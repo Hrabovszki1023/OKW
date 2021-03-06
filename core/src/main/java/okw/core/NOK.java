@@ -32,7 +32,7 @@
 
     Sie sollten eine Kopie der GNU General Public License zusammen mit 
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package okw.core;
 
@@ -62,476 +62,347 @@ import okw.log.*;
 public class NOK implements IOKW_State
 {
 
-    private OKWLanguage   AL = OKWLanguage.getInstance();
-
-    private Logger_Sngltn Log;
-
-    private Core          _Kernel;
-
-    /** \~german
-     *  Diese Klasser repräsentiert den Zustand "Not OK".
-     *  
-     *  Wenn ein Schlüsselwort eine Ausnahme auslöst, dann wechselt der Zustand von OK nach NOK.
-     *  Die Schlüsselwörter dieser Klassen führen, bis auf einge ausnahmen, kein GUI aktivitäten aus.
-     * 
-     *  \~english
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  \date 02.03.2013
-     */
-    public NOK( Core fp_OKW )
-    {
-        Log = Logger_Sngltn.getInstance();
-        this._Kernel = fp_OKW;
-    }
-
-    /**
-     *  \copydoc IOKW_State::BeginTest(String)
-     */
-    public void BeginTest( String fpsTestname )
-    {
-        try
-        {
-            Log.LogFunctionStartDebug( "BeginTest", "fpsTestname", fpsTestname );
-
-            // Alles Initialisieren
-            OKW_Ini_Sngltn.getInstance().Init();
-
-            OKW_CurrentObject_Sngltn.getInstance();
-            OKW_CurrentObject_Sngltn.init();
-
-            // Memorize TestCaseName
-            OKW_Memorize_Sngltn.getInstance().set( "TCN", fpsTestname );
-
-            Log.LogPrint( "NOK -> OK" );
-            this._Kernel.SetCoreStateOK();
-        }
-        catch (XPathExpressionException | JAXBException | ParserConfigurationException | SAXException | IOException e)
-        {
-            throw new RuntimeException( e );
-        }
-        finally
-        {
-            // Gute Frage was alles hier hingehört...
-            Log.LogFunctionEndDebug();
-        }
-    }
-
-    /**
-     *  \copydoc IOKW_State::EndTest()
-     * @throws Exception 
-     */
-    public void EndTest() throws Exception
-    {
-        // TODO: Aufräumen  Kill... usw aufrufen
-        Log.LogFunctionStartDebug( "EndTest" );
-        
-        Log.LogFunctionEndDebug();
-
-        Exception e = _Kernel.getNOK_Reason();
-        
-        throw e;
-    }
-
-    /**
-     *  \copydoc IOKW_State::ClickOn(String)
-     */
-    public void ClickOn( String FN )
-    {
-        Log.LogFunctionStartDebug( "ClickOn", "FN", FN );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-      * \copydoc IOKW_State::DoubleClickOn(String)
-     */
-    public void DoubleClickOn( String FN )
-    {
-        Log.LogFunctionStartDebug( "DoubleClickOn", "FN", FN );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::LogCaption(String)
-     */
-    public void LogCaption( String FN )
-    {
-        Log.LogFunctionStartDebug( "LogCaption", "FN", FN );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::LogExists(String)
-     */
-    public void LogExists( String FN )
-    {
-        Log.LogFunctionStartDebug( "LogExists", "FN", FN );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::LogHasFocus(String)
-     */
-    public void LogHasFocus( String FN )
-    {
-        Log.LogFunctionStartDebug( "LogHasFocus", "FN", FN );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::LogIsActive(String)
-     */
-    public void LogIsActive( String FN )
-    {
-        Log.LogFunctionStartDebug( "LogIsActive", "FN", FN );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::LogLabel(String)
-     */
-    public void LogLabel( String FN )
-    {
-        Log.LogFunctionStartDebug( "LogLabel", "FN", FN );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::LogPlaceholder(String)
-     */
-    public void LogPlaceholder( String FN )
-    {
-        Log.LogFunctionStartDebug( "LogPlaceholder", "FN", FN );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::LogSelected(String)
-     */
-    public void LogSelected( String FN )
-    {
-        Log.LogFunctionStartDebug( "LogSelected", "FN", FN );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::LogTablecellValue(String,String,String)
-     */
-    public void LogTablecellValue( String FN, String COL, String ROW )
-    {
-        Log.LogFunctionStartDebug( "LogTablecellValue", "COL", COL, "ROW", ROW, "FN", FN );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::LogTooltip(String)
-     */
-    public void LogTooltip( String FN )
-    {
-        Log.LogFunctionStartDebug( "LogTooltip", "FN", FN );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::LogValue(String)
-     */
-    public void LogValue( String FN )
-    {
-        Log.LogFunctionStartDebug( "LogValue", "FN", FN );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::MemorizeCaption(String,String)
-     */
-    public void MemorizeCaption( String FN, String fpsMemKeyName )
-    {
-        Log.LogFunctionStartDebug( "MemorizeCaption", "FN", FN, "fpsMemKeyName", fpsMemKeyName );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::MemorizeExists(String,String)
-     */
-    public void MemorizeExists( String FN, String fpsMemKeyName )
-    {
-        Log.LogFunctionStartDebug( "MemorizeExists", "FN", FN, "fpsMemKeyName", fpsMemKeyName );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::MemorizeHasFocus(String,String)
-     */
-    public void MemorizeHasFocus( String FN, String fpsMemKeyName )
-    {
-        Log.LogFunctionStartDebug( "MemorizeHasFocus", "FN", FN, "fpsMemKeyName", fpsMemKeyName );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::MemorizeIsActive(String,String)
-     */
-    public void MemorizeIsActive( String FN, String fpsMemKeyName )
-    {
-        Log.LogFunctionStartDebug( "MemorizeIsActive", "FN", FN, "fpsMemKeyName", fpsMemKeyName );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::MemorizeLabel(String,String)
-     */
-    public void MemorizeLabel( String FN, String fpsMemKeyName )
-    {
-        Log.LogFunctionStartDebug( "MemorizeLabel", "FN", FN, "fpsMemKeyName", fpsMemKeyName );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::MemorizePlaceholder(String,String)
-     */
-    public void MemorizePlaceholder( String FN, String fpsMemKeyName )
-    {
-        Log.LogFunctionStartDebug( "MemorizePlaceholder", "FN", FN, "fpsMemKeyName", fpsMemKeyName );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::MemorizeSelectedValue(String,String)
-     */
-    public void MemorizeSelectedValue( String FN, String fpsMemKeyName )
-    {
-        Log.LogFunctionStartDebug( "MemorizeSelectedValue", "FN", FN, "fpsMemKeyName", fpsMemKeyName );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::MemorizeTablecellValue(String,String,String,String)
-     */
-    public void MemorizeTablecellValue( String FN, String COL, String ROW, String fpsMemKeyName )
-    {
-        Log.LogFunctionStartDebug( "MemorizeTablecellValue", "FN", FN, "COL", COL, "ROW", ROW, "fpsMemKeyName", fpsMemKeyName );
-        
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::MemorizeTooltip(String,String)
-     */
-    public void MemorizeTooltip( String FN, String fpsMemKeyName )
-    {
-        Log.LogFunctionStartDebug( "MemorizeTooltip", "FN", FN, "fpsMemKeyName", fpsMemKeyName );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::MemorizeLabel(String,String)
-     */
-    public void MemorizeValue( String FN, String fpsMemKeyName )
-    {
-        Log.LogFunctionStartDebug( "MemorizeValue", "FN", FN, "fpsMemKeyName", fpsMemKeyName );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::Select(String,String)
-     */
-    public void Select( String FN, String fpsValue )
-    {
-        Log.LogFunctionStartDebug( "Select", "FN", FN, "fpsValue", fpsValue );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::SelectMenu(String)
-     */
-    public void SelectMenu( String FN )
-    {
-        Log.LogFunctionStartDebug( "SelectMenu", "FN", FN );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::SelectMenu(String,String)
-     */
-    public void SelectMenu( String FN, String fpsValue )
-    {
-        Log.LogFunctionStartDebug( "SelectMenu", "FN", FN, "fpsValue", fpsValue );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::SelectTablecell(String,String,String)
-     */
-    public void SelectTablecell( String FN, String COL, String ROW )
-    {
-        Log.LogFunctionStartDebug( "SelectTablecell", "FN", FN, "COL", COL, "ROW", ROW );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::SelectWindow(String)
-     */
-    public void SelectWindow( String FN )
-    {
-        Log.LogFunctionStartDebug( "SelectWindow", "FN", FN );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::SelectContext(String)
-     */
-    public void SelectContext( String FN )
-    {
-        Log.LogFunctionStartDebug( "SelectContext", "FN", FN );
-
-        Log.LogFunctionEndDebug();
-    }
-    
-    /**
-     *  \copydoc IOKW_State::SelectChild(String)
-     */
-    public void SelectChild( String FN )
-    {
-        Log.LogFunctionStartDebug( "SelectWindow", "FN", FN );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::Sequence(String,String,String)
-     */
-    public void Sequence( String FN, String SeqName, String SEQ_ID )
-    {
-        Log.LogFunctionStartDebug( "Sequence", "FN", FN, "fpsSequenceName", SeqName, "SEQ_ID", SEQ_ID );
-
-        Log.LogFunctionEndDebug();
-    }
-
-   /**
-    *  \copydoc IOKW_State::SetFocus(String)
-    */
-    public void SetFocus( String FN )
-    {
-        Log.LogFunctionStartDebug( "SetFocus", "FN", FN );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /** \~german
-     *  \~english
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  \date 02.03.2013
-     */ 
-    public void setLanguage( String Language )
-    {
-        this.AL.setLanguage( Language );
-    }
-
-    /**
-     *  \copydoc IOKW_State::SetValue(String,String)
-     */
-    public void SetValue( String FN, String Val )
-    {
-        Log.LogFunctionStartDebug( "SetValue", "FN", FN, "Val", Val );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::SetVar(String,String)
-     */
-    public void SetVar( String VN, String Val )
-    {
-        Log.LogFunctionStartDebug( "SetVar", "VN", VN, "Val", Val );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::StartApp(String)
-     */
-    public void StartApp( String fpsApplicationName )
-    {
-        Log.LogFunctionStartDebug( "StartApp", "fpsApplicationName", fpsApplicationName );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::StopApp(String)
-     */
-    public void StopApp( String fpsApplicationName )
-    {
-        Log.LogFunctionStartDebug( "StopApp", "fpsApplicationName", fpsApplicationName );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::TypeKey(String,String)
-     */
-    public void TypeKey( String FN, String fpsValue )
-    {
-        Log.LogFunctionStartDebug( "TypeKey", "FN", FN, "fpsValue", fpsValue );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::TypeKeyTablecell(String,String,String,String)
-     */
-    public void TypeKeyTablecell( String FN, String COL, String ROW, String fpsValue )
-    {
-        Log.LogFunctionStartDebug( "TypeKeyTablecell", "FN", FN, "COLl", COL, "ROW", ROW, "fpsValue", fpsValue );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::TypeKeyWindow(String,String)
-     */
-    public void TypeKeyWindow( String FN, String fpsValue )
-    {
-        Log.LogFunctionStartDebug( "TypeKeyWindow", "FN", FN, "fpsValue", fpsValue );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
+	private OKWLanguage   AL = OKWLanguage.getInstance();
+
+	private Logger_Sngltn Log;
+
+	private Core          _Kernel;
+
+	/** \~german
+	 *  Diese Klasser repräsentiert den Zustand "Not OK".
+	 *  
+	 *  Wenn ein Schlüsselwort eine Ausnahme auslöst, dann wechselt der Zustand von OK nach NOK.
+	 *  Die Schlüsselwörter dieser Klassen führen, bis auf einge ausnahmen, kein GUI aktivitäten aus.
+	 * 
+	 *  \~english
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 02.03.2013
+	 */
+	public NOK( Core fp_OKW )
+	{
+		Log = Logger_Sngltn.getInstance();
+		this._Kernel = fp_OKW;
+	}
+
+	/**
+	 *  \copydoc IOKW_State::BeginTest(String)
+	 */
+	public void BeginTest( String fpsTestname )
+	{
+		try
+		{
+			// Alles Initialisieren
+			OKW_Ini_Sngltn.getInstance().Init();
+
+			OKW_CurrentObject_Sngltn.getInstance();
+			OKW_CurrentObject_Sngltn.init();
+
+			// Memorize TestCaseName
+			OKW_Memorize_Sngltn.getInstance().set( "TCN", fpsTestname );
+
+			Log.LogPrint( "NOK -> OK" );
+			this._Kernel.SetCoreStateOK();
+		}
+		catch (XPathExpressionException | JAXBException | ParserConfigurationException | SAXException | IOException e)
+		{
+			throw new RuntimeException( e );
+		}
+	}
+
+	/**
+	 *  \copydoc IOKW_State::EndTest()
+	 * @throws Exception 
+	 */
+	public void EndTest() throws Exception
+	{
+		Exception e = _Kernel.getNOK_Reason();
+
+		throw e;
+	}
+
+	/**
+	 *  \copydoc IOKW_State::ClickOn(String)
+	 */
+	public void ClickOn( String FN )
+	{
+	}
+
+	/**
+	 * \copydoc IOKW_State::DoubleClickOn(String)
+	 */
+	public void DoubleClickOn( String FN )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::LogCaption(String)
+	 */
+	public void LogCaption( String FN )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::LogExists(String)
+	 */
+	public void LogExists( String FN )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::LogHasFocus(String)
+	 */
+	public void LogHasFocus( String FN )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::LogIsActive(String)
+	 */
+	public void LogIsActive( String FN )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::LogLabel(String)
+	 */
+	public void LogLabel( String FN )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::LogPlaceholder(String)
+	 */
+	public void LogPlaceholder( String FN )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::LogSelected(String)
+	 */
+	public void LogSelected( String FN )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::LogTablecellValue(String,String,String)
+	 */
+	public void LogTablecellValue( String FN, String COL, String ROW )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::LogTooltip(String)
+	 */
+	public void LogTooltip( String FN )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::LogValue(String)
+	 */
+	public void LogValue( String FN )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::MemorizeCaption(String,String)
+	 */
+	public void MemorizeCaption( String FN, String fpsMemKeyName )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::MemorizeExists(String,String)
+	 */
+	public void MemorizeExists( String FN, String fpsMemKeyName )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::MemorizeHasFocus(String,String)
+	 */
+	public void MemorizeHasFocus( String FN, String fpsMemKeyName )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::MemorizeIsActive(String,String)
+	 */
+	public void MemorizeIsActive( String FN, String fpsMemKeyName )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::MemorizeLabel(String,String)
+	 */
+	public void MemorizeLabel( String FN, String fpsMemKeyName )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::MemorizePlaceholder(String,String)
+	 */
+	public void MemorizePlaceholder( String FN, String fpsMemKeyName )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::MemorizeSelectedValue(String,String)
+	 */
+	public void MemorizeSelectedValue( String FN, String fpsMemKeyName )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::MemorizeTablecellValue(String,String,String,String)
+	 */
+	public void MemorizeTablecellValue( String FN, String COL, String ROW, String fpsMemKeyName )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::MemorizeTooltip(String,String)
+	 */
+	public void MemorizeTooltip( String FN, String fpsMemKeyName )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::MemorizeLabel(String,String)
+	 */
+	public void MemorizeValue( String FN, String fpsMemKeyName )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::Select(String,String)
+	 */
+	public void Select( String FN, String fpsValue )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::SelectMenu(String)
+	 */
+	public void SelectMenu( String FN )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::SelectMenu(String,String)
+	 */
+	public void SelectMenu( String FN, String fpsValue )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::SelectTablecell(String,String,String)
+	 */
+	public void SelectTablecell( String FN, String COL, String ROW )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::SelectWindow(String)
+	 */
+	public void SelectWindow( String FN )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::SelectContext(String)
+	 */
+	public void SelectContext( String FN )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::SelectChild(String)
+	 */
+	public void SelectChild( String FN )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::Sequence(String,String,String)
+	 */
+	public void Sequence( String FN, String SeqName, String SEQ_ID )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::SetFocus(String)
+	 */
+	public void SetFocus( String FN )
+	{
+	}
+
+	/** \~german
+	 *  \~english
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 02.03.2013
+	 */ 
+	public void setLanguage( String Language )
+	{
+		this.AL.setLanguage( Language );
+	}
+
+	/**
+	 *  \copydoc IOKW_State::SetValue(String,String)
+	 */
+	public void SetValue( String FN, String Val )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::SetVar(String,String)
+	 */
+	public void SetVar( String VN, String Val )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::StartApp(String)
+	 */
+	public void StartApp( String fpsApplicationName )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::StopApp(String)
+	 */
+	public void StopApp( String fpsApplicationName )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::TypeKey(String,String)
+	 */
+	public void TypeKey( String FN, String fpsValue )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::TypeKeyTablecell(String,String,String,String)
+	 */
+	public void TypeKeyTablecell( String FN, String COL, String ROW, String fpsValue )
+	{
+	}
+
+	/**
+	 *  \copydoc IOKW_State::TypeKeyWindow(String,String)
+	 */
+	public void TypeKeyWindow( String FN, String fpsValue )
+	{
+	}
+
+	/**
 	 * \copydoc IOKW_State::VerifyBadge(String,String)
 	 */
 	public void VerifyBadge ( String BN, String ExpVal )
 	{
-	    Log.LogFunctionStartDebug( "VerifyBadge", "BN", BN, "ExpVal", ExpVal );
-	
-	    Log.LogFunctionEndDebug();
 	}
 
 	/**
@@ -539,9 +410,6 @@ public class NOK implements IOKW_State
 	 */
 	public void VerifyBadgeWCM( String FN, String ExpVal )
 	{
-	    Log.LogFunctionStartDebug( "VerifyBadgeWCM", "FN", FN, "ExpVal", ExpVal );
-	
-	    Log.LogFunctionEndDebug();
 	}
 
 	/**
@@ -549,402 +417,293 @@ public class NOK implements IOKW_State
 	 */
 	public void VerifyBadgeREGX( String FN, String ExpVal )
 	{
-	    Log.LogFunctionStartDebug( "VerifyBadgeREGX", "FN", FN, "ExpVal", ExpVal );
-	
-	    Log.LogFunctionEndDebug();
 	}
 
 	/**
-     *  \copydoc IOKW_State::VerifyCaption(String,String)
-     */
-    public void VerifyCaption( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyCaption", "FN", FN, "ExpVal", ExpVal );
+	 *  \copydoc IOKW_State::VerifyCaption(String,String)
+	 */
+	public void VerifyCaption( String FN, String ExpVal )
+	{
+	}
 
-        Log.LogFunctionEndDebug();
-    }
+	/**
+	 *  \copydoc IOKW_State::VerifyCaptionWCM(String,String)
+	 */
+	public void VerifyCaptionWCM( String FN, String ExpVal )
+	{
+	}
 
-    /**
-     *  \copydoc IOKW_State::VerifyCaptionWCM(String,String)
-     */
-    public void VerifyCaptionWCM( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyCaption", "FN", FN, "ExpVal", ExpVal );
+	/**
+	 *  \copydoc IOKW_State::VerifyCaptionREGX(String,String)
+	 */
+	public void VerifyCaptionREGX( String FN, String ExpVal )
+	{
+	}
 
-        Log.LogFunctionEndDebug();
-    }
+	/**
+	 *  \copydoc IOKW_State::VerifyExists(String,String)
+	 */
+	public void VerifyExists( String FN, String ExpVal )
+	{
+	}
 
-    /**
-     *  \copydoc IOKW_State::VerifyCaptionREGX(String,String)
-     */
-    public void VerifyCaptionREGX( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyCaption", "FN", FN, "ExpVal", ExpVal );
+	/**
+	 *  \copydoc IOKW_State::VerifyHasFocus(String,String)
+	 */
+	public void VerifyHasFocus( String FN, String ExpVal )
+	{
+	}
 
-        Log.LogFunctionEndDebug();
-    }
+	/**
+	 *  \copydoc IOKW_State::VerifyIsActive(String,String)
+	 */
+	public void VerifyIsActive( String FN, String ExpVal )
+	{
+	}
 
-    /**
-     *  \copydoc IOKW_State::VerifyExists(String,String)
-     */
-    public void VerifyExists( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyExists", "FN", FN, "ExpVal", ExpVal );
+	/**
+	 * \copydoc IOKW_State::VerifyValue(String,String)
+	 */
+	public void VerifyLabel( String FN, String ExpVal )
+	{
+	}
 
-        Log.LogFunctionEndDebug();
-    }
+	/**
+	 * \copydoc IOKW_State::VerifyLabelWCM(String,String)
+	 */
+	public void VerifyLabelWCM( String FN, String ExpVal )
+	{
+	}
 
-    /**
-     *  \copydoc IOKW_State::VerifyHasFocus(String,String)
-     */
-    public void VerifyHasFocus( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyHasFocus", "FN", FN, "ExpVal", ExpVal );
+	/**
+	 * \copydoc IOKW_State::VerifyLabelREGX(String,String)
+	 */
+	public void VerifyLabelREGX( String FN, String ExpVal )
+	{
+	}
 
-        Log.LogFunctionEndDebug();
-    }
+	/**
+	 * \copydoc IOKW_State::VerifyPlaceholder(String,String)
+	 */
+	public void VerifyPlaceholder( String FN, String ExpVal )
+	{
+	}
 
-    /**
-     *  \copydoc IOKW_State::VerifyIsActive(String,String)
-     */
-    public void VerifyIsActive( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyIsActive", "FN", FN, "ExpVal", ExpVal );
+	/**
+	 * \copydoc IOKW_State::VerifyPlaceholderWCM(String,String)
+	 */
+	public void VerifyPlaceholderWCM( String FN, String ExpVal )
+	{
+	}
 
-        Log.LogFunctionEndDebug();
-    }
+	/**
+	 * \copydoc IOKW_State::VerifyMaxLength(String,String)
+	 */
+	public void VerifyMaxLength( String FN, String ExpVal )
+	{
+	}
 
-    /**
-     * \copydoc IOKW_State::VerifyValue(String,String)
-     */
-    public void VerifyLabel( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyLabel", "FN", FN, "ExpVal", ExpVal );
+	/**
+	 * \copydoc IOKW_State::VerifyPlaceholderREGX(String,String)
+	 */
+	public void VerifyPlaceholderREGX( String FN, String ExpVal )
+	{
+	}
 
-        Log.LogFunctionEndDebug();
-    }
+	/**
+	 *  \copydoc IOKW_State::VerifySelectedValue(String,String)
+	 */
+	public void VerifySelectedValue( String FN, String ExpVal )
+	{
+	}
+	/**
+	 *  \copydoc IOKW_State::VerifySelectedValueWCM(String,String)
+	 */
 
-    /**
-     * \copydoc IOKW_State::VerifyLabelWCM(String,String)
-     */
-    public void VerifyLabelWCM( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyLabelWCM", "FN", FN, "ExpVal", ExpVal );
+	public void VerifySelectedValueWCM( String FN, String ExpVal )
+	{
+	}
 
-        Log.LogFunctionEndDebug();
-    }
+	/**
+	 *  \copydoc IOKW_State::VerifySelectedValueREGX(String,String)
+	 */
+	public void VerifySelectedValueREGX( String FN, String ExpVal )
+	{
+	}
 
-    /**
-     * \copydoc IOKW_State::VerifyLabelREGX(String,String)
-     */
-    public void VerifyLabelREGX( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyLabelREGX", "FN", FN, "ExpVal", ExpVal );
+	/**
+	 *  \copydoc IOKW_State::VerifyTablecellValue(String,String,String,String)
+	 */
+	public void VerifyTablecellValue( String FN, String COL, String ROW, String ExpVal )
+	{
+	}
 
-        Log.LogFunctionEndDebug();
-    }
+	/**
+	 *  \copydoc IOKW_State::VerifyTablecellValueWCM(String,String,String,String)
+	 */
+	public void VerifyTablecellValueWCM( String FN, String COL, String ROW, String ExpVal )
+	{
+	}
 
-    /**
-     * \copydoc IOKW_State::VerifyPlaceholder(String,String)
-     */
-    public void VerifyPlaceholder( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyPlaceholder", "FN", FN, "ExpVal", ExpVal );
+	/**
+	 *  \copydoc IOKW_State::VerifyTablecellValueREGX(String,String,String,String)
+	 */
+	public void VerifyTablecellValueREGX( String FN, String COL, String ROW, String ExpVal )
+	{
+	}
 
-        Log.LogFunctionEndDebug();
-    }
+	/**
+	 *  \copydoc IOKW_State::VerifyTooltip(String,String)
+	 */
+	public void VerifyTooltip( String FN, String ExpVal )
+	{
+	}
 
-    /**
-     * \copydoc IOKW_State::VerifyPlaceholderWCM(String,String)
-     */
-    public void VerifyPlaceholderWCM( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyPlaceholderWCM", "FN", FN, "ExpVal", ExpVal );
+	/**
+	 * \copydoc IOKW_State::VerifyTooltipWCM(String,String)
+	 */
+	public void VerifyTooltipWCM( String FN, String ExpVal )
+	{
+	}
 
-        Log.LogFunctionEndDebug();
-    }
+	/**
+	 * \copydoc IOKW_State::VerifyTooltipREGX(String,String)
+	 */
+	public void VerifyTooltipREGX( String FN, String ExpVal )
+	{
+	}
 
-    /**
-     * \copydoc IOKW_State::VerifyMaxLength(String,String)
-     */
-    public void VerifyMaxLength( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyMaxLength", "FN", FN, "ExpVal", ExpVal );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     * \copydoc IOKW_State::VerifyPlaceholderREGX(String,String)
-     */
-    public void VerifyPlaceholderREGX( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyPlaceholderREGX", "FN", FN, "ExpVal", ExpVal );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::VerifySelectedValue(String,String)
-     */
-    public void VerifySelectedValue( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifySelectedValue", "FN", FN, "ExpVal", ExpVal );
-
-        Log.LogFunctionEndDebug();
-    }
-    /**
-     *  \copydoc IOKW_State::VerifySelectedValueWCM(String,String)
-     */
-
-    public void VerifySelectedValueWCM( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifySelectedValueWCM", "FN", FN, "ExpVal", ExpVal );
-
-        Log.LogFunctionEndDebug();
-    }
-    
-    /**
-     *  \copydoc IOKW_State::VerifySelectedValueREGX(String,String)
-     */
-    public void VerifySelectedValueREGX( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifySelectedValueREGX", "FN", FN, "ExpVal", ExpVal );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::VerifyTablecellValue(String,String,String,String)
-     */
-    public void VerifyTablecellValue( String FN, String COL, String ROW, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyTablecellValue", "FN", FN, "COL", COL, "ROW", ROW, "ExpVal", ExpVal );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::VerifyTablecellValueWCM(String,String,String,String)
-     */
-    public void VerifyTablecellValueWCM( String FN, String COL, String ROW, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyTablecellValueWCM", "FN", FN, "COL", COL, "ROW", ROW, "ExpVal", ExpVal );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::VerifyTablecellValueREGX(String,String,String,String)
-     */
-    public void VerifyTablecellValueREGX( String FN, String COL, String ROW, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyTablecellValueREGX", "FN", FN, "COL", COL, "ROW", ROW, "ExpVal", ExpVal );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::VerifyTooltip(String,String)
-     */
-    public void VerifyTooltip( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyTooltip", "FN", FN, "ExpVal", ExpVal );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-    * \copydoc IOKW_State::VerifyTooltipWCM(String,String)
-    */
-    public void VerifyTooltipWCM( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyTooltipWCM", "FN", FN, "ExpVal", ExpVal );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     * \copydoc IOKW_State::VerifyTooltipREGX(String,String)
-     */
-    public void VerifyTooltipREGX( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyTooltipREGX", "FN", FN, "ExpVal", ExpVal );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
+	/**
     /// \copydoc IOKW_State::VerifyValue(String,String)
-    */
-    public void VerifyValue( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyValue", "FN", FN, "ExpVal", ExpVal );
+	 */
+	public void VerifyValue( String FN, String ExpVal )
+	{
+	}
 
-        Log.LogFunctionEndDebug();
-    }
+	/**
+	 * \copydoc IOKW_State::VerifyValueWCM(String,String)
+	 */
+	public void VerifyValueWCM( String FN, String ExpVal )
+	{
+	}
 
-    /**
-     * \copydoc IOKW_State::VerifyValueWCM(String,String)
-     */
-    public void VerifyValueWCM( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyValueWCM", "FN", FN, "ExpVal", ExpVal );
+	/**
+	 * \copydoc IOKW_State::VerifyValueREGX(String,String)
+	 */
+	public void VerifyValueREGX( String FN, String ExpVal )
+	{
+	}
 
-        Log.LogFunctionEndDebug();
-    }
+	/**
+	 *  \copydoc IOKW_State::FileCreate(String)
+	 */
+	public void FileCreate( String PATH )
+	{
+	}
 
-    /**
-     * \copydoc IOKW_State::VerifyValueREGX(String,String)
-     */
-    public void VerifyValueREGX( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyValueREGX", "FN", FN, "ExpVal", ExpVal );
+	/**
+	 *  \copydoc IOKW_State::FileDelete(String)
+	 */
+	public void FileDelete( String fpsPathAndFileName )
+	{
+	}
 
-        Log.LogFunctionEndDebug();
-    }
+	/**
+	 *  \copydoc IOKW_State::FilesDelete(String, String)
+	 */
+	public void FilesDelete( String fpsDirPath, String fpsFileMatch )
+	{
+	}
 
-    /**
-     *  \copydoc IOKW_State::FileCreate(String)
-     */
-    public void FileCreate( String PATH )
-    {
-        Log.LogFunctionStartDebug( "FileCreate", "PATH", PATH );
+	/**
+	 *  \copydoc IOKW_State::DirectoryDelete(String)
+	 */
+	public void DirectoryDelete( String PATH )
+	{
+	}
 
-        Log.LogFunctionEndDebug();
-    }
-    
-    /**
-     *  \copydoc IOKW_State::FileDelete(String)
-     */
-    public void FileDelete( String fpsPathAndFileName )
-    {
-        Log.LogFunctionStartDebug( "FileDelete", "fpsPathAndFileName", fpsPathAndFileName );
+	/**
+	 *  \copydoc IOKW_State::DirectoryCreate(String)
+	 */
+	public void DirectoryCreate( String PATH )
+	{
+	}
 
-        Log.LogFunctionEndDebug();
-    }
+	/**
+	 *  \copydoc IOKW_State::VerifyFileExists(String,String)
+	 */
+	public void VerifyFileExists( String fpsPathAndFileName, String ExpVal )
+	{
+	}
 
-    /**
-     *  \copydoc IOKW_State::FilesDelete(String, String)
-     */
-    public void FilesDelete( String fpsDirPath, String fpsFileMatch )
-    {
-        Log.LogFunctionStartDebug( "FilesDelete", "fpsDirPath", fpsDirPath, "fpsFileMatch", fpsFileMatch );
+	/**
+	 *  \copydoc IOKW_State::VerifyIsFile(String,String)
+	 */
+	public void VerifyIsFile( String fpsPathAndFileName, String ExpVal )
+	{
+	}
 
-        Log.LogFunctionEndDebug();
-    }
+	/**
+	 *  \copydoc IOKW_State::VerifyIsDirectory(String,String)
+	 */
+	public void VerifyIsDirectory( String fpsPathAndFileName, String ExpVal )
+	{
+	}
 
-    /**
-     *  \copydoc IOKW_State::DirectoryDelete(String)
-     */
-    public void DirectoryDelete( String PATH )
-    {
-        Log.LogFunctionStartDebug( "DirectoryDelete", "PATH", PATH );
+	/**
+	 *  \copydoc IOKW_State::VerifyDirectoryExists(String,String)
+	 */
+	public void VerifyDirectoryExists( String fpsPath, String ExpVal )
+	{
 
-        Log.LogFunctionEndDebug();
-    }
 
-    /**
-     *  \copydoc IOKW_State::DirectoryCreate(String)
-     */
-    public void DirectoryCreate( String PATH )
-    {
-        Log.LogFunctionStartDebug( "DirectoryDelete", "PATH", PATH );
 
-        Log.LogFunctionEndDebug();
-    }
+	}
 
-    /**
-     *  \copydoc IOKW_State::VerifyFileExists(String,String)
-     */
-    public void VerifyFileExists( String fpsPathAndFileName, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyFileExists", "fpsPathAndFileName", fpsPathAndFileName, "ExpVal", ExpVal );
+	/**
+	 *  \copydoc IOKW_State::CopyFile(String,String)
+	 */
+	public void CopyFile( String fpsSourcePathAndFileName, String fpsDestinationPathAndFileName )
+	{
 
-        Log.LogFunctionEndDebug();
-    }
+	}
 
-    /**
-     *  \copydoc IOKW_State::VerifyIsFile(String,String)
-     */
-    public void VerifyIsFile( String fpsPathAndFileName, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyIsFile", "fpsPathAndFileName", fpsPathAndFileName, "ExpVal", ExpVal );
+	/**
+	 * \copydoc IOKW_State::VerifyMinLength(String,String)
+	 */
+	public void VerifyMinLength( String FN, String ExpVal )
+	{
 
-        Log.LogFunctionEndDebug();
-    }
+	}
 
-    /**
-     *  \copydoc IOKW_State::VerifyIsDirectory(String,String)
-     */
-    public void VerifyIsDirectory( String fpsPathAndFileName, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyIsDirectory", "fpsPathAndFileName", fpsPathAndFileName, "ExpVal", ExpVal );
 
-        Log.LogFunctionEndDebug();
-    }
-    
-    /**
-     *  \copydoc IOKW_State::VerifyDirectoryExists(String,String)
-     */
-    public void VerifyDirectoryExists( String fpsPath, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyDirectoryExists", "fpsPath", fpsPath, "ExpVal", ExpVal );
+	/**
+	 * \copydoc IOKW_State::VerifyErrorMSG(String,String)
+	 */
+	public void VerifyErrorMSG( String FN, String ExpVal )
+	{
 
-        Log.LogFunctionEndDebug();
-    }
+	}
 
-    /**
-     *  \copydoc IOKW_State::CopyFile(String,String)
-     */
-    public void CopyFile( String fpsSourcePathAndFileName, String fpsDestinationPathAndFileName )
-    {
-        Log.LogFunctionStartDebug( "CopyFile", "fpsSourcePathAndFileName", fpsSourcePathAndFileName, "fpsDestinationPathAndFileName",
-                        fpsDestinationPathAndFileName );
+	/**
+	 * \copydoc IOKW_State::VerifyErrorMSG_WCM(String,String)
+	 */
+	public void VerifyErrorMSG_WCM( String FN, String ExpVal )
+	{
 
-        Log.LogFunctionEndDebug();
-    }
-    
-    /**
-     * \copydoc IOKW_State::VerifyMinLength(String,String)
-     */
-    public void VerifyMinLength( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyMinLength", "FN", FN, "ExpVal", ExpVal );
 
-        Log.LogFunctionEndDebug();
-    }
-    
-    
-    /**
-     * \copydoc IOKW_State::VerifyErrorMSG(String,String)
-     */
-    public void VerifyErrorMSG( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyErrorMSG", "FN", FN, "ExpVal", ExpVal );
 
-        Log.LogFunctionEndDebug();
-    }
+	}
 
-    /**
-     * \copydoc IOKW_State::VerifyErrorMSG_WCM(String,String)
-     */
-    public void VerifyErrorMSG_WCM( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyErrorMSG_WCM", "FN", FN, "ExpVal", ExpVal );
+	/**
+	 * \copydoc IOKW_State::VerifyErrorMSG_REGX(String,String)
+	 */
+	public void VerifyErrorMSG_REGX( String FN, String ExpVal )
+	{
 
-        Log.LogFunctionEndDebug();
-    }
 
-    /**
-     * \copydoc IOKW_State::VerifyErrorMSG_REGX(String,String)
-     */
-    public void VerifyErrorMSG_REGX( String FN, String ExpVal )
-    {
-        Log.LogFunctionStartDebug( "VerifyErrorMSG_REGX", "FN", FN, "ExpVal", ExpVal );
 
-        Log.LogFunctionEndDebug();
-    }
+	}
 
-    
+
 }

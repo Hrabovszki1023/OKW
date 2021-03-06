@@ -35,7 +35,7 @@
 
     Sie sollten eine Kopie der GNU General Public License zusammen mit 
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package okw.gui.adapter;
 
@@ -48,146 +48,146 @@ import okw.gui.AnyChildwindow;
 import okw.gui.OKWLocator;
 import okw.log.*;
 
-    // : IOKW_SimpleDataObj
-    public class Test_TextField extends AnyChildwindow
-    {
+// : IOKW_SimpleDataObj
+public class Test_TextField extends AnyChildwindow
+{
 
-        String Locator;
-        
-        Logger_Sngltn            myLogger        = Logger_Sngltn.getInstance();
-        OKW_TestClipboard        myClipBoard     = OKW_TestClipboard.getInstance();
+	String Locator;
 
-        String myValue = "";
+	Logger_Sngltn            myLogger        = Logger_Sngltn.getInstance();
+	OKW_TestClipboard        myClipBoard     = OKW_TestClipboard.getInstance();
 
-        public Test_TextField( String fpsLocator, OKWLocator... fpLocators )
-        {
-            super( fpsLocator, fpLocators );
-        }
+	String myValue = "";
 
-        public String getCAT()
-        {
-            // return Test_PushButton.class.getAnnotation(OKW_FN.class).FN();
-            return "Test_Textfield";
-        }
+	public Test_TextField( String fpsLocator, OKWLocator... fpLocators )
+	{
+		super( fpsLocator, fpLocators );
+	}
 
-        public void ClickOn()
-        {
-            this.myValue = "NO VALUE";
-            this.myLogger.LogFunctionStartDebug("ClickOn");
-            String lvs_ObjectName = getCAT();
+	public String getCAT()
+	{
+		// return Test_PushButton.class.getAnnotation(OKW_FN.class).FN();
+		return "Test_Textfield";
+	}
 
-            myClipBoard.setObjectName(lvs_ObjectName);
-            myClipBoard.setMethod("ClickOn()");
-            myClipBoard.getValue().clear();
-            myClipBoard.getValue().add(this.myValue);
-            this.myLogger.LogFunctionEndDebug();
-        }
+	public void ClickOn()
+	{
+		this.myValue = "NO VALUE";
 
-        public void ClickOn_DOUBLECLICK()
-        {
-            this.myValue = "NO VALUE";
-            this.myLogger.LogFunctionStartDebug("ClickOn_DOUBLECLICK");
-            String lvs_ObjectName = getCAT();
+		String lvs_ObjectName = getCAT();
 
-            myClipBoard.setObjectName(lvs_ObjectName);
-            myClipBoard.setMethod("ClickOn_DOUBLECLICK()");
-            myClipBoard.getValue().clear();
-            myClipBoard.getValue().add(this.myValue);
-            this.myLogger.LogFunctionEndDebug();
-        }
+		myClipBoard.setObjectName(lvs_ObjectName);
+		myClipBoard.setMethod("ClickOn()");
+		myClipBoard.getValue().clear();
+		myClipBoard.getValue().add(this.myValue);
 
-        public List<String> GetValue()
-        {
-            List<String> lvLsReturn = new ArrayList<String>();
+	}
 
-            myLogger.LogFunctionStartDebug(this.getClass().getName() + ".GetValue");
-            lvLsReturn.add(this.myValue);
+	public void ClickOn_DOUBLECLICK()
+	{
+		this.myValue = "NO VALUE";
 
-            String lvs_ObjectName = getCAT();
+		String lvs_ObjectName = getCAT();
 
-            myClipBoard.setObjectName(lvs_ObjectName);
-            myClipBoard.setMethod("OKW_GetValue()");
-            myClipBoard.getValue().clear();
-            myClipBoard.getValue().add(this.myValue);
+		myClipBoard.setObjectName(lvs_ObjectName);
+		myClipBoard.setMethod("ClickOn_DOUBLECLICK()");
+		myClipBoard.getValue().clear();
+		myClipBoard.getValue().add(this.myValue);
 
-            myLogger.LogFunctionEndDebug();
+	}
 
-            return lvLsReturn;
-        }
-
-        public List<String> GetValue_TOOLTIP()
-        {
-            List<String> lvLsReturn = new ArrayList<String>();
-
-            myLogger.LogFunctionStartDebug(this.getClass().getName() + ".GetValue_TOOLTIP");
-            lvLsReturn.add(this.myValue);
-
-            String lvs_ObjectName = getCAT();
-            
-            myClipBoard.setObjectName(lvs_ObjectName);
-            myClipBoard.setMethod("OKW_GetValue_TOOLTIP()");
-            myClipBoard.getValue().clear();
-            myClipBoard.getValue().add("TOOLTIP: " + this.myValue);
-
-            myLogger.LogFunctionEndDebug();
-
-            return lvLsReturn;
-        }
-
-        public void Set_Focus()
-        {
-            this.myValue = "";
-            myLogger.LogFunctionStartDebug(this.getClass().getName() + ".Set_Focus");
-            String lvs_ObjectName = getCAT();
-
-            myClipBoard.setObjectName(lvs_ObjectName);
-            myClipBoard.setMethod("Set_Focus()");
-            myClipBoard.getValue().clear();
-            myLogger.LogFunctionEndDebug();
-        }
-
-        public void TypeKey(List<String> fpLs_Value)
-        {
-            this.myValue = fpLs_Value.get(0);
-            myLogger.LogFunctionStartDebug(this.getClass().getName() + ".TypeKey");
-            
-            String lvs_ObjectName = getCAT();
-
-            myClipBoard.setObjectName(lvs_ObjectName);
-            myClipBoard.setMethod("OKW_TypeKey(List<String> fpLs_Value)");
-            myClipBoard.getValue().clear();
-            myClipBoard.getValue().add(fpLs_Value.get(0));
-            
-            myLogger.LogFunctionEndDebug();
-        }
+	public List<String> GetValue()
+	{
+		List<String> lvLsReturn = new ArrayList<String>();
 
 
-        /**
-         *  \brief
-         *  Testmethode liefert als Ergebnis fplsExpectedValue, also den erwarteten Wert, zurück.
-         *           *  
-         *  \return
-         *  Rückgabe fplsExpectedValue.
-         *  
-         *  \author Zoltan Hrabovszki
-         *  \date 2016.06.14
-         */
-        public ArrayList<String> VerifyValue(ArrayList<String> fplsExpectedValue) throws InterruptedException
-        {
+		lvLsReturn.add(this.myValue);
 
-          this.myValue = fplsExpectedValue.get(0);
-          myLogger.LogFunctionStartDebug(this.getClass().getName() + ".VerifyValue");
-          
-          String lvs_ObjectName = getCAT();
+		String lvs_ObjectName = getCAT();
 
-          myClipBoard.setObjectName(lvs_ObjectName);
-          myClipBoard.setMethod("VerifyValue(ArrayList<String> fplsExpectedValue)");
-          myClipBoard.getValue().clear();
-          myClipBoard.getValue().add(fplsExpectedValue.get(0));
-          
-          myLogger.LogFunctionEndDebug();
+		myClipBoard.setObjectName(lvs_ObjectName);
+		myClipBoard.setMethod("OKW_GetValue()");
+		myClipBoard.getValue().clear();
+		myClipBoard.getValue().add(this.myValue);
 
-          return fplsExpectedValue;
-        }
 
-    }
+
+		return lvLsReturn;
+	}
+
+	public List<String> GetValue_TOOLTIP()
+	{
+		List<String> lvLsReturn = new ArrayList<String>();
+
+
+		lvLsReturn.add(this.myValue);
+
+		String lvs_ObjectName = getCAT();
+
+		myClipBoard.setObjectName(lvs_ObjectName);
+		myClipBoard.setMethod("OKW_GetValue_TOOLTIP()");
+		myClipBoard.getValue().clear();
+		myClipBoard.getValue().add("TOOLTIP: " + this.myValue);
+
+
+
+		return lvLsReturn;
+	}
+
+	public void Set_Focus()
+	{
+		this.myValue = "";
+
+		String lvs_ObjectName = getCAT();
+
+		myClipBoard.setObjectName(lvs_ObjectName);
+		myClipBoard.setMethod("Set_Focus()");
+		myClipBoard.getValue().clear();
+
+	}
+
+	public void TypeKey(List<String> fpLs_Value)
+	{
+		this.myValue = fpLs_Value.get(0);
+
+
+		String lvs_ObjectName = getCAT();
+
+		myClipBoard.setObjectName(lvs_ObjectName);
+		myClipBoard.setMethod("OKW_TypeKey(List<String> fpLs_Value)");
+		myClipBoard.getValue().clear();
+		myClipBoard.getValue().add(fpLs_Value.get(0));
+
+
+	}
+
+
+	/**
+	 *  \brief
+	 *  Testmethode liefert als Ergebnis fplsExpectedValue, also den erwarteten Wert, zurück.
+	 *           *  
+	 *  \return
+	 *  Rückgabe fplsExpectedValue.
+	 *  
+	 *  \author Zoltan Hrabovszki
+	 *  \date 2016.06.14
+	 */
+	public ArrayList<String> VerifyValue(ArrayList<String> fplsExpectedValue) throws InterruptedException
+	{
+
+		this.myValue = fplsExpectedValue.get(0);
+
+
+		String lvs_ObjectName = getCAT();
+
+		myClipBoard.setObjectName(lvs_ObjectName);
+		myClipBoard.setMethod("VerifyValue(ArrayList<String> fplsExpectedValue)");
+		myClipBoard.getValue().clear();
+		myClipBoard.getValue().add(fplsExpectedValue.get(0));
+
+
+
+		return fplsExpectedValue;
+	}
+
+}

@@ -35,7 +35,7 @@
 
     Sie sollten eine Kopie der GNU General Public License zusammen mit 
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package okw.gui.adapter.selenium.webdriver;
 
@@ -44,336 +44,208 @@ import java.util.ArrayList;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.gui.adapter.selenium.SeAnyChildWindow;
 
-    /** 
-     * @ingroup groupSeleniumChildGUIAdapter
-     * 
-     *  \~german
-     *  Klasse Implementiert den Knopf zur Fenster-Maximierung eines Browsers.
-     *  
-     *  Die Klasse besitz keinen <tt>locator</tt>.
-     *  Die Maximierung wird via SeDriver.Instance.driver.
-     *  Die Menge der verwendbaren Schlüsselwörter ist begrenzt, da SeMAXIMIZE ein Virtuelle Pushbutten ist, d.h. ein Maximize Puschbutton simuliert wird.
-     *  
-     *  @par Wichtig: Klasse kann nur zusammen mit Selenium WebBrowser Klassen verwendet werden.
-     *  
-     *  http://www.software-testing-tutorials-automation.com/2015/02/how-to-setget-window-position-and-size.html
-     *  
-     *  \~english
-     *  \~
-     *  @author Zoltan Hrabovszki
-     *  \date 2014.04.19
-     */
-    public class SeMAXIMIZE extends SeAnyChildWindow
-    {
+/** 
+ * @ingroup groupSeleniumChildGUIAdapter
+ * 
+ *  \~german
+ *  Klasse Implementiert den Knopf zur Fenster-Maximierung eines Browsers.
+ *  
+ *  Die Klasse besitz keinen <tt>locator</tt>.
+ *  Die Maximierung wird via SeDriver.Instance.driver.
+ *  Die Menge der verwendbaren Schlüsselwörter ist begrenzt, da SeMAXIMIZE ein Virtuelle Pushbutten ist, d.h. ein Maximize Puschbutton simuliert wird.
+ *  
+ *  @par Wichtig: Klasse kann nur zusammen mit Selenium WebBrowser Klassen verwendet werden.
+ *  
+ *  http://www.software-testing-tutorials-automation.com/2015/02/how-to-setget-window-position-and-size.html
+ *  
+ *  \~english
+ *  \~
+ *  @author Zoltan Hrabovszki
+ *  \date 2014.04.19
+ */
+public class SeMAXIMIZE extends SeAnyChildWindow
+{
 
-        public SeMAXIMIZE()
-        {
-          super();
-        }
+	public SeMAXIMIZE()
+	{
+		super();
+	}
 
-        /** \~german
-         *  Ermittelt den textuellen Inhalt der Überschrift eines HTML-Tags anhand des Attributee "textContent".
-         *   
-         *  @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
-         *  \~english
-         *  \~
-         *  @author Zoltán Hrabovszki
-         *  \date 2013.12.07
-         */
-       public ArrayList<String> getCaption()
-       {
-           ArrayList<String> lvLsReturn = new ArrayList<String>();
+	/** \~german
+	 *  Ermittelt den textuellen Inhalt der Überschrift eines HTML-Tags anhand des Attributee "textContent".
+	 *   
+	 *  @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
+	 *  \~english
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2013.12.07
+	 */
+	public ArrayList<String> getCaption()
+	{
+		// TODO: SeURL.GetTooltip: Ausnahme-Meldung auslagern
+		throw new OKWFrameObjectMethodNotImplemented("\"Caption\" not supported by SeMAXIMIZE-class!");
+	}
 
-           try
-           {
-               this.LogFunctionStartDebug( "GetCaption" );
+	/** \~german
+	 *  Prüft die Existenz des aktuellen Objektes.
+	 *  
+	 *  - Methode ist Selenium spezifisch.
+	 *  - Elementare Funktion, muss hier defiert werden.
+	 *  - Es wird nicht auf das Objekt gewarten!
+	 *  - Es wird nur ein eizigesmal die Existenz geprüft.
+	 *  - Es wird keine Ausnahme ausgelöst, wenn das Object nicht vorhanden ist.
+	 *  - Wenn Das Objekt nicht eindeitig ist wird false Zurückgeliefert.
+	 *  
+	 *  @return true, falls das Objekt eindeutig gefunden worden ist ist, sonst false.
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2017.01.31
+	 */
+	public Boolean getExists()
+	{
+		this.LogPrintDebug( "Allways true" );
+		return true;
+	}
 
-               // TODO: SeURL.GetTooltip: Ausnahme-Meldung auslagern
-               throw new OKWFrameObjectMethodNotImplemented("\"Caption\" not supported by SeMAXIMIZE-class!");
-           }
-           finally
-           {
-               this.LogFunctionEndDebug( lvLsReturn );
-           }
-       }
-       
-       /** \~german
-        *  Prüft die Existenz des aktuellen Objektes.
-        *  
-        *  - Methode ist Selenium spezifisch.
-        *  - Elementare Funktion, muss hier defiert werden.
-        *  - Es wird nicht auf das Objekt gewarten!
-        *  - Es wird nur ein eizigesmal die Existenz geprüft.
-        *  - Es wird keine Ausnahme ausgelöst, wenn das Object nicht vorhanden ist.
-        *  - Wenn Das Objekt nicht eindeitig ist wird false Zurückgeliefert.
-        *  
-        *  @return true, falls das Objekt eindeutig gefunden worden ist ist, sonst false.
-        *  \~
-        *  @author Zoltán Hrabovszki
-        *  \date 2017.01.31
-        */
-        public Boolean getExists()
-        {
-            Boolean lvbReturn = true;
+	/** \~german
+	 *  Ermittelt, ob das aktuellen Objekt aktiv ist.
+	 *  
+	 *  Diese Klasse ist als virtuelles Textfeld ab
+	 *  
+	 *  @return true, und zwar immer!
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2014.04.19
+	 */
+	public Boolean getIsActive()
+	{
+		this.LogPrintDebug( "Allways true" );
+		return true;
+	}
 
-            try
-            {
-                this.LogFunctionStartDebug( "getExists" );
-                lvbReturn = true;
-            }
-            finally
-            {
-                this.LogFunctionEndDebug( lvbReturn );
-            }
-            return lvbReturn;
-        }
-       
-        /** \~german
-         *  Ermittelt, ob das aktuellen Objekt aktiv ist.
-         *  
-         *  Diese Klasse ist als virtuelles Textfeld ab
-         *  
-         *  @return true, und zwar immer!
-         *  \~
-         *  @author Zoltán Hrabovszki
-         *  \date 2014.04.19
-         */
-         public Boolean getIsActive()
-         {
-             Boolean lvbReturn = true;
+	/** \~german
+	 *  Methode wird nicht untertütz, Methode liefert den aktuellen Zustand Wert des Focus.
+	 * 
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2017.07.28
+	 */
+	public Boolean getHasFocus()
+	{
+		throw new OKWFrameObjectMethodNotImplemented("\"HasFocus\" not supported by SeMAXIMIZE-class!");
+	}
 
-             this.LogFunctionStartDebug( "getIsActive" );
-             this.LogPrintDebug( "Allways true" );
-             this.LogFunctionEndDebug( lvbReturn );
-
-             return lvbReturn;
-         }
-
-         /** \~german
-          *  Methode wird nicht untertütz, Methode liefert den aktuellen Zustand Wert des Focus.
-          * 
-          *  \~
-          *  @author Zoltán Hrabovszki
-          *  \date 2017.07.28
-          */
-         public Boolean getHasFocus()
-         {
-             Boolean lvbReturn = false;
-
-             try
-             {
-                 this.LogFunctionStartDebug( "getHasFocus" );
-
-                 // TODO: SeURL.GetTooltip: Ausnahme-Meldung auslagern
-                 throw new OKWFrameObjectMethodNotImplemented("\"HasFocus\" not supported by SeMAXIMIZE-class!");
-                 }
-             finally
-             {
-                 this.LogFunctionEndDebug( lvbReturn );
-             }
-
-         }
-
-         /** \~german
-          *  Ermittelt den textuellen Inhalt des Labels.
-          *  
-         *  __Diese Methode wird von dieser Klasse nicht unterstützt.__
-         *  
-         *  \~english
-         *  \~
-         *  @author Zoltan Hrabovszki
-         *  \date 2017.07.23
-        */
-        public ArrayList<String> getLabel()
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
-
-            try
-            {
-                this.LogFunctionStartDebug( "getLabel" );
-
-                // TODO: SeURL.GetTooltip: Ausnahme-Meldung auslagern
-                throw new OKWFrameObjectMethodNotImplemented("GetTooltip not supported by SeURL-class!");
-            }
-            finally
-            {
-                this.LogFunctionEndDebug( lvLsReturn );
-            }
-        }
-         
-         
-        /** \~german
-         *  \brief
-         *  Liest den aktuellen Tooltip-Wert der URL aus.
-         *  
-         *  __Diese Methode wird von dieser Klasse nicht unterstützt.__
-         *  
-         *  \~english
-         *  \~
-         *  @author Zoltan Hrabovszki
-         *  \date 2017.07.23
-         */
-        public ArrayList<String> getTooltip()
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
-
-            this.LogFunctionStartDebug("GetTooltip");
-
-            try
-            {
-                // TODO: SeURL.GetTooltip: Ausnahme-Meldung auslagern
-                throw new OKWFrameObjectMethodNotImplemented("GetTooltip not supported by SeURL-class!");
-            }
-            finally
-            {
-                this.LogFunctionEndDebug(lvLsReturn);
-            }
-            // return lvLsReturn;
-        }
-
-         /**
-          * \~german
-          * 
-          * Alle Value Schlüsselwörter werden nicht unterstützt
-          * 
-          *  \~english
-          *  \~
-          *  @author Zoltan Hrabovszki
-          *  \date 2017.07.28
-          */
-        public ArrayList<String> getValue()
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
-
-            this.LogFunctionStartDebug("getValue");
-
-            try
-            {
-                // TODO: SeMAXIMIZE.SetFocus: Ausnahme-Meldung auslagern
-                throw new OKWFrameObjectMethodNotImplemented("\"*Value\" Keyword are not supported by SeMAXIMIZE-class!");
-            }
-            finally
-            {
-               this.LogFunctionEndDebug(lvLsReturn);
-            }
-
-        }
-
-        
-        /** \~german
-         *  Klickt auf das aktuelle Objekt.
-         *  
-         *  \~english
-         *  \~
-         *  @author Zoltán Hrabovszki
-         * \date 2013.11.11
-         */
-        public void ClickOn()
-        {
-            try
-            {
-                this.LogFunctionStartDebug("ClickOn");
-
-                /*java.awt.Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-                
-                this.ResOpenList( "Screen Dimension:" );
-                this.LogPrint( screenSize.toString() );
-                this.ResCloseList();
-                
-                Dimension myDimension = new Dimension((int)screenSize.getWidth(), (int)screenSize.getHeight());
-                
-                // Set dimension to 
-                SeDriver.getInstance().getDriver().manage().window().setSize(myDimension);
-
-                Point myPoint = new Point(0,0);
-                
-                // Set dimension to 
-                SeDriver.getInstance().getDriver().manage().window().setPosition( myPoint );
-*/
-                
-                SeDriver.getInstance().getDriver().manage().window().maximize();
-            }
-            finally
-            {
-                this.LogFunctionEndDebug();
-            }
-        }
+	/** \~german
+	 *  Ermittelt den textuellen Inhalt des Labels.
+	 *  
+	 *  __Diese Methode wird von dieser Klasse nicht unterstützt.__
+	 *  
+	 *  \~english
+	 *  \~
+	 *  @author Zoltan Hrabovszki
+	 *  \date 2017.07.23
+	 */
+	public ArrayList<String> getLabel()
+	{
+		// TODO: SeURL.GetTooltip: Ausnahme-Meldung auslagern
+		throw new OKWFrameObjectMethodNotImplemented("GetTooltip not supported by SeURL-class!");
+	}
 
 
-         /**  \~german
-         *  Setzt den Focus in das aktuelle URL-TextFeld.
-         *  
-         *  __Diese Methode wird von dieser Klasse nicht unterstützt.__
-         *  
-         *  \~english
-         *  \~
-         *  @author Zoltan Hrabovszki
-         *  \date 2014.04.19
-         */
-        public void SetFocus()
-        {
-            this.LogFunctionStartDebug("SetFocus");
+	/** \~german
+	 *  \brief
+	 *  Liest den aktuellen Tooltip-Wert der URL aus.
+	 *  
+	 *  __Diese Methode wird von dieser Klasse nicht unterstützt.__
+	 *  
+	 *  \~english
+	 *  \~
+	 *  @author Zoltan Hrabovszki
+	 *  \date 2017.07.23
+	 */
+	public ArrayList<String> getTooltip()
+	{
+		throw new OKWFrameObjectMethodNotImplemented("GetTooltip not supported by SeURL-class!");
+	}
 
-            try
-            {
-                // TODO: SeMAXIMIZE.SetFocus: Ausnahme-Meldung auslagern
-                throw new OKWFrameObjectMethodNotImplemented("\"SetFocus\" not supported by SeMAXIMIZE-class!");
-            }
-            finally
-            {
-                this.LogFunctionEndDebug();
-            }
-        }
+	/**
+	 * \~german
+	 * 
+	 * Alle Value Schlüsselwörter werden nicht unterstützt
+	 * 
+	 *  \~english
+	 *  \~
+	 *  @author Zoltan Hrabovszki
+	 *  \date 2017.07.28
+	 */
+	public ArrayList<String> getValue()
+	{
+		// TODO: SeMAXIMIZE.SetFocus: Ausnahme-Meldung auslagern
+		throw new OKWFrameObjectMethodNotImplemented("\"*Value\" Keyword are not supported by SeMAXIMIZE-class!");
+	}
 
-         /**  \~german
-         *  Setzt den Wert der URL im aktiven Browser und navigiert zur gegebene Seite.
-         *  
-         *  Ctrl-Eingaben funktionieren nicht bei Set Value nicht (z.B. <tt>CTRL-C</tt>).
-         *  
-         *  \~english
-         *  \~
-         *  @author Zoltan Hrabovszki
-         *  \date 2014.04.19
-         */
-        public void SetValue(ArrayList<String> fps_Values)
-        {
-            this.LogFunctionStartDebug("SetValue", "fps_Values", fps_Values.get(0));
 
-            try
-            {
-                // TODO: SeMAXIMIZE.SetFocus: Ausnahme-Meldung auslagern
-                throw new OKWFrameObjectMethodNotImplemented("\"SetValue\" not supported by SeMAXIMIZE-class!");
-            }
-            finally
-            {
-                this.LogFunctionEndDebug();
-            }
-        }
+	/** \~german
+	 *  Klickt auf das aktuelle Objekt.
+	 *  
+	 *  \~english
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 * \date 2013.11.11
+	 */
+	public void ClickOn()
+	{
 
-        
-         /**  \~german
-         *  Setzt den Wert der URL im aktiven Browser/BrowserChild und navigiert zur gegebenen Seite.
-         *  
-         *  __Wichtig:__ Die URL wird in dieser Klasse technisch nicht über die Tastatur eigegeben. Implementierung erfolg 
-         *  aus Kompfort- und Kompatinilitätsgründen.
-         *  Dass heißt Ctrl-Eingaben funktionieren nicht(z.B. <tt>CTRL-C</tt>).
-         *  
-         *  \~english
-         *  \~
-         *  @author Zoltan Hrabovszki
-         *  \date 2014.04.19
-         */
-        public void TypeKey(ArrayList<String> fps_Values)
-        {
-            this.LogFunctionStartDebug("TypeKey", "fps_Values", fps_Values.get(0));
+		SeDriver.getInstance().getDriver().manage().window().maximize();
+	}
 
-            try
-            {
-                throw new OKWFrameObjectMethodNotImplemented("\"TypeKey\" not supported by SeMAXIMIZE-class!");
-            }
-            finally
-            {
-                this.LogFunctionEndDebug();
-            }
-        }
+
+	/**  \~german
+	 *  Setzt den Focus in das aktuelle URL-TextFeld.
+	 *  
+	 *  __Diese Methode wird von dieser Klasse nicht unterstützt.__
+	 *  
+	 *  \~english
+	 *  \~
+	 *  @author Zoltan Hrabovszki
+	 *  \date 2014.04.19
+	 */
+	public void SetFocus()
+	{
+		throw new OKWFrameObjectMethodNotImplemented("\"SetFocus\" not supported by SeMAXIMIZE-class!");
+	}
+
+	/**  \~german
+	 *  Setzt den Wert der URL im aktiven Browser und navigiert zur gegebene Seite.
+	 *  
+	 *  Ctrl-Eingaben funktionieren nicht bei Set Value nicht (z.B. <tt>CTRL-C</tt>).
+	 *  
+	 *  \~english
+	 *  \~
+	 *  @author Zoltan Hrabovszki
+	 *  \date 2014.04.19
+	 */
+	public void SetValue(ArrayList<String> fps_Values)
+	{
+		// TODO: SeMAXIMIZE.SetFocus: Ausnahme-Meldung auslagern
+		throw new OKWFrameObjectMethodNotImplemented("\"SetValue\" not supported by SeMAXIMIZE-class!");
+	}
+
+
+	/**  \~german
+	 *  Setzt den Wert der URL im aktiven Browser/BrowserChild und navigiert zur gegebenen Seite.
+	 *  
+	 *  __Wichtig:__ Die URL wird in dieser Klasse technisch nicht über die Tastatur eigegeben. Implementierung erfolg 
+	 *  aus Kompfort- und Kompatinilitätsgründen.
+	 *  Dass heißt Ctrl-Eingaben funktionieren nicht(z.B. <tt>CTRL-C</tt>).
+	 *  
+	 *  \~english
+	 *  \~
+	 *  @author Zoltan Hrabovszki
+	 *  \date 2014.04.19
+	 */
+	public void TypeKey(ArrayList<String> fps_Values)
+	{
+		throw new OKWFrameObjectMethodNotImplemented("\"TypeKey\" not supported by SeMAXIMIZE-class!");
+	}
 }

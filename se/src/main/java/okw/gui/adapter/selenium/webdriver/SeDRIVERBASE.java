@@ -80,9 +80,6 @@ public class SeDRIVERBASE extends SeAnyChildWindow
 	 */
 	public ArrayList<String> getCaption()
 	{
-		this.LogFunctionStartDebug( "getCaption" );
-		this.LogFunctionEndDebug( );
-
 		// TODO: SeALERTMESSAGE.getCaption: Ausnahme-Meldung auslagern
 		throw new OKWFrameObjectMethodNotImplemented("getCaption not supported by SeALERTMESSAGE-class!");
 	}
@@ -97,9 +94,6 @@ public class SeDRIVERBASE extends SeAnyChildWindow
 	 */
 	public Boolean getExists()
 	{
-		this.LogFunctionStartDebug( "getExists" );
-		this.LogFunctionEndDebug( );
-
 		// TODO: SeALERTMESSAGE.getExists: Ausnahme-Meldung auslagern
 		throw new OKWFrameObjectMethodNotImplemented("getExists not supported by SeALERTMESSAGE-class!");
 	}
@@ -114,9 +108,6 @@ public class SeDRIVERBASE extends SeAnyChildWindow
 	 */
 	public Boolean getHasFocus()
 	{
-		this.LogFunctionStartDebug( "getIsActive" );
-		this.LogFunctionEndDebug( );
-
 		// TODO: SeALERTMESSAGE.getHasFocus: Ausnahme-Meldung auslagern
 		throw new OKWFrameObjectMethodNotImplemented("getHasFocus not supported by SeALERTMESSAGE-class!");
 	}
@@ -131,9 +122,6 @@ public class SeDRIVERBASE extends SeAnyChildWindow
 	 */
 	public Boolean getIsActive()
 	{
-		this.LogFunctionStartDebug( "getIsActive" );
-		this.LogFunctionEndDebug( );
-
 		// TODO: SeALERTMESSAGE.getIsActive: Ausnahme-Meldung auslagern
 		throw new OKWFrameObjectMethodNotImplemented("getIsActive not supported by SeALERTMESSAGE-class!");
 	}
@@ -148,9 +136,6 @@ public class SeDRIVERBASE extends SeAnyChildWindow
 	 */
 	public ArrayList<String> getLabel()
 	{
-		this.LogFunctionStartDebug( "getLabel" );
-		this.LogFunctionEndDebug( );
-
 		// TODO: SeALERTMESSAGE.getLabel: Ausnahme-Meldung auslagern
 		throw new OKWFrameObjectMethodNotImplemented("GetTooltip not supported by SeALERTMESSAGE-class!");
 	}
@@ -165,9 +150,6 @@ public class SeDRIVERBASE extends SeAnyChildWindow
 	 */
 	public ArrayList<String> getTooltip()
 	{
-		this.LogFunctionStartDebug("GetTooltip");
-		this.LogFunctionEndDebug();
-
 		// TODO: SeALERTMESSAGE.getTooltip: Ausnahme-Meldung auslagern
 		throw new OKWFrameObjectMethodNotImplemented("GetTooltip not supported by SeALERTMESSAGE-class!");
 	}
@@ -186,9 +168,6 @@ public class SeDRIVERBASE extends SeAnyChildWindow
 	 */
 	public ArrayList<String> getValue()
 	{
-		this.LogFunctionStartDebug( "getValue" );
-		this.LogFunctionEndDebug( );
-
 		// TODO: SeALERTMESSAGE.getValue: Ausnahme-Meldung auslagern
 		throw new OKWFrameObjectMethodNotImplemented("getValue not supported by SeALERTMESSAGE-class!");
 	}
@@ -203,9 +182,6 @@ public class SeDRIVERBASE extends SeAnyChildWindow
 	 */
 	public void ClickOn()
 	{
-		this.LogFunctionStartDebug("SetFocus");
-		this.LogFunctionEndDebug();
-
 		// TODO: SeALERTMESSAGE.ClickOn: Ausnahme-Meldung auslagern
 		throw new OKWFrameObjectMethodNotImplemented("\"SetFocus\" not supported by SeALERTMESSAGE-class!");
 	}
@@ -220,9 +196,6 @@ public class SeDRIVERBASE extends SeAnyChildWindow
 	 */
 	public void SetFocus()
 	{
-		this.LogFunctionStartDebug("SetFocus");
-		this.LogFunctionEndDebug();
-
 		// TODO: SeALERTMESSAGE.SetFocus: Ausnahme-Meldung auslagern
 		throw new OKWFrameObjectMethodNotImplemented("\"SetFocus\" not supported by SeALERTMESSAGE-class!");
 	}
@@ -237,9 +210,6 @@ public class SeDRIVERBASE extends SeAnyChildWindow
 	 */
 	public void SetValue(ArrayList<String> fps_Values)
 	{
-		this.LogFunctionStartDebug("SetValue", "fps_Values", fps_Values.get(0));
-		this.LogFunctionEndDebug();
-
 		// TODO: SeALERTMESSAGE.SetValue: Ausnahme-Meldung auslagern
 		throw new OKWFrameObjectMethodNotImplemented("\"SetValue\" not supported by SeALERTMESSAGE-class!");
 	}
@@ -254,9 +224,6 @@ public class SeDRIVERBASE extends SeAnyChildWindow
 	 */
 	public void TypeKey(ArrayList<String> fps_Values)
 	{
-		this.LogFunctionStartDebug("TypeKey", "fps_Values", fps_Values.get(0));
-		this.LogFunctionEndDebug();
-
 		// TODO: SeALERTMESSAGE.TypeKey: Ausnahme-Meldung auslagern
 		throw new OKWFrameObjectMethodNotImplemented("\"TypeKey\" not supported by SeALERTMESSAGE-class!");
 	}

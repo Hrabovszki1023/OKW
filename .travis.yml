@@ -76,10 +76,10 @@ jobs:
           Package="log2html"
 #
     - stage: chrome
+#      env:
+#          TAG="SeBACK_EN_Chrome_Test"
+#          Package="se"
       env:
-          TAG="SeBACK_EN_Chrome_Test"
-          Package="se"
-    - env:
           TAG="SeBrowserChild_EN_Chrome_Test"
           Package="se"
     - env:

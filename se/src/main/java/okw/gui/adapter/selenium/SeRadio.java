@@ -163,27 +163,19 @@ public class SeRadio extends SeAnyChildWindow
 	public ArrayList<String> getValue()
 	{
 		ArrayList<String> lvls_Return = new ArrayList<String>();
-		try
+
+		// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+		this.WaitForMe();
+
+		if (this.getIsSelected())
 		{
-			LogFunctionStartDebug("getValue");
-
-			// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-			this.WaitForMe();
-
-			if (this.getIsSelected())
-			{
-				String lvsValue = OKW_Const_Sngltn.getInstance().GetConst4Internalname("CHECKED");
-				lvls_Return.add(lvsValue);
-			}
-			else
-			{
-				String lvsValue = OKW_Const_Sngltn.getInstance().GetConst4Internalname("UNCHECKED");
-				lvls_Return.add(lvsValue);
-			}
+			String lvsValue = OKW_Const_Sngltn.getInstance().GetConst4Internalname("CHECKED");
+			lvls_Return.add(lvsValue);
 		}
-		finally
+		else
 		{
-			LogFunctionEndDebug(lvls_Return);
+			String lvsValue = OKW_Const_Sngltn.getInstance().GetConst4Internalname("UNCHECKED");
+			lvls_Return.add(lvsValue);
 		}
 
 		return lvls_Return;
@@ -201,20 +193,9 @@ public class SeRadio extends SeAnyChildWindow
 	 */
 	public Boolean getIsSelected()
 	{
-		Boolean lvbReturn = false;
+		// Hole Zusand: Häckchen oder kein Häckchen, das ist hier die Frage?
+		Boolean lvbReturn = this.WaitForInteractionReturnBoolean( () -> { return this.Me().isSelected(); } );
 
-
-		try
-		{
-			LogFunctionStartDebug( "getIsSelected" );
-
-			// Hole Zusand: Häckchen oder kein Häckchen, das ist hier die Frage?
-			lvbReturn = this.WaitForInteractionReturnBoolean( () -> { return this.Me().isSelected(); } );
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvbReturn );
-		}
 		return lvbReturn;
 	}
 
@@ -238,30 +219,22 @@ public class SeRadio extends SeAnyChildWindow
 	public ArrayList<String> getCaption()
 	{
 		ArrayList<String> lvLsReturn = new ArrayList<String>();
-		
+
+
+		// Use the Implementation a Label-tag?
 		try
 		{
-			this.LogFunctionStartDebug("getCaption");
-			
-			// Use the Implementation a Label-tag?
-			try
-			{
-				lvLsReturn.addAll( super.getLabel() );
-			}
-			catch( NoSuchElementException e )
-			{   
-				// No, label is defined, then get the "textContent" of WebElement is the "Caption"
-	            String myAttribute = WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "textContent" ); } );
-	            myAttribute = StringUtils.normalizeSpace( myAttribute );
-	            
-	            lvLsReturn.add( myAttribute );
-			}			            
+			lvLsReturn.addAll( super.getLabel() );
 		}
-		finally
-		{      
-			this.LogFunctionEndDebug( );
-		}
-		
+		catch( NoSuchElementException e )
+		{   
+			// No, label is defined, then get the "textContent" of WebElement is the "Caption"
+			String myAttribute = WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "textContent" ); } );
+			myAttribute = StringUtils.normalizeSpace( myAttribute );
+
+			lvLsReturn.add( myAttribute );
+		}			            
+
 		return lvLsReturn;
 	}
 
@@ -279,16 +252,8 @@ public class SeRadio extends SeAnyChildWindow
 	@Override
 	public ArrayList<String> getLabel()
 	{
-		try
-		{
-			this.LogFunctionStartDebug("getLabel");
-			// String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetCaption()");
-			throw new OKWFrameObjectMethodNotImplemented("Radiobutton/SeRadion has no label! - See Caption...");
-		}
-		finally
-		{      
-			this.LogFunctionEndDebug( );
-		}
+		// String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetCaption()");
+		throw new OKWFrameObjectMethodNotImplemented("Radiobutton/SeRadion has no label! - See Caption...");
 	}
 
 	/**
@@ -304,118 +269,96 @@ public class SeRadio extends SeAnyChildWindow
 	@Override
 	public void SetValue( ArrayList<String> Values )
 	{
+		this.Select(Values);
+	}
 
-		try
+	/**
+	 * \~german
+	 * 
+	 * Hinweis: Auf die Existenz des GUI-Objekte wird in der MethodeClickon gewartet!
+	 *
+	 * \~english
+	 * 
+	 *  Note: The existence of the GUI object is waited for in the Clickon method!
+	 * \~
+	 * @author Zoltán Hrabovszki
+	 * \date 2016.10.06
+	 */
+	@Override
+	public void Select( ArrayList<String> Values )
+	{
+		String Value = Values.get(0);
+		String myCHECKED = OKW_Const_Sngltn.getInstance().GetConst4Internalname("CHECKED");
+		String myUNCHECKED = OKW_Const_Sngltn.getInstance().GetConst4Internalname("UNCHECKED");
+
+		if ( Value.equals(myCHECKED) )
 		{
-			this.LogFunctionStartDebug( "SetValue" );
-			
-			this.Select(Values);
-
+			this.ClickOn();
 		}
-		finally
+		else if ( Value.equals(myUNCHECKED) )
 		{
-			this.LogFunctionEndDebug();
+			throw new OKWNotAllowedValueException("RadioButton is not UNCHECK-able!");
+		}
+		else
+		{
+			String lvsLM = LM.GetMessage("Common", "OKWNotAllowedValueException", Value);
+			throw new OKWNotAllowedValueException(lvsLM);
 		}
 	}
 
-		/**
-		 * \~german
-		 * 
-		 * Hinweis: Auf die Existenz des GUI-Objekte wird in der MethodeClickon gewartet!
-		 *
-		 * \~english
-		 * 
-		 *  Note: The existence of the GUI object is waited for in the Clickon method!
-		 * \~
-		 * @author Zoltán Hrabovszki
-		 * \date 2016.10.06
-		 */
-		@Override
-		public void Select( ArrayList<String> Values )
-		{
 
-			try
-			{
-				this.LogFunctionStartDebug( "SetValue" );
-
-				String Value = Values.get(0);
-				String myCHECKED = OKW_Const_Sngltn.getInstance().GetConst4Internalname("CHECKED");
-				String myUNCHECKED = OKW_Const_Sngltn.getInstance().GetConst4Internalname("UNCHECKED");
-
-				if ( Value.equals(myCHECKED) )
-				{
-					this.ClickOn();
-				}
-				else if ( Value.equals(myUNCHECKED) )
-				{
-					throw new OKWNotAllowedValueException("RadioButton is not UNCHECK-able!");
-				}
-				else
-				{
-					String lvsLM = LM.GetMessage("Common", "OKWNotAllowedValueException", Value);
-					throw new OKWNotAllowedValueException(lvsLM);
-				}
-			}
-			finally
-			{
-				this.LogFunctionEndDebug();
-			}
-
-	}
+	//	/** \~german
+	//	 *  Methode liefert den aktuellen Zustand/Wert des Focus.
+	//	 *  
+	//	 *  @see http://stackoverflow.com/questions/7491806/in-selenium-how-do-i-find-the-current-object
+	//	 *  
+	//	 *  \~english
+	//	 *  method returns the current state/value of the focus.
+	//	 *  
+	//	 *  @see http://stackoverflow.com/questions/7491806/in-selenium-how-do-i-find-the-current-object
+	//	 *  
+	//	 *  \~
+	//	 *  @author Zoltán Hrabovszki
+	//	 *  \date 2016.12.20
+	//	 */
+	//	@Override
+	//	public Boolean getHasFocus()
+	//	{
+	//		try
+	//		{
+	//			this.LogFunctionStartDebug("getHasFocus");
+	//			// String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetCaption()");
+	//			throw new UnsupportedOperationException("The Radiobutton/SeInputRadion can´t have a focus. The RadioList has the focus.");
+	//		}
+	//		finally
+	//		{      
+	//			this.LogFunctionEndDebug( );
+	//		}
+	//	}
 
 
-//	/** \~german
-//	 *  Methode liefert den aktuellen Zustand/Wert des Focus.
-//	 *  
-//	 *  @see http://stackoverflow.com/questions/7491806/in-selenium-how-do-i-find-the-current-object
-//	 *  
-//	 *  \~english
-//	 *  method returns the current state/value of the focus.
-//	 *  
-//	 *  @see http://stackoverflow.com/questions/7491806/in-selenium-how-do-i-find-the-current-object
-//	 *  
-//	 *  \~
-//	 *  @author Zoltán Hrabovszki
-//	 *  \date 2016.12.20
-//	 */
-//	@Override
-//	public Boolean getHasFocus()
-//	{
-//		try
-//		{
-//			this.LogFunctionStartDebug("getHasFocus");
-//			// String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetCaption()");
-//			throw new UnsupportedOperationException("The Radiobutton/SeInputRadion can´t have a focus. The RadioList has the focus.");
-//		}
-//		finally
-//		{      
-//			this.LogFunctionEndDebug( );
-//		}
-//	}
-
-
-//	/** \~german
-//	 *  Diese Implemnetierung geht davon aus das ein RadioButten 
-//	 *  selbst keinen Focus besitzen kann sondern die RadiList, die dieser angehört.
-//	 *  \~english
-//	 *  \~
-//	 *  @author Zoltán Hrabovszki
-//	 *  \date 2013.11.11
-//	 */
-//	@Override
-//	public void SetFocus()
-//	{
-//		try
-//		{
-//			this.LogFunctionStartDebug("SetFocus");
-//			// String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetCaption()");
-//			throw new OKWFrameObjectMethodNotImplemented("The Radiobutton/SeInputRadion itself can not have a focus, the RadioList has the focus. Please use VerifyHasFosus with the RadioList!");
-//		}
-//		finally
-//		{      
-//			this.LogFunctionEndDebug( );
-//		}
-//	}
+	//	/** \~german
+	//	 *  Diese Implemnetierung geht davon aus das ein RadioButten 
+	//	 *  selbst keinen Focus besitzen kann sondern die RadiList, die dieser angehört.
+	//	 *  \~english
+	//	 *  \~
+	//	 *  @author Zoltán Hrabovszki
+	//	 *  \date 2013.11.11
+	//	 */
+	//	@Override
+	//	public void SetFocus()
+	//	{
+	//		try
+	//		{
+	//			this.LogFunctionStartDebug("SetFocus");
+	//			// String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetCaption()");
+	//			throw new OKWFrameObjectMethodNotImplemented("The Radiobutton/SeInputRadion itself can not have a focus, the RadioList has the focus. Please use VerifyHasFosus with the RadioList!");
+	//		}
+	//		finally
+	//		{      
+	//			this.LogFunctionEndDebug( );
+	//		}
+	//	}
 
 	/** \~german
 	 *  Tastatur Eingabe an das Objekt

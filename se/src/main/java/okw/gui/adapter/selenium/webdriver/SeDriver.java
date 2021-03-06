@@ -162,44 +162,36 @@ public class SeDriver
 	 */
 	public void swichToFrame( String iframeID )
 	{
-		LOG.LogFunctionStartDebug( "SeDriver.swichToFrame", "String iframeID", iframeID );
+		driver.switchTo().defaultContent();
+		LOG.LogPrintDebug( "Reset switch to: defaultContent" );
 
-		try {
-
-			driver.switchTo().defaultContent();
-			LOG.LogPrintDebug( "Reset switch to: defaultContent" );
-
-			// then set to your iFrame if not null or empty!
-			if ( !okw.OKW_Helper.isStringNullOrEmpty( iframeID ) )
-			{
-				try
-				{
-					driver.switchTo().frame( iframeID );
-					LOG.LogPrintDebug( "Switch to iFrame:" + iframeID );
-				}
-				catch (NoSuchFrameException e)
-				{
-					LOG.LogWarning( "Unable to locate frame with id " + iframeID );
-					LOG.LogPrint( "Stack Trace: " + e.getStackTrace() );
-					throw e;
-				}
-				catch (Exception e)
-				{
-					LOG.LogWarning( "Unable to set Conext to iFrame with id " + iframeID );
-					LOG.LogPrint( "Stack Trace: " + e.getStackTrace() );
-					throw e;
-				}
-			}
-			else
-			{
-				LOG.LogPrintDebug( "iframeID is Empty or Null" );
-				LOG.LogPrintDebug( "We stay on the defaultContent." );
-			}
-		}
-		finally
+		// then set to your iFrame if not null or empty!
+		if ( !okw.OKW_Helper.isStringNullOrEmpty( iframeID ) )
 		{
-			LOG.LogFunctionEndDebug();
+			try
+			{
+				driver.switchTo().frame( iframeID );
+				LOG.LogPrintDebug( "Switch to iFrame:" + iframeID );
+			}
+			catch (NoSuchFrameException e)
+			{
+				LOG.LogWarning( "Unable to locate frame with id " + iframeID );
+				LOG.LogPrint( "Stack Trace: " + e.getStackTrace() );
+				throw e;
+			}
+			catch (Exception e)
+			{
+				LOG.LogWarning( "Unable to set Conext to iFrame with id " + iframeID );
+				LOG.LogPrint( "Stack Trace: " + e.getStackTrace() );
+				throw e;
+			}
 		}
+		else
+		{
+			LOG.LogPrintDebug( "iframeID is Empty or Null" );
+			LOG.LogPrintDebug( "We stay on the defaultContent." );
+		}
+
 		return;
 	}
 
@@ -240,76 +232,67 @@ public class SeDriver
 		boolean isRoot = "/*".equals(fpsLocator);
 
 		// Action:
-		try {
 
-			LOG.LogFunctionStartDebug("SeDriver.getWebElement", "fpsLocator", fpsLocator);
+		// Wenn der locator allgemein auf die Wurzel/root zeigt ("/*"),
+		// dann wird nur der defaultpage als Webelement ermittelt und nicht in weiteren
+		// möglichen iframes nach dem Locator fpsLocator gesucht
+		LOG.LogPrint( "Locator" + fpsLocator );
+		if ( isRoot )
+		{
+			LOG.LogPrint( "root" );
+			iframeIDs.add( "" );
+		}
+		else{
+			LOG.LogPrint( "no root" );
+			iframeIDs.addAll(getIframesID());
+		}
+		LOG.LogPrintDebug("Number of iFrames found: " + ((Integer) iframeIDs.size()).toString());
 
-			// Wenn der locator allgemein auf die Wurzel/root zeigt ("/*"),
-			// dann wird nur der defaultpage als Webelement ermittelt und nicht in weiteren
-			// möglichen iframes nach dem Locator fpsLocator gesucht
-			LOG.LogPrint( "Locator" + fpsLocator );
-			if ( isRoot )
-			{
-				LOG.LogPrint( "root" );
-				iframeIDs.add( "" );
-			}
-			else{
-				LOG.LogPrint( "no root" );
-				iframeIDs.addAll(getIframesID());
-			}
-			LOG.LogPrintDebug("Number of iFrames found: " + ((Integer) iframeIDs.size()).toString());
+		// Alle iframes (ID) jeweils nach Webelementen durchsuchen. die zum gegebene
+		// Lokator fpsLocator passen.
+		for (String iframeID : iframeIDs) {
+			try
+			{   // Note: Wenn nicht genau ein Eement gefunden wird, dann löst das hier schon eine Ausnahme aus
+				myWebElement = this.getWebElement(iframeID, fpsLocator);
 
-			// Alle iframes (ID) jeweils nach Webelementen durchsuchen. die zum gegebene
-			// Lokator fpsLocator passen.
-			for (String iframeID : iframeIDs) {
-				try
-				{   // Note: Wenn nicht genau ein Eement gefunden wird, dann löst das hier schon eine Ausnahme aus
-					myWebElement = this.getWebElement(iframeID, fpsLocator);
-
-					if (myWebElement != null) {
-						WebElements.add(myWebElement);
-						this.currentiframeID = iframeID;
-						continue;
-					}
-				}
-				catch (OKWGUIObjectNotFoundException | NoSuchFrameException e)
-				{
-					// OKWGUIObjectNotFoundException abfangen und im nächsten iFrame locator-Match
-					// suchen...
-					// Alle anderen Exception Durchlassen
-					// Die Exception OKWGUIObjectNotFoundException wird nachder Schleife unten
-					// ausgelöst
-					// wenn keiner der iFrames ein Objekt passend zum Locator fpsLocator enthält.
+				if (myWebElement != null) {
+					WebElements.add(myWebElement);
+					this.currentiframeID = iframeID;
 					continue;
 				}
 			}
-
-			// Error handling...
-			if (WebElements.size() == 0)
-			{   // Wenn in keinem der Frames ein Webelement zum gegebenem Locator gefunden wurde,
-				// dann die Ausnamhe OKWGUIObjectNotFoundException auslösen.
-				throw new OKWGUIObjectNotFoundException(
-						"GUI object was not found. Locator: \"" + fpsLocator + "\"");
-			}
-			else if (WebElements.size() > 1)
-			{   // Wenn in mehr als einem Frame Webelemente zum gegebenem Locator
-				// gefunden wurden, dann OKWGUIObjectNotFoundException auslösen.
-				throw new OKWGUIObjectNotUniqueException(
-						"Object was not uniquely found. Several objects match the locator: \"" + fpsLocator + "\"");
-			}
-			else
+			catch (OKWGUIObjectNotFoundException | NoSuchFrameException e)
 			{
-				// Wenn genua ein elemnt gefunden wird wird der Contxt auf das iFrame 
-				// gesetzt in dem sich das Objekt befindet.
-				this.swichToFrame(this.currentiframeID);
+				// OKWGUIObjectNotFoundException abfangen und im nächsten iFrame locator-Match
+				// suchen...
+				// Alle anderen Exception Durchlassen
+				// Die Exception OKWGUIObjectNotFoundException wird nachder Schleife unten
+				// ausgelöst
+				// wenn keiner der iFrames ein Objekt passend zum Locator fpsLocator enthält.
+				continue;
 			}
+		}
 
+		// Error handling...
+		if (WebElements.size() == 0)
+		{   // Wenn in keinem der Frames ein Webelement zum gegebenem Locator gefunden wurde,
+			// dann die Ausnamhe OKWGUIObjectNotFoundException auslösen.
+			throw new OKWGUIObjectNotFoundException(
+					"GUI object was not found. Locator: \"" + fpsLocator + "\"");
 		}
-		finally
+		else if (WebElements.size() > 1)
+		{   // Wenn in mehr als einem Frame Webelemente zum gegebenem Locator
+			// gefunden wurden, dann OKWGUIObjectNotFoundException auslösen.
+			throw new OKWGUIObjectNotUniqueException(
+					"Object was not uniquely found. Several objects match the locator: \"" + fpsLocator + "\"");
+		}
+		else
 		{
-			// edal wie LogFunction Level schließen...
-			LOG.LogFunctionEndDebug();
+			// Wenn genua ein elemnt gefunden wird wird der Contxt auf das iFrame 
+			// gesetzt in dem sich das Objekt befindet.
+			this.swichToFrame(this.currentiframeID);
 		}
+
 		return WebElements.get(0);
 	}
 
@@ -430,41 +413,36 @@ public class SeDriver
 		ArrayList<String> lvReturn = new ArrayList<String>();
 		lvReturn.add(""); // Default iframe
 
-		LOG.LogFunctionStartDebug("SeDriver.getIframesID");
-		try {
-			// f
-			this.swichToFrame(""); // TODO ZH tem eingabut
-			List<WebElement> iframes = this.driver.findElements(By.tagName("iframe"));
+		// f
+		this.swichToFrame(""); // TODO ZH tem eingabut
+		List<WebElement> iframes = this.driver.findElements(By.tagName("iframe"));
 
-			LOG.ResOpenListDebug("iFrames...");
-			try
+		LOG.ResOpenListDebug("iFrames...");
+		try
+		{
+			for (WebElement iframe : iframes)
 			{
-				for (WebElement iframe : iframes)
+				String myID = iframe.getAttribute("id");
+
+				if (!okw.OKW_Helper.isStringNullOrEmpty(myID))
 				{
-					String myID = iframe.getAttribute("id");
+					lvReturn.add(myID);
+					LOG.LogPrintDebug("ID='" + myID + "'");
+				}
+				else
+				{
+					myID = iframe.getAttribute("name");
 
-					if (!okw.OKW_Helper.isStringNullOrEmpty(myID))
-					{
+					if (!okw.OKW_Helper.isStringNullOrEmpty(myID)) {
 						lvReturn.add(myID);
-						LOG.LogPrintDebug("ID='" + myID + "'");
-					}
-					else
-					{
-						myID = iframe.getAttribute("name");
-
-						if (!okw.OKW_Helper.isStringNullOrEmpty(myID)) {
-							lvReturn.add(myID);
-							LOG.LogPrintDebug("name='" + myID + "'");
-						} else {
-							LOG.LogWarning("iFrame has neither ID nor Name:" + iframe.toString());
-						}
+						LOG.LogPrintDebug("name='" + myID + "'");
+					} else {
+						LOG.LogWarning("iFrame has neither ID nor Name:" + iframe.toString());
 					}
 				}
-			} finally {
-				LOG.ResCloseListDebug();
 			}
 		} finally {
-			LOG.LogFunctionEndDebug(lvReturn);
+			LOG.ResCloseListDebug();
 		}
 
 		return lvReturn;
@@ -492,55 +470,40 @@ public class SeDriver
 	 *                                           \~
 	 * @author Zoltán Hrabovszki \date 2015.05.12
 	 */
-	protected WebElement getWebElement(String fpsFrameID, String fpsLocator) {
-		WebElement webElement = null;
+	protected WebElement getWebElement(String fpsFrameID, String fpsLocator)
+	{
 		List<WebElement> webElements = null;
 
-		try
+		// 1. auf das iFrame Setzen oder zurück auf default.
+		// 2. Kann exception 
+		this.swichToFrame(fpsFrameID);
+
+		// Element ggf. des richtigen Frames Holen.
+		webElements = this.driver.findElements(By.xpath(fpsLocator));
+
+		if (webElements.size() == 0)
 		{
-			LOG.LogFunctionStartDebug("SeDriver.getWebElement", "fpsFrameID", fpsFrameID, "fpsLocator",
-					fpsLocator);
+			String lvsPrintMe = "GUI object was not found. Locator: \"" + fpsLocator + "\"";
+			LOG.LogPrintDebug(lvsPrintMe);
 
-			// 1. auf das iFrame Setzen oder zurück auf default.
-			// 2. Kann exception 
-			this.swichToFrame(fpsFrameID);
-
-			// Element ggf. des richtigen Frames Holen.
-			webElements = this.driver.findElements(By.xpath(fpsLocator));
-
-			if (webElements.size() == 0)
-			{
-				String lvsPrintMe = "GUI object was not found. Locator: \"" + fpsLocator + "\"";
-				LOG.LogPrintDebug(lvsPrintMe);
-
-				throw new OKWGUIObjectNotFoundException(lvsPrintMe);
-			}
-			else if (webElements.size() > 1)
-			{
-				String lvsPrintMe = "Object was not uniquely found. Several objects match the locator: \"" + fpsLocator
-						+ "\"";
-
-				LOG.LogWarning(lvsPrintMe);
-
-				throw new OKWGUIObjectNotUniqueException(lvsPrintMe);
-			}
-			else
-			{
-				String lvsPrintMe = "GUI object was found. iframe: '" + fpsFrameID + "' Locator: '" + fpsLocator + "'";
-				LOG.LogPrintDebug(lvsPrintMe);
-				webElement = webElements.get(0);
-			}
+			throw new OKWGUIObjectNotFoundException(lvsPrintMe);
 		}
-		finally
+		else if (webElements.size() > 1)
 		{
-			// Logfunction schliessen...
-			if (webElement != null)
-				LOG.LogFunctionEndDebug(webElement.toString());
-			else
-				LOG.LogFunctionEndDebug();
+			String lvsPrintMe = "Object was not uniquely found. Several objects match the locator: \"" + fpsLocator
+					+ "\"";
+
+			LOG.LogWarning(lvsPrintMe);
+
+			throw new OKWGUIObjectNotUniqueException(lvsPrintMe);
+		}
+		else
+		{
+			String lvsPrintMe = "GUI object was found. iframe: '" + fpsFrameID + "' Locator: '" + fpsLocator + "'";
+			LOG.LogPrintDebug(lvsPrintMe);
 		}
 
-		return webElement;
+		return webElements.get(0);
 	}
 
 	/** \~german
@@ -559,20 +522,12 @@ public class SeDriver
 	{
 		List<WebElement> WebElements = null;
 
-		try
-		{
-			LOG.LogFunctionStartDebug( "SeDriver.getElement", "fpsFrameID", fpsFrameID, "fpsLocator", fpsLocator );
+		// 1. Auf das richtige frame Setzen oder zurück auf default. 
+		this.swichToFrame( fpsFrameID );
 
-			// 1. Auf das richtige frame Setzen oder zurück auf default. 
-			this.swichToFrame( fpsFrameID );
+		// 2. Element im Frame finden.
+		WebElements = this.driver.findElements( By.xpath( fpsLocator ) );
 
-			// 2. Element im Frame finden.
-			WebElements = this.driver.findElements( By.xpath( fpsLocator ) );
-		}
-		finally
-		{
-			LOG.LogFunctionEndDebug(); ;    
-		}
 		return WebElements;
 	}
 

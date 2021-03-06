@@ -35,7 +35,7 @@
 
     Sie sollten eine Kopie der GNU General Public License zusammen mit 
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package okw;
 
@@ -44,7 +44,6 @@ import java.util.*;
 import javax.xml.xpath.XPathExpressionException;
 
 import okw.exceptions.*;
-import okw.log.Logger_Sngltn;
 
 /// \~german
 /// \brief
@@ -61,11 +60,6 @@ import okw.log.Logger_Sngltn;
 /// 
 public class OKW_Helper
 {
-
-	/**
-	 *  \copydoc OKW_CurrentObject_Sngltn::Log()
-	 */
-	private static Logger_Sngltn		Log	= Logger_Sngltn.getInstance();
 
 	/**
 	 *  \copydoc OKW_CurrentObject_Sngltn::LM()
@@ -99,23 +93,14 @@ public class OKW_Helper
 	public static String Boolean2String( Boolean fpbTrueOrFalse )
 	{
 		String lvsReturn = "";
-		
-		Log.LogFunctionStartDebug("OKW_Helper.Boolean2String", "fpbTrueOrFalse", fpbTrueOrFalse.toString());
 
-		try
+		if (fpbTrueOrFalse)
 		{
-			if (fpbTrueOrFalse)
-			{
-				lvsReturn = "true";
-			}
-			else
-			{
-				lvsReturn = "false";
-			}
+			lvsReturn = "true";
 		}
-		finally
+		else
 		{
-			Log.LogFunctionEndDebug(lvsReturn);
+			lvsReturn = "false";
 		}
 
 		return lvsReturn;
@@ -201,47 +186,38 @@ public class OKW_Helper
 		int RangeMin = 1;
 		int RangeMax = 1;
 
-		try
+
+		if ( ! "".equals( fpsDelimiter ) )
 		{
-			Log.LogFunctionStartDebug("OKW_Helper.GetLeftFromDelimiterNumber", "fpsSource", fpsSource, "fpsDelimiter",
-					fpsDelimiter, "fpiCount", fpiCount.toString());
+			lvLsSplitedSource = splitString(fpsSource, fpsDelimiter);
 
-			if ( ! "".equals( fpsDelimiter ) )
+			// Gültigen Werte bereich berechnen:
+			RangeMax = lvLsSplitedSource.size() - 1;
+			RangeMin = 1;
+
+			// 1. Prüfen ob Split Zahl <= Count, anderefalls Exception
+			// auslösen...
+			if ((RangeMin <= fpiCount) & (fpiCount <= RangeMax))
 			{
-				lvLsSplitedSource = splitString(fpsSource, fpsDelimiter);
+				// 2. Dann bauen wir den String auf
+				lvsReturn = lvLsSplitedSource.get(0);
 
-				// Gültigen Werte bereich berechnen:
-				RangeMax = lvLsSplitedSource.size() - 1;
-				RangeMin = 1;
-
-				// 1. Prüfen ob Split Zahl <= Count, anderefalls Exception
-				// auslösen...
-				if ((RangeMin <= fpiCount) & (fpiCount <= RangeMax))
+				for (int i = 1; i < fpiCount; i++)
 				{
-					// 2. Dann bauen wir den String auf
-					lvsReturn = lvLsSplitedSource.get(0);
-
-					for (int i = 1; i < fpiCount; i++)
-					{
-						lvsReturn = lvsReturn + fpsDelimiter + lvLsSplitedSource.get(i);
-					}
-				}
-				else
-				{
-					String lvsLM = LM.GetMessage("GetLeftFromDelimiterNumber", "OKWDelimiterCountOutOfRangeException",
-							fpiCount, RangeMax);
-					throw new IndexOutOfBoundsException(lvsLM);
+					lvsReturn = lvsReturn + fpsDelimiter + lvLsSplitedSource.get(i);
 				}
 			}
 			else
 			{
-				String lvsLM = LM.GetMessage("GetLeftFromDelimiterNumber", "OKWDelimiterIsEmptyException");
-				throw new IllegalArgumentException(lvsLM);
+				String lvsLM = LM.GetMessage("GetLeftFromDelimiterNumber", "OKWDelimiterCountOutOfRangeException",
+						fpiCount, RangeMax);
+				throw new IndexOutOfBoundsException(lvsLM);
 			}
 		}
-		finally
+		else
 		{
-			Log.LogFunctionEndDebug(lvsReturn);
+			String lvsLM = LM.GetMessage("GetLeftFromDelimiterNumber", "OKWDelimiterIsEmptyException");
+			throw new IllegalArgumentException(lvsLM);
 		}
 
 		return lvsReturn;
@@ -307,47 +283,39 @@ public class OKW_Helper
 		List<String> lvLsSplitedSource = null;
 		int RangeMin = 1;
 		int RangeMax = 1;
-		try
+
+
+		if (  ! "".equals( fpsDelimiter ))
 		{
-			Log.LogFunctionStartDebug("OKW_Helper.GetRigthFromDelimiterNumber", "fpsSource", fpsSource, "fpsDelimiter",
-					fpsDelimiter, "fpiCount", fpiCount.toString());
-			
-			if (  ! "".equals( fpsDelimiter ))
+			lvLsSplitedSource = splitString(fpsSource, fpsDelimiter);
+
+			// Gültigen Werte bereich berechnen:
+			RangeMax = lvLsSplitedSource.size() - 1;
+			RangeMin = 1;
+
+			// 1. Prüfen ob Split Zahl <= Count, anderefalls Exception
+			// auslösen...
+			if ((RangeMin <= fpiCount) & (fpiCount <= RangeMax))
 			{
-				lvLsSplitedSource = splitString(fpsSource, fpsDelimiter);
+				// 2. Dann bauen wir den String auf
+				lvsReturn = lvLsSplitedSource.get(fpiCount);
 
-				// Gültigen Werte bereich berechnen:
-				RangeMax = lvLsSplitedSource.size() - 1;
-				RangeMin = 1;
-
-				// 1. Prüfen ob Split Zahl <= Count, anderefalls Exception
-				// auslösen...
-				if ((RangeMin <= fpiCount) & (fpiCount <= RangeMax))
+				for (int i = fpiCount + 1; i < lvLsSplitedSource.size(); i++)
 				{
-					// 2. Dann bauen wir den String auf
-					lvsReturn = lvLsSplitedSource.get(fpiCount);
-
-					for (int i = fpiCount + 1; i < lvLsSplitedSource.size(); i++)
-					{
-						lvsReturn = lvsReturn + fpsDelimiter + lvLsSplitedSource.get(i);
-					}
-				}
-				else
-				{
-					String lvsLM = LM.GetMessage("GetRightFromDelimiterNumber", "OKWDelimiterCountOutOfRangeException",
-							fpiCount, RangeMax);
-					throw new IndexOutOfBoundsException(lvsLM);
+					lvsReturn = lvsReturn + fpsDelimiter + lvLsSplitedSource.get(i);
 				}
 			}
 			else
 			{
-				String lvsLM = LM.GetMessage("GetRightFromDelimiterNumber", "OKWDelimiterIsEmptyException");
-				throw new IllegalArgumentException(lvsLM);
+				String lvsLM = LM.GetMessage("GetRightFromDelimiterNumber", "OKWDelimiterCountOutOfRangeException",
+						fpiCount, RangeMax);
+				throw new IndexOutOfBoundsException(lvsLM);
 			}
 		}
-		finally
+		else
 		{
-		    Log.LogFunctionEndDebug(lvsReturn);
+			String lvsLM = LM.GetMessage("GetRightFromDelimiterNumber", "OKWDelimiterIsEmptyException");
+			throw new IllegalArgumentException(lvsLM);
 		}
 
 		return lvsReturn;
@@ -376,37 +344,26 @@ public class OKW_Helper
 	{
 		Boolean lvbReturn = true;
 
-		Log.LogFunctionStartDebug("OKW_Helper.ListStringCompare", "ListString1", ListString1.toString(), "ListString2",
-				ListString2.toString());
-
-		try
+		// HAben beide Listen
+		if (ListString1.size() == ListString2.size())
 		{
-			// HAben beide Listen
-			if (ListString1.size() == ListString2.size())
+			for (int i = 0; i < ListString1.size(); i++)
 			{
-				for (int i = 0; i < ListString1.size(); i++)
+				if (ListString1.get(i) != ListString2.get(i))
 				{
-					if (ListString1.get(i) != ListString2.get(i))
-					{
-						// ungleich daher abbrechen und false zurückliefern.
-						Log.LogPrintDebug(ListString1.get(i) + "<>" + ListString2.get(i));
-						lvbReturn = false;
-						break;
-					}
-					else
-					{
-						lvbReturn = true;
-					}
+					// ungleich daher abbrechen und false zurückliefern.
+					lvbReturn = false;
+					break;
+				}
+				else
+				{
+					lvbReturn = true;
 				}
 			}
-			else
-			{
-				lvbReturn = false;
-			}
 		}
-		finally
+		else
 		{
-			Log.LogFunctionEndDebug(lvbReturn);
+			lvbReturn = false;
 		}
 
 		return lvbReturn;
@@ -462,29 +419,19 @@ public class OKW_Helper
 	{
 		String lvsReturn = "";
 
-		Log.LogFunctionStartDebug("OKW_Helper.ListStringConcat", "fps_ListString2Concat",
-				fps_ListString2Concat.toString(), "fps_Separator", fps_Delimiter);
+		StringBuilder sb = new StringBuilder();
 
-		try
+		for (int i=0;  i<fps_ListString2Concat.size(); i++)
 		{
-			StringBuilder sb = new StringBuilder();
-			
-			for (int i=0;  i<fps_ListString2Concat.size(); i++)
+			if (i > 0)
 			{
-				if (i > 0)
-				{
-					sb.append(fps_Delimiter);
-				}
-
-				sb.append(fps_ListString2Concat.get(i));
+				sb.append(fps_Delimiter);
 			}
 
-			lvsReturn = sb.toString();
+			sb.append(fps_ListString2Concat.get(i));
 		}
-		finally
-		{
-			Log.LogFunctionEndDebug(lvsReturn);
-		}
+
+		lvsReturn = sb.toString();
 
 		return lvsReturn;
 	}
@@ -512,27 +459,18 @@ public class OKW_Helper
 		Boolean lvbReturn = false;
 
 		// Action:
-		try
-		{
-			Log.LogFunctionStartDebug("OKW_Helper.MatchStr", "String fpsPattern", fpsPattern, "String fpsStringToMatch",
-					fpsStringToMatch);
 
-			// Replace the * with an .* and the ? with a dot. Put ^ at the
-			// beginning and a $ at the end
-			// c#:String pattern = "^" + Regex.Escape(fpsPattern).Replace("\\*",
-			// ".*").Replace("\\?", ".") + "$";
-			String pattern = "^" + fpsPattern.replace("*", ".*").replace("?", ".") + "$";
+		// Replace the * with an .* and the ? with a dot. Put ^ at the
+		// beginning and a $ at the end
+		// c#:String pattern = "^" + Regex.Escape(fpsPattern).Replace("\\*",
+		// ".*").Replace("\\?", ".") + "$";
+		String pattern = "^" + fpsPattern.replace("*", ".*").replace("?", ".") + "$";
 
-			// c#: Regex regex;
-			// c#: regex = new Regex(pattern);
+		// c#: Regex regex;
+		// c#: regex = new Regex(pattern);
 
-			// C#: lvb_Return = regex.IsMatch(fpsStringToMatch);
-			lvbReturn = fpsStringToMatch.matches(pattern);
-		}
-		finally
-		{
-				Log.LogFunctionEndDebug(lvbReturn);
-		}
+		// C#: lvb_Return = regex.IsMatch(fpsStringToMatch);
+		lvbReturn = fpsStringToMatch.matches(pattern);
 
 		return lvbReturn;
 	}
@@ -560,29 +498,20 @@ public class OKW_Helper
 		Boolean lvbReturn = false;
 
 		// Action:
-		try
-		{
-			Log.LogFunctionStartDebug("OKW_Helper.MatchStrIgnoreCase", "String fpsPattern", fpsPattern,
-					"String fpsStringToMatch", fpsStringToMatch);
 
-			//
-			// Replace the * with an .* and the ? with a dot. Put ^ at the
-			// beginning and a $ at the end
-			// c#:String pattern = "^" + Regex.Escape(fpsPattern).Replace("\\*",
-			// ".*").Replace("\\?", ".") + "$";
-			String pattern = "^" + fpsPattern.replace("*", ".*").replace("?", ".") + "$";
+		//
+		// Replace the * with an .* and the ? with a dot. Put ^ at the
+		// beginning and a $ at the end
+		// c#:String pattern = "^" + Regex.Escape(fpsPattern).Replace("\\*",
+		// ".*").Replace("\\?", ".") + "$";
+		String pattern = "^" + fpsPattern.replace("*", ".*").replace("?", ".") + "$";
 
-			// Now, run the Regex as you already know
-			// c#: Regex regex;
-			// c#: regex = new Regex(pattern, RegexOptions.IgnoreCase);
+		// Now, run the Regex as you already know
+		// c#: Regex regex;
+		// c#: regex = new Regex(pattern, RegexOptions.IgnoreCase);
 
-			// C#: lvb_Return = regex.IsMatch(fpsStringToMatch);
-			lvbReturn = fpsStringToMatch.matches("(?i:" + pattern + ")");
-		}
-		finally
-		{
-			Log.LogFunctionEndDebug(lvbReturn);
-		}
+		// C#: lvb_Return = regex.IsMatch(fpsStringToMatch);
+		lvbReturn = fpsStringToMatch.matches("(?i:" + pattern + ")");
 
 		return lvbReturn;
 	}
@@ -638,21 +567,12 @@ public class OKW_Helper
 	 */
 	public static ArrayList<String> StringArray2ListStr( String[] fpsStringArray )
 	{
-		Log.LogFunctionStartDebug("OKW_Helper.StrArray2ListStr", "fpsStringArray", fpsStringArray.toString());
-
 		ArrayList<String> lvls_Splited = new ArrayList<String>();
 		lvls_Splited.clear();
 
-		try
+		for (String lvsElement : fpsStringArray)
 		{
-			for (String lvsElement : fpsStringArray)
-			{
-				lvls_Splited.add(lvsElement);
-			}
-		}
-		finally
-		{
-			Log.LogFunctionEndDebug(lvls_Splited);
+			lvls_Splited.add(lvsElement);
 		}
 
 		return lvls_Splited;
@@ -693,43 +613,21 @@ public class OKW_Helper
 	public static Boolean String2Boolean( String fpsTrueOrFalse ) throws XPathExpressionException
 	{
 		Boolean lvbReturn = false;
-		Boolean bOK = false;
-
 		String lvsTrueOrFalse = fpsTrueOrFalse.toLowerCase();
 
-		Log.LogFunctionStartDebug("OKW_Helper.String2Boolean", "fpsTrueOrFalse", fpsTrueOrFalse);
-
-		try
+		if ( "true".equals( lvsTrueOrFalse ) )
 		{
-			if ( "true".equals( lvsTrueOrFalse ) )
-			{
-				lvbReturn = true;
-				bOK = true;
-			}
-			else if ( "false".equals( lvsTrueOrFalse ) )
-			{
-				lvbReturn = false;
-				bOK = true;
-			}
-			else
-			{
-				// alles andere löst ein OKWNotAllowedValueException aus
-				bOK = false;
-
-				String lvsLM = LM.GetMessage("String2Boolean", "OKWNotAllowedValueException", fpsTrueOrFalse);
-				throw new OKWNotAllowedValueException(lvsLM);
-			}
+			lvbReturn = true;
 		}
-		finally
+		else if ( "false".equals( lvsTrueOrFalse ) )
 		{
-			if (bOK)
-			{
-				Log.LogFunctionEndDebug(lvbReturn);
-			}
-			else
-			{
-				Log.LogFunctionEndDebug();
-			}
+			lvbReturn = false;
+		}
+		else
+		{
+			// alles andere löst ein OKWNotAllowedValueException aus
+			String lvsLM = LM.GetMessage("String2Boolean", "OKWNotAllowedValueException", fpsTrueOrFalse);
+			throw new OKWNotAllowedValueException(lvsLM);
 		}
 
 		return lvbReturn;
@@ -776,91 +674,81 @@ public class OKW_Helper
 		return lvls_Splited;
 	}*/
 
-	
-	
+
+
 	public static ArrayList<String> splitString(String fpsString2Split, String fpsSeparator)
 	{
 		ArrayList<String> SplitedList = new ArrayList<String>();
-	    int offset = 0;
-	    
-		Log.LogFunctionStartDebug("OKW_Helper.StrSplit", "fpsString2Split", fpsString2Split, "fpsSeparator",
-				fpsSeparator);
+		int offset = 0;
 
-		try
-		{	    
-	    while (true)
-	    {
-	        int index = fpsString2Split.indexOf(fpsSeparator, offset);
-	        if (index == -1)
-	        {
-	        	SplitedList.add(fpsString2Split.substring(offset));
-	            break;
-	        }
-	        else
-	        {
-	        	SplitedList.add(fpsString2Split.substring(offset, index));
-	            offset = (index + fpsSeparator.length());
-	        }
-	    }
+		while (true)
+		{
+			int index = fpsString2Split.indexOf(fpsSeparator, offset);
+			if (index == -1)
+			{
+				SplitedList.add(fpsString2Split.substring(offset));
+				break;
+			}
+			else
+			{
+				SplitedList.add(fpsString2Split.substring(offset, index));
+				offset = (index + fpsSeparator.length());
+			}
+		}
+
+		return SplitedList;
 	}
-	finally
-	{
-		Log.LogFunctionEndDebug(SplitedList);
-	}
-	    
-	    return SplitedList;
-	}
-	
-	
+
+
 	/// \todo TODO: Methode Documentieren!
 	public static String repeatString( char c, Integer n )
 	{
 		StringBuilder lvsReturn = new StringBuilder();
-		
+
 		for (Integer x = 0; x < n; x++)
 			lvsReturn.append(c);
-		
+
 		return lvsReturn.toString();
 	}
-	
+
 
 	/// \todo TODO: Methode Documentieren!
 	public static String repeatString( String c, Integer n )
 	{
 		StringBuilder lvsReturn = new StringBuilder();
-		
+
 		for (Integer x = 0; x < n; x++)
 			lvsReturn.append(c);
-		
+
 		return lvsReturn.toString();
 	}
 
-/**
- * \~german
- * Prüft ob der gegeben String `fpsStrin` `null` oder leer ("") ist.
- *
- * @param fpsStrin Zu prüfender String
- * @return `true`, falls der String Leer oder `null` ist sondt `false`
- * \~english
- *
- *
- * @param ? 
- * @return returns `true`, if the given String is empty or `null`, else `false`
- * \~
- * @author Zoltán Hrabovszki
- * \date 2017-04-27
- */
+	/**
+	 * \~german
+	 * Prüft ob der gegeben String `fpsStrin` `null` oder leer ("") ist.
+	 *
+	 * @param fpsStrin Zu prüfender String
+	 * @return `true`, falls der String Leer oder `null` ist sondt `false`
+	 * \~english
+	 *
+	 *
+	 * @param ? 
+	 * @return returns `true`, if the given String is empty or `null`, else `false`
+	 * \~
+	 * @author Zoltán Hrabovszki
+	 * \date 2017-04-27
+	 */
 	public static Boolean isStringNullOrEmpty( String fpsString)
 	{
 		// Variables
-	    Boolean lvbReturn = true;
-		
-	    // Action
+		Boolean lvbReturn = true;
+
+		// Action
 		if(fpsString != null && !fpsString.isEmpty())
 		{
 			lvbReturn = false;
 		}
-		
+
 		// Return
 		return lvbReturn;
 	}

@@ -70,7 +70,7 @@ public class OKW_Helper_GetRightFromDelimiterNumberTest
         Log.setDebugMode( false );
     }
             @ParameterizedTest
-            @CsvSource( value = { "'BBBB', 'AAAACBBBB', 'C,  1 ",
+            @CsvSource( value = { "'BBBB', 'AAAACBBBB', 'C',  1 ",
         		" 'BBBBCDDDD',       'AAAACBBBBCDDDD',      'C',  1 ",
         		
         		" 'BBBBGGDDDD',      'AAAAGGBBBBGGDDDD',    'GG', 1 ",

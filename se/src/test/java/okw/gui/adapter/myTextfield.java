@@ -35,7 +35,7 @@
 
     Sie sollten eine Kopie der GNU General Public License zusammen mit 
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package okw.gui.adapter;
 
@@ -117,196 +117,159 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
 public class myTextfield extends SeInputText
 {
 
-    /**
-     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
-     */
-    public myTextfield( String Locator, OKWLocatorBase... Locators )
-    {
-        super( Locator, Locators );
-    }
+	/**
+	 *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
+	 */
+	public myTextfield( String Locator, OKWLocatorBase... Locators )
+	{
+		super( Locator, Locators );
+	}
 
 
-    /** \~german
-     *  Ermittelt den textuellen Inhalt der Überschrift eines Textfeldes.
-     *  
-     *  Im GUI-adapter SeInputText ist die Überschrift (Caption) gleich dem Wert des Textfeldes.
-     *  Daher ruft `SeInputText::getCaption()` die Methode `SeInputText::getValue()` auf!
-     *   
-     *  @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
-     *  \~english
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  \date 2013-12-07
-     */
-    @Override
-    public ArrayList<String> getCaption()
-    {
-        return getValue();
-    }
-    
-    
-   /** \~german
-   *  Ermittelt den textuellen Inhalt des Labels.
-   *  
-   *  Es wird das Attribute "textContent" des mit "id" an das aktuelle Objekt angebunde "Laben" gelesen.
-   *  
-   *  @return Rückgabe des Label-Textes.
-   *  \~english
-   *  \~
-   *  @author Zoltán Hrabovszki
-   *  \date 2018.12.27
-   */
-   public Integer getMaxLength()
-   {
-       Integer lviReturn = 0;
+	/** \~german
+	 *  Ermittelt den textuellen Inhalt der Überschrift eines Textfeldes.
+	 *  
+	 *  Im GUI-adapter SeInputText ist die Überschrift (Caption) gleich dem Wert des Textfeldes.
+	 *  Daher ruft `SeInputText::getCaption()` die Methode `SeInputText::getValue()` auf!
+	 *   
+	 *  @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
+	 *  \~english
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2013-12-07
+	 */
+	@Override
+	public ArrayList<String> getCaption()
+	{
+		return getValue();
+	}
 
-       try
-       {
-           this.LogFunctionStartDebug( "getMaxLength" );
 
-           // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-           this.WaitForMe();
+	/** \~german
+	 *  Ermittelt den textuellen Inhalt des Labels.
+	 *  
+	 *  Es wird das Attribute "textContent" des mit "id" an das aktuelle Objekt angebunde "Laben" gelesen.
+	 *  
+	 *  @return Rückgabe des Label-Textes.
+	 *  \~english
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2018.12.27
+	 */
+	public Integer getMaxLength()
+	{
+		Integer lviReturn = 0;
 
-           
-           // The Attribute "MaxLength" auslesen...
-           
-           String lvsMaxLength = this.Me().getAttribute( "maxlength" );
+		// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+		this.WaitForMe();
 
-           if ( !okw.OKW_Helper.isStringNullOrEmpty( lvsMaxLength) )
-           {
-               lviReturn = Integer.parseInt( lvsMaxLength );
-           }
-       }
-       finally
-       {
-           this.LogFunctionEndDebug( lviReturn.toString() );
-       }
 
-       return lviReturn;
-   }
-   
-   
-    /** \~german
-     *  Liest den Placeholder des input-Tags aus.
-     * 
-     *  Es wird das Attribut "placeholder" ausgelesen.
-     *  @return Wert des Attributs "placeholder"
-     *  
-     *  \~english
-     *  Reads the current placeholder of the input-tag.
-     *  
-     *  It reads the attribute "placeholder".
-     *  
-     *  @return The value of the attribute "placeholder"
-     *  
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  \date 2018.10.28
-     */
-    public ArrayList<String> getPlaceholder()
-    {
-        ArrayList<String> lvLsReturn = new ArrayList<String>();
+		// The Attribute "MaxLength" auslesen...
 
-        try
-        {
-            this.LogFunctionStartDebug( "getPlaceholder" );
+		String lvsMaxLength = this.Me().getAttribute( "maxlength" );
 
-            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-            this.WaitForMe();
+		if ( !okw.OKW_Helper.isStringNullOrEmpty( lvsMaxLength) )
+		{
+			lviReturn = Integer.parseInt( lvsMaxLength );
+		}
 
-            // Get Value from TextField and put this into the return ArrayList<String>
-            lvLsReturn.add( this.Me().getAttribute( "placeholder" ) );
-        }
-        finally
-        {
-            this.LogFunctionEndDebug( lvLsReturn );
-        }
+		return lviReturn;
+	}
 
-        return lvLsReturn;
-    }    
 
-    
-    /** \~german
-     *  Ermittelt den Wert des Textfeldes, welches dem sichtbaren .
-     *  
-     *  @return
-     *  Gibt den Textuellen Inhaltes des TextFeldes zurück.
-     *  Es korrespondieren je eine Zeile des GUI-Objektes mit jeweil einem Listen-Element.<br/>
-     *  Ein Textfield besteht aus einerZeile: Daher wird der Wert des Textfield-s im ListenElement[0] zurückgegeben.
-     *  \~
-     *  @author Zoltan Hrabovszki
-     *  \date 2014.06.2014
-     */
-    @Override
-    public ArrayList<String> getValue()
-    {
-        ArrayList<String> lvLsReturn = new ArrayList<String>();
+	/** \~german
+	 *  Liest den Placeholder des input-Tags aus.
+	 * 
+	 *  Es wird das Attribut "placeholder" ausgelesen.
+	 *  @return Wert des Attributs "placeholder"
+	 *  
+	 *  \~english
+	 *  Reads the current placeholder of the input-tag.
+	 *  
+	 *  It reads the attribute "placeholder".
+	 *  
+	 *  @return The value of the attribute "placeholder"
+	 *  
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2018.10.28
+	 */
+	public ArrayList<String> getPlaceholder()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-        try
-        {
-            this.LogFunctionStartDebug( "GetValue" );
 
-            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-            this.WaitForMe();
+		// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+		this.WaitForMe();
 
-            // Get Value from TextField and put this into the return List<string>
-            String myValue = this.Me().getAttribute( "value" );
+		// Get Value from TextField and put this into the return ArrayList<String>
+		lvLsReturn.add( this.Me().getAttribute( "placeholder" ) );
 
-            if ( myValue != null )
-            {
-                lvLsReturn.add( this.Me().getAttribute( "value" ) );
-            }
+		return lvLsReturn;
+	}    
 
-        }
-        finally
-        {
-            this.LogFunctionEndDebug( lvLsReturn.toString() );
-        }
 
-        return lvLsReturn;
-    }
+	/** \~german
+	 *  Ermittelt den Wert des Textfeldes, welches dem sichtbaren .
+	 *  
+	 *  @return
+	 *  Gibt den Textuellen Inhaltes des TextFeldes zurück.
+	 *  Es korrespondieren je eine Zeile des GUI-Objektes mit jeweil einem Listen-Element.<br/>
+	 *  Ein Textfield besteht aus einerZeile: Daher wird der Wert des Textfield-s im ListenElement[0] zurückgegeben.
+	 *  \~
+	 *  @author Zoltan Hrabovszki
+	 *  \date 2014.06.2014
+	 */
+	@Override
+	public ArrayList<String> getValue()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-    
-    public void set__Attribute( WebElement elem, String value )
-    {
-        JavascriptExecutor js = ( JavascriptExecutor ) SeDriver.getInstance().getDriver();
+		// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+		this.WaitForMe();
 
-        String scriptSetAttrValue = "arguments[0].setAttribute(arguments[1],arguments[2])";
+		// Get Value from TextField and put this into the return List<string>
+		String myValue = this.Me().getAttribute( "value" );
 
-        js.executeScript( scriptSetAttrValue, elem, "value", value );
+		if ( myValue != null )
+		{
+			lvLsReturn.add( this.Me().getAttribute( "value" ) );
+		}
 
-    }
+		return lvLsReturn;
+	}
 
-    /**
-     *  \~german
-     */
-    @Override
-    public void SetValue( ArrayList<String> Val )
-    {
 
-        try
-        {
-            this.LogFunctionStartDebug( "SetValue", "Val", Val.toString() );
+	public void set__Attribute( WebElement elem, String value )
+	{
+		JavascriptExecutor js = ( JavascriptExecutor ) SeDriver.getInstance().getDriver();
 
-            // Wenn GUI-Objekt nicht gefunden wird, mit OKWGUIObjectNotFoundException aussteigen
-            this.WaitForMe();
+		String scriptSetAttrValue = "arguments[0].setAttribute(arguments[1],arguments[2])";
 
-            WebElement myMe = this.Me();
-            myMe.clear();
+		js.executeScript( scriptSetAttrValue, elem, "value", value );
 
-            if ( Val.get( 0 ).equals( okw.OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                myMe.clear();
-            }
-            else
-            {
-                myMe.sendKeys( Val.get( 0 ) );
-            }
-        }
-        finally
-        {
-            this.LogFunctionEndDebug();
-        }
-    }
+	}
+
+	/**
+	 *  \~german
+	 */
+	@Override
+	public void SetValue( ArrayList<String> Val )
+	{
+		// Wenn GUI-Objekt nicht gefunden wird, mit OKWGUIObjectNotFoundException aussteigen
+		this.WaitForMe();
+
+		WebElement myMe = this.Me();
+		myMe.clear();
+
+		if ( Val.get( 0 ).equals( okw.OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
+		{
+			myMe.clear();
+		}
+		else
+		{
+			myMe.sendKeys( Val.get( 0 ) );
+		}
+	}
 
 }

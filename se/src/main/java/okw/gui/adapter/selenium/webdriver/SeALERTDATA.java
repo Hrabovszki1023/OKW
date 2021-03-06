@@ -84,18 +84,9 @@ public class SeALERTDATA extends SeAnyChildWindow
 	@Override
 	public void SetValue(ArrayList<String> fps_Values)
 	{
-		this.LogFunctionStartDebug("SetValue", "fps_Values", fps_Values.get(0));
-
-		try
-		{
-			WebDriver myDriver = SeDriver.getInstance().getDriver();
-			// The Attribute "textContent" wird als Beschriftung angezeigt...
-			myDriver.switchTo().alert().sendKeys(fps_Values.get(0));
-		}
-		finally
-		{
-			this.LogFunctionEndDebug();
-		}
+		WebDriver myDriver = SeDriver.getInstance().getDriver();
+		// The Attribute "textContent" wird als Beschriftung angezeigt...
+		myDriver.switchTo().alert().sendKeys(fps_Values.get(0));
 	}
 
 
@@ -110,15 +101,6 @@ public class SeALERTDATA extends SeAnyChildWindow
 	@Override
 	public void TypeKey(ArrayList<String> fps_Values)
 	{
-		this.LogFunctionStartDebug("TypeKey", "fps_Values", fps_Values.get(0));
-
-		try
-		{
-			this.SetValue(fps_Values);
-		}
-		finally
-		{
-			this.LogFunctionEndDebug();
-		}
+		this.SetValue(fps_Values);
 	}
 }

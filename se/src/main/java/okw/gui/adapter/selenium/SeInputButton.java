@@ -35,7 +35,7 @@
 
     Sie sollten eine Kopie der GNU General Public License zusammen mit 
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package okw.gui.adapter.selenium;
 
@@ -121,76 +121,59 @@ import okw.gui.OKWLocatorBase;
 public class SeInputButton extends SeAnyChildWindow
 {
 
-    /**
-     * \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...) \~
-     * 
-     * @author Zoltán Hrabovszki
-     * \date 2013.05.03
-     */
-    public SeInputButton( String Locator, OKWLocatorBase... Locators )
-    {
-        super( Locator, Locators );
-    }
+	/**
+	 * \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...) \~
+	 * 
+	 * @author Zoltán Hrabovszki
+	 * \date 2013.05.03
+	 */
+	public SeInputButton( String Locator, OKWLocatorBase... Locators )
+	{
+		super( Locator, Locators );
+	}
 
 
-    /**
-     * \~german Ermittelt den textuellen Inhalt der Caption/Überschrift des
-     * Objektes.
-     * 
-     * @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
-     * \~english
-     * \~
-     * @author Zoltán Hrabovszki
-     * @throws Exception
-     * \date 2013.12.07
-     */
-    @Override // TODO define Prototype in BaseClass!
-    public ArrayList<String> getCaption()
-    {
-        ArrayList<String> lvLsReturn = new ArrayList<String>();
-        try
-        {
-            this.LogFunctionStartDebug( "GetCaption" );
+	/**
+	 * \~german Ermittelt den textuellen Inhalt der Caption/Überschrift des
+	 * Objektes.
+	 * 
+	 * @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
+	 * \~english
+	 * \~
+	 * @author Zoltán Hrabovszki
+	 * @throws Exception
+	 * \date 2013.12.07
+	 */
+	@Override // TODO define Prototype in BaseClass!
+	public ArrayList<String> getCaption()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            // The Attribute "value" wird als Beschriftung angezeigt...
-			String myAttribute = this.WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "value" ); } );
+		// The Attribute "value" wird als Beschriftung angezeigt...
+		String myAttribute = this.WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "value" ); } );
 
-			// Wert des Attributes "src" wird als Wert zurückgegeben
-			lvLsReturn.add( StringUtils.normalizeSpace( myAttribute ) );
-        }
-        finally
-        {
-            this.LogFunctionEndDebug( lvLsReturn );
-        }
+		// Wert des Attributes "src" wird als Wert zurückgegeben
+		lvLsReturn.add( StringUtils.normalizeSpace( myAttribute ) );
 
-        return lvLsReturn;
-    }
+		return lvLsReturn;
+	}
 
-    /**
-     * \~german Ein SeInputButton hat keinen Wert! ->
-     * OKWFrameObjectMethodNotImplemented Auslösen!
-     * 
-     * @return
-     * 
-     * \~english A SeInputButton has no value! -> Trigger
-     *         OKWFrameObjectMethodNotImplemented! \~
-     * @author Zoltán Hrabovszki
-     * \date 2016.10.06
-     */
-    @Override
-    public ArrayList<String> getValue()
-    {
-        try
-        {
-            LogFunctionStartDebug( "GetValue" );
+	/**
+	 * \~german Ein SeInputButton hat keinen Wert! ->
+	 * OKWFrameObjectMethodNotImplemented Auslösen!
+	 * 
+	 * @return
+	 * 
+	 * \~english A SeInputButton has no value! -> Trigger
+	 *         OKWFrameObjectMethodNotImplemented! \~
+	 * @author Zoltán Hrabovszki
+	 * \date 2016.10.06
+	 */
+	@Override
+	public ArrayList<String> getValue()
+	{
 
-            String lvsLM = this.LM.GetMessage( "Common", "OKWFrameObjectMethodNotImplemented", "getValue()" );
-            throw new OKWFrameObjectMethodNotImplemented( lvsLM );
-        }
-        finally
-        {
-            LogFunctionEndDebug();
-        }
-        // return lvLsReturn;
-    }
+		String lvsLM = this.LM.GetMessage( "Common", "OKWFrameObjectMethodNotImplemented", "getValue()" );
+		throw new OKWFrameObjectMethodNotImplemented( lvsLM );
+	}
 }

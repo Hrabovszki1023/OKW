@@ -111,13 +111,18 @@ public class OKW_ConstExceptionTest
         @Test
         public void tcYesNoToBoolean_OKWConst4InternalnameNotFoundException() throws XPathExpressionException
         {
-            OKWLanguage.getInstance().setLanguage( "hurtz" );
-
             Assertions.assertThrows( OKWLanguageNotImplemntedException.class, () ->
+            {
+                // Call with expected Exception...
+            	OKWLanguage.getInstance().setLanguage( "hurtz" );
+            });
+            
+           /** Assertions.assertThrows( OKWLanguageNotImplemntedException.class, () ->
             {
                 // Call with expected Exception...
                 myOKW_Const.YesNo2Boolean( "YES" );
             });
+            */
         }
 
         /**

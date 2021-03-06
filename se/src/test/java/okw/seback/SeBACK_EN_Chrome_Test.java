@@ -31,7 +31,7 @@ public class SeBACK_EN_Chrome_Test extends SeBACK_EN_Test
         Logger_Sngltn.getInstance().setDebugMode(false);
         
 	}
-
+	
 	/*
 	@AfterAll
 	public static void tearDownAfterClass() throws Exception

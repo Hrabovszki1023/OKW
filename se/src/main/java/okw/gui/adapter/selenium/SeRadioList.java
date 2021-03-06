@@ -35,7 +35,7 @@
 
     Sie sollten eine Kopie der GNU General Public License zusammen mit 
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package okw.gui.adapter.selenium;
 
@@ -227,223 +227,180 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
 public class SeRadioList extends SeAnyChildWindow
 {
 
-    // Instance of OKW_CurrentObject
-    OKW_CurrentObject_Sngltn     CO               = null;
+	// Instance of OKW_CurrentObject
+	OKW_CurrentObject_Sngltn     CO               = null;
 
-    // Instance of OKW_CurrentObject
-    FrameObjectDictionary_Sngltn FOD              = null;
+	// Instance of OKW_CurrentObject
+	FrameObjectDictionary_Sngltn FOD              = null;
 
-    /**
-     *  Holds the FNs of all RadionButton ChildObjects of this RadioList.<br/>
-     *  See Constructor for initialsation.
-     */
-    ArrayList<String>            myRadioButtonFNs = null;
+	/**
+	 *  Holds the FNs of all RadionButton ChildObjects of this RadioList.<br/>
+	 *  See Constructor for initialsation.
+	 */
+	ArrayList<String>            myRadioButtonFNs = null;
 
-    /**
-     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
-     */
-    public SeRadioList( String Locator, OKWLocatorBase... Locators )
-    {
-        super( Locator, Locators );
+	/**
+	 *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
+	 */
+	public SeRadioList( String Locator, OKWLocatorBase... Locators )
+	{
+		super( Locator, Locators );
 
-        try
-        {
-            CO = OKW_CurrentObject_Sngltn.getInstance();
-            FOD = FrameObjectDictionary_Sngltn.getInstance();
-        }
-        catch (Exception e)
-        {
-            System.exit( 0 );
-        }
-    }
+		try
+		{
+			CO = OKW_CurrentObject_Sngltn.getInstance();
+			FOD = FrameObjectDictionary_Sngltn.getInstance();
+		}
+		catch (Exception e)
+		{
+			System.exit( 0 );
+		}
+	}
 
 
-    @Override
-    public void SetValue( ArrayList<String> Val )
-    {
+	@Override
+	public void SetValue( ArrayList<String> Val )
+	{
 
-        try
-        {
+		try
+		{
 
-            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-            this.WaitForMe();
+			// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+			this.WaitForMe();
 
-            if ( Val.size() == 1 )
-            {
+			if ( Val.size() == 1 )
+			{
 
-                String DELETE = OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" );
+				String DELETE = OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" );
 
-                if ( Val.get( 0 ).equals( DELETE ) )
-                {
-                    // \todo TODO: Ausnahme Meldung in LM_SeRadioList anlegen.
-                    throw new okw.exceptions.OKWNotAllowedValueException( "SeRadioList: This Value is Not Alowed here: " + Val.get( 0 ) );
-                }
+				if ( Val.get( 0 ).equals( DELETE ) )
+				{
+					// \todo TODO: Ausnahme Meldung in LM_SeRadioList anlegen.
+					throw new okw.exceptions.OKWNotAllowedValueException( "SeRadioList: This Value is Not Alowed here: " + Val.get( 0 ) );
+				}
 
-                else
-                {
-                    // Get my FN
-                    String myFN = this.getCAT();
+				else
+				{
+					// Get my FN
+					String myFN = this.getCAT();
 
-                    // Radiolist enthällt nur einen wert
-                    String myChildFN = myFN + "." + Val.get( 0 );
+					// Radiolist enthällt nur einen wert
+					String myChildFN = myFN + "." + Val.get( 0 );
 
-                    Core myCore = new Core();
-                    myCore.ClickOn( myChildFN );
+					Core myCore = new Core();
+					myCore.ClickOn( myChildFN );
 
-                    // Set the Current Radiobutton-object back to the
-                    // RadioList..
-                    CO.setChildName( myFN );
-                }
-            }
-            else
-            {
-                // \todo TODO: Ausnahme Meldung in LM_SeRadioList anlegen.
-                throw new OKWOnlySingleValueAllowedException( "SeRadioList: Only single value is allowed!" );
-            }
-        }
-        /*catch (Exception e)
-        {
-            // TODO Auto-generated catch block
-            throw new RuntimeException( e );
-        }
-        */
-        catch (Exception e)
-        {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        finally
-        {
-            this.LogFunctionEndDebug();
-        }
+					// Set the Current Radiobutton-object back to the
+					// RadioList..
+					CO.setChildName( myFN );
+				}
+			}
+			else
+			{
+				// \todo TODO: Ausnahme Meldung in LM_SeRadioList anlegen.
+				throw new OKWOnlySingleValueAllowedException( "SeRadioList: Only single value is allowed!" );
+			}
+		}
+		catch (Exception e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
-    }
+	@Override
+	/**
+	 * 
+	 */
+	public void Select( ArrayList<String> Val )
+	{
+		this.SetValue( Val );
+	}
 
-    @Override
-    /**
-     * 
-     */
-    public void Select( ArrayList<String> Val )
-    {
-        try
-        {
-            this.LogFunctionStartDebug( "Select" );
-            this.SetValue( Val );
-        }
-        finally
-        {
-            this.LogFunctionEndDebug();
-        }
-    }
+	/**
+	 *  Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert.
+	 *  
+	 *  Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
+	 *  
+	 *  @return Rückgabe des Textuellen Inhaltes der markierten Textes.
+	 *  Es wird (immer) der aktuelle Wert des Objektes zurückgeliefert.
+	 *  @author Zoltan Hrabovszki
+	 * @throws Exception 
+	 *  \date 2013.12.14
+	 */
+	public ArrayList<String> getValue()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-    /**
-     *  Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert.
-     *  
-     *  Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
-     *  
-     *  @return Rückgabe des Textuellen Inhaltes der markierten Textes.
-     *  Es wird (immer) der aktuelle Wert des Objektes zurückgeliefert.
-     *  @author Zoltan Hrabovszki
-     * @throws Exception 
-     *  \date 2013.12.14
-     */
-    public ArrayList<String> getValue()
-    {
-        ArrayList<String> lvLsReturn = new ArrayList<String>();
+		ArrayList<String> myRadioButtonKeys = new ArrayList<String>();
 
-        ArrayList<String> myRadioButtonKeys = new ArrayList<String>();
+		try
+		{
+			// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+			this.WaitForMe();
 
-        try
-        {
-            this.LogFunctionStartDebug( "getValue" );
+			String isChecked = OKW_Const_Sngltn.getInstance().GetConst4Internalname( "CHECKED" );
 
-            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-            this.WaitForMe();
+			// 1. Get the List of RadioButtons
+			myRadioButtonKeys = OKW_CurrentObject_Sngltn.getInstance().getAllChildFNsOfParent( this.getParentFN() + "." + this.getCAT() + "." );
 
-            String isChecked = OKW_Const_Sngltn.getInstance().GetConst4Internalname( "CHECKED" );
+			for ( String lvsRadioButtonFN : myRadioButtonKeys )
+			{
 
-            // 1. Get the List of RadioButtons
-            myRadioButtonKeys = OKW_CurrentObject_Sngltn.getInstance().getAllChildFNsOfParent( this.getParentFN() + "." + this.getCAT() + "." );
+				ArrayList<String> Actuel = ( ( SeRadio ) FOD.getParentObjectByName( lvsRadioButtonFN ) ).getValue();
 
-            for ( String lvsRadioButtonFN : myRadioButtonKeys )
-            {
+				if ( isChecked.equals( Actuel.get( 0 ) ) )
+				{
 
-                ArrayList<String> Actuel = ( ( SeRadio ) FOD.getParentObjectByName( lvsRadioButtonFN ) ).getValue();
+					String CurrentValue = okw.OKW_Helper.getRightFromDelimiterNumber( lvsRadioButtonFN, this.getCAT() + ".", 1 );
+					lvLsReturn.add( CurrentValue );
 
-                if ( isChecked.equals( Actuel.get( 0 ) ) )
-                {
+					break;
+				}
+			}
+			if ( 0 == lvLsReturn.size() )
+			{
+				lvLsReturn.add( "" );
+			}
 
-                    String CurrentValue = okw.OKW_Helper.getRightFromDelimiterNumber( lvsRadioButtonFN, this.getCAT() + ".", 1 );
-                    lvLsReturn.add( CurrentValue );
+		}
+		catch (XPathExpressionException | JAXBException | ParserConfigurationException | SAXException | IOException e)
+		{
+			throw new RuntimeException( e );
+		}
 
-                    break;
-                }
-            }
-            if ( 0 == lvLsReturn.size() )
-            {
-                lvLsReturn.add( "" );
-            }
-            
-        }
-        catch (XPathExpressionException | JAXBException | ParserConfigurationException | SAXException | IOException e)
-        {
-            throw new RuntimeException( e );
-        }
-        finally
-        {
-            this.LogFunctionEndDebug( lvLsReturn.toString() );
-        }
+		return lvLsReturn;
+	}
 
-        return lvLsReturn;
-    }
+	/** \~german
+	 *  Ermittelt den textuellen Inhalt des Labels.
+	 *  
+	 *  Beim RadioList ist das Label die "Legende"
+	 *  @return  Rückgabe des Textuellen Inhaltes der Labels.
+	 *
+	 *  \~english
+	 *  \~
+	 *  \author Zoltán Hrabovszki
+	 *  \date 2016.12.20
+	 */
+	@Override
+	public ArrayList<String> getLabel()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-    /** \~german
-     *  Ermittelt den textuellen Inhalt des Labels.
-     *  
-     *  Beim RadioList ist das Label die "Legende"
-     *  @return  Rückgabe des Textuellen Inhaltes der Labels.
-     *
-     *  \~english
-     *  \~
-     *  \author Zoltán Hrabovszki
-     *  \date 2016.12.20
-     */
-    @Override
-    public ArrayList<String> getLabel()
-    {
-        ArrayList<String> lvLsReturn = new ArrayList<String>();
-        Boolean bOK = false;
-        try
-        {
-            this.LogFunctionStartDebug( "GetLabel" );
 
-            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-            this.WaitForMe();
+		// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+		this.WaitForMe();
 
-            // 2.schritt nun den Tag-label finden und den Textinhalt ermitteln.
-            WebElement label = SeDriver.getInstance().getDriver().findElement( By.xpath( this.getLocator() + "//legend" ) );
-            
-            // The Attribute "textContent" wird als Beschriftung angezeigt...
-            String myAttribute = WaitForInteractionReturnString(() -> { return label.getAttribute( "textContent" );} );
-            myAttribute = StringUtils.normalizeSpace( myAttribute );
-            
-            lvLsReturn.add( myAttribute );
+		// 2.schritt nun den Tag-label finden und den Textinhalt ermitteln.
+		WebElement label = SeDriver.getInstance().getDriver().findElement( By.xpath( this.getLocator() + "//legend" ) );
 
-            
-            bOK = true;
-        }
-        finally
-        {
-            if ( bOK )
-            {
-                this.LogFunctionEndDebug( lvLsReturn );
-            }
-            else
-            {
-                this.LogFunctionEndDebug();
-            }
-        }
+		// The Attribute "textContent" wird als Beschriftung angezeigt...
+		String myAttribute = WaitForInteractionReturnString(() -> { return label.getAttribute( "textContent" );} );
+		myAttribute = StringUtils.normalizeSpace( myAttribute );
 
-        return lvLsReturn;
-    }
+		lvLsReturn.add( myAttribute );
+
+		return lvLsReturn;
+	}
 }

@@ -80,16 +80,7 @@ public class SeALERTACCEPT extends SeDRIVERBASE
 	@Override
 	public void ClickOn()
 	{
-		try
-		{
-			this.LogFunctionStartDebug( "ClickOn" );
-
-			SeDriver.getInstance().getDriver().switchTo().alert().accept();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug();
-		}
+		SeDriver.getInstance().getDriver().switchTo().alert().accept();
 	}
 
 }

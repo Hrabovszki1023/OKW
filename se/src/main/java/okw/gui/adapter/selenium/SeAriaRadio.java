@@ -10,20 +10,12 @@ public class SeAriaRadio extends SeRadio
 	}
 
 	@Override
-	public Boolean getIsSelected() {
+	public Boolean getIsSelected()
+	{
 		Boolean lvbReturn = false;
 
-		try
-		{
-			LogFunctionStartDebug("getIsSelected");
+		lvbReturn = this.WaitForInteractionReturnBoolean( () -> { return this.Me().getAttribute("aria-checked").equalsIgnoreCase("true"); } );
 
-			lvbReturn = this.WaitForInteractionReturnBoolean( () -> { return this.Me().getAttribute("aria-checked").equalsIgnoreCase("true"); } );
-
-		}
-		finally
-		{
-			LogFunctionEndDebug(lvbReturn);
-		}
 		return lvbReturn;
 	}
 }

@@ -161,10 +161,6 @@ public class SeSelect extends SeAnyChildWindow
     @Override
     public void Select( ArrayList<String> fps_Values )
     {
-        this.LogFunctionStartDebug( "Select", "fps_Values", fps_Values.toString() );
-
-        try
-        {
             this.SetFocus();
 
             //org.openqa.selenium.support.ui.Select
@@ -181,11 +177,6 @@ public class SeSelect extends SeAnyChildWindow
                     SelectList.selectByVisibleText( lvsValue );
                 }
             }
-        }
-        finally
-        {
-            this.LogFunctionEndDebug();
-        }
     }
 
     /** \~german
@@ -207,10 +198,6 @@ public class SeSelect extends SeAnyChildWindow
     @Override
     public void SetValue( ArrayList<String> fpsValues )
     {
-        this.LogFunctionStartDebug( "SetValue", "fpsValues", fpsValues.toString() );
-
-        try
-        {
             // Waiting for the object. 
             // If it does not exist after TimeOut 
             // then the exception OKWGUIObjectNotFoundException is raised and terminated...
@@ -237,11 +224,6 @@ public class SeSelect extends SeAnyChildWindow
             {
                 WaitForInteraction(() -> { SelectList.selectByVisibleText( lvsValue );});
             }
-        }
-        finally
-        {
-            this.LogFunctionEndDebug();
-        }
     }
 
     /** \~german
@@ -261,11 +243,7 @@ public class SeSelect extends SeAnyChildWindow
         ArrayList<String> lvLsReturn = new ArrayList<String>();
         Boolean lvbSelectionFound = false;
 
-        try
-        {
-            this.LogFunctionStartDebug( "GetValue" );
-
-            // Waiting for the object. 
+             // Waiting for the object. 
             // If it does not exist after TimeOut 
             // then the exception OKWGUIObjectNotFoundException is raised and terminated...
             // ========================================
@@ -282,11 +260,6 @@ public class SeSelect extends SeAnyChildWindow
             
             if (!lvbSelectionFound) lvLsReturn.add("");
             
-        }
-        finally
-        {
-            this.LogFunctionEndDebug( lvLsReturn );
-        }
 
         return lvLsReturn;
     }

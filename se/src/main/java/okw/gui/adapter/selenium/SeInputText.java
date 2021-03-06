@@ -171,21 +171,12 @@ public class SeInputText extends SeAnyChildWindow
 	{
 		Integer lviReturn = 0;
 
-		try
-		{
-			this.LogFunctionStartDebug( "getMaxLength" );
+		// The Attribute "MaxLength" auslesen...
+		String lvsMaxLength = this.WaitForInteractionReturnString( () -> {return this.Me().getAttribute( "maxlength" );} );
 
-			// The Attribute "MaxLength" auslesen...
-			String lvsMaxLength = this.WaitForInteractionReturnString( () -> {return this.Me().getAttribute( "maxlength" );} );
-
-			if ( !okw.OKW_Helper.isStringNullOrEmpty( lvsMaxLength) )
-			{
-				lviReturn = Integer.parseInt( lvsMaxLength );
-			}
-		}
-		finally
+		if ( !okw.OKW_Helper.isStringNullOrEmpty( lvsMaxLength) )
 		{
-			this.LogFunctionEndDebug( lviReturn.toString() );
+			lviReturn = Integer.parseInt( lvsMaxLength );
 		}
 
 		return lviReturn;
@@ -205,18 +196,11 @@ public class SeInputText extends SeAnyChildWindow
 	public Integer getMinLength() {
 		Integer lviReturn = 0;
 
-		try {
-			this.LogFunctionStartDebug("getMinLength");
+		// The Attribute "MaxLength" auslesen...
+		String lvsMaxLength = this.WaitForInteractionReturnString( () -> {return this.Me().getAttribute( "minlength" );} );
 
-			// The Attribute "MaxLength" auslesen...
-			String lvsMaxLength = this.WaitForInteractionReturnString( () -> {return this.Me().getAttribute( "minlength" );} );
-
-			if (!okw.OKW_Helper.isStringNullOrEmpty(lvsMaxLength)) {
-				lviReturn = Integer.parseInt(lvsMaxLength);
-			}
-		} finally {
-			this.LogFunctionEndDebug(lviReturn.toString());
-		}
+		if (!okw.OKW_Helper.isStringNullOrEmpty(lvsMaxLength))
+			lviReturn = Integer.parseInt(lvsMaxLength);
 
 		return lviReturn;
 	}
@@ -238,26 +222,17 @@ public class SeInputText extends SeAnyChildWindow
 	 *  @author Zoltán Hrabovszki
 	 *  \date 2018.10.28
 	 */
-	   @Override
+	@Override
 	public ArrayList<String> getPlaceholder()
 	{
 		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-		try
-		{
-			this.LogFunctionStartDebug( "getPlaceholder" );
+		// The Attribute "placeholder" wird als Beschriftung angezeigt...
+		String myAttribute = this.WaitForInteractionReturnString( () -> {return this.Me().getAttribute( "placeholder" );} );
 
-			// The Attribute "placeholder" wird als Beschriftung angezeigt...
-			String myAttribute = this.WaitForInteractionReturnString( () -> {return this.Me().getAttribute( "placeholder" );} );
+		myAttribute = StringUtils.normalizeSpace( myAttribute );
 
-			myAttribute = StringUtils.normalizeSpace( myAttribute );
-
-			lvLsReturn.add( myAttribute );
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvLsReturn );
-		}
+		lvLsReturn.add( myAttribute );
 
 		return lvLsReturn;
 	}    
@@ -279,22 +254,12 @@ public class SeInputText extends SeAnyChildWindow
 	{
 		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-		try
+		// Get Value from TextField and put this into the return List<string>
+		String myValue = this.WaitForInteractionReturnString( () -> {return this.Me().getAttribute( "value" );} );
+
+		if ( myValue != null )
 		{
-			this.LogFunctionStartDebug( "getValue" );
-
-			// Get Value from TextField and put this into the return List<string>
-			String myValue = this.WaitForInteractionReturnString( () -> {return this.Me().getAttribute( "value" );} );
-
-			if ( myValue != null )
-			{
-				lvLsReturn.add( this.Me().getAttribute( "value" ) );
-			}
-
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvLsReturn.toString() );
+			lvLsReturn.add( this.Me().getAttribute( "value" ) );
 		}
 
 		return lvLsReturn;
@@ -307,29 +272,19 @@ public class SeInputText extends SeAnyChildWindow
 	@Override
 	public void SetValue( ArrayList<String> Val )
 	{
+		// Wenn GUI-Objekt nicht gefunden wird, mit OKWGUIObjectNotFoundException aussteigen
+		this.SetFocus();
 
-		try
+		this.WaitForInteraction( () -> {this.Me().clear();} );
+
+		if ( Val.get( 0 ).equals( okw.OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
 		{
-			this.LogFunctionStartDebug( "SetValue", "Val", Val.toString() );
-
-			// Wenn GUI-Objekt nicht gefunden wird, mit OKWGUIObjectNotFoundException aussteigen
-			this.SetFocus();
-
-			this.WaitForInteraction( () -> {this.Me().clear();} );
-
-			if ( Val.get( 0 ).equals( okw.OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-			{
-				// this.WaitForInteraction( () -> {this.Me().clear();} );
-			}
-			else
-			{
-				String resolvedValue = Val.get( 0 );
-				this.WaitForInteraction( (  ) -> { this.Me().sendKeys( resolvedValue ); } );
-			}
+			// this.WaitForInteraction( () -> {this.Me().clear();} );
 		}
-		finally
+		else
 		{
-			this.LogFunctionEndDebug();
+			String resolvedValue = Val.get( 0 );
+			this.WaitForInteraction( (  ) -> { this.Me().sendKeys( resolvedValue ); } );
 		}
 	}
 

@@ -35,7 +35,7 @@
 
     Sie sollten eine Kopie der GNU General Public License zusammen mit 
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package okw.gui.adapter.selenium.webdriver;
 
@@ -44,253 +44,180 @@ import org.openqa.selenium.*;
 
 import okw.gui.adapter.selenium.SeAnyChildWindow;
 
-    /** 
-     * @ingroup groupSeleniumChildGUIAdapter
-     * 
-     *  \~german
-     *  Klasse Implementiert das URL-Eingabefeld der Browser.
-     *  Die Klasse besitz keinen <tt>locator</tt>.
-     *  Die URL wird via <tt>SeDriver.Instance.driver.Url</tt> gelesen und geschrieben.
-     *  Die Menge der Verwendbaren Schlüsselwörter ist begrenzt, weil die Selenium WebDriver API
-     *  nur beschränkt an alle Funktionalitäten und Eigenschaften des
-     *  URL-TextFeldes eines Browser herankommt.
-     *  
-     *  __Wichtig:__ Klasse kann nur zusammen mit Selenium WebBrowser Klassen verwendet werden.
-     *  
-     *  \~english
-     *  \~
-     *  @author Zoltan Hrabovszki
-     *  \date 2014.04.19
-     */
-    public class SeURL extends SeAnyChildWindow
-    {
+/** 
+ * @ingroup groupSeleniumChildGUIAdapter
+ * 
+ *  \~german
+ *  Klasse Implementiert das URL-Eingabefeld der Browser.
+ *  Die Klasse besitz keinen <tt>locator</tt>.
+ *  Die URL wird via <tt>SeDriver.Instance.driver.Url</tt> gelesen und geschrieben.
+ *  Die Menge der Verwendbaren Schlüsselwörter ist begrenzt, weil die Selenium WebDriver API
+ *  nur beschränkt an alle Funktionalitäten und Eigenschaften des
+ *  URL-TextFeldes eines Browser herankommt.
+ *  
+ *  __Wichtig:__ Klasse kann nur zusammen mit Selenium WebBrowser Klassen verwendet werden.
+ *  
+ *  \~english
+ *  \~
+ *  @author Zoltan Hrabovszki
+ *  \date 2014.04.19
+ */
+public class SeURL extends SeAnyChildWindow
+{
 
-        public SeURL()
-        {
-          super();
-        }
+	public SeURL()
+	{
+		super();
+	}
 
-  
-        /** \~german
-         *  \brief
-         *  Liest den aktuellen Tooltip-Wert der URL aus.
-         *  
-         *  __Diese Methode wird von dieser Klasse nicht unterstützt.__
-         *  
-         *  @return Tooltip-Wert des aktuellen URL-Textfeldes im aktiven Browser.
-         *  \~english
-         *  \~
-         *  @author Zoltan Hrabovszki
-         *  \date 2014.04.19
-         */
-        public ArrayList<String> getTooltip()
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            this.LogFunctionStartDebug("GetTooltip");
+	/** \~german
+	 *  \brief
+	 *  Liest den aktuellen Tooltip-Wert der URL aus.
+	 *  
+	 *  __Diese Methode wird von dieser Klasse nicht unterstützt.__
+	 *  
+	 *  @return Tooltip-Wert des aktuellen URL-Textfeldes im aktiven Browser.
+	 *  \~english
+	 *  \~
+	 *  @author Zoltan Hrabovszki
+	 *  \date 2014.04.19
+	 */
+	public ArrayList<String> getTooltip()
+	{
+		// TODO: SeURL.GetTooltip: Ausnahme-Meldung auslagern
+		throw new NotFoundException("GetTooltip not supported by SeURL-class!");
+	}
 
-            try
-            {
-                // TODO: SeURL.GetTooltip: Ausnahme-Meldung auslagern
-                throw new NotFoundException("GetTooltip not supported by SeURL-class!");
-            }
-            finally
-            {
-                this.LogFunctionEndDebug(lvLsReturn);
-            }
-            // return lvLsReturn;
-        }
+	/**
+	 * \~german
+	 *  Liest den aktuellen Wert der URL aus.
+	 *  
+	 *  @return Sichtbarer Wert der URL im Aktiven Browser.
+	 *  \~english
+	 *  \~
+	 *  @author Zoltan Hrabovszki
+	 *  \date 2014.04.19
+	 */
+	public ArrayList<String> getValue()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-         /**
-          * \~german
-          *  Liest den aktuellen Wert der URL aus.
-          *  
-          *  @return Sichtbarer Wert der URL im Aktiven Browser.
-          *  \~english
-          *  \~
-          *  @author Zoltan Hrabovszki
-          *  \date 2014.04.19
-          */
-        public ArrayList<String> getValue()
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
+		// Get Value from TextField and Putt this into theReturn ArrayList<String>
+		lvLsReturn.add(SeDriver.getInstance().getDriver().getCurrentUrl());
 
-            this.LogFunctionStartDebug("getValue");
+		return lvLsReturn;
+	}
 
-            try
-            {
-                // Get Value from TextField and Putt this into theReturn ArrayList<String>
-                lvLsReturn.add(SeDriver.getInstance().getDriver().getCurrentUrl());
-            }
-            finally
-            {
-               this.LogFunctionEndDebug(lvLsReturn);
-            }
+	/** 
+	 *  Ermittelt den Wert des Objktes für das Schlüsselwort Loggewert.
+	 *  
+	 *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methoden überschreibung.
+	 *  
+	 *  @return Rückgabe des Textuellen Inhaltes der markierten Textes.
+	 *  
+	 *  @author Zoltan Hrabovszki
+	 *  \date 2013.12.14
+	 */
+	public ArrayList<String> LogValue()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            return lvLsReturn;
-        }
+		lvLsReturn = this.getValue();
 
-         /** 
-         *  Ermittelt den Wert des Objktes für das Schlüsselwort Loggewert.
-         *  
-         *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methoden überschreibung.
-         *  
-         *  @return Rückgabe des Textuellen Inhaltes der markierten Textes.
-         *  
-         *  @author Zoltan Hrabovszki
-         *  \date 2013.12.14
-         */
-        public ArrayList<String> LogValue()
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
+		return lvLsReturn;
+	}
 
-            try
-            {
-                this.LogFunctionStartDebug("LogValue");
-                lvLsReturn = this.getValue();
-            }
-            finally
-            {
-                this.LogFunctionEndDebug(lvLsReturn);
-            }
+	/**  \~german
+	 *  Ermittelt den Wert, im Allgemeinen den textuellen Inhalt eines Objektes
+	 *  für das Schlüsselwort MerkeWert.
+	 *  
+	 *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methodenüberschreibung.
+	 *  
+	 *  @return Rückgabe des Textuellen Inhaltes des aktuellen Objektes.
+	 *  
+	 *  \~english
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2013.12.14
+	 */
+	public ArrayList<String> MemorizeValue()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            return lvLsReturn;
-        }
+		lvLsReturn = this.getValue();
 
-        /**  \~german
-         *  Ermittelt den Wert, im Allgemeinen den textuellen Inhalt eines Objektes
-         *  für das Schlüsselwort MerkeWert.
-         *  
-         *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methodenüberschreibung.
-         *  
-         *  @return Rückgabe des Textuellen Inhaltes des aktuellen Objektes.
-         *  
-         *  \~english
-         *  \~
-         *  @author Zoltán Hrabovszki
-         *  \date 2013.12.14
-         */
-        public ArrayList<String> MemorizeValue()
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
+		return lvLsReturn;
+	}
 
-            try
-            {
-                this.LogFunctionStartDebug("MemorizeValue");
-                lvLsReturn = this.getValue();
-            }
-            finally
-            {
-               this.LogFunctionEndDebug(lvLsReturn);
-            }
+	/**  \~german
+	 *  Setzt den Focus in das aktuelle URL-TextFeld.
+	 *  
+	 *  __Diese Methode wird von dieser Klasse nicht unterstützt.__
+	 *  
+	 *  \~english
+	 *  \~
+	 *  @author Zoltan Hrabovszki
+	 *  \date 2014.04.19
+	 */
+	public void SetFocus()
+	{
+		// TODO: SeURL.SetFocus: Ausnahme-Meldung auslagern
+		throw new NotFoundException("\"SetFocus\" not supported by SeURL-class!");
+	}
 
-            return lvLsReturn;
-        }
+	/**  \~german
+	 *  Setzt den Wert der URL im aktiven Browser und navigiert zur gegebene Seite.
+	 *  
+	 *  Ctrl-Eingaben funktionieren nicht bei Set Value nicht (z.B. <tt>CTRL-C</tt>).
+	 *  
+	 *  \~english
+	 *  \~
+	 *  @author Zoltan Hrabovszki
+	 *  \date 2014.04.19
+	 */
+	public void SetValue(ArrayList<String> fps_Values)
+	{
+		SeDriver.getInstance().getDriver().navigate().to(fps_Values.get(0));
+	}
 
-         /**  \~german
-         *  Setzt den Focus in das aktuelle URL-TextFeld.
-         *  
-         *  __Diese Methode wird von dieser Klasse nicht unterstützt.__
-         *  
-         *  \~english
-         *  \~
-         *  @author Zoltan Hrabovszki
-         *  \date 2014.04.19
-         */
-        public void SetFocus()
-        {
-            this.LogFunctionStartDebug("SetFocus");
+	/**  \~german
+	 *  Setzt den Wert der URL im aktiven Browser/BrowserChild und navigiert zur gegebenen Seite.
+	 *  
+	 *  __Wichtig:__ Die URL wird in dieser Klasse technisch nicht über die Tastatur eigegeben. Implementierung erfolg 
+	 *  aus Kompfort- und Kompatinilitätsgründen.
+	 *  Dass heißt Ctrl-Eingaben funktionieren nicht(z.B. <tt>CTRL-C</tt>).
+	 *  
+	 *  \~english
+	 *  \~
+	 *  @author Zoltan Hrabovszki
+	 *  \date 2014.04.19
+	 */
+	public void TypeKey(ArrayList<String> fps_Values)
+	{
+		WebDriver myDriver = SeDriver.getInstance().getDriver();
+		myDriver.navigate().to(fps_Values.get(0));
+	}
 
-            try
-            {
-                // TODO: SeURL.SetFocus: Ausnahme-Meldung auslagern
-                throw new NotFoundException("\"SetFocus\" not supported by SeURL-class!");
-            }
-            finally
-            {
-                this.LogFunctionEndDebug();
-            }
-        }
+	/**
+	 *  Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert.
+	 *  
+	 *  Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
+	 *  
+	 *  \return
+	 *  Rückgabe des Textuellen Inhaltes der markierten Textes.
+	 *  Es wird immer der aktuelle Wert des Objektes zurückgeliefert.
+	 *  
+	 *  @author Zoltan Hrabovszki
+	 *  \date 2013.12.14
+	 */
+	public ArrayList<String> VerifyValue()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-         /**  \~german
-         *  Setzt den Wert der URL im aktiven Browser und navigiert zur gegebene Seite.
-         *  
-         *  Ctrl-Eingaben funktionieren nicht bei Set Value nicht (z.B. <tt>CTRL-C</tt>).
-         *  
-         *  \~english
-         *  \~
-         *  @author Zoltan Hrabovszki
-         *  \date 2014.04.19
-         */
-        public void SetValue(ArrayList<String> fps_Values)
-        {
-            this.LogFunctionStartDebug("SetValue", "fps_Values", fps_Values.get(0));
+		lvLsReturn.add( SeDriver.getInstance().getDriver().getCurrentUrl() );
 
-            try
-            {
-                SeDriver.getInstance().getDriver().navigate().to(fps_Values.get(0));
-            }
-            finally
-            {
-                this.LogFunctionEndDebug();
-            }
-        }
 
-         /**  \~german
-         *  Setzt den Wert der URL im aktiven Browser/BrowserChild und navigiert zur gegebenen Seite.
-         *  
-         *  __Wichtig:__ Die URL wird in dieser Klasse technisch nicht über die Tastatur eigegeben. Implementierung erfolg 
-         *  aus Kompfort- und Kompatinilitätsgründen.
-         *  Dass heißt Ctrl-Eingaben funktionieren nicht(z.B. <tt>CTRL-C</tt>).
-         *  
-         *  \~english
-         *  \~
-         *  @author Zoltan Hrabovszki
-         *  \date 2014.04.19
-         */
-        public void TypeKey(ArrayList<String> fps_Values)
-        {
-            this.LogFunctionStartDebug("TypeKey", "fps_Values", fps_Values.get(0));
-
-            try
-            {
-            	WebDriver myDriver = SeDriver.getInstance().getDriver();
-            	myDriver.navigate().to(fps_Values.get(0));
-            }
-            finally
-            {
-                this.LogFunctionEndDebug();
-            }
-        }
-
-         /**
-          *  Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert.
-          *  
-          *  Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
-          *  
-          *  \return
-          *  Rückgabe des Textuellen Inhaltes der markierten Textes.
-          *  Es wird immer der aktuelle Wert des Objektes zurückgeliefert.
-          *  
-          *  @author Zoltan Hrabovszki
-          *  \date 2013.12.14
-          */
-        public ArrayList<String> VerifyValue()
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
-
-            try
-            {
-                this.LogFunctionStartDebug("VerifyValue");
-
-                lvLsReturn.add( SeDriver.getInstance().getDriver().getCurrentUrl() );
-                
-            }
-            finally
-            {
-                this.LogFunctionEndDebug(lvLsReturn);
-            }
-
-            return lvLsReturn;
-        }
+		return lvLsReturn;
+	}
 }

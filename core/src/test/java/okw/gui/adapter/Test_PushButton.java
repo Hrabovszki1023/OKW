@@ -35,7 +35,7 @@
 
     Sie sollten eine Kopie der GNU General Public License zusammen mit 
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
-*/
+ */
 package okw.gui.adapter;
 
 import java.io.IOException;
@@ -52,146 +52,145 @@ import okw.gui.AnyChildwindow;
 import okw.gui.OKWLocator;
 import okw.log.*;
 
-    // TODO Implemetierung einschalten : IOKW_LinkObj
-    public class Test_PushButton extends AnyChildwindow
-    {
-        /// \brief
-        /// Hier eventuell virtuelle Eigenschaft einfügen
-        /// 
-        String Locator;
-        
-        Logger_Sngltn            myLogger        = Logger_Sngltn.getInstance();
-        //OKW_CurrentObject_Sngltn myCurrentObject = OKW_CurrentObject_Sngltn.getInstance();
-        OKW_TestClipboard        myClipBoard     = OKW_TestClipboard.getInstance();
+// TODO Implemetierung einschalten : IOKW_LinkObj
+public class Test_PushButton extends AnyChildwindow
+{
+	/// \brief
+	/// Hier eventuell virtuelle Eigenschaft einfügen
+	/// 
+	String Locator;
 
-        String myValue = "";
-        
-        public String getCAT()
-        {
-            String lvsReturn = "";
-            
-            try
-			{
-				lvsReturn = okw.core.OKW_CurrentObject_Sngltn.getInstance().getObjectFN();
-			}
-			catch (
-					XPathExpressionException | JAXBException
-					| ParserConfigurationException | SAXException | IOException e)
-			{
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-            
-            return lvsReturn;
-        }
-        
-        /** \~german
-         *  GUI-TestObjekt für ein Pushbotton
-         * 
-         *  Objekt enthält keine Aktionen ist ein Mock für ein Button.
-         *  
-         *  \param fpsLocator Locator des Objektes
-         *  \param fpLocators Referenz auf Locatoren, die eigebunden werden sollen
-         * 
-         *  \~english
-         *  \todo TODO: Brief Description.
-         *  
-         *  \todo TODO: Detailed Description
-         *  
-         *  \param fpsLocator  \todo TODO: Parameter Description
-         * 
-         *  \~
-         *  \author Zoltán Hrabovszki
-         *  \date 2015.05.01
-         */
-        public Test_PushButton( String fpsLocator, OKWLocator... fpLocators )
-        {            
-            super( fpsLocator, fpLocators );
-        }
+	Logger_Sngltn            myLogger        = Logger_Sngltn.getInstance();
+	//OKW_CurrentObject_Sngltn myCurrentObject = OKW_CurrentObject_Sngltn.getInstance();
+	OKW_TestClipboard        myClipBoard     = OKW_TestClipboard.getInstance();
 
-        /// \~german
-        /// \brief Simuliert die Methode ClickOn()
-        /// 
-        /// \~english
-        /// \brief \todo TODO: Brief Description.
-        /// 
-        /// \todo TODO: Detailed Description
-        ///
-        /// \~
-        /// \author Zoltán Hrabovszki
-        /// \date 2015.05.01
-        public void ClickOn()
-        {
-            this.myValue = "NO VALUE";
-            
-            //String lvs_ObjectName = myCurrentObject.GetObjectName();
-            String lvs_ObjectName = getCAT();
-            
-            this.myLogger.LogFunctionStartDebug("ClickOn");
+	String myValue = "";
+
+	public String getCAT()
+	{
+		String lvsReturn = "";
+
+		try
+		{
+			lvsReturn = okw.core.OKW_CurrentObject_Sngltn.getInstance().getObjectFN();
+		}
+		catch (
+				XPathExpressionException | JAXBException
+				| ParserConfigurationException | SAXException | IOException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return lvsReturn;
+	}
+
+	/** \~german
+	 *  GUI-TestObjekt für ein Pushbotton
+	 * 
+	 *  Objekt enthält keine Aktionen ist ein Mock für ein Button.
+	 *  
+	 *  \param fpsLocator Locator des Objektes
+	 *  \param fpLocators Referenz auf Locatoren, die eigebunden werden sollen
+	 * 
+	 *  \~english
+	 *  \todo TODO: Brief Description.
+	 *  
+	 *  \todo TODO: Detailed Description
+	 *  
+	 *  \param fpsLocator  \todo TODO: Parameter Description
+	 * 
+	 *  \~
+	 *  \author Zoltán Hrabovszki
+	 *  \date 2015.05.01
+	 */
+	public Test_PushButton( String fpsLocator, OKWLocator... fpLocators )
+	{            
+		super( fpsLocator, fpLocators );
+	}
+
+	/// \~german
+	/// \brief Simuliert die Methode ClickOn()
+	/// 
+	/// \~english
+	/// \brief \todo TODO: Brief Description.
+	/// 
+	/// \todo TODO: Detailed Description
+	///
+	/// \~
+	/// \author Zoltán Hrabovszki
+	/// \date 2015.05.01
+	public void ClickOn()
+	{
+		this.myValue = "NO VALUE";
+
+		//String lvs_ObjectName = myCurrentObject.GetObjectName();
+		String lvs_ObjectName = getCAT();
 
 
-            myClipBoard.setObjectName(lvs_ObjectName);
-            myClipBoard.setMethod("ClickOn()");
-            myClipBoard.getValue().clear();
-            myClipBoard.getValue().add(this.myValue);
-            
-            this.myLogger.LogFunctionEndDebug();
-        }
 
-        /// \~german
-        /// \brief Simuliert ClickOn_DOUBLECLICK()
-        /// 
-        /// \~english
-        /// \brief \todo TODO: Brief Description.
-        ///
-        /// \~
-        /// \author Zoltán Hrabovszki
-        /// \date 2015.05.01
-        public void ClickOn_DOUBLECLICK()
-        {
-            this.myValue = "NO VALUE";
-            this.myLogger.LogFunctionStartDebug("ClickOn_DOUBLECLICK");
-            
-            String lvs_ObjectName = getCAT();;
 
-            myClipBoard.setObjectName(lvs_ObjectName);
-            myClipBoard.setMethod("ClickOn_DOUBLECLICK()");
-            myClipBoard.getValue().clear();
-            myClipBoard.getValue().add(this.myValue);
-            
-            this.myLogger.LogFunctionEndDebug();
-        }
+		myClipBoard.setObjectName(lvs_ObjectName);
+		myClipBoard.setMethod("ClickOn()");
+		myClipBoard.getValue().clear();
+		myClipBoard.getValue().add(this.myValue);
 
-        /// \~german
-        /// \brief Simuliert die Tastatur Eingabe.
-        /// 
-        /// \param fpLsValue Werte die als Tastatureingabe 
-        /// \return
-        ///
-        /// \~english
-        /// \brief \todo TODO: Brief Description.
-        /// 
-        /// \todo TODO: Detailed Description
-        /// 
-        /// \param fpbTrueOrFalse 
-        /// \return
-        ///
-        /// \~
-        /// \author Zoltán Hrabovszki
-        /// \date 2015.05.01
-        public void TypeKey(List<String> fpLsValue)
-        {
-            this.myValue = fpLsValue.get(0);
-            myLogger.LogFunctionStartDebug("TypeKey");
-            
-            String lvs_ObjectName = getCAT();;
 
-            myClipBoard.setObjectName(lvs_ObjectName);
-            myClipBoard.setMethod("TypeKey()");
-            myClipBoard.getValue().clear();
-            myClipBoard.getValue().add(fpLsValue.get(0));
-            
-            myLogger.LogFunctionEndDebug();
-        }
+	}
+
+	/// \~german
+	/// \brief Simuliert ClickOn_DOUBLECLICK()
+	/// 
+	/// \~english
+	/// \brief \todo TODO: Brief Description.
+	///
+	/// \~
+	/// \author Zoltán Hrabovszki
+	/// \date 2015.05.01
+	public void ClickOn_DOUBLECLICK()
+	{
+		this.myValue = "NO VALUE";
+
+
+		String lvs_ObjectName = getCAT();;
+
+		myClipBoard.setObjectName(lvs_ObjectName);
+		myClipBoard.setMethod("ClickOn_DOUBLECLICK()");
+		myClipBoard.getValue().clear();
+		myClipBoard.getValue().add(this.myValue);
+
+
+	}
+
+	/// \~german
+	/// \brief Simuliert die Tastatur Eingabe.
+	/// 
+	/// \param fpLsValue Werte die als Tastatureingabe 
+	/// \return
+	///
+	/// \~english
+	/// \brief \todo TODO: Brief Description.
+	/// 
+	/// \todo TODO: Detailed Description
+	/// 
+	/// \param fpbTrueOrFalse 
+	/// \return
+	///
+	/// \~
+	/// \author Zoltán Hrabovszki
+	/// \date 2015.05.01
+	public void TypeKey(List<String> fpLsValue)
+	{
+		this.myValue = fpLsValue.get(0);
+
+
+		String lvs_ObjectName = getCAT();;
+
+		myClipBoard.setObjectName(lvs_ObjectName);
+		myClipBoard.setMethod("TypeKey()");
+		myClipBoard.getValue().clear();
+		myClipBoard.getValue().add(fpLsValue.get(0));
+
+	}
 
 }

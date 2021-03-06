@@ -37,7 +37,7 @@ package okw.gui.adapter;
 
     Sie sollten eine Kopie der GNU General Public License zusammen mit 
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
-*/
+ */
 
 import java.util.ArrayList;
 
@@ -117,198 +117,161 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
 public class SeDiv4CtrlKeyTest extends SeAnyChildWindow
 {
 
-    /**
-     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
-     */
-    public SeDiv4CtrlKeyTest( String Locator, OKWLocatorBase... Locators )
-    {
-        super( Locator, Locators );
-    }
+	/**
+	 *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
+	 */
+	public SeDiv4CtrlKeyTest( String Locator, OKWLocatorBase... Locators )
+	{
+		super( Locator, Locators );
+	}
 
 
-    /** \~german
-     *  Ermittelt den textuellen Inhalt der Überschrift eines Textfeldes.
-     *  
-     *  Im GUI-adapter SeInputText ist die Überschrift (Caption) gleich dem Wert des Textfeldes.
-     *  Daher ruft `SeInputText::getCaption()` die Methode `SeInputText::getValue()` auf!
-     *   
-     *  @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
-     *  \~english
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  \date 2013-12-07
-     */
-    @Override
-    public ArrayList<String> getCaption()
-    {
-        return getValue();
-    }
-    
-    
-   /** \~german
-   *  Ermittelt den textuellen Inhalt des Labels.
-   *  
-   *  Es wird das Attribute "textContent" des mit "id" an das aktuelle Objekt angebunde "Laben" gelesen.
-   *  
-   *  @return Rückgabe des Label-Textes.
-   *  \~english
-   *  \~
-   *  @author Zoltán Hrabovszki
-   *  \date 2018.12.27
-   */
-   public Integer getMaxLength()
-   {
-       Integer lviReturn = 0;
+	/** \~german
+	 *  Ermittelt den textuellen Inhalt der Überschrift eines Textfeldes.
+	 *  
+	 *  Im GUI-adapter SeInputText ist die Überschrift (Caption) gleich dem Wert des Textfeldes.
+	 *  Daher ruft `SeInputText::getCaption()` die Methode `SeInputText::getValue()` auf!
+	 *   
+	 *  @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
+	 *  \~english
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2013-12-07
+	 */
+	@Override
+	public ArrayList<String> getCaption()
+	{
+		return getValue();
+	}
 
-       try
-       {
-           this.LogFunctionStartDebug( "getMaxLength" );
 
-           // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-           this.WaitForMe();
+	/** \~german
+	 *  Ermittelt den textuellen Inhalt des Labels.
+	 *  
+	 *  Es wird das Attribute "textContent" des mit "id" an das aktuelle Objekt angebunde "Laben" gelesen.
+	 *  
+	 *  @return Rückgabe des Label-Textes.
+	 *  \~english
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2018.12.27
+	 */
+	public Integer getMaxLength()
+	{
+		Integer lviReturn = 0;
 
-           
-           // The Attribute "MaxLength" auslesen...
-           
-           String lvsMaxLength = this.Me().getAttribute( "maxlength" );
+		// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+		this.WaitForMe();
 
-           if ( !okw.OKW_Helper.isStringNullOrEmpty( lvsMaxLength) )
-           {
-               lviReturn = Integer.parseInt( lvsMaxLength );
-           }
-       }
-       finally
-       {
-           this.LogFunctionEndDebug( lviReturn.toString() );
-       }
 
-       return lviReturn;
-   }
-   
-   
-    /** \~german
-     *  Liest den Placeholder des input-Tags aus.
-     * 
-     *  Es wird das Attribut "placeholder" ausgelesen.
-     *  @return Wert des Attributs "placeholder"
-     *  
-     *  \~english
-     *  Reads the current placeholder of the input-tag.
-     *  
-     *  It reads the attribute "placeholder".
-     *  
-     *  @return The value of the attribute "placeholder"
-     *  
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  \date 2018.10.28
-     */
-    public ArrayList<String> getPlaceholder()
-    {
-        ArrayList<String> lvLsReturn = new ArrayList<String>();
+		// The Attribute "MaxLength" auslesen...
 
-        try
-        {
-            this.LogFunctionStartDebug( "getPlaceholder" );
+		String lvsMaxLength = this.Me().getAttribute( "maxlength" );
 
-            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-            this.WaitForMe();
+		if ( !okw.OKW_Helper.isStringNullOrEmpty( lvsMaxLength) )
+		{
+			lviReturn = Integer.parseInt( lvsMaxLength );
+		}
 
-            // Get Value from TextField and put this into the return ArrayList<String>
-            lvLsReturn.add( this.Me().getAttribute( "placeholder" ) );
-        }
-        finally
-        {
-            this.LogFunctionEndDebug( lvLsReturn );
-        }
+		return lviReturn;
+	}
 
-        return lvLsReturn;
-    }    
 
-    
-    /** \~german
-     *  Für dieses Objekt definieren wir "Wert"/"Value" wie Folgt.
-     *  
-     *  @return
-     *  Gibt den Textuellen Inhaltes des TextFeldes zurück.
-     *  - Wenns das objekt "ausgewählt" ist, dann ist "class='selected'" und Value wird auf "selected" gesetzt.
-     *  - Wenn das Objekt "nicht ausgewählt ist", dann ist "class='unselected'" und "Value" wird auf "unselected" gesetzt
-     *  - wenn weder die eine classe noch die andere existiert, dann wir "Value= 'unknown State or Wrong Type of GUI-Objekt'" zurück gegeben.
-     *  \~
-     *  @author Zoltan Hrabovszki
-     *  \date 2020.03.01
-     */
-    @Override
-    public ArrayList<String> getValue()
-    {
-        ArrayList<String> lvLsReturn = new ArrayList<String>();
+	/** \~german
+	 *  Liest den Placeholder des input-Tags aus.
+	 * 
+	 *  Es wird das Attribut "placeholder" ausgelesen.
+	 *  @return Wert des Attributs "placeholder"
+	 *  
+	 *  \~english
+	 *  Reads the current placeholder of the input-tag.
+	 *  
+	 *  It reads the attribute "placeholder".
+	 *  
+	 *  @return The value of the attribute "placeholder"
+	 *  
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2018.10.28
+	 */
+	public ArrayList<String> getPlaceholder()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-        try
-        {
-            this.LogFunctionStartDebug( "GetValue" );
 
-            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-            this.WaitForMe();
+		// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+		this.WaitForMe();
 
-            // Get Value from TextField and put this into the return List<string>
-            String myValue = this.Me().getAttribute( "class" );
+		// Get Value from TextField and put this into the return ArrayList<String>
+		lvLsReturn.add( this.Me().getAttribute( "placeholder" ) );
 
-            if ( "key_un".equals( myValue ) )
-            {
-                lvLsReturn.add( "unselected" );
-            }
-            else if ( "key_pressed".equals( myValue ) )
-            {
-                lvLsReturn.add( "selected" );
-            }
-            else if ( "key_pressed_m".equals( myValue ) )
-            {
-                lvLsReturn.add( "selected" );
-            }
-            else
-            {
-                lvLsReturn.add( "unknown State or Wrong Type of GUI-Objekt" );
-            }
-        }
-        finally
-        {
-            this.LogFunctionEndDebug( lvLsReturn.toString() );
-        }
+		return lvLsReturn;
+	}    
 
-        return lvLsReturn;
-    }
 
-    
-    public void set__Attribute( WebElement elem, String value )
-    {
-        JavascriptExecutor js = ( JavascriptExecutor ) SeDriver.getInstance().getDriver();
+	/** \~german
+	 *  Für dieses Objekt definieren wir "Wert"/"Value" wie Folgt.
+	 *  
+	 *  @return
+	 *  Gibt den Textuellen Inhaltes des TextFeldes zurück.
+	 *  - Wenns das objekt "ausgewählt" ist, dann ist "class='selected'" und Value wird auf "selected" gesetzt.
+	 *  - Wenn das Objekt "nicht ausgewählt ist", dann ist "class='unselected'" und "Value" wird auf "unselected" gesetzt
+	 *  - wenn weder die eine classe noch die andere existiert, dann wir "Value= 'unknown State or Wrong Type of GUI-Objekt'" zurück gegeben.
+	 *  \~
+	 *  @author Zoltan Hrabovszki
+	 *  \date 2020.03.01
+	 */
+	@Override
+	public ArrayList<String> getValue()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-        String scriptSetAttrValue = "arguments[0].setAttribute(arguments[1],arguments[2])";
+		// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+		this.WaitForMe();
 
-        js.executeScript( scriptSetAttrValue, elem, "value", value );
+		// Get Value from TextField and put this into the return List<string>
+		String myValue = this.Me().getAttribute( "class" );
 
-    }
+		if ( "key_un".equals( myValue ) )
+		{
+			lvLsReturn.add( "unselected" );
+		}
+		else if ( "key_pressed".equals( myValue ) )
+		{
+			lvLsReturn.add( "selected" );
+		}
+		else if ( "key_pressed_m".equals( myValue ) )
+		{
+			lvLsReturn.add( "selected" );
+		}
+		else
+		{
+			lvLsReturn.add( "unknown State or Wrong Type of GUI-Objekt" );
+		}
 
-    /**
-     *  \~german
-     *  Hier wird nicht einWert des GUI-Objketes gesetzt,
-     *  sondern das Property "KeyValue" auf dem gegebenen Wert von Val gesetzt.
-     * 
-     */
-    @Override
-    public void SetValue( ArrayList<String> Val )
-    {
-        try
-        {
-            this.LogFunctionStartDebug( "SetValue", "Val", Val.toString() );
-            
-            this.setLocator( "//div[text()='" + Val.get( 0 )  + "']" );
-            
-           // okw.OKW_Properties.getInstance().setProperty( "KeyValue", Val.get( 0 ) );
-        }
-        finally
-        {
-            this.LogFunctionEndDebug();
-        }
-    }
+		return lvLsReturn;
+	}
+
+
+	public void set__Attribute( WebElement elem, String value )
+	{
+		JavascriptExecutor js = ( JavascriptExecutor ) SeDriver.getInstance().getDriver();
+
+		String scriptSetAttrValue = "arguments[0].setAttribute(arguments[1],arguments[2])";
+
+		js.executeScript( scriptSetAttrValue, elem, "value", value );
+
+	}
+
+	/**
+	 *  \~german
+	 *  Hier wird nicht einWert des GUI-Objketes gesetzt,
+	 *  sondern das Property "KeyValue" auf dem gegebenen Wert von Val gesetzt.
+	 * 
+	 */
+	@Override
+	public void SetValue( ArrayList<String> Val )
+	{
+		this.setLocator( "//div[text()='" + Val.get( 0 )  + "']" );
+	}
 }

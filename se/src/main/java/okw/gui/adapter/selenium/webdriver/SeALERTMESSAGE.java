@@ -85,19 +85,10 @@ public class SeALERTMESSAGE extends SeDRIVERBASE
 	{
 		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-		this.LogFunctionStartDebug("getValue");
-
-		try
-		{
-			// The Attribute "textContent" wird als Beschriftung angezeigt...
-			String myText = SeDriver.getInstance().getDriver().switchTo().alert().getText();
-			myText = StringUtils.normalizeSpace( myText );
-			lvLsReturn.add( myText );
-		}
-		finally
-		{
-			this.LogFunctionEndDebug(lvLsReturn);
-		}
+		// The Attribute "textContent" wird als Beschriftung angezeigt...
+		String myText = SeDriver.getInstance().getDriver().switchTo().alert().getText();
+		myText = StringUtils.normalizeSpace( myText );
+		lvLsReturn.add( myText );
 
 		return lvLsReturn;
 

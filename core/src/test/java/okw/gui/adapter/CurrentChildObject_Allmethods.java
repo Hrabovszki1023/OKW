@@ -35,7 +35,7 @@
 
     Sie sollten eine Kopie der GNU General Public License zusammen mit 
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package okw.gui.adapter;
 
@@ -48,339 +48,339 @@ import okw.gui.OKWLocator;
 import okw.log.Logger_Sngltn;
 
 
-    public class CurrentChildObject_Allmethods extends AnyChildwindow // : IOKW_SimpleDataObj
-    {
+public class CurrentChildObject_Allmethods extends AnyChildwindow // : IOKW_SimpleDataObj
+{
 
-        protected String Locator;
-        
-        protected Logger_Sngltn            myLogger        = Logger_Sngltn.getInstance();
-        //protected OKW_CurrentObject_Sngltn myCurrentObject = OKW_CurrentObject_Sngltn.getInstance();
-        protected OKW_TestClipboard        myClipboard     = OKW_TestClipboard.getInstance();
-        
-        
-        String myValue = "";
+	protected String Locator;
+
+	protected Logger_Sngltn            myLogger        = Logger_Sngltn.getInstance();
+	//protected OKW_CurrentObject_Sngltn myCurrentObject = OKW_CurrentObject_Sngltn.getInstance();
+	protected OKW_TestClipboard        myClipboard     = OKW_TestClipboard.getInstance();
 
 
-        public CurrentChildObject_Allmethods( String fpsLocator, OKWLocator... fpLocators )
-        {
-            super( fpsLocator, fpLocators );
-        }
+	String myValue = "";
 
-        
-        public String getCAT()
-        {        	
-        	String lvsReturn = "CurrentObjectWindow.CurrentObjectAllMethodCallTypes";
-        	
-        	return lvsReturn;
-        }
 
-        /*
+	public CurrentChildObject_Allmethods( String fpsLocator, OKWLocator... fpLocators )
+	{
+		super( fpsLocator, fpLocators );
+	}
+
+
+	public String getCAT()
+	{        	
+		String lvsReturn = "CurrentObjectWindow.CurrentObjectAllMethodCallTypes";
+
+		return lvsReturn;
+	}
+
+	/*
         public __CurrentObjectAllMethodCallTypes(String fps_Locator)
         {
-        	myLogger.LogFunctionStartDebug(this.getClass().getSimpleName() + ".__CurrentObjectAllMethodCallTypes()", "fps_Locator", fps_Locator);
+
         	myLogger.LogPrintDebug(this.Locator);
             Locator = fps_Locator;
-            myLogger.LogFunctionEndDebug();
+
         }
-*/
+	 */
 
-		public Boolean CallMethodReturn_rB_pMN()
-        {
-        	myLogger.LogFunctionStart("CallMethodReturn_rB_pMN");
-        	myLogger.LogPrintDebug("Locator: " + this.Locator);
+	public Boolean CallMethodReturn_rB_pMN()
+	{
 
-            Boolean bReturn = true;
+		myLogger.LogPrintDebug("Locator: " + this.Locator);
 
-            myClipboard.setObjectName(getCAT());
-            myClipboard.setMethod("CallMethodReturn_rB_pMN");
-            myClipboard.getValue().clear();
-            myClipboard.getValue().add("NO VALUE");
+		Boolean bReturn = true;
 
-            myLogger.LogFunctionEnd();
-            return bReturn;
-        }
+		myClipboard.setObjectName(getCAT());
+		myClipboard.setMethod("CallMethodReturn_rB_pMN");
+		myClipboard.getValue().clear();
+		myClipboard.getValue().add("NO VALUE");
 
 
-		public Boolean CallMethodReturn_rB_pMN_pB(Boolean pB)
-        {
-        	myLogger.LogFunctionStart("CallMethodReturn_rB_pMN_pB", "String pB", pB.toString());
-        	myLogger.LogPrintDebug("Locator: " + this.Locator);
+		return bReturn;
+	}
 
-            Boolean bReturn = pB;
-
-            myClipboard.setObjectName(getCAT());
-            myClipboard.setMethod("CallMethodReturn_rB_pMN_pB");
-            myClipboard.getValue().clear();
-            myClipboard.getValue().add(OKW_Helper.Boolean2String(bReturn));
-
-            myLogger.LogFunctionEnd();
-            return bReturn;
-        }
-
-
-		public int CallMethodReturn_rI_pMN()
-        {
-
-            myLogger.LogFunctionStart("CallMethodReturn_rI_pMN");
-            myLogger.LogPrintDebug("Locator: " + this.Locator);
-
-            int liReturn = 23101963;
 
-            myClipboard.setObjectName(getCAT());
-            myClipboard.setMethod("CallMethodReturn_rI_pMN");
-            myClipboard.getValue().clear();
-            myClipboard.getValue().add("NO VALUE");
+	public Boolean CallMethodReturn_rB_pMN_pB(Boolean pB)
+	{
 
-            myLogger.LogFunctionEnd();
-            return liReturn;
-        }
+		myLogger.LogPrintDebug("Locator: " + this.Locator);
 
-		public List<String> CallMethodReturn_rLS_pMN()
-        {
-            
-            myLogger.LogFunctionStart("CallMethodReturn_rLS_pMN");
-            myLogger.LogPrintDebug("Locator: " + this.Locator);
-
-            List<String> LSReturn = new ArrayList<String>();
-            LSReturn.add("Wert 1");
-            LSReturn.add("Wert 2");
-            LSReturn.add("Wert 3");
+		Boolean bReturn = pB;
 
-            myClipboard.setObjectName(getCAT());
-            myClipboard.setMethod("CallMethodReturn_rLS_pMN");
-            myClipboard.getValue().clear();
-            myClipboard.getValue().add("NO VALUE");
+		myClipboard.setObjectName(getCAT());
+		myClipboard.setMethod("CallMethodReturn_rB_pMN_pB");
+		myClipboard.getValue().clear();
+		myClipboard.getValue().add(OKW_Helper.Boolean2String(bReturn));
 
-            myLogger.LogFunctionEnd();
-            return LSReturn;
-        }
 
+		return bReturn;
+	}
 
-		public List<String> CallMethodReturn_rLS_pMN_pLS(ArrayList<String> pLS)
-        {
-            
-            myLogger.LogFunctionStart("CallMethodReturn_rLS_pMN_pLS", "List<String> pLS", pLS.toString());
-            myLogger.LogPrintDebug("Locator: " + this.Locator);
 
-            List<String> LSReturn = pLS;
-
-            myClipboard.setObjectName(getCAT());
-            myClipboard.setMethod("CallMethodReturn_rLS_pMN_pLS");
-            myClipboard.getValue().clear();
-
-            myClipboard.getValue().add(pLS.get(0));
-            myClipboard.getValue().add(pLS.get(1));
-            myClipboard.getValue().add(pLS.get(2));
-
-            myLogger.LogFunctionEnd();
-            return LSReturn;
-        }
+	public int CallMethodReturn_rI_pMN()
+	{
 
-		public List<String> CallMethodReturn_rLS_pMN_pS_pS(String Param1, String Param2)
-        {
-            
-            myLogger.LogFunctionStart("CallMethodReturn_rLS_pMN_pS_pS");
-            myLogger.LogPrintDebug("Locator: " + this.Locator);
 
-            List<String> LSReturn = new ArrayList<String>();
-            LSReturn.add(Param1);
-            LSReturn.add(Param2);
-
-            myClipboard.setObjectName(getCAT());
-            myClipboard.setMethod("CallMethodReturn_rLS_pMN_pS_pS");
-            myClipboard.getValue().clear();
-            myClipboard.getValue().add(Param1);
-            myClipboard.getValue().add(Param2);
-
-            myLogger.LogFunctionEnd();
-            return LSReturn;
-        }
-
-		public List<String> CallMethodReturn_rLS_pMN_pS_pS_pLS(String Parameter1, String Parameter2, ArrayList<String> pLS)
-        {
-            
-            myLogger.LogFunctionStart("CallMethodReturn_rLS_pMN_pS_pS_pLS", "List<String> pLS", pLS.toString());
-            myLogger.LogPrintDebug("Locator: " + this.Locator);
-
-            List<String> LSReturn = new ArrayList<String>();
-            LSReturn.add(Parameter1);
-            LSReturn.add(Parameter2);
-            LSReturn.add(pLS.get(0));
-            LSReturn.add(pLS.get(1));
-            LSReturn.add(pLS.get(2));
-
-            myClipboard.setObjectName(getCAT());
-            myClipboard.setMethod("CallMethodReturn_rLS_pMN_pS_pS_pLS");
-            myClipboard.getValue().clear();
-
-            myClipboard.getValue().add(Parameter1);
-            myClipboard.getValue().add(Parameter2);
-            myClipboard.getValue().add(pLS.get(0));
-            myClipboard.getValue().add(pLS.get(1));
-            myClipboard.getValue().add(pLS.get(2));
-
-            myLogger.LogFunctionEnd();
-            return LSReturn;
-        }
-
-
-		public String CallMethodReturn_rS_pMN()
-        {
-            
-            myLogger.LogFunctionStart("CallMethodReturn_rS_pMN");
-            myLogger.LogPrintDebug("Locator: " + this.Locator);
+		myLogger.LogPrintDebug("Locator: " + this.Locator);
 
-            String lsReturn = "Wert 1";
-
-            myClipboard.setObjectName(getCAT());
-            myClipboard.setMethod("CallMethodReturn_rS_pMN");
-            myClipboard.getValue().clear();
-            myClipboard.getValue().add("Wert 1");
-
-            myLogger.LogFunctionEnd();
-            return lsReturn;
-        }
-
+		int liReturn = 23101963;
 
-		public String CallMethodReturn_rS_pMN_pS(String pS)
-        {
-            
-            myLogger.LogFunctionStart("CallMethodReturn_rS_pMN_pS");
-            myLogger.LogPrintDebug("Locator: " + this.Locator);
+		myClipboard.setObjectName(getCAT());
+		myClipboard.setMethod("CallMethodReturn_rI_pMN");
+		myClipboard.getValue().clear();
+		myClipboard.getValue().add("NO VALUE");
 
-            String lsReturn = pS;
 
-            myClipboard.setObjectName(getCAT());
-            myClipboard.setMethod("CallMethodReturn_rS_pMN_pS");
-            myClipboard.getValue().clear();
-            myClipboard.getValue().add(pS);
+		return liReturn;
+	}
 
-            myLogger.LogFunctionEnd();
-            return lsReturn;
-        }
+	public List<String> CallMethodReturn_rLS_pMN()
+	{
 
- 
-        public void CallMethod_pMN()
-        {
-            
-            myLogger.LogFunctionStart("CallMethod_pMN");
-            myLogger.LogPrintDebug("Locator: " + this.Locator);
 
-            myClipboard.setObjectName(getCAT());
-            myClipboard.setMethod("CallMethod_MN");
-            myClipboard.getValue().clear();
-            myClipboard.getValue().add("NO VALUE");
+		myLogger.LogPrintDebug("Locator: " + this.Locator);
 
-            myLogger.LogFunctionEnd();
-        }
+		List<String> LSReturn = new ArrayList<String>();
+		LSReturn.add("Wert 1");
+		LSReturn.add("Wert 2");
+		LSReturn.add("Wert 3");
 
+		myClipboard.setObjectName(getCAT());
+		myClipboard.setMethod("CallMethodReturn_rLS_pMN");
+		myClipboard.getValue().clear();
+		myClipboard.getValue().add("NO VALUE");
 
-		public void CallMethod_pMN_pLS(ArrayList<String> pLS)
-        {
-            
-            myLogger.LogFunctionStart("CallMethodReturn_rLS_pMN_pLS", "List<String> pLS", pLS.toString());
-            myLogger.LogPrint("Locator: " + this.Locator);
 
-            myClipboard.setObjectName(getCAT());
-            myClipboard.setMethod("CallMethod_pMN_pLS");
-            myClipboard.getValue().clear();
+		return LSReturn;
+	}
 
-            myClipboard.getValue().add(pLS.get(0));
-            myClipboard.getValue().add(pLS.get(1));
-            myClipboard.getValue().add(pLS.get(2));
 
-            myLogger.LogFunctionEnd();
-        }
+	public List<String> CallMethodReturn_rLS_pMN_pLS(ArrayList<String> pLS)
+	{
 
 
-		public void CallMethod_pMN_pLS_pS(ArrayList<String> pLS, String sOption)
-        {
-            
-            myLogger.LogFunctionStart("CallMethodReturn_rLS_pMN_pLS", "List<String> pLS", pLS.toString());
-            myLogger.LogPrint("Locator: " + this.Locator);
+		myLogger.LogPrintDebug("Locator: " + this.Locator);
 
-            myClipboard.setObjectName(getCAT());
-            myClipboard.setMethod("CallMethod_pMN_pLS_pS");
-            myClipboard.getValue().clear();
+		List<String> LSReturn = pLS;
 
-            myClipboard.getValue().add(pLS.get(0));
-            myClipboard.getValue().add(pLS.get(1));
-            myClipboard.getValue().add(pLS.get(2));
+		myClipboard.setObjectName(getCAT());
+		myClipboard.setMethod("CallMethodReturn_rLS_pMN_pLS");
+		myClipboard.getValue().clear();
 
-            myClipboard.getValue().add(sOption);
+		myClipboard.getValue().add(pLS.get(0));
+		myClipboard.getValue().add(pLS.get(1));
+		myClipboard.getValue().add(pLS.get(2));
 
-            myLogger.LogFunctionEnd();
-        }
 
+		return LSReturn;
+	}
 
-		public void CallMethod_pMN_pS(String psParameter_1)
-        {
-            
-            myLogger.LogFunctionStart("CallMethod_pMN_pS_pS", "String psParameter_1", psParameter_1 );
-            myLogger.LogPrint("Locator: " + this.Locator);
+	public List<String> CallMethodReturn_rLS_pMN_pS_pS(String Param1, String Param2)
+	{
 
-            myClipboard.setObjectName(getCAT());
-            myClipboard.setMethod("CallMethod_pMN_pS");
-            myClipboard.getValue().clear();
 
-            myClipboard.getValue().add(psParameter_1);
+		myLogger.LogPrintDebug("Locator: " + this.Locator);
 
-            myLogger.LogFunctionEnd();
-        }
+		List<String> LSReturn = new ArrayList<String>();
+		LSReturn.add(Param1);
+		LSReturn.add(Param2);
 
-        public void CallMethod_pMN_pS_pS(String psParameter_1, String psParameter_2)
-        {
-            
-            myLogger.LogFunctionStart("CallMethod_pMN_pS_pS", "String psParameter_1", psParameter_1, "String psParameter_2", psParameter_2);
-            myLogger.LogPrint("Locator: " + this.Locator);
+		myClipboard.setObjectName(getCAT());
+		myClipboard.setMethod("CallMethodReturn_rLS_pMN_pS_pS");
+		myClipboard.getValue().clear();
+		myClipboard.getValue().add(Param1);
+		myClipboard.getValue().add(Param2);
 
-            myClipboard.setObjectName(getCAT());
-            myClipboard.setMethod("CallMethod_pMN_pS_pS");
-            myClipboard.getValue().clear();
 
-            myClipboard.getValue().add(psParameter_1);
-            myClipboard.getValue().add(psParameter_2);
+		return LSReturn;
+	}
 
-            myLogger.LogFunctionEnd();
-        }
+	public List<String> CallMethodReturn_rLS_pMN_pS_pS_pLS(String Parameter1, String Parameter2, ArrayList<String> pLS)
+	{
 
 
-		public void CallMethod_pMN_pS_pS_pS(String psParameter_1, String psParameter_2, String psParameter_3)
-        {
-            
-            myLogger.LogFunctionStart("CallMethod_pMN_pS_pS", "String psParameter_1", psParameter_1, "String psParameter_2", psParameter_2, "String psParameter_3", psParameter_3);
-            myLogger.LogPrint("Locator: " + this.Locator);
+		myLogger.LogPrintDebug("Locator: " + this.Locator);
 
-            myClipboard.setObjectName(getCAT());
-            myClipboard.setMethod("CallMethod_pMN_pS_pS_pS");
-            myClipboard.getValue().clear();
+		List<String> LSReturn = new ArrayList<String>();
+		LSReturn.add(Parameter1);
+		LSReturn.add(Parameter2);
+		LSReturn.add(pLS.get(0));
+		LSReturn.add(pLS.get(1));
+		LSReturn.add(pLS.get(2));
 
-            myClipboard.getValue().add(psParameter_1);
-            myClipboard.getValue().add(psParameter_2);
-            myClipboard.getValue().add(psParameter_3);
+		myClipboard.setObjectName(getCAT());
+		myClipboard.setMethod("CallMethodReturn_rLS_pMN_pS_pS_pLS");
+		myClipboard.getValue().clear();
 
-            myLogger.LogFunctionEnd();
-        }
+		myClipboard.getValue().add(Parameter1);
+		myClipboard.getValue().add(Parameter2);
+		myClipboard.getValue().add(pLS.get(0));
+		myClipboard.getValue().add(pLS.get(1));
+		myClipboard.getValue().add(pLS.get(2));
 
 
-		public void CallMethod_pMN_pS_pS_pLS(String psParameter_1, String psParameter_2, ArrayList<String> fpLSValue)
-        {
-            
-            myLogger.LogFunctionStart("CallMethod_pMN_pS_pS_pLS", "String psParameter_1", psParameter_1, "String psParameter_2", psParameter_2);
-            myLogger.LogPrint("Locator: " + Locator);
+		return LSReturn;
+	}
 
-            myClipboard.setObjectName(getCAT());
-            myClipboard.setMethod("CallMethod_pMN_pS_pS_pLS");
-            myClipboard.getValue().clear();
 
-            myClipboard.getValue().add(psParameter_1);
-            myClipboard.getValue().add(psParameter_2);
+	public String CallMethodReturn_rS_pMN()
+	{
 
-            myClipboard.getValue().add(fpLSValue.get(0));
-            myClipboard.getValue().add(fpLSValue.get(1));
-            myClipboard.getValue().add(fpLSValue.get(2));
 
-            myLogger.LogFunctionEnd();
-        }
+		myLogger.LogPrintDebug("Locator: " + this.Locator);
 
-    }
+		String lsReturn = "Wert 1";
+
+		myClipboard.setObjectName(getCAT());
+		myClipboard.setMethod("CallMethodReturn_rS_pMN");
+		myClipboard.getValue().clear();
+		myClipboard.getValue().add("Wert 1");
+
+
+		return lsReturn;
+	}
+
+
+	public String CallMethodReturn_rS_pMN_pS(String pS)
+	{
+
+
+		myLogger.LogPrintDebug("Locator: " + this.Locator);
+
+		String lsReturn = pS;
+
+		myClipboard.setObjectName(getCAT());
+		myClipboard.setMethod("CallMethodReturn_rS_pMN_pS");
+		myClipboard.getValue().clear();
+		myClipboard.getValue().add(pS);
+
+
+		return lsReturn;
+	}
+
+
+	public void CallMethod_pMN()
+	{
+
+
+		myLogger.LogPrintDebug("Locator: " + this.Locator);
+
+		myClipboard.setObjectName(getCAT());
+		myClipboard.setMethod("CallMethod_MN");
+		myClipboard.getValue().clear();
+		myClipboard.getValue().add("NO VALUE");
+
+
+	}
+
+
+	public void CallMethod_pMN_pLS(ArrayList<String> pLS)
+	{
+
+
+		myLogger.LogPrint("Locator: " + this.Locator);
+
+		myClipboard.setObjectName(getCAT());
+		myClipboard.setMethod("CallMethod_pMN_pLS");
+		myClipboard.getValue().clear();
+
+		myClipboard.getValue().add(pLS.get(0));
+		myClipboard.getValue().add(pLS.get(1));
+		myClipboard.getValue().add(pLS.get(2));
+
+
+	}
+
+
+	public void CallMethod_pMN_pLS_pS(ArrayList<String> pLS, String sOption)
+	{
+
+
+		myLogger.LogPrint("Locator: " + this.Locator);
+
+		myClipboard.setObjectName(getCAT());
+		myClipboard.setMethod("CallMethod_pMN_pLS_pS");
+		myClipboard.getValue().clear();
+
+		myClipboard.getValue().add(pLS.get(0));
+		myClipboard.getValue().add(pLS.get(1));
+		myClipboard.getValue().add(pLS.get(2));
+
+		myClipboard.getValue().add(sOption);
+
+
+	}
+
+
+	public void CallMethod_pMN_pS(String psParameter_1)
+	{
+
+
+		myLogger.LogPrint("Locator: " + this.Locator);
+
+		myClipboard.setObjectName(getCAT());
+		myClipboard.setMethod("CallMethod_pMN_pS");
+		myClipboard.getValue().clear();
+
+		myClipboard.getValue().add(psParameter_1);
+
+
+	}
+
+	public void CallMethod_pMN_pS_pS(String psParameter_1, String psParameter_2)
+	{
+
+
+		myLogger.LogPrint("Locator: " + this.Locator);
+
+		myClipboard.setObjectName(getCAT());
+		myClipboard.setMethod("CallMethod_pMN_pS_pS");
+		myClipboard.getValue().clear();
+
+		myClipboard.getValue().add(psParameter_1);
+		myClipboard.getValue().add(psParameter_2);
+
+
+	}
+
+
+	public void CallMethod_pMN_pS_pS_pS(String psParameter_1, String psParameter_2, String psParameter_3)
+	{
+
+
+		myLogger.LogPrint("Locator: " + this.Locator);
+
+		myClipboard.setObjectName(getCAT());
+		myClipboard.setMethod("CallMethod_pMN_pS_pS_pS");
+		myClipboard.getValue().clear();
+
+		myClipboard.getValue().add(psParameter_1);
+		myClipboard.getValue().add(psParameter_2);
+		myClipboard.getValue().add(psParameter_3);
+
+
+	}
+
+
+	public void CallMethod_pMN_pS_pS_pLS(String psParameter_1, String psParameter_2, ArrayList<String> fpLSValue)
+	{
+
+
+		myLogger.LogPrint("Locator: " + Locator);
+
+		myClipboard.setObjectName(getCAT());
+		myClipboard.setMethod("CallMethod_pMN_pS_pS_pLS");
+		myClipboard.getValue().clear();
+
+		myClipboard.getValue().add(psParameter_1);
+		myClipboard.getValue().add(psParameter_2);
+
+		myClipboard.getValue().add(fpLSValue.get(0));
+		myClipboard.getValue().add(fpLSValue.get(1));
+		myClipboard.getValue().add(fpLSValue.get(2));
+
+
+	}
+
+}

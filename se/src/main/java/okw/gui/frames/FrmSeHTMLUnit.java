@@ -148,12 +148,8 @@ public class FrmSeHTMLUnit extends SeBrowserWindow
      */
     public void StartApp()
     {
-        LogFunctionStartDebug("StartApp");
-
         SeDriver.getInstance().setDriver( new HtmlUnitDriver( true ) );
         // this.Init();
-
-        LogFunctionEndDebug();
     }
 
     
@@ -173,12 +169,8 @@ public class FrmSeHTMLUnit extends SeBrowserWindow
      */
     public void StopApp()
     {
-        LogFunctionStartDebug("StopApp");
-
         SeDriver.getInstance().getDriver().close();
         SeDriver.getInstance().getDriver().quit();
-
-        LogFunctionEndDebug();
     }
 
     public void TypeKey(ArrayList<String> fps_Values)

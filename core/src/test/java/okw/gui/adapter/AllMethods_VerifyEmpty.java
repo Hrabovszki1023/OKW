@@ -35,7 +35,7 @@
 
     Sie sollten eine Kopie der GNU General Public License zusammen mit 
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package okw.gui.adapter;
 
@@ -55,267 +55,267 @@ import okw.gui.OKWLocatorBase;
 import okw.log.Logger_Sngltn;
 
 
-    public class AllMethods_VerifyEmpty extends AnyChildwindow
-    {
-
-        protected String Locator;
-        
-        protected Logger_Sngltn            myLogger        = Logger_Sngltn.getInstance();
-        //protected OKW_CurrentObject_Sngltn myCurrentObject = OKW_CurrentObject_Sngltn.getInstance();
-        protected OKW_TestClipboard        myClipboard     = OKW_TestClipboard.getInstance();
-        
-        
-        String myValue = "";
-
-
-        public AllMethods_VerifyEmpty( String fpsLocator, OKWLocatorBase... fpLocators )
-        {
-            super( fpsLocator, fpLocators );
-        }
-
-        
-        public String getCAT()
-        {
-            return "Rechner.All_MethodsObj";
-        }
-        
-        public ArrayList<String> VerifyBadge()
-		{
-		    this.myLogger.LogFunctionStartDebug("VerifyBadge");
-		
-		    // ${EMPTY} => ArrayList mit einem Wert und ""
-		    ArrayList<String> lvLsReturn = new ArrayList<String>();
-		    lvLsReturn.add( "" );
-		
-		    myClipboard.Clear();
-		    String lvs_ObjectName = getCAT();
-		    myClipboard.setObjectName(lvs_ObjectName);
-		    myClipboard.setMethod("VerifyBadge()");
-		
-		    myClipboard.getValue().clear();
-		
-		    this.myLogger.LogFunctionEndDebug();
-		
-		    return lvLsReturn;
-		}
+public class AllMethods_VerifyEmpty extends AnyChildwindow
+{
 
+	protected String Locator;
 
-		public boolean VerifyExists(Boolean fpbExpectedValue) throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
-        {
-            this.myLogger.LogFunctionStartDebug("VerifyExists", "fpbExpectedValue", fpbExpectedValue.toString());
+	protected Logger_Sngltn            myLogger        = Logger_Sngltn.getInstance();
+	//protected OKW_CurrentObject_Sngltn myCurrentObject = OKW_CurrentObject_Sngltn.getInstance();
+	protected OKW_TestClipboard        myClipboard     = OKW_TestClipboard.getInstance();
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getCAT();
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("VerifyExists()");
-            myClipboard.getValue().add(OKW_Const_Sngltn.getInstance().Boolean2YesNo(fpbExpectedValue));
+	String myValue = "";
 
-            this.myLogger.LogFunctionEndDebug(fpbExpectedValue);
 
-            return fpbExpectedValue;
-        }
+	public AllMethods_VerifyEmpty( String fpsLocator, OKWLocatorBase... fpLocators )
+	{
+		super( fpsLocator, fpLocators );
+	}
 
 
-        public Boolean VerifyHasFocus(Boolean fpbExpectedValue)
-        {
-            myLogger.LogFunctionStartDebug("VerifyHasFocus", "fpbExpectedValue", fpbExpectedValue.toString());
+	public String getCAT()
+	{
+		return "Rechner.All_MethodsObj";
+	}
 
-            myClipboard.Clear();
-            
-            String lvs_ObjectName = getCAT();
+	public ArrayList<String> VerifyBadge()
+	{
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("VerifyHasFocus()");
 
-            myClipboard.getValue().add(fpbExpectedValue.toString());
+		// ${EMPTY} => ArrayList mit einem Wert und ""
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
+		lvLsReturn.add( "" );
 
-            this.myLogger.LogFunctionEndDebug();
+		myClipboard.Clear();
+		String lvs_ObjectName = getCAT();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifyBadge()");
 
-            return fpbExpectedValue;
-        }
+		myClipboard.getValue().clear();
 
-        public boolean VerifyIsActive(Boolean fpbExpectedValue) throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
-        {
-            this.myLogger.LogFunctionStartDebug("VerifyIsActive");
 
-            myClipboard.Clear();   
-            String lvs_ObjectName = getCAT();
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("VerifyIsActive()");
-            myClipboard.getValue().add(OKW_Const_Sngltn.getInstance().Boolean2YesNo(fpbExpectedValue));
+		return lvLsReturn;
+	}
 
-            this.myLogger.LogFunctionEndDebug();
 
-            return fpbExpectedValue;
-        }
+	public boolean VerifyExists(Boolean fpbExpectedValue) throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
+	{
 
-        public ArrayList<String> VerifySelectedValue() //ArrayList<String> fpLsExpectedValue)
-        {
-            this.myLogger.LogFunctionStartDebug("VerifySelectedValue");
-            
-            // ${EMPTY} => ArrayList mit einem Wert und ""
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
-            lvLsReturn.add( "" );
 
-            myClipboard.Clear();
-            
-            String lvs_ObjectName = getCAT();
+		myClipboard.Clear();
+		String lvs_ObjectName = getCAT();
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("VerifySelectedValue()");
-            //myClipboard.getValue().addAll(fpLsExpectedValue);
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifyExists()");
+		myClipboard.getValue().add(OKW_Const_Sngltn.getInstance().Boolean2YesNo(fpbExpectedValue));
 
-            this.myLogger.LogFunctionEndDebug();
 
-            return lvLsReturn;
-        }
 
-        public List<String> VerifyTablecellValue(String Col, String Row, ArrayList<String> fpLsExpectedValue)
-        {
+		return fpbExpectedValue;
+	}
 
-            this.myLogger.LogFunctionStartDebug("VerifyTablecellValue");
 
-            // ${EMPTY} => ArrayList mit einem Wert und ""
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
-            lvLsReturn.add( "" );
+	public Boolean VerifyHasFocus(Boolean fpbExpectedValue)
+	{
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getCAT();
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("VerifyTablecellValue()");
+		myClipboard.Clear();
 
-            myClipboard.getValue().add(Col);
-            myClipboard.getValue().add(Row);
+		String lvs_ObjectName = getCAT();
 
-            this.myLogger.LogFunctionEndDebug();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifyHasFocus()");
 
-            return lvLsReturn;
-        }
+		myClipboard.getValue().add(fpbExpectedValue.toString());
 
-        public ArrayList<String> VerifyTooltip()
-        {
 
-            this.myLogger.LogFunctionStartDebug("VerifyTooltip");
 
-            // ${EMPTY} => ArrayList mit einem Wert und ""
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
-            lvLsReturn.add( "" );
+		return fpbExpectedValue;
+	}
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getCAT();
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("VerifyTooltip()");
+	public boolean VerifyIsActive(Boolean fpbExpectedValue) throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
+	{
 
-            myClipboard.getValue().clear();
 
-            this.myLogger.LogFunctionEndDebug();
+		myClipboard.Clear();   
+		String lvs_ObjectName = getCAT();
 
-            return lvLsReturn;
-        }
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifyIsActive()");
+		myClipboard.getValue().add(OKW_Const_Sngltn.getInstance().Boolean2YesNo(fpbExpectedValue));
 
-        
-        public ArrayList<String> VerifyCaption()
-        {
 
-            this.myLogger.LogFunctionStartDebug("VerifyCaption");
 
-            // ${EMPTY} => ArrayList mit einem Wert und ""
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
-            lvLsReturn.add( "" );
+		return fpbExpectedValue;
+	}
 
+	public ArrayList<String> VerifySelectedValue() //ArrayList<String> fpLsExpectedValue)
+	{
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getCAT();
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("VerifyCaption()");
-            myClipboard.getValue().clear();
+		// ${EMPTY} => ArrayList mit einem Wert und ""
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
+		lvLsReturn.add( "" );
 
-            this.myLogger.LogFunctionEndDebug();
+		myClipboard.Clear();
 
-            return lvLsReturn;
-        }
+		String lvs_ObjectName = getCAT();
 
-        public ArrayList<String> VerifyLabel()
-        {
-            this.myLogger.LogFunctionStartDebug("VerifyLabel");
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifySelectedValue()");
+		//myClipboard.getValue().addAll(fpLsExpectedValue);
 
-            // ${EMPTY} => ArrayList mit einem Wert und ""
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
-            lvLsReturn.add( "" );
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getCAT();
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("VerifyLabel()");
 
-            myClipboard.getValue().clear();
+		return lvLsReturn;
+	}
 
-            this.myLogger.LogFunctionEndDebug();
+	public List<String> VerifyTablecellValue(String Col, String Row, ArrayList<String> fpLsExpectedValue)
+	{
 
-            return lvLsReturn;
-        }
 
-        public ArrayList<String> VerifyPlaceholder()
-        {
-            this.myLogger.LogFunctionStartDebug("VerifyPlaceholder");
 
-            // ${EMPTY} => ArrayList mit einem Wert und ""
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
-            lvLsReturn.add( "" );
+		// ${EMPTY} => ArrayList mit einem Wert und ""
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
+		lvLsReturn.add( "" );
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getCAT();
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("VerifyPlaceholder()");
+		myClipboard.Clear();
+		String lvs_ObjectName = getCAT();
 
-            myClipboard.getValue().clear();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifyTablecellValue()");
 
-            this.myLogger.LogFunctionEndDebug();
+		myClipboard.getValue().add(Col);
+		myClipboard.getValue().add(Row);
 
-            return lvLsReturn;
-        }
 
-        public ArrayList<String> VerifyValue()
-        {
-            this.myLogger.LogFunctionStartDebug("VerifyValue");
 
-            // ${EMPTY} => ArrayList mit einem Wert und ""
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
-            lvLsReturn.add( "" );
+		return lvLsReturn;
+	}
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getCAT();
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("VerifyValue()");
+	public ArrayList<String> VerifyTooltip()
+	{
 
-            myClipboard.getValue().clear();
 
-            this.myLogger.LogFunctionEndDebug();
 
-            return lvLsReturn;
-        }
-        
-        public ArrayList<String> VerifyErrorMSG()
-        {
-            this.myLogger.LogFunctionStartDebug("VerifyErrorMSG");
+		// ${EMPTY} => ArrayList mit einem Wert und ""
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
+		lvLsReturn.add( "" );
 
-            // ${EMPTY} => ArrayList mit einem Wert und ""
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
-            lvLsReturn.add( "" );
+		myClipboard.Clear();
+		String lvs_ObjectName = getCAT();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifyTooltip()");
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getCAT();
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("VerifyErrorMSG()");
+		myClipboard.getValue().clear();
 
-            myClipboard.getValue().clear();
 
-            this.myLogger.LogFunctionEndDebug();
 
-            return lvLsReturn;
-        }
-    }
+		return lvLsReturn;
+	}
+
+
+	public ArrayList<String> VerifyCaption()
+	{
+
+
+
+		// ${EMPTY} => ArrayList mit einem Wert und ""
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
+		lvLsReturn.add( "" );
+
+
+		myClipboard.Clear();
+		String lvs_ObjectName = getCAT();
+
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifyCaption()");
+		myClipboard.getValue().clear();
+
+
+
+		return lvLsReturn;
+	}
+
+	public ArrayList<String> VerifyLabel()
+	{
+
+
+		// ${EMPTY} => ArrayList mit einem Wert und ""
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
+		lvLsReturn.add( "" );
+
+		myClipboard.Clear();
+		String lvs_ObjectName = getCAT();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifyLabel()");
+
+		myClipboard.getValue().clear();
+
+
+
+		return lvLsReturn;
+	}
+
+	public ArrayList<String> VerifyPlaceholder()
+	{
+
+
+		// ${EMPTY} => ArrayList mit einem Wert und ""
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
+		lvLsReturn.add( "" );
+
+		myClipboard.Clear();
+		String lvs_ObjectName = getCAT();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifyPlaceholder()");
+
+		myClipboard.getValue().clear();
+
+
+
+		return lvLsReturn;
+	}
+
+	public ArrayList<String> VerifyValue()
+	{
+
+
+		// ${EMPTY} => ArrayList mit einem Wert und ""
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
+		lvLsReturn.add( "" );
+
+		myClipboard.Clear();
+		String lvs_ObjectName = getCAT();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifyValue()");
+
+		myClipboard.getValue().clear();
+
+
+
+		return lvLsReturn;
+	}
+
+	public ArrayList<String> VerifyErrorMSG()
+	{
+
+
+		// ${EMPTY} => ArrayList mit einem Wert und ""
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
+		lvLsReturn.add( "" );
+
+		myClipboard.Clear();
+		String lvs_ObjectName = getCAT();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifyErrorMSG()");
+
+		myClipboard.getValue().clear();
+
+
+
+		return lvLsReturn;
+	}
+}

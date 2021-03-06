@@ -35,7 +35,7 @@
 
     Sie sollten eine Kopie der GNU General Public License zusammen mit 
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package okw.gui.adapter;
 
@@ -49,1024 +49,1024 @@ import okw.gui.OKWLocator;
 import okw.log.Logger_Sngltn;
 
 
-    public class AllMethods_SingleValue extends AnyChildwindow
-    {
+public class AllMethods_SingleValue extends AnyChildwindow
+{
 
-        protected String Locator;
-        
-        protected Logger_Sngltn            myLogger        = Logger_Sngltn.getInstance();
-        //protected OKW_CurrentObject_Sngltn myCurrentObject = OKW_CurrentObject_Sngltn.getInstance();
-        protected OKW_TestClipboard        myClipboard     = OKW_TestClipboard.getInstance();
-        
-        
-        private ArrayList<String> myALValue = new ArrayList<String>();
+	protected String Locator;
+
+	protected Logger_Sngltn            myLogger        = Logger_Sngltn.getInstance();
+	//protected OKW_CurrentObject_Sngltn myCurrentObject = OKW_CurrentObject_Sngltn.getInstance();
+	protected OKW_TestClipboard        myClipboard     = OKW_TestClipboard.getInstance();
 
 
-        public AllMethods_SingleValue( String fpsLocator, OKWLocator... fpLocators )
-        {
-            super( fpsLocator, fpLocators );
-        }
+	private ArrayList<String> myALValue = new ArrayList<String>();
 
-        /**
+
+	public AllMethods_SingleValue( String fpsLocator, OKWLocator... fpLocators )
+	{
+		super( fpsLocator, fpLocators );
+	}
+
+	/**
         public String getCAT()
         {
             return "Rechner.All_MethodsObj";
         }
-        */
-        
-        public void ClickOn()
-        {
-
-          this.myLogger.LogFunctionStartDebug("ClickOn");
-
-            myClipboard.Clear();
-            String lvs_ObjectName = this.getKN();
-
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("ClickOn()");
-            myClipboard.getValue().addAll(this.myALValue);
-            
-            this.myLogger.LogFunctionEndDebug();
-        }
-
-        
-        public void DoubleClickOn()
-        {
-          this.myLogger.LogFunctionStartDebug("DoubleClickOn");
-            
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
-
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("DoubleClickOn()");
-            myClipboard.getValue().addAll(this.myALValue);
-
-            this.myLogger.LogFunctionEndDebug();
-        }
-
-        
-    public boolean LogExists()
-    {
-
-        this.myLogger.LogFunctionStartDebug( "LogExists" );
-
-        myClipboard.Clear();
-        String lvs_ObjectName = getKN();
-
-        myClipboard.setObjectName( lvs_ObjectName );
-        myClipboard.setMethod( "LogExists()" );
-
-        myClipboard.getValue().addAll( this.myALValue );
-
-        Boolean lvbReturn = false;
-
-        try
-        {
-            lvbReturn = okw.OKW_Const_Sngltn.getInstance().YesNo2Boolean( this.myALValue.get( 0 ) );
-        }
-        catch (XPathExpressionException e)
-        {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-
-        this.myLogger.LogFunctionEndDebug( lvbReturn );
-        return lvbReturn;
-    }
-
-
-        public boolean LogHasFocus()
-        {
-          this.myLogger.LogFunctionStartDebug("LogHasFocus");
-
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
-
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("LogHasFocus()");
-            myClipboard.getValue().addAll(this.myALValue);
-
-            Boolean lvbReturn = false;  
-
-            try
-            {
-              lvbReturn = okw.OKW_Const_Sngltn.getInstance().YesNo2Boolean(this.myALValue.get( 0 ));
-            }
-            catch (XPathExpressionException e)
-            {
-              // TODO Auto-generated catch block
-              e.printStackTrace();
-            }
-            
-            this.myLogger.LogFunctionEndDebug(lvbReturn);
-            return lvbReturn;
-        }
-
-        public boolean LogIsActive()
-        {
-            this.myLogger.LogFunctionStartDebug("LogIsActive");
-
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
-
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("LogIsActive()");
-            myClipboard.getValue().addAll(this.myALValue);
-
-            Boolean lvbReturn = false;  
+	 */
 
-            try
-            {
-              lvbReturn = okw.OKW_Const_Sngltn.getInstance().YesNo2Boolean(this.myALValue.get( 0 ));
-            }
-            catch (XPathExpressionException e)
-            {
-              // TODO Auto-generated catch block
-              e.printStackTrace();
-            }
-            
-            this.myLogger.LogFunctionEndDebug(lvbReturn);
-            return lvbReturn;
-        }
+	public void ClickOn()
+	{
 
-        public ArrayList<String> LogSelected()
-        {
-        	ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStartDebug("LogSelected");
-            lvLsReturn.add("Wert_1");
-            lvLsReturn.add("Wert_2");
-            lvLsReturn.add("Wert_3");
 
-            myClipboard.Clear();
-           String lvs_ObjectName = getKN();
+		myClipboard.Clear();
+		String lvs_ObjectName = this.getKN();
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("LogSelected()");
-            myClipboard.getValue().add("NO VALUE");
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("ClickOn()");
+		myClipboard.getValue().addAll(this.myALValue);
 
-            this.myLogger.LogFunctionEndDebug(lvLsReturn);
 
-            return lvLsReturn;
-        }
+	}
 
-        public ArrayList<String> LogTablecellValue(String Coll, String Row)
-        {
-        	ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStartDebug("LogTablecellValue");
-            lvLsReturn.add(Coll);
-            lvLsReturn.add(Row);
+	public void DoubleClickOn()
+	{
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("LogTablecellValue()");
-            myClipboard.getValue().add(Coll);
-            myClipboard.getValue().add(Row);
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
 
-            this.myLogger.LogFunctionEndDebug(lvLsReturn);
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("DoubleClickOn()");
+		myClipboard.getValue().addAll(this.myALValue);
 
-            return lvLsReturn;
-        }
 
-        public ArrayList<String> LogTooltip()
-        {
-        	ArrayList<String> lvLsReturn = new ArrayList<String>();
+	}
 
-            this.myLogger.LogFunctionStartDebug("LogTooltip");
-            lvLsReturn.add("Tooltip Rückgabewert 1");
-            lvLsReturn.add("Tooltip Rückgabewert 2");
-            lvLsReturn.add("Tooltip Rückgabewert 3");
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
+	public boolean LogExists()
+	{
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("LogTooltip()");
-            myClipboard.getValue().add("NO VALUE");
 
-            this.myLogger.LogFunctionEndDebug(lvLsReturn);
 
-            return lvLsReturn;
-        }
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
 
-        public ArrayList<String> LogCaption()
-        {
-        	ArrayList<String> lvLsReturn = new ArrayList<String>();
+		myClipboard.setObjectName( lvs_ObjectName );
+		myClipboard.setMethod( "LogExists()" );
 
-            this.myLogger.LogFunctionStartDebug("LogCaption");
-            lvLsReturn.add("Caption Rückgabewert 1");
-            lvLsReturn.add("Caption Rückgabewert 2");
-            lvLsReturn.add("Caption Rückgabewert 3");
+		myClipboard.getValue().addAll( this.myALValue );
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
+		Boolean lvbReturn = false;
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("LogCaption()");
-            myClipboard.getValue().add("NO VALUE");
+		try
+		{
+			lvbReturn = okw.OKW_Const_Sngltn.getInstance().YesNo2Boolean( this.myALValue.get( 0 ) );
+		}
+		catch (XPathExpressionException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
-            this.myLogger.LogFunctionEndDebug(lvLsReturn);
 
-            return lvLsReturn;
-        }
+		return lvbReturn;
+	}
 
-        public ArrayList<String> LogLabel()
-        {
-        	ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStartDebug("LogLabel");
-            lvLsReturn.add("Label Rückgabewert 1");
-            lvLsReturn.add("Label Rückgabewert 2");
-            lvLsReturn.add("Label Rückgabewert 3");
+	public boolean LogHasFocus()
+	{
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("LogLabel()");
-            myClipboard.getValue().add("NO VALUE");
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
 
-            this.myLogger.LogFunctionEndDebug(lvLsReturn);
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("LogHasFocus()");
+		myClipboard.getValue().addAll(this.myALValue);
 
-            return lvLsReturn;
-        }
+		Boolean lvbReturn = false;  
 
-        public ArrayList<String> LogPlaceholder()
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
+		try
+		{
+			lvbReturn = okw.OKW_Const_Sngltn.getInstance().YesNo2Boolean(this.myALValue.get( 0 ));
+		}
+		catch (XPathExpressionException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
-            this.myLogger.LogFunctionStartDebug("LogPlaceholder");
-            lvLsReturn.add("Placeholder Rückgabewert 1");
-            lvLsReturn.add("Placeholder Rückgabewert 2");
-            lvLsReturn.add("Placeholder Rückgabewert 3");
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
+		return lvbReturn;
+	}
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("LogPlaceholder()");
-            myClipboard.getValue().add("NO VALUE");
+	public boolean LogIsActive()
+	{
 
-            this.myLogger.LogFunctionEndDebug(lvLsReturn);
 
-            return lvLsReturn;
-        }
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
 
-        public ArrayList<String> LogValue()
-        {
-        	ArrayList<String> lvLsReturn = new ArrayList<String>();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("LogIsActive()");
+		myClipboard.getValue().addAll(this.myALValue);
 
-            this.myLogger.LogFunctionStartDebug("LogValue");
-            lvLsReturn.add("Return Value 1");
-            lvLsReturn.add("Return Value 2");
-            lvLsReturn.add("Return Value 3");
+		Boolean lvbReturn = false;  
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
+		try
+		{
+			lvbReturn = okw.OKW_Const_Sngltn.getInstance().YesNo2Boolean(this.myALValue.get( 0 ));
+		}
+		catch (XPathExpressionException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("LogValue()");
-            myClipboard.getValue().add("NO VALUE");
 
-            this.myLogger.LogFunctionEndDebug(lvLsReturn);
+		return lvbReturn;
+	}
 
-            return lvLsReturn;
-        }
+	public ArrayList<String> LogSelected()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-        public boolean MemorizeExists()
-        {
-            this.myLogger.LogFunctionStartDebug("MemorizeExists");
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
+		lvLsReturn.add("Wert_1");
+		lvLsReturn.add("Wert_2");
+		lvLsReturn.add("Wert_3");
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("MemorizeExists()");
-            myClipboard.getValue().add("NO VALUE");
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
 
-            this.myLogger.LogFunctionEndDebug();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("LogSelected()");
+		myClipboard.getValue().add("NO VALUE");
 
-            return true;
-        }
 
-        public boolean MemorizeHasFocus()
-        {
-            this.myLogger.LogFunctionStartDebug("MemorizeHasFocus");
 
-            myClipboard.Clear();
-           String lvs_ObjectName = getKN();
+		return lvLsReturn;
+	}
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("MemorizeHasFocus()");
-            myClipboard.getValue().addAll(this.myALValue);
+	public ArrayList<String> LogTablecellValue(String Coll, String Row)
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionEndDebug();
 
-            return true;
-        }
+		lvLsReturn.add(Coll);
+		lvLsReturn.add(Row);
 
-        public boolean MemorizeIsActive()
-        {
-            this.myLogger.LogFunctionStartDebug("MemorizeIsActive");
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("LogTablecellValue()");
+		myClipboard.getValue().add(Coll);
+		myClipboard.getValue().add(Row);
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("MemorizeIsActive()");
-            myClipboard.getValue().add("NO VALUE");
 
-            this.myLogger.LogFunctionEndDebug();
 
-            return true;
-        }
+		return lvLsReturn;
+	}
 
-        public ArrayList<String> MemorizeSelectedValue()
-        {
-        	ArrayList<String> lvLsReturn = new ArrayList<String>();
+	public ArrayList<String> LogTooltip()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStartDebug("MemorizeSelectedValue");
-            lvLsReturn.add("MemorizeSelectedValue_Return_1");
-            lvLsReturn.add("MemorizeSelectedValue_Return_2");
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
+		lvLsReturn.add("Tooltip Rückgabewert 1");
+		lvLsReturn.add("Tooltip Rückgabewert 2");
+		lvLsReturn.add("Tooltip Rückgabewert 3");
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("MemorizeSelectedValue()");
-            myClipboard.getValue().add("NO VALUE");
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
 
-            this.myLogger.LogFunctionEndDebug();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("LogTooltip()");
+		myClipboard.getValue().add("NO VALUE");
 
-            return lvLsReturn;
-        }
 
-        public ArrayList<String> MemorizeTablecellValue(String Col, String Row)
-        {
-        	ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStartDebug("MemorizeTablecellValue");
-            lvLsReturn.add("MemorizeTablecellValue_1");
+		return lvLsReturn;
+	}
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
+	public ArrayList<String> LogCaption()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("MemorizeTablecellValue()");
-            myClipboard.getValue().add(Col);
-            myClipboard.getValue().add(Row);
 
-            this.myLogger.LogFunctionEndDebug();
+		lvLsReturn.add("Caption Rückgabewert 1");
+		lvLsReturn.add("Caption Rückgabewert 2");
+		lvLsReturn.add("Caption Rückgabewert 3");
 
-            return lvLsReturn;
-        }
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
 
-        public ArrayList<String> MemorizeTooltip()
-        {
-        	ArrayList<String> lvLsReturn = new ArrayList<String>();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("LogCaption()");
+		myClipboard.getValue().add("NO VALUE");
 
-            this.myLogger.LogFunctionStartDebug("MemorizeTooltip");
-            lvLsReturn.add("MemorizeTooltip_Return_1");
-            lvLsReturn.add("MemorizeTooltip_Return_2");
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("MemorizeTooltip()");
-            myClipboard.getValue().add("NO VALUE");
+		return lvLsReturn;
+	}
 
-            this.myLogger.LogFunctionEndDebug();
+	public ArrayList<String> LogLabel()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            return lvLsReturn;
-        }
 
-        public ArrayList<String> MemorizeCaption()
-        {
-        	ArrayList<String> lvLsReturn = new ArrayList<String>();
+		lvLsReturn.add("Label Rückgabewert 1");
+		lvLsReturn.add("Label Rückgabewert 2");
+		lvLsReturn.add("Label Rückgabewert 3");
 
-            this.myLogger.LogFunctionStartDebug("MemorizeCaption");
-            lvLsReturn.add("MemorizeCaption_Return_1");
-            lvLsReturn.add("MemorizeCaption_Return_2");
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("LogLabel()");
+		myClipboard.getValue().add("NO VALUE");
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("MemorizeCaption()");
-            myClipboard.getValue().add("NO VALUE");
 
-            this.myLogger.LogFunctionEndDebug();
 
-            return lvLsReturn;
-        }
+		return lvLsReturn;
+	}
 
-        public ArrayList<String> MemorizeLabel()
-        {
-        	ArrayList<String> lvLsReturn = new ArrayList<String>();
+	public ArrayList<String> LogPlaceholder()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStartDebug("MemorizeLabel");
-            lvLsReturn.add("MemorizeLabel_Return_1");
-            lvLsReturn.add("MemorizeLabel_Return_2");
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
+		lvLsReturn.add("Placeholder Rückgabewert 1");
+		lvLsReturn.add("Placeholder Rückgabewert 2");
+		lvLsReturn.add("Placeholder Rückgabewert 3");
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("MemorizeLabel()");
-            myClipboard.getValue().add("NO VALUE");
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
 
-            this.myLogger.LogFunctionEndDebug();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("LogPlaceholder()");
+		myClipboard.getValue().add("NO VALUE");
 
-            return lvLsReturn;
-        }
 
-        public ArrayList<String> MemorizePlaceholder()
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStartDebug("MemorizePlaceholder");
-            lvLsReturn.add("MemorizePlaceholder_Return_1");
-            lvLsReturn.add("MemorizePlaceholder_Return_2");
+		return lvLsReturn;
+	}
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
+	public ArrayList<String> LogValue()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("MemorizePlaceholder()");
-            myClipboard.getValue().add("NO VALUE");
 
-            this.myLogger.LogFunctionEndDebug();
+		lvLsReturn.add("Return Value 1");
+		lvLsReturn.add("Return Value 2");
+		lvLsReturn.add("Return Value 3");
 
-            return lvLsReturn;
-        }
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
 
-        public ArrayList<String> MemorizeValue()
-        {
-        	ArrayList<String> lvLsReturn = new ArrayList<String>();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("LogValue()");
+		myClipboard.getValue().add("NO VALUE");
 
-            this.myLogger.LogFunctionStartDebug("MemorizeValue");
-            lvLsReturn.add("MemorizeValue_Return_1");
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("MemorizeValue()");
-            myClipboard.getValue().add("NO VALUE");
+		return lvLsReturn;
+	}
 
-            this.myLogger.LogFunctionEndDebug();
+	public boolean MemorizeExists()
+	{
 
-            return lvLsReturn;
-        }
 
-        public void Select(ArrayList<String> fpLs_Value)
-        {
-            this.myLogger.LogFunctionStartDebug("Select");
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
 
-            try
-            {
-              // myALValue Löschen + setzen...
-              this.myALValue.clear();
-              this.myALValue.addAll( fpLs_Value );
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("MemorizeExists()");
+		myClipboard.getValue().add("NO VALUE");
 
-              myClipboard.Clear();             
-            	String lvs_ObjectName = getKN();
 
-              myClipboard.setObjectName(lvs_ObjectName);
-              myClipboard.setMethod("Select()");
 
-              // Eingabewerte auf den TestClipboard packen...
+		return true;
+	}
 
-              for (String lsValue : fpLs_Value)
-              {
-                 myClipboard.getValue().add(lsValue);
-              }
-            }
-            finally
-            {
-                this.myLogger.LogFunctionEndDebug();
-            }
-        }
+	public boolean MemorizeHasFocus()
+	{
 
-        public void SelectMenu()
-        {
 
-          this.myLogger.LogFunctionStartDebug("SelectMenu");
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("MemorizeHasFocus()");
+		myClipboard.getValue().addAll(this.myALValue);
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("SelectMenu()");
-            myClipboard.getValue().addAll(this.myALValue);
 
-            this.myLogger.LogFunctionEndDebug();
-        }
 
-        public void SelectMenu(ArrayList<String> fpLsValue)
-        {
-            this.myLogger.LogFunctionStartDebug("SelectMenu");
+		return true;
+	}
 
-            // myALValue Löschen + setzen...
-            this.myALValue.clear();
-            this.myALValue.addAll( fpLsValue );
-            
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
+	public boolean MemorizeIsActive()
+	{
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("SelectMenu(ArrayList<String>)");
 
-            myClipboard.getValue().addAll(this.myALValue);
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
 
-            this.myLogger.LogFunctionEndDebug();
-        }
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("MemorizeIsActive()");
+		myClipboard.getValue().add("NO VALUE");
 
-        public void SelectTablecell(String COL, String ROW)
-        {
-            this.myLogger.LogFunctionStartDebug("SelectTablecell", "String COL", COL, "String ROW", ROW);
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("SelectTablecell(String COL, String ROW)");
-            
-            myClipboard.getValue().add(COL);
-            myClipboard.getValue().add(ROW);
-            
-            myClipboard.getValue().addAll(this.myALValue);
+		return true;
+	}
 
-            this.myLogger.LogFunctionEndDebug();
-        }
+	public ArrayList<String> MemorizeSelectedValue()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-        public void SelectTablecell_Clicktype(String COL, String ROW, String fpsClickType)
-        {
-            this.myLogger.LogFunctionStartDebug("SelectTablecell", "String COL", COL, "String ROW", ROW, "String ClickType", fpsClickType);
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("SelectTablecellClicktype()");
+		lvLsReturn.add("MemorizeSelectedValue_Return_1");
+		lvLsReturn.add("MemorizeSelectedValue_Return_2");
 
-            myClipboard.getValue().add(COL);
-            myClipboard.getValue().add(ROW);
-            myClipboard.getValue().add(fpsClickType);
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
 
-            myClipboard.getValue().addAll(this.myALValue);
-           
-            
-            this.myLogger.LogFunctionEndDebug();
-        }
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("MemorizeSelectedValue()");
+		myClipboard.getValue().add("NO VALUE");
 
 
-/*        @Override
+
+		return lvLsReturn;
+	}
+
+	public ArrayList<String> MemorizeTablecellValue(String Col, String Row)
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+
+		lvLsReturn.add("MemorizeTablecellValue_1");
+
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
+
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("MemorizeTablecellValue()");
+		myClipboard.getValue().add(Col);
+		myClipboard.getValue().add(Row);
+
+
+
+		return lvLsReturn;
+	}
+
+	public ArrayList<String> MemorizeTooltip()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+
+		lvLsReturn.add("MemorizeTooltip_Return_1");
+		lvLsReturn.add("MemorizeTooltip_Return_2");
+
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
+
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("MemorizeTooltip()");
+		myClipboard.getValue().add("NO VALUE");
+
+
+
+		return lvLsReturn;
+	}
+
+	public ArrayList<String> MemorizeCaption()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+
+		lvLsReturn.add("MemorizeCaption_Return_1");
+		lvLsReturn.add("MemorizeCaption_Return_2");
+
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
+
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("MemorizeCaption()");
+		myClipboard.getValue().add("NO VALUE");
+
+
+
+		return lvLsReturn;
+	}
+
+	public ArrayList<String> MemorizeLabel()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+
+		lvLsReturn.add("MemorizeLabel_Return_1");
+		lvLsReturn.add("MemorizeLabel_Return_2");
+
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
+
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("MemorizeLabel()");
+		myClipboard.getValue().add("NO VALUE");
+
+
+
+		return lvLsReturn;
+	}
+
+	public ArrayList<String> MemorizePlaceholder()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+
+		lvLsReturn.add("MemorizePlaceholder_Return_1");
+		lvLsReturn.add("MemorizePlaceholder_Return_2");
+
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
+
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("MemorizePlaceholder()");
+		myClipboard.getValue().add("NO VALUE");
+
+
+
+		return lvLsReturn;
+	}
+
+	public ArrayList<String> MemorizeValue()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+
+		lvLsReturn.add("MemorizeValue_Return_1");
+
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
+
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("MemorizeValue()");
+		myClipboard.getValue().add("NO VALUE");
+
+
+
+		return lvLsReturn;
+	}
+
+	public void Select(ArrayList<String> fpLs_Value)
+	{
+
+
+		try
+		{
+			// myALValue Löschen + setzen...
+			this.myALValue.clear();
+			this.myALValue.addAll( fpLs_Value );
+
+			myClipboard.Clear();             
+			String lvs_ObjectName = getKN();
+
+			myClipboard.setObjectName(lvs_ObjectName);
+			myClipboard.setMethod("Select()");
+
+			// Eingabewerte auf den TestClipboard packen...
+
+			for (String lsValue : fpLs_Value)
+			{
+				myClipboard.getValue().add(lsValue);
+			}
+		}
+		finally
+		{
+
+		}
+	}
+
+	public void SelectMenu()
+	{
+
+
+
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
+
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("SelectMenu()");
+		myClipboard.getValue().addAll(this.myALValue);
+
+
+	}
+
+	public void SelectMenu(ArrayList<String> fpLsValue)
+	{
+
+
+		// myALValue Löschen + setzen...
+		this.myALValue.clear();
+		this.myALValue.addAll( fpLsValue );
+
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
+
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("SelectMenu(ArrayList<String>)");
+
+		myClipboard.getValue().addAll(this.myALValue);
+
+
+	}
+
+	public void SelectTablecell(String COL, String ROW)
+	{
+
+
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
+
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("SelectTablecell(String COL, String ROW)");
+
+		myClipboard.getValue().add(COL);
+		myClipboard.getValue().add(ROW);
+
+		myClipboard.getValue().addAll(this.myALValue);
+
+
+	}
+
+	public void SelectTablecell_Clicktype(String COL, String ROW, String fpsClickType)
+	{
+
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
+
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("SelectTablecellClicktype()");
+
+		myClipboard.getValue().add(COL);
+		myClipboard.getValue().add(ROW);
+		myClipboard.getValue().add(fpsClickType);
+
+		myClipboard.getValue().addAll(this.myALValue);
+
+
+
+	}
+
+
+	/*        @Override
         public void Select_Clicktype(ArrayList<String> fpLs_Value, String fpsClicktype)
         {
-            this.myLogger.LogFunctionStartDebug("Select_Clicktype");
+
 
             myClipboard.Clear();
             String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("Select_Clicktype()");
-            
+
             myClipboard.getValue().add(fpLs_Value.get(0));
             myClipboard.getValue().add(fpsClicktype);
-            this.myLogger.LogFunctionEndDebug();
+
         }*/
 
-        public void Select_TABLE(ArrayList<String> fpLs_Value)
-        {
-            this.myLogger.LogFunctionStartDebug("OKW_Select");
-            String lvs_ObjectName = getKN();
+	public void Select_TABLE(ArrayList<String> fpLs_Value)
+	{
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("OKW_Select_TABLE()");
-            myClipboard.Clear();
-            myClipboard.getValue().add(fpLs_Value.get(0));
-            this.myLogger.LogFunctionEndDebug();
-        }
+		String lvs_ObjectName = getKN();
 
-        public void SetFocus()
-        {
-            this.myLogger.LogFunctionStartDebug("SetFocus");
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("OKW_Select_TABLE()");
+		myClipboard.Clear();
+		myClipboard.getValue().add(fpLs_Value.get(0));
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
+	}
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("SetFocus()");
-            myClipboard.getValue().addAll(this.myALValue);
-
-            this.myLogger.LogFunctionEndDebug();
-        }
-
-  public void SetValue( ArrayList<String> fpLs_Value )
-  {
-    this.myLogger.LogFunctionStartDebug( "SetValue" );
-
-    try
-    {
-      // myALValue Löschen + setzen...
-      this.myALValue.clear();
-      
-      if (fpLs_Value.get( 0 ).equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ))
-      {
-          this.myALValue.add("");
-      }
-      else
-      {          
-          this.myALValue.addAll( fpLs_Value );
-      }
- 
-      // Clipboard löschen und Werte setzen...
-      myClipboard.Clear();
-      String lvs_ObjectName = getKN();
-
-      myClipboard.setObjectName( lvs_ObjectName );
-      myClipboard.setMethod( "SetValue()" );
-
-      myClipboard.getValue().addAll( myALValue );
-    }
-    finally
-    {
-      this.myLogger.LogFunctionEndDebug();
-    }
-  }
-
-        public void TypeKey(ArrayList<String> fpLs_Value)
-        {
-            this.myLogger.LogFunctionStartDebug("TypeKey");
-
-            try
-            {
-
-              // myALValue Löschen + setzen...
-              this.myALValue.clear();
-              this.myALValue.addAll( fpLs_Value );
-
-              myClipboard.Clear();
-                
-                String lvs_ObjectName = getKN();
-
-                myClipboard.setObjectName(lvs_ObjectName);
-                myClipboard.setMethod("TypeKey(List<String> fpLs_Value)");
-
-                // Eingabe werte auf den TestClipboard packen
-                for (String lsValue : fpLs_Value)
-                {
-                    myClipboard.getValue().add(lsValue);
-                }
-            }
-            finally
-            {
-                this.myLogger.LogFunctionEndDebug();
-            }
-        }
-
-        public void TypeKeyTablecell(String COL, String ROW, ArrayList<String> fpLsValues)
-        {
-            this.myLogger.LogFunctionStartDebug("TypeKeyTablecell", "String COL", COL, "String ROW", ROW);
-
-            try
-            {
-                myClipboard.Clear();
-                
-                String lvs_ObjectName = getKN();
-
-                myClipboard.setObjectName(lvs_ObjectName);
-                myClipboard.setMethod("TypeKeyTablecell(String COL, String ROW, List<String> Values)");
-
-                // Eingabe werte auf den TestClipboard packen
-
-                myClipboard.getValue().add(COL);
-                myClipboard.getValue().add(ROW);
-
-                for (String lsValue : fpLsValues)
-                {
-                    myClipboard.getValue().add(lsValue);
-                }
-            }
-            finally
-            {
-                this.myLogger.LogFunctionEndDebug();
-            }
-        }
+	public void SetFocus()
+	{
 
 
-        public ArrayList<String> VerifyBadge()
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
+
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("SetFocus()");
+		myClipboard.getValue().addAll(this.myALValue);
+
+
+	}
+
+	public void SetValue( ArrayList<String> fpLs_Value )
+	{
+
+
+		try
 		{
-		    ArrayList<String> lvLsReturn = new ArrayList<String>();
-		
-		    this.myLogger.LogFunctionStartDebug("VerifyBadge");
-		    
-		    lvLsReturn.addAll(this.myALValue);
-		
-		    myClipboard.Clear();
-		    String lvs_ObjectName = getKN();
-		    myClipboard.setObjectName(lvs_ObjectName);
-		    myClipboard.setMethod("VerifyBadge()");
-		
-		    myClipboard.getValue().addAll(this.myALValue);;
-		
-		    this.myLogger.LogFunctionEndDebug();
-		
-		    return lvLsReturn;
+			// myALValue Löschen + setzen...
+			this.myALValue.clear();
+
+			if (fpLs_Value.get( 0 ).equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ))
+			{
+				this.myALValue.add("");
+			}
+			else
+			{          
+				this.myALValue.addAll( fpLs_Value );
+			}
+
+			// Clipboard löschen und Werte setzen...
+			myClipboard.Clear();
+			String lvs_ObjectName = getKN();
+
+			myClipboard.setObjectName( lvs_ObjectName );
+			myClipboard.setMethod( "SetValue()" );
+
+			myClipboard.getValue().addAll( myALValue );
+		}
+		finally
+		{
+
+		}
+	}
+
+	public void TypeKey(ArrayList<String> fpLs_Value)
+	{
+
+
+		try
+		{
+
+			// myALValue Löschen + setzen...
+			this.myALValue.clear();
+			this.myALValue.addAll( fpLs_Value );
+
+			myClipboard.Clear();
+
+			String lvs_ObjectName = getKN();
+
+			myClipboard.setObjectName(lvs_ObjectName);
+			myClipboard.setMethod("TypeKey(List<String> fpLs_Value)");
+
+			// Eingabe werte auf den TestClipboard packen
+			for (String lsValue : fpLs_Value)
+			{
+				myClipboard.getValue().add(lsValue);
+			}
+		}
+		finally
+		{
+
+		}
+	}
+
+	public void TypeKeyTablecell(String COL, String ROW, ArrayList<String> fpLsValues)
+	{
+
+
+		try
+		{
+			myClipboard.Clear();
+
+			String lvs_ObjectName = getKN();
+
+			myClipboard.setObjectName(lvs_ObjectName);
+			myClipboard.setMethod("TypeKeyTablecell(String COL, String ROW, List<String> Values)");
+
+			// Eingabe werte auf den TestClipboard packen
+
+			myClipboard.getValue().add(COL);
+			myClipboard.getValue().add(ROW);
+
+			for (String lsValue : fpLsValues)
+			{
+				myClipboard.getValue().add(lsValue);
+			}
+		}
+		finally
+		{
+
+		}
+	}
+
+
+	public ArrayList<String> VerifyBadge()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+
+
+		lvLsReturn.addAll(this.myALValue);
+
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifyBadge()");
+
+		myClipboard.getValue().addAll(this.myALValue);;
+
+
+
+		return lvLsReturn;
+	}
+
+	public Boolean VerifyExists()
+	{
+
+
+		boolean lvbReturn = false;
+
+		try
+		{
+			lvbReturn = okw.OKW_Const_Sngltn.getInstance().YesNo2Boolean( this.myALValue.get( 0 ));
+		}
+		catch (XPathExpressionException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 
-		public Boolean VerifyExists()
-        {
-            this.myLogger.LogFunctionStartDebug("VerifyExists");
-
-            boolean lvbReturn = false;
-
-            try
-            {
-              lvbReturn = okw.OKW_Const_Sngltn.getInstance().YesNo2Boolean( this.myALValue.get( 0 ));
-            }
-            catch (XPathExpressionException e)
-            {
-              // TODO Auto-generated catch block
-              e.printStackTrace();
-            }
-
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
-
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("VerifyExists()");
-            myClipboard.getValue().addAll(this.myALValue);;
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
 
-            this.myLogger.LogFunctionEndDebug(true);
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifyExists()");
+		myClipboard.getValue().addAll(this.myALValue);;
 
-            return lvbReturn;
-        }
 
 
-        public Boolean VerifyHasFocus()
-        {
-          Boolean lvbReturn = false;
-          
-          myLogger.LogFunctionStartDebug("VerifyHasFocus");
+		return lvbReturn;
+	}
 
-            myClipboard.Clear();
-            
-            try
-            {
-              lvbReturn = okw.OKW_Const_Sngltn.getInstance().YesNo2Boolean( this.myALValue.get( 0 ));
-            }
-            catch (XPathExpressionException e)
-            {
-              // TODO Auto-generated catch block
-              e.printStackTrace();
-            }
-            
-            String lvs_ObjectName = getKN();
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("VerifyHasFocus()");
+	public Boolean VerifyHasFocus()
+	{
+		Boolean lvbReturn = false;
 
-            myClipboard.getValue().addAll(this.myALValue);;
 
-            this.myLogger.LogFunctionEndDebug();
 
-            return lvbReturn;
-        }
+		myClipboard.Clear();
 
+		try
+		{
+			lvbReturn = okw.OKW_Const_Sngltn.getInstance().YesNo2Boolean( this.myALValue.get( 0 ));
+		}
+		catch (XPathExpressionException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
-        public Boolean VerifyIsActive()
-        {
-          boolean lvbReturn = false;
-          
-            this.myLogger.LogFunctionStartDebug("VerifyIsActive");
+		String lvs_ObjectName = getKN();
 
-            try
-            {
-              lvbReturn = okw.OKW_Const_Sngltn.getInstance().YesNo2Boolean( this.myALValue.get( 0 ));
-            }
-            catch (XPathExpressionException e)
-            {
-              // TODO Auto-generated catch block
-              e.printStackTrace();
-            }
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifyHasFocus()");
 
-            myClipboard.Clear();   
-            String lvs_ObjectName = getKN();
+		myClipboard.getValue().addAll(this.myALValue);;
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("VerifyIsActive()");
-            myClipboard.getValue().addAll(this.myALValue);
-            
-            this.myLogger.LogFunctionEndDebug();
 
-            return lvbReturn;
-        }
 
+		return lvbReturn;
+	}
 
-        public ArrayList<String> VerifySelectedValue()
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStartDebug("VerifySelectedValue");
-            lvLsReturn.addAll(this.myALValue);
+	public Boolean VerifyIsActive()
+	{
+		boolean lvbReturn = false;
 
-            myClipboard.Clear();
-            
-            String lvs_ObjectName = getKN();
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("VerifySelectedValue()");
-            myClipboard.getValue().addAll(this.myALValue);
 
-            this.myLogger.LogFunctionEndDebug();
+		try
+		{
+			lvbReturn = okw.OKW_Const_Sngltn.getInstance().YesNo2Boolean( this.myALValue.get( 0 ));
+		}
+		catch (XPathExpressionException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
-            return lvLsReturn;
-        }
+		myClipboard.Clear();   
+		String lvs_ObjectName = getKN();
 
-        public ArrayList<String> VerifyTablecellValue(String Col, String Row)
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifyIsActive()");
+		myClipboard.getValue().addAll(this.myALValue);
 
-            this.myLogger.LogFunctionStartDebug("VerifyTablecellValue");
-            lvLsReturn.addAll(this.myALValue);
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("VerifyTablecellValue()");
+		return lvbReturn;
+	}
 
-            myClipboard.getValue().addAll(this.myALValue);
-            myClipboard.getValue().add(Col);
-            myClipboard.getValue().add(Row);
 
-            this.myLogger.LogFunctionEndDebug();
+	public ArrayList<String> VerifySelectedValue()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            return lvLsReturn;
-        }
 
-        public ArrayList<String> VerifyTooltip()
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
+		lvLsReturn.addAll(this.myALValue);
 
-            this.myLogger.LogFunctionStartDebug("VerifyTooltip");
-            
-            lvLsReturn.addAll(myALValue);
+		myClipboard.Clear();
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("VerifyTooltip()");
+		String lvs_ObjectName = getKN();
 
-            myClipboard.getValue().addAll(this.myALValue);
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifySelectedValue()");
+		myClipboard.getValue().addAll(this.myALValue);
 
-            this.myLogger.LogFunctionEndDebug();
 
-            return lvLsReturn;
-        }
 
-        public ArrayList<String> VerifyCaption()
-       {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
+		return lvLsReturn;
+	}
 
-            this.myLogger.LogFunctionStartDebug("VerifyCaption");
-            lvLsReturn.addAll(this.myALValue);
+	public ArrayList<String> VerifyTablecellValue(String Col, String Row)
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("VerifyCaption()");
 
-            myClipboard.getValue().addAll(this.myALValue);
+		lvLsReturn.addAll(this.myALValue);
 
-            this.myLogger.LogFunctionEndDebug();
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
 
-            return lvLsReturn;
-        }
-        
-        public ArrayList<String> VerifyLabel()
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifyTablecellValue()");
 
-            this.myLogger.LogFunctionStartDebug("VerifyLabel");
-            
-            lvLsReturn.addAll(this.myALValue);
+		myClipboard.getValue().addAll(this.myALValue);
+		myClipboard.getValue().add(Col);
+		myClipboard.getValue().add(Row);
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("VerifyLabel()");
 
-            myClipboard.getValue().addAll(this.myALValue);;
 
-            this.myLogger.LogFunctionEndDebug();
+		return lvLsReturn;
+	}
 
-            return lvLsReturn;
-        }
-        
-        public Integer VerifyMaxLength()
-        {
-            Integer lviReturn = 0;
+	public ArrayList<String> VerifyTooltip()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStartDebug("VerifyMaxLength");
-            
-            lviReturn = Integer.valueOf( this.myALValue.get( 0 ) );
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("VerifyMaxLength()");
 
-            myClipboard.getValue().addAll(this.myALValue);;
+		lvLsReturn.addAll(myALValue);
 
-            this.myLogger.LogFunctionEndDebug();
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifyTooltip()");
 
-            return lviReturn;
-        }
-        
-        public ArrayList<String> VerifyPlaceholder()
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
+		myClipboard.getValue().addAll(this.myALValue);
 
-            this.myLogger.LogFunctionStartDebug("VerifyPlaceholder");
-            
-            lvLsReturn.addAll(this.myALValue);
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("VerifyPlaceholder()");
 
-            myClipboard.getValue().addAll(this.myALValue);;
+		return lvLsReturn;
+	}
 
-            this.myLogger.LogFunctionEndDebug();
+	public ArrayList<String> VerifyCaption()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            return lvLsReturn;
-        }
 
-        public ArrayList<String> VerifyValue()
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
+		lvLsReturn.addAll(this.myALValue);
 
-            this.myLogger.LogFunctionStartDebug("VerifyValue");
-            
-            lvLsReturn.addAll(myALValue);
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifyCaption()");
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("VerifyValue()");
+		myClipboard.getValue().addAll(this.myALValue);
 
-            myClipboard.getValue().addAll(myALValue);
 
-            this.myLogger.LogFunctionEndDebug();
 
-            return lvLsReturn;
-        }
-        
-        public Integer VerifyMinLength()
-        {
-            Integer lviReturn = 0;
+		return lvLsReturn;
+	}
 
-            this.myLogger.LogFunctionStartDebug("VerifyMinLength");
-            
-            lviReturn = Integer.valueOf( this.myALValue.get( 0 ) );
+	public ArrayList<String> VerifyLabel()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("VerifyMinLength()");
 
-            myClipboard.getValue().addAll(this.myALValue);;
 
-            this.myLogger.LogFunctionEndDebug();
+		lvLsReturn.addAll(this.myALValue);
 
-            return lviReturn;
-        }
-        
-        
-        public ArrayList<String> VerifyErrorMSG()
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifyLabel()");
 
-            this.myLogger.LogFunctionStartDebug("VerifyErrorMSG");
-            
-            lvLsReturn.addAll(this.myALValue);
+		myClipboard.getValue().addAll(this.myALValue);;
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("VerifyErrorMSG()");
 
-            myClipboard.getValue().addAll(this.myALValue);;
 
-            this.myLogger.LogFunctionEndDebug();
+		return lvLsReturn;
+	}
 
-            return lvLsReturn;
-        }
-    }
+	public Integer VerifyMaxLength()
+	{
+		Integer lviReturn = 0;
+
+
+
+		lviReturn = Integer.valueOf( this.myALValue.get( 0 ) );
+
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifyMaxLength()");
+
+		myClipboard.getValue().addAll(this.myALValue);;
+
+
+
+		return lviReturn;
+	}
+
+	public ArrayList<String> VerifyPlaceholder()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+
+
+		lvLsReturn.addAll(this.myALValue);
+
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifyPlaceholder()");
+
+		myClipboard.getValue().addAll(this.myALValue);;
+
+
+
+		return lvLsReturn;
+	}
+
+	public ArrayList<String> VerifyValue()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+
+
+		lvLsReturn.addAll(myALValue);
+
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifyValue()");
+
+		myClipboard.getValue().addAll(myALValue);
+
+
+
+		return lvLsReturn;
+	}
+
+	public Integer VerifyMinLength()
+	{
+		Integer lviReturn = 0;
+
+
+
+		lviReturn = Integer.valueOf( this.myALValue.get( 0 ) );
+
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifyMinLength()");
+
+		myClipboard.getValue().addAll(this.myALValue);;
+
+
+
+		return lviReturn;
+	}
+
+
+	public ArrayList<String> VerifyErrorMSG()
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+
+
+		lvLsReturn.addAll(this.myALValue);
+
+		myClipboard.Clear();
+		String lvs_ObjectName = getKN();
+		myClipboard.setObjectName(lvs_ObjectName);
+		myClipboard.setMethod("VerifyErrorMSG()");
+
+		myClipboard.getValue().addAll(this.myALValue);;
+
+
+
+		return lvLsReturn;
+	}
+}

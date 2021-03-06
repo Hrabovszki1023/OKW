@@ -132,16 +132,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 */
 	public void ClickOn()
 	{
-		try
-		{
-			this.LogFunctionStartDebug( "ClickOn" );
 
-			this.WaitForInteraction( () -> {this.Me().click();} );
-		}
-		finally
-		{
-			this.LogFunctionEndDebug();
-		}
+		this.WaitForInteraction( () -> {this.Me().click();} );
 	}
 
 
@@ -158,18 +150,10 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-		try
-		{
-			this.LogFunctionStartDebug( "getCaption" );
 
-			String myAttribute = this.WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "textContent" ); } );
+		String myAttribute = this.WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "textContent" ); } );
 
-			lvLsReturn.add( StringUtils.normalizeSpace( myAttribute ) );
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvLsReturn );
-		}
+		lvLsReturn.add( StringUtils.normalizeSpace( myAttribute ) );
 		return lvLsReturn;
 	}
 
@@ -196,8 +180,6 @@ public class SeAnyChildWindow extends AnyChildwindow
 
 		try
 		{
-			LogFunctionStartDebug( "getExists" );
-
 			myLocator = this.getLocator();
 
 			SeDriver.getInstance().getWebElement( myLocator );
@@ -215,10 +197,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 			LogPrint( "StaleElementReferenceException - GUI-Objekt existiert nicht mehr..." );
 			lvbReturn = false;
 		}
-		finally
-		{
-			LogFunctionEndDebug( lvbReturn );
-		}
+
 		return lvbReturn;
 	}
 
@@ -229,7 +208,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 * 
 	 *  @return true, wenn Fokus vorhanden, sonst false
 	 *  
-     * \~english
+	 * \~english
 	 *  Method returns the focus state of the current GUI object.
 	 *  
 	 *  Source: http://stackoverflow.com/questions/7491806/in-selenium-how-do-i-find-the-current-object
@@ -243,22 +222,12 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		Boolean lvbReturn = false;
 
-		try
-		{
-			this.LogFunctionStartDebug( "getHasFocus" );
+		// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+		this.WaitForMe();
 
-			// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-			this.WaitForMe();
+		WebElement currentElement = SeDriver.getInstance().getDriver().switchTo().activeElement();
 
-			WebElement currentElement = SeDriver.getInstance().getDriver().switchTo().activeElement();
-
-			lvbReturn = currentElement.equals( this.Me() );
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvbReturn );
-		}
-
+		lvbReturn = currentElement.equals( this.Me() );
 		return lvbReturn;
 	}
 
@@ -275,27 +244,19 @@ public class SeAnyChildWindow extends AnyChildwindow
 		Boolean lvbReturn = false;
 		String lvsDisabled = null;
 
-		try
+		// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+		lvsDisabled = this.WaitForInteractionReturnString( () -> { 
+			return this.Me().getAttribute( "disabled" ); 
+		} );
+
+		if ( lvsDisabled != null )
 		{
-			LogFunctionStartDebug( "getIsActive" );
-
-			// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-			lvsDisabled = this.WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "disabled" ); } );
-			
-			if ( lvsDisabled != null )
-			{
-				if ( lvsDisabled.equals( "true" ) )
-					lvbReturn = false;
-			}
-			else
-			{
-				lvbReturn = true;
-			}
-
+			if ( lvsDisabled.equals( "true" ) )
+				lvbReturn = false;
 		}
-		finally
+		else
 		{
-			this.LogFunctionEndDebug( lvbReturn );
+			lvbReturn = true;
 		}
 
 		return lvbReturn;
@@ -308,7 +269,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 *  
 	 *  @return Rückgabe des normalisierten Label-Textes.
 	 *  \~english
- 	 *  Determines the textual content of the label.
+	 *  Determines the textual content of the label.
 	 *  
 	 *  The "textContent" attribute of the "label" is read, which is linked to the current GUI object via the "id" attribute.
 	 *  
@@ -321,28 +282,19 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-		try
-		{
-			this.LogFunctionStartDebug( "getLabel" );
+		// 1. Schritt: get Attribute "id" is shown as Tooltip...
+		String lvsID = this.WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "id" ); } );
 
-			// 1. Schritt: get Attribute "id" is shown as Tooltip...
-			String lvsID = this.WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "id" ); } );
+		// 2.schritt nun Tag Label mit for= "${lvsID}" finden.
+		WebElement label = SeDriver.getInstance().getDriver().findElement( By.xpath( "//label[@for='" + lvsID + "']" ) );
 
-			// 2.schritt nun Tag Label mit for= "${lvsID}" finden.
-			WebElement label = SeDriver.getInstance().getDriver().findElement( By.xpath( "//label[@for='" + lvsID + "']" ) );
+		// 3. Hole Attribute "textContent" wird als Beschriftung angezeigt...
+		String myAttribute = label.getAttribute( "textContent" );
 
-			// 3. Hole Attribute "textContent" wird als Beschriftung angezeigt...
-			String myAttribute = label.getAttribute( "textContent" );
-			
-			// 4 Normalisieren...
-			myAttribute = StringUtils.normalizeSpace( myAttribute );
+		// 4 Normalisieren...
+		myAttribute = StringUtils.normalizeSpace( myAttribute );
 
-			lvLsReturn.add( myAttribute );
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvLsReturn );
-		}
+		lvLsReturn.add( myAttribute );
 
 		return lvLsReturn;
 	}
@@ -370,21 +322,12 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-		try
-		{
-			this.LogFunctionStartDebug( "getTooltip" );
+		// The Attribute "title" is shown as Tooltip...
+		String myAttribute = this.WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "title" ); } );
 
-			// The Attribute "title" is shown as Tooltip...
-			String myAttribute = this.WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "title" ); } );
-			
-			myAttribute = StringUtils.normalizeSpace( myAttribute );
+		myAttribute = StringUtils.normalizeSpace( myAttribute );
 
-			lvLsReturn.add( myAttribute );
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvLsReturn );
-		}
+		lvLsReturn.add( myAttribute );
 
 		return lvLsReturn;
 	}
@@ -410,30 +353,22 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		ArrayList<String> lvLsReturn = new ArrayList<String>();
 		String myAttribute = null;
-		try
-		{
-			this.LogFunctionStartDebug( "getValue" );
 
-			// Warten auf die Interaktion mit dem Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-			String myValue = this.WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "data-harmony-value" ); } );
+		// Warten auf die Interaktion mit dem Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+		String myValue = this.WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "data-harmony-value" ); } );
 
-			// Wurde data-harmony-value definiert?
-			if ( null == myValue )
-			{
-				// Nein: "Normal" Weiter 
-				myAttribute = this.WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "textContent" ); } );
-			}
-			else
-			{   
-				// Ja: Auslesen
-				myAttribute = myValue;
-			}
-			lvLsReturn.add( StringUtils.normalizeSpace( myAttribute ) );
-		}
-		finally
+		// Wurde data-harmony-value definiert?
+		if ( null == myValue )
 		{
-			this.LogFunctionEndDebug( lvLsReturn );
+			// Nein: "Normal" Weiter 
+			myAttribute = this.WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "textContent" ); } );
 		}
+		else
+		{   
+			// Ja: Auslesen
+			myAttribute = myValue;
+		}
+		lvLsReturn.add( StringUtils.normalizeSpace( myAttribute ) );
 
 		return lvLsReturn;
 	}
@@ -458,16 +393,9 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		ArrayList<String> lvLsReturn = null;
 
-		try
-		{
-			this.LogFunctionStartDebug( "LogCaption" );
 
-			lvLsReturn = this.getCaption();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvLsReturn );
-		}
+		lvLsReturn = this.getCaption();
+
 		return lvLsReturn;
 	}
 
@@ -491,16 +419,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		Boolean lvbReturn = null;
 
-		try
-		{
-			this.LogFunctionStartDebug( "LogExists" );
-
-			lvbReturn = this.getExists();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvbReturn );
-		}
+		lvbReturn = this.getExists();
 
 		return lvbReturn;
 	}
@@ -525,16 +444,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		Boolean lvbReturn = null;
 
-		try
-		{
-			this.LogFunctionStartDebug( "LogHasFocus" );
 
-			lvbReturn = this.getHasFocus();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvbReturn );
-		}
+		lvbReturn = this.getHasFocus();
 
 		return lvbReturn;
 	}
@@ -559,16 +470,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		Boolean lvbReturn = null;
 
-		try
-		{
-			this.LogFunctionStartDebug( "LogIsActive" );
 
-			lvbReturn = this.getIsActive();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvbReturn );
-		}
+		lvbReturn = this.getIsActive();
 
 		return lvbReturn;
 	}
@@ -592,16 +495,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		ArrayList<String> lvLsReturn = null;
 
-		try
-		{
-			this.LogFunctionStartDebug( "LogLabel" );
 
-			lvLsReturn = this.getLabel();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvLsReturn );
-		}
+		lvLsReturn = this.getLabel();
 
 		return lvLsReturn;
 	}
@@ -625,16 +520,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		ArrayList<String> lvLsReturn = null;
 
-		try
-		{
-			this.LogFunctionStartDebug( "LogLabel" );
 
-			lvLsReturn = this.getLabel();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvLsReturn );
-		}
+		lvLsReturn = this.getLabel();
 
 		return lvLsReturn;
 	}
@@ -658,16 +545,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		ArrayList<String> lvLsReturn = null;
 
-		try
-		{
-			this.LogFunctionStartDebug( "LogTooltip" );
 
-			lvLsReturn = this.getTooltip();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvLsReturn );
-		}
+		lvLsReturn = this.getTooltip();
 
 		return lvLsReturn;
 	}
@@ -693,16 +572,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-		try
-		{
-			this.LogFunctionStartDebug( "LogValue" );
-
-			lvLsReturn = this.getValue();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvLsReturn );
-		}
+		lvLsReturn = this.getValue();
 
 		return lvLsReturn;
 	}
@@ -745,16 +615,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		ArrayList<String> lvLsReturn = null;
 
-		try
-		{
-			this.LogFunctionStartDebug( "MemorizeCaption" );
-
-			lvLsReturn = this.getCaption();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvLsReturn );
-		}
+		lvLsReturn = this.getCaption();
 
 		return lvLsReturn;
 	}
@@ -779,16 +640,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		Boolean lvbReturn = false;
 
-		try
-		{
-			this.LogFunctionStartDebug( "MemorizeExists" );
 
-			lvbReturn = this.getExists();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvbReturn );
-		}
+		lvbReturn = this.getExists();
 
 		return lvbReturn;
 	}
@@ -812,16 +665,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		Boolean lvbReturn = null;
 
-		try
-		{
-			this.LogFunctionStartDebug( "MemorizeHasFocus" );
-
-			lvbReturn = this.getHasFocus();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvbReturn );
-		}
+		lvbReturn = this.getHasFocus();
 
 		return lvbReturn;
 	}
@@ -847,16 +691,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		Boolean lvbReturn = false;
 
-		try
-		{
-			LogFunctionStartDebug( "MemorizeIsActive" );
 
-			lvbReturn = this.getIsActive();
-		}
-		finally
-		{
-			LogFunctionEndDebug( lvbReturn );
-		}
+		lvbReturn = this.getIsActive();
 
 		return lvbReturn;
 	}
@@ -880,16 +716,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		ArrayList<String> lvLsReturn = null;
 
-		try
-		{
-			LogFunctionStartDebug( "MemorizeLabel" );
 
-			lvLsReturn = this.getLabel();
-		}
-		finally
-		{
-			LogFunctionEndDebug( lvLsReturn );
-		}
+		lvLsReturn = this.getLabel();
 
 		return lvLsReturn;
 	}
@@ -913,16 +741,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		ArrayList<String> lvLsReturn = null;
 
-		try
-		{
-			this.LogFunctionStartDebug( "MemorizePlaceholder" );
-
-			lvLsReturn = this.getPlaceholder();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvLsReturn );
-		}
+		lvLsReturn = this.getPlaceholder();
 
 		return lvLsReturn;
 	}
@@ -948,16 +767,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		ArrayList<String> lvLsReturn = null;
 
-		try
-		{
-			this.LogFunctionStartDebug( "MemorizeTooltip" );
-
-			lvLsReturn = this.getTooltip();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvLsReturn );
-		}
+		lvLsReturn = this.getTooltip();
 
 		return lvLsReturn;
 	}
@@ -980,16 +790,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-		try
-		{
-			this.LogFunctionStartDebug( "MemorizeValue" );
 
-			lvLsReturn = this.getValue();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvLsReturn );
-		}
+		lvLsReturn = this.getValue();
 
 		return lvLsReturn;
 	}
@@ -1010,7 +812,6 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 */
 	public Boolean _NotExists() throws Exception
 	{
-		LogFunctionStartDebug( "NotExists" );
 		Boolean lvb_Return = null;
 
 		try
@@ -1022,10 +823,6 @@ public class SeAnyChildWindow extends AnyChildwindow
 		{
 			LogPrint( "NoSuchElementException" );
 			lvb_Return = true;
-		}
-		finally
-		{
-			LogFunctionEndDebug( lvb_Return );
 		}
 		return lvb_Return;
 	}
@@ -1042,17 +839,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	public void Select( ArrayList<String> Values )
 	{
 
-		try
-		{
-			this.LogFunctionStartDebug( "Select" );
-
-			String lvsLM = this.LM.GetMessage( "Common", "OKWFrameObjectMethodNotImplemented", "Select( ArrayList<String> )" );
-			throw new OKWFrameObjectMethodNotImplemented( lvsLM );
-		}
-		finally
-		{
-			this.LogFunctionEndDebug();
-		}
+		String lvsLM = this.LM.GetMessage( "Common", "OKWFrameObjectMethodNotImplemented", "Select( ArrayList<String> )" );
+		throw new OKWFrameObjectMethodNotImplemented( lvsLM );
 	}
 
 	/**
@@ -1070,18 +858,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 */
 	public void SelectMenu()
 	{
-		// ArrayList<String> lvLsReturn = new ArrayList<String>();
-		try
-		{
-			this.LogFunctionStartDebug( "SelectMenu" );
-
-			String lvsLM = this.LM.GetMessage( "Common", "OKWFrameObjectMethodNotImplemented", "SelectMenu()" );
-			throw new OKWFrameObjectMethodNotImplemented( lvsLM );
-		}
-		finally
-		{
-			this.LogFunctionEndDebug();
-		}
+		String lvsLM = this.LM.GetMessage( "Common", "OKWFrameObjectMethodNotImplemented", "SelectMenu()" );
+		throw new OKWFrameObjectMethodNotImplemented( lvsLM );
 	}
 
 	/** \~german
@@ -1096,18 +874,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 */
 	public void SelectMenu( ArrayList<String> Values )
 	{
-
-		try
-		{
-			this.LogFunctionStartDebug( "SelectMenu_Value" );
-
-			String lvsLM = this.LM.GetMessage( "Common", "OKWFrameObjectMethodNotImplemented", "SelectMenu_Value()" );
-			throw new OKWFrameObjectMethodNotImplemented( lvsLM );
-		}
-		finally
-		{
-			this.LogFunctionEndDebug();
-		}
+		String lvsLM = this.LM.GetMessage( "Common", "OKWFrameObjectMethodNotImplemented", "SelectMenu_Value()" );
+		throw new OKWFrameObjectMethodNotImplemented( lvsLM );
 	}
 
 	/** \~german
@@ -1131,18 +899,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 */
 	public void SetFocus() // throws Exception
 	{
-
-		try
-		{
-			LogFunctionStartDebug( "SetFocus" );
-
-			this.WaitForInteraction( () -> {this.Me().sendKeys( "" );} );
-
-		}
-		finally
-		{
-			LogFunctionEndDebug();
-		}
+		this.WaitForInteraction( () -> {this.Me().sendKeys( "" );} );
 	}
 
 	/** \~german
@@ -1157,18 +914,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 */
 	public void SetValue( ArrayList<String> Values )
 	{
-
-		try
-		{
-			LogFunctionStartDebug( "SetValue" );
-
-			String lvsLM = this.LM.GetMessage( "Common", "OKWGUIObjectNotFoundException", "SetValue()" ); // FIXME Flasche Fehlemeldung? Prüfen
-			throw new OKWFrameObjectMethodNotImplemented( lvsLM );
-		}
-		finally
-		{
-			LogFunctionEndDebug();
-		}
+		String lvsLM = this.LM.GetMessage( "Common", "OKWGUIObjectNotFoundException", "SetValue()" ); // FIXME Flasche Fehlemeldung? Prüfen
+		throw new OKWFrameObjectMethodNotImplemented( lvsLM );
 	}
 
 	/** \~german
@@ -1188,31 +935,23 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 */
 	public void TypeKey( ArrayList<String> fps_Values )
 	{
-		try
+
+		this.SetFocus();
+
+		// Loop through all List-Values with foreach...
+		for ( String Value : fps_Values )
 		{
-			LogFunctionStartDebug( "TypeKey", "fps_Values", fps_Values.toString() );
+			Logger_Sngltn.getInstance().LogPrintDebug( ">>" + Value + "<<" );
 
-			this.SetFocus();
-
-			// Loop through all List-Values with foreach...
-			for ( String Value : fps_Values )
+			if ( Value.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
 			{
-				Logger_Sngltn.getInstance().LogPrintDebug( ">>" + Value + "<<" );
-
-				if ( Value.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-				{
-					this.WaitForInteraction( () -> {this.Me().clear();} );
-				}
-				else
-				{
-					String resolvedValue = okw.parser.SeKeyParser.ParseMe( Value );
-					this.WaitForInteraction( (  ) -> { this.Me().sendKeys( resolvedValue );} );
-				}
+				this.WaitForInteraction( () -> {this.Me().clear();} );
 			}
-		}
-		finally
-		{
-			LogFunctionEndDebug();
+			else
+			{
+				String resolvedValue = okw.parser.SeKeyParser.ParseMe( Value );
+				this.WaitForInteraction( (  ) -> { this.Me().sendKeys( resolvedValue );} );
+			}
 		}
 	}
 
@@ -1240,17 +979,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-		try
-		{
-			this.LogFunctionStartDebug( "VerifyCaption" );
-
-			// Get the current value of the caption.
-			lvLsReturn = this.getCaption();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvLsReturn );
-		}
+		// Get the current value of the caption.
+		lvLsReturn = this.getCaption();
 
 		return lvLsReturn;
 	}
@@ -1278,17 +1008,9 @@ public class SeAnyChildWindow extends AnyChildwindow
 	public Boolean VerifyExists()
 	{
 
-		Boolean lvbReturn = null;
+		Boolean lvbReturn = false;
 
-		try
-		{
-			this.LogFunctionStartDebug( "VerifyExists" );
-			lvbReturn = this.getExists();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvbReturn );
-		}
+		lvbReturn = this.getExists();
 
 		return lvbReturn;
 	}
@@ -1316,17 +1038,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 
 		Boolean lvbReturn = false;
 
-		try
-		{
-			LogFunctionStartDebug( "VerifyIsActive" );
-
-			// Value GetIsActive if necessary wait for the expected value.
-			lvbReturn = this.getIsActive();
-		}
-		finally
-		{
-			LogFunctionEndDebug( lvbReturn );
-		}
+		// Value GetIsActive if necessary wait for the expected value.
+		lvbReturn = this.getIsActive();
 
 		return lvbReturn;
 	}
@@ -1350,16 +1063,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		Boolean lvbReturn = false;
 
-		try
-		{
-			this.LogFunctionStartDebug( "VerifyHasFocus" );
+		lvbReturn = this.getHasFocus();
 
-			lvbReturn = this.getHasFocus();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvbReturn );
-		}
 		return lvbReturn;
 	}
 
@@ -1380,16 +1085,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-		try
-		{
-			this.LogFunctionStartDebug( "VerifyLabel" );
-
-			lvLsReturn = this.getLabel();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvLsReturn );
-		}
+		lvLsReturn = this.getLabel();
 
 		return lvLsReturn;
 	}
@@ -1418,16 +1114,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		Integer lvLsReturn = null;
 
-		try
-		{
-			this.LogFunctionStartDebug( "VerifyMaxLength" );
-
-			lvLsReturn = this.getMaxLength();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvLsReturn.toString( ) );
-		}
+		lvLsReturn = this.getMaxLength();
 
 		return lvLsReturn;
 	}
@@ -1456,16 +1143,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		Integer lvLsReturn = null;
 
-		try
-		{
-			this.LogFunctionStartDebug( "VerifyMinLength" );
-
-			lvLsReturn = this.getMinLength();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvLsReturn.toString( ) );
-		}
+		lvLsReturn = this.getMinLength();
 
 		return lvLsReturn;
 	}     
@@ -1494,16 +1172,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-		try
-		{
-			this.LogFunctionStartDebug( "VerifyPlaceholder" );
-
-			lvLsReturn = this.getPlaceholder();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvLsReturn );
-		}
+		lvLsReturn = this.getPlaceholder();
 
 		return lvLsReturn;
 	}
@@ -1532,16 +1201,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-		try
-		{
-			this.LogFunctionStartDebug( "VerifyTooltip" );
-
-			lvLsReturn = this.getTooltip();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvLsReturn );
-		}
+		lvLsReturn = this.getTooltip();
 
 		return lvLsReturn;
 	}
@@ -1562,17 +1222,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		ArrayList<String> lvLsReturn = null;
 
-		try
-		{
-			this.LogFunctionStartDebug( "VerifyValue" );
-
-			// get the Actual Value.
-			lvLsReturn = this.getValue();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvLsReturn );
-		}
+		// get the Actual Value.
+		lvLsReturn = this.getValue();
 
 		return lvLsReturn;
 	}
@@ -1615,28 +1266,28 @@ public class SeAnyChildWindow extends AnyChildwindow
 	{
 		Boolean lvbReturn = false;
 
-			this.LogPrint("Scrolling the object into the visible area...");
+		this.LogPrint("Scrolling the object into the visible area...");
 
-			((JavascriptExecutor) SeDriver.getInstance().getDriver())
-			.executeScript("arguments[0].scrollIntoView({block:'nearest'})", Me());
+		((JavascriptExecutor) SeDriver.getInstance().getDriver())
+		.executeScript("arguments[0].scrollIntoView({block:'nearest'})", Me());
 
-			try
-			{
-				this.LogPrint("... und warte 1s.");
-				// TODO: ScrollWait in Properties auslagern.
-				Thread.sleep(1000);
-				lvbReturn = true;
-			}
-			catch (InterruptedException e)
-			{
-				this.LogWarning("Unexpected exception InterruptedException during ScrollWait, we ignore that..." );
-				e.printStackTrace();
-			}
+		try
+		{
+			this.LogPrint("... und warte 1s.");
+			// TODO: ScrollWait in Properties auslagern.
+			Thread.sleep(1000);
+			lvbReturn = true;
+		}
+		catch (InterruptedException e)
+		{
+			this.LogWarning("Unexpected exception InterruptedException during ScrollWait, we ignore that..." );
+			e.printStackTrace();
+		}
 
 		return lvbReturn;
 	}
-	
-	
+
+
 	/** \~german
 	 *  Methode versucht die gegebene Interaktion Method2Call gegen das aktuelle GUI-Objekt auszuführen und warten ggf. 
 	 *  
@@ -1661,7 +1312,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 
 		RuntimeException TimeOutException = null;
 		boolean isExecuted = false;
-		
+
 		// Action:
 		try
 		{
@@ -1686,7 +1337,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 					isExecuted = true;
 					break;
 				}
-				
+
 				catch ( OKWGUIObjectNotFoundException e)
 				{
 					TimeOutException = e;
@@ -1790,10 +1441,10 @@ public class SeAnyChildWindow extends AnyChildwindow
 		Integer Count, MaxCount, PollTime;
 
 		String lvsReturn = null;
-		
+
 		RuntimeException TimeOutException = null;
 		boolean isExecuted = false;
-		
+
 		// Action:
 		try
 		{
@@ -1818,7 +1469,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 					isExecuted = true;
 					break;
 				}
-				
+
 				catch ( OKWGUIObjectNotFoundException e)
 				{
 					TimeOutException = e;
@@ -1874,7 +1525,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 
 		return lvsReturn;
 	}
-	
+
 	/** \~german
 	 *  Methode versucht die gegebene Interaktion Method2Call gegen das aktuelle GUI-Objekt 
 	 *  auszuführen.
@@ -1921,10 +1572,10 @@ public class SeAnyChildWindow extends AnyChildwindow
 		Integer Count, MaxCount, PollTime;
 
 		Boolean lvbReturn = null;
-		
+
 		RuntimeException TimeOutException = null;
 		boolean isExecuted = false;
-		
+
 		// Action:
 		try
 		{
@@ -1949,7 +1600,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 					isExecuted = true;
 					break;
 				}
-				
+
 				catch ( OKWGUIObjectNotFoundException e)
 				{
 					TimeOutException = e;

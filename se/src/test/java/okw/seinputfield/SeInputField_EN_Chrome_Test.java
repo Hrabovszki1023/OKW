@@ -65,7 +65,7 @@ public class SeInputField_EN_Chrome_Test extends SeInputField_EN_Test
         Logger_Sngltn.init();
 
         //
-        myLog2HTML = new Log2HTML( "SeInputField_Chrome_Test" );
+        myLog2HTML = new Log2HTML( "target/SeInputField_Chrome_Test.html" );
 
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
         Logger_Sngltn.getInstance().setDebugMode(false);
@@ -78,6 +78,7 @@ public class SeInputField_EN_Chrome_Test extends SeInputField_EN_Test
     {
       myLog2HTML.Result2HTML( "target/SeInputField_Chrome_Test.html" );
     }
+
 	
     /* @After
     public void FirefoxAfter() throws Exception

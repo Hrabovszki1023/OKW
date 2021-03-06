@@ -39,8 +39,6 @@ OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 
 package okw.log;
 
-import java.util.*;
-
 /**
  * Debug Logs are not a part of Interface. This methods are implemented in Logger.cs
  * a Log*Debug function calls after checking the log-conditions(debug=true) the Log*-Funktion(without "Debug")
@@ -299,113 +297,6 @@ public interface ILogger
      * \date 2016-10-23
      */
     void LogSequenceEnd();
-    
-    /**
-     * LogFunctionStart: @todo TODO: Add description to LogFunctionStart.
-     * 
-     *  @param FunctionName
-     *  @param Params
-     * \~
-     * @author Zoltan Hrabovszki
-     * \date 2016-10-23
-     */
-    void LogFunctionStart(String FunctionName, String... Params);
-
-
-    /**
-     *  LogFunctionStartDebug: @todo TODO: Add description to LogFunctionStartDebug.
-     * 
-     *  @param FunctionName
-     *  @param Params
-     * \~
-     * @author Zoltan Hrabovszki
-     * \date 2016-10-23
-     */    
-    void LogFunctionStartDebug(String FunctionName, String... Params);
-
-    /**
-     *  LogFunctionEnd: @todo TODO: Add description to LogFunctionEnd.
-     * 
-     * \~
-     * @author Zoltan Hrabovszki
-     * \date 2016-10-23
-     */    
-    void LogFunctionEnd();
-
-    /**
-     * LogFunctionEndDebug: @todo TODO: Add description to LogFunctionEndDebug.
-     * 
-     * \~
-     * @author Zoltan Hrabovszki
-     * \date 2016-10-23
-     */    
-    void LogFunctionEndDebug();
-
-    /**
-     * LogFunctionEnd(Boolean): @todo TODO: Add description to LogFunctionEnd(Boolean).
-     * 
-     * @param Message
-     * \~
-     * @author Zoltan Hrabovszki
-     * \date 2016-10-23
-     */    
-    void LogFunctionEnd(Boolean Message);
-
-
-    /**
-     * LogFunctionEndDebug(Boolean): @todo TODO: Add description to LogFunctionEndDebug(Boolean).
-     * 
-     * @param Message
-     * \~
-     * @author Zoltan Hrabovszki
-     * \date 2016-10-23
-     */    
-     void LogFunctionEndDebug(Boolean Message);
-
-
-     /**
-      * LogFunctionEnd(String): @todo TODO: Add description to LogFunctionEnd(String).
-      * 
-      * @param Message
-      * \~
-      * @author Zoltan Hrabovszki
-      * \date 2016-10-23
-      */    
-      void LogFunctionEnd(String Message);
-
-
-      /**
-       *  LogFunctionEndDebug(String): @todo TODO: Add description to LogFunctionEndDebug(String).
-       * 
-       *  @param Message
-       * \~
-       * @author Zoltan Hrabovszki
-       * \date 2016-10-23
-       */    
-      void LogFunctionEndDebug(String Message);
-
-
-      /**
-       *  LogFunctionEnd: @todo TODO: Add description to LogFunctionEnd.
-       * 
-       *  @param Message
-       * \~
-       * @author Zoltan Hrabovszki
-       * \date 2016-10-23
-       */    
-    void LogFunctionEnd(List<String> Message);    
-
-
-    /**
-     *  LogFunctionEndDebug: @todo TODO: Add description to LogFunctionEndDebug.
-     * 
-     *  @param Message
-     * \~
-     * @author Zoltan Hrabovszki
-     * \date 2016-10-23
-     */    
-    void LogFunctionEndDebug(List<String> Message);
-    
     
     /**
      *  LogFunctionStartDebug: Opens a debug outline level with the .

@@ -42,7 +42,7 @@ package okw.log.log2html;
 public class LogTestcase extends LogBaseNode
 {
 
-    private String name = "";
+    //private String info = "";
     private String type = "TestCase";
     
 	protected LogTestcase( LogBase Parent, String fpsTestcaseName )
@@ -50,7 +50,7 @@ public class LogTestcase extends LogBaseNode
 		setParent(Parent);
 		myID = AllCount;
 				
-		this.name = fpsTestcaseName;
+		this.Info = fpsTestcaseName;
 		
 		
 		// inkrementieren TestcaseCount
@@ -102,7 +102,7 @@ public class LogTestcase extends LogBaseNode
   {
       StringBuilder myJSON = new StringBuilder();
       
-      myJSON.append(this.jsonElementComma( "name", this.name ));
+      myJSON.append(this.jsonElementComma( "name", this.Info ));
       myJSON.append(this.jsonElementComma( "type", this.type ));
       
       return myJSON.toString();

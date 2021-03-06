@@ -39,7 +39,6 @@
 
 package okw.log;
 
-import java.util.List;
 import okw.OKW_Helper;
 
 /** \~german
@@ -103,67 +102,6 @@ public class Log2Console implements ILogger
 	            this.ResCloseList();
 	        }
 
-	        /**
-	         *  \copydoc ILogger::LogFunctionEnd(String)
-	         */
-			public void LogFunctionEnd(String fps_Return)
-	        {
-	            this.ResOpenList("Return...");
-	            this.LogPrint(fps_Return);
-	            this.ResCloseList();
-	            this.LogPrint("-------");
-	            this.ResCloseList();
-	        }
-
-	        /**
-	         *  \copydoc ILogger::LogFunctionEnd(Boolean)
-	         */
-	        public void LogFunctionEnd(Boolean fpb_Return)
-	        {
-	            this.ResOpenList("Return...");
-	            this.LogPrint(fpb_Return.toString());
-	            this.ResCloseList();
-	            this.LogPrint("-------");
-	            this.ResCloseList();
-	        }
-
-
-	        /**
-	         *  \copydoc ILogger::LogFunctionEnd(List<String>)
-	         */
-	        public void LogFunctionEnd(List<String> fpls_Return)
-	        {
-	            this.ResOpenList("Return...");
-
-	            for (String Value : fpls_Return)
-	            {
-	                this.LogPrint(Value);
-	            }
-
-	            this.ResCloseList();
-	            this.LogPrint("-------");
-	            this.ResCloseList();
-	        }
-
-
-	        /**
-	         *  \copydoc ILogger::LogFunctionStart(String,String...)
-	         */
-			public void LogFunctionStart(String fps_FunctionName, String... fpsParameter)
-	        {
-	            this.ResOpenList(fps_FunctionName);
-	            this.ResOpenList("Parameter...");
-
-	            for (int i = 0; i < fpsParameter.length; i += 2)
-	            {
-	                this.LogPrint(fpsParameter[i] + ": >>" + fpsParameter[i + 1] + "<<");
-	            }
-
-	            this.ResCloseList(); // Close Parameter List...
-	            this.LogPrint("-------");
-	        }
-
-			
 	        /**
 	         *  \copydoc ILogger::LogKeyWordEnd()
 	         */
@@ -452,64 +390,6 @@ public class Log2Console implements ILogger
 
 			
 	        /**
-	         *  \copydoc ILogger::LogFunctionStartDebug(String,String...)
-	         */
-			public void LogFunctionStartDebug( String fps_FunctionName, String... fpsParameter )
-			{
-				if (this.cvbDebugMode)
-				{
-					LogFunctionStart(fps_FunctionName, fpsParameter);
-				}
-			}
-
-			
-	        /**
-	         *  \copydoc ILogger::LogFunctionEndDebug()
-	         */
-			public void LogFunctionEndDebug()
-			{
-				if (this.cvbDebugMode)
-				{
-					LogFunctionEnd();
-				}
-			}
-
-
-	        /**
-	         *  \copydoc ILogger::LogFunctionEndDebug(Boolean)
-	         */
-			public void LogFunctionEndDebug( Boolean fpb_Return )
-			{
-				if (this.cvbDebugMode)
-				{
-					LogFunctionEnd();
-				}
-			}
-
-	        /**
-	         *  \copydoc ILogger::LogFunctionEndDebug(String)
-	         */
-			public void LogFunctionEndDebug( String fps_Return )
-			{
-				if (this.cvbDebugMode)
-				{
-					LogFunctionEnd( fps_Return );
-				}
-			}
-
-	        /**
-	         *  \copydoc ILogger::LogFunctionEndDebug(List<String>)
-	         */
-			public void LogFunctionEndDebug( List<String> fpLs_Return )
-			{
-				if (this.cvbDebugMode)
-				{
-					LogFunctionEnd( fpLs_Return );
-				}
-			}
-
-
-			/**
 	         *  \copydoc ILogger::LogPrintDebug(String)
 	         */
 			public void LogPrintDebug( String fps_Message )

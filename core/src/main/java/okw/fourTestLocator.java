@@ -4,21 +4,21 @@ import okw.log.Logger_Sngltn;
 
 public class fourTestLocator
 {
-    /**
-     *  \copydoc CurrentObject::Log()
-     */
-    private static Logger_Sngltn Log = Logger_Sngltn.getInstance();
-	
-	public fourTestLocator( String fspL )
-    {
-        super();
-        this.get4TestLocator( fspL );
-    }
+	/**
+	 *  \copydoc CurrentObject::Log()
+	 */
+	private static Logger_Sngltn Log = Logger_Sngltn.getInstance();
 
-    private String cvsGUIClass = null;
+	public fourTestLocator( String fspL )
+	{
+		super();
+		this.get4TestLocator( fspL );
+	}
+
+	private String cvsGUIClass = null;
 	private String cvsLocator = null;
 
-	
+
 	/**
 	 * Erzeugt einen locator aus dem gegebenen Wert, wenn fspL mit "4T!", "4T:" oder "4T?" anfängt, sonst wird fspL unverändert zuräckgegeben.
 	 * 
@@ -36,87 +36,79 @@ public class fourTestLocator
 	 */
 	public String get4TestLocator( String fpsL )
 	{
-		Log.LogFunctionStartDebug( "fourTestLocator.get4TestLocator", "fpsL", fpsL );
-
 		String lvsReturn = fpsL;
 		String LogMessage = "";
 
-		try
+		if ( fpsL.startsWith("4T!") )
 		{
-			if ( fpsL.startsWith("4T!") )
-			{
-				// Find object with data-4test attribute
-				LogMessage = "Generate '@data-harmony-id' Locator";
-				seperateClassnameAndLocator( fpsL.replaceFirst("4T!", "" ) );
-				lvsReturn = "//*[@data-harmony-id=\"" +  this.cvsLocator + "\"]";
-			}
-			else if ( fpsL.startsWith("4TAI!") )
-			{
-				// Find object with label than contains text
-				LogMessage = "Generate '@AutomationID' Locator";
-				seperateClassnameAndLocator( fpsL.replaceFirst("4TAI!", "" ) );
-				lvsReturn = "//*[@AutomationID='" +  this.cvsLocator + "']";
-			}
-			else if ( fpsL.startsWith("4TNA!") )
-			{
-				// Find object with label than contains text
-				LogMessage = "Generate '@name' Locator";
-				seperateClassnameAndLocator( fpsL.replaceFirst("4TNA!", "" ) );
-				lvsReturn = "//*[contains(@name,'" + this.cvsLocator + "')]";
-			}
-			else if ( fpsL.startsWith("4TID!") )
-			{
-				// Find object with label than contains text
-				LogMessage = "Generate '@id' Locator";
-				seperateClassnameAndLocator( fpsL.replaceFirst("4TID!", "" ) );
-				lvsReturn = "//*[contains(@id,'" + this.cvsLocator + "')]";
-			}
-			else if ( fpsL.startsWith("4TLA!") )
-			{
-				// Find object with label than contains text
-				LogMessage = "Generate 'label' Locator";
-				seperateClassnameAndLocator( fpsL.replaceFirst("4TLA!", "" ) );
-				lvsReturn = "//label[contains(text(),'" + this.cvsLocator + "')]/following-sibling::input";
-			}
-			else if ( fpsL.startsWith("4TTX!") )
-			{
-				// Find object with label than contains text
-				LogMessage = "Generate 'Contains Text' Locator";
-				seperateClassnameAndLocator( fpsL.replaceFirst("4TTX!", "" ) );
-				lvsReturn = "//*[contains(text(),'" + this.cvsLocator + "')]";
-			}
-
-			this.cvsLocator = lvsReturn;
+			// Find object with data-4test attribute
+			LogMessage = "Generate '@data-harmony-id' Locator";
+			seperateClassnameAndLocator( fpsL.replaceFirst("4T!", "" ) );
+			lvsReturn = "//*[@data-harmony-id=\"" +  this.cvsLocator + "\"]";
+		}
+		else if ( fpsL.startsWith("4TAI!") )
+		{
+			// Find object with label than contains text
+			LogMessage = "Generate '@AutomationID' Locator";
+			seperateClassnameAndLocator( fpsL.replaceFirst("4TAI!", "" ) );
+			lvsReturn = "//*[@AutomationID='" +  this.cvsLocator + "']";
+		}
+		else if ( fpsL.startsWith("4TNA!") )
+		{
+			// Find object with label than contains text
+			LogMessage = "Generate '@name' Locator";
+			seperateClassnameAndLocator( fpsL.replaceFirst("4TNA!", "" ) );
+			lvsReturn = "//*[contains(@name,'" + this.cvsLocator + "')]";
+		}
+		else if ( fpsL.startsWith("4TID!") )
+		{
+			// Find object with label than contains text
+			LogMessage = "Generate '@id' Locator";
+			seperateClassnameAndLocator( fpsL.replaceFirst("4TID!", "" ) );
+			lvsReturn = "//*[contains(@id,'" + this.cvsLocator + "')]";
+		}
+		else if ( fpsL.startsWith("4TLA!") )
+		{
+			// Find object with label than contains text
+			LogMessage = "Generate 'label' Locator";
+			seperateClassnameAndLocator( fpsL.replaceFirst("4TLA!", "" ) );
+			lvsReturn = "//label[contains(text(),'" + this.cvsLocator + "')]/following-sibling::input";
+		}
+		else if ( fpsL.startsWith("4TTX!") )
+		{
+			// Find object with label than contains text
+			LogMessage = "Generate 'Contains Text' Locator";
+			seperateClassnameAndLocator( fpsL.replaceFirst("4TTX!", "" ) );
+			lvsReturn = "//*[contains(text(),'" + this.cvsLocator + "')]";
 		}
 
-		finally
-		{
-			Log.LogPrintDebug( LogMessage );
-			Log.LogFunctionEndDebug( lvsReturn );
-		}
+		this.cvsLocator = lvsReturn;
+
+		Log.LogPrint( LogMessage );
+
 		return lvsReturn;
 	}
 
-    /**
-     * Trennt den Klassenbezeichner vom Locator ab.
-     * 
-     * "Myclass::myLocator"
-     * "MyLocator" 
-     * 
-     * @param fpsLocator
-     * @return
-     */
+	/**
+	 * Trennt den Klassenbezeichner vom Locator ab.
+	 * 
+	 * "Myclass::myLocator"
+	 * "MyLocator" 
+	 * 
+	 * @param fpsLocator
+	 * @return
+	 */
 	public int seperateClassnameAndLocator( String fpsLocator )
 	{
 		int iReturn = 0;
-		
+
 		String[] MySplit = fpsLocator.split("::");
-		
+
 		if ( MySplit.length == 1 )
 		{
 			cvsLocator = MySplit[0];
 		}
-		
+
 		else if ( MySplit.length == 2 )
 		{
 			cvsGUIClass= MySplit[0];
@@ -126,7 +118,7 @@ public class fourTestLocator
 		{
 			iReturn = -1;
 		}
-	
+
 		return iReturn;
 	}
 

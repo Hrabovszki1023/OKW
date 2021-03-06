@@ -69,8 +69,9 @@ public class Log2HTMLCounterTest extends JUnitBase
 		myLog.LogTestcaseEnd();
 
         String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
-        
         String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".json" );
+
+        myLog.Result2HTML( "target/" + TestName + ".html" );
              
         assertEquals( Expected, Current );      
 
@@ -90,8 +91,9 @@ public class Log2HTMLCounterTest extends JUnitBase
 			myLog.LogPrint( "Print auf einer Ebene höher...");
 		
             String Current = myLog.Result2JSON( "target/" + TestName+".json" );
-            
             String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".json" );
+            
+            myLog.Result2HTML( "target/" + TestName + ".html" );
             
             assertEquals( Expected, Current );       
 	}
@@ -110,8 +112,9 @@ public class Log2HTMLCounterTest extends JUnitBase
 			myLog.LogTestcaseEnd();
 
 			String Current = myLog.Result2JSON( "target/" + TestName+".json" );
-            
             String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".json" );
+            
+            myLog.Result2HTML( "target/" + TestName + ".html" );
             
             assertEquals( Expected, Current );    
 
@@ -129,8 +132,9 @@ public class Log2HTMLCounterTest extends JUnitBase
 				myLog.LogPrint( "Das hier ist ein weiterern Print-Absatz im Schlüsselwort.");
 		
 	            String Current = myLog.Result2JSON( "target/" + TestName+".json" );
-	            
 	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".json" );
+	            
+	            myLog.Result2HTML( "target/" + TestName + ".html" );
 	                 
 	            assertEquals( Expected, Current );    
 	}
@@ -146,8 +150,9 @@ public class Log2HTMLCounterTest extends JUnitBase
 				myLog.LogWarning("Warning 1");
 		
 	            String Current = myLog.Result2JSON( "target/" + TestName+".json" );
-	            
 	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".json" );
+	            
+	            myLog.Result2HTML( "target/" + TestName + ".html" );
 	            
 	            assertEquals( Expected, Current );       
 	}
@@ -165,8 +170,9 @@ public class Log2HTMLCounterTest extends JUnitBase
 			myLog.LogTestcaseEnd();
 		
             String Current = myLog.Result2JSON( "target/" + TestName+".json" );
-            
             String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".json" );
+
+            myLog.Result2HTML( "target/" + TestName + ".html" );
             
             assertEquals( Expected, Current );
 	}
@@ -186,11 +192,11 @@ public class Log2HTMLCounterTest extends JUnitBase
 			myLog.LogTestcaseEnd();
 		
             String Current = myLog.Result2JSON( "target/" + TestName+".json" );
-            
             String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".json" );
             
+            myLog.Result2HTML( "target/" + TestName + ".html" );
+            
             assertEquals( Expected, Current );      
-
 	}
 
 	
@@ -206,10 +212,11 @@ public class Log2HTMLCounterTest extends JUnitBase
 				myLog.LogWarning("Warning 1");
 		
 	            String Current = myLog.Result2JSON( "target/" + TestName+".json" );
-	            
 	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".json" );
 	            
-	            assertEquals( Expected, Current );      
+	            myLog.Result2HTML( "target/" + TestName + ".html" );
+	            
+	            assertEquals( Expected, Current );   
 
 	}
 
@@ -229,6 +236,8 @@ public class Log2HTMLCounterTest extends JUnitBase
 	        
             String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".json" );
 	        
+            myLog.Result2HTML( "target/" + TestName + ".html" );
+            
 	        assertEquals( Expected, Current );		
 	}
 	
@@ -250,6 +259,8 @@ public class Log2HTMLCounterTest extends JUnitBase
             String Current = myLog.Result2JSON( "target/" + TestName+".json" );
             
             String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".json" );
+	        
+            myLog.Result2HTML( "target/" + TestName + ".html" );
             
             assertEquals( Expected, Current ); 
     }
@@ -267,6 +278,8 @@ public class Log2HTMLCounterTest extends JUnitBase
 	            String Current = myLog.Result2JSON( "target/" + TestName+".json" );
 	            
 	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".json" );
+		        
+	            myLog.Result2HTML( "target/" + TestName + ".html" );
 	            
 	            assertEquals( Expected, Current );      
 
@@ -281,12 +294,13 @@ public class Log2HTMLCounterTest extends JUnitBase
 		myLog.LogTestcaseStart( "tcTestcase_ErrorAborted_TC_KW_F_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
 				myLog.LogPrint( "Print im Schlüsselwort");
-				myLog.LogFunctionStartDebug("Funktion_1", "P1=", "P1");
 				myLog.LogError("Error 1");
 		
 	            String Current = myLog.Result2JSON( "target/" + TestName+".json" );
 	            
 	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".json" );
+		        
+	            myLog.Result2HTML( "target/" + TestName + ".html" );
 	            
 	            assertEquals( Expected, Current );      
 
@@ -301,43 +315,20 @@ public class Log2HTMLCounterTest extends JUnitBase
 	        myLog.LogTestcaseStart( "tcTestcase_ErrorAborted_TC_KW_F_Test" );
 	            myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
 	                myLog.LogPrint( "Print im Schlüsselwort");
-	                myLog.LogFunctionStartDebug("Funktion_1", "Param 1", "Value 1");
 	                    myLog.LogError("Error 1");
-	                    myLog.LogFunctionEndDebug( );
 	                myLog.LogKeyWordEnd( );
 	        myLog.LogTestcaseEnd( );
 	        
 	                String Current = myLog.Result2JSON( "target/" + TestName+".json" );
 	                
 	                String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".json" );
+	    	        
+	                myLog.Result2HTML( "target/" + TestName + ".html" );
 	                
 	                assertEquals( Expected, Current );      
 	    }
 	   
 	   
-       @Test
-       public void tc_OK_Testcase_Funktion_Test()
-       {   
-           Log2HTML myLog = new Log2HTML(TestName);
-           myLog.setDebugMode(true);
-           
-           myLog.LogTestcaseStart( "tcTestcase_Funktion_Test" );
-               myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
-                   myLog.LogPrint( "Print im Schlüsselwort");
-                   myLog.LogFunctionStart("Funktion_1", "Param 1", "Value 1");
-                       myLog.LogError("Error 1");
-                       myLog.LogFunctionEnd( );
-                   myLog.LogKeyWordEnd( );
-           myLog.LogTestcaseEnd( );
-           
-                   String Current = myLog.Result2JSON( "target/" + TestName+".json" );
-                   
-                   String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".json" );
-                   
-                   assertEquals( Expected, Current );      
-       }
-       
-       
 	@Test
 	public void tc_OK_Testcase_Passed_Test()
 	{	
@@ -353,6 +344,8 @@ public class Log2HTMLCounterTest extends JUnitBase
             String Current = myLog.Result2JSON( "target/" + TestName+".json" );
             
             String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".json" );
+	        
+            myLog.Result2HTML( "target/" + TestName + ".html" );
             
             assertEquals( Expected, Current );      
 
@@ -374,6 +367,8 @@ public class Log2HTMLCounterTest extends JUnitBase
             String Current = myLog.Result2JSON( "target/" + TestName+".json" );
             
             String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".json" );
+	        
+            myLog.Result2HTML( "target/" + TestName + ".html" );
             
             assertEquals( Expected, Current );      
 
@@ -392,6 +387,8 @@ public class Log2HTMLCounterTest extends JUnitBase
 	            String Current = myLog.Result2JSON( "target/" + TestName+".json" );
 	            
 	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".json" );
+		        
+	            myLog.Result2HTML( "target/" + TestName + ".html" );
 	            
 	            assertEquals( Expected, Current );      
 
@@ -406,12 +403,13 @@ public class Log2HTMLCounterTest extends JUnitBase
 		myLog.LogTestcaseStart( "tcTestcase_PassedAborted_TC_KW_F_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
 				myLog.LogPrint( "Print im Schlüsselwort");
-				myLog.LogFunctionStartDebug("Funktion_1", "P1=", "P1");
 				myLog.LogPass("Pass 1");
 		
 	            String Current = myLog.Result2JSON( "target/" + TestName+".json" );
 	            
 	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".json" );
+		        
+	            myLog.Result2HTML( "target/" + TestName + ".html" );
 	            
 	            assertEquals( Expected, Current );      
 	
@@ -432,6 +430,8 @@ public class Log2HTMLCounterTest extends JUnitBase
             String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
             
             String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".json" );
+	        
+            myLog.Result2HTML( "target/" + TestName + ".html" );
             
             assertEquals( Expected, Current );      
 
@@ -453,6 +453,8 @@ public class Log2HTMLCounterTest extends JUnitBase
 		String Current = myLog.Result2JSON( "target/" + TestName+".json" );
 		
         String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".json" );
+        
+        myLog.Result2HTML( "target/" + TestName + ".html" );
 		
 		assertEquals( Expected, Current );
 
@@ -471,6 +473,8 @@ public class Log2HTMLCounterTest extends JUnitBase
 	            String Current = myLog.Result2JSON( "target/" + TestName+".json" );
 	            
 	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".json" );
+		        
+	            myLog.Result2HTML( "target/" + TestName + ".html" );
 	            
 	            assertEquals( Expected, Current );      
 
@@ -485,7 +489,6 @@ public class Log2HTMLCounterTest extends JUnitBase
 		myLog.LogTestcaseStart( "tcTestcase_ExceptionAborted_TC_KW_F_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
 				myLog.LogPrint( "Print im Schlüsselwort");
-				myLog.LogFunctionStartDebug("Funktion_1", "P1=", "P1");
                    myLog.LogPrint( "Print im Schlüsselwort");
                    myLog.LogPass( "Pass" );
 				   myLog.LogException("Exception 1");
@@ -497,6 +500,8 @@ public class Log2HTMLCounterTest extends JUnitBase
 		            String Current = myLog.Result2JSON( "target/" + TestName+".json" );
 		            
 		            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".json" );
+			        
+		            myLog.Result2HTML( "target/" + TestName + ".html" );
 		            
 		            assertEquals( Expected, Current );      
 	}
@@ -543,7 +548,9 @@ public class Log2HTMLCounterTest extends JUnitBase
                 String Current = myLog.Result2JSON( "target/" + TestName+".json" );
                 
                 String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".json" );
-                
+    	        
+                myLog.Result2HTML( "target/" + TestName + ".html" );
+               
                 assertEquals( Expected, Current );      
     }
     
@@ -590,6 +597,7 @@ public class Log2HTMLCounterTest extends JUnitBase
         String Current = myLog.Result2JSON( "target/" + TestName+".json" );
                 
         String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".json" );
+        myLog.Result2HTML( "target/" + TestName + ".html" );
                 
         assertEquals( Expected, Current );      
     }

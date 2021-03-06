@@ -61,7 +61,8 @@ import static org.junit.jupiter.api.Assertions.*;
  *  \date 2017-07-23
  */
 @Disabled
-public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
+public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest
+{
 
 	protected static String ApplicationName;
 
@@ -76,7 +77,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcClickOn() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -105,7 +106,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test
+	@Test
 	public void tcLogExists() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -128,7 +129,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test
+	@Test
 	public void tcLogHasFocus() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -153,7 +154,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test
+	@Test
 	public void tcLogIsActive() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -164,8 +165,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 		EN.StopApp( ApplicationName );
 		EN.EndTest();
 	}
-
-
+	
 	/**
 	 * \~german
 	 * Testet das Schlüsselwort LogHasFocus( CAT ) eines SeBACK Prüfen.
@@ -177,7 +177,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2020-09-24
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcLogLabel( ) throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -203,7 +203,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test
+	@Test
 	public void tcLogToolTip() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -228,7 +228,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test
+	@Test
 	public void tcLogValue() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -250,7 +250,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test
+	@Test
 	public void tcMemorizeExists() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -273,7 +273,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test
+	@Test
 	public void tcMemorizeExists_DELETE() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -299,7 +299,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test
+	@Test
 	public void tcMemorizeExists_EMPTY() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -324,7 +324,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test
+	@Test
 	public void tcMemorizeExists_IGNORE() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -361,7 +361,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test // (expected = OKWFrameObjectMethodNotImplemented.class)
+	@Test // (expected = OKWFrameObjectMethodNotImplemented.class)
 	public void tcMemorizeHasFocus() throws Exception {
 
 		EN.BeginTest( TestName );
@@ -387,7 +387,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test
+	@Test
 	public void tcMemorizeIsActive() throws Exception {
 
 		EN.BeginTest( TestName );
@@ -412,7 +412,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test
+	@Test
 	public void tcMemorizeLabel() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -439,7 +439,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test // (expected = OKWFrameObjectMethodNotImplemented.class)
+	@Test // (expected = OKWFrameObjectMethodNotImplemented.class)
 	public void tcMemorizeToolTip() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -464,7 +464,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test
+	@Test
 	public void tcMemorizeValue() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -484,7 +484,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort SetFocus( CAT, VAL ).
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcSetFocus_ReadableAndEnabled( ) throws Exception
 	{
 		assertTrue( true, "BACK is always Readable and Enabled. This test is not relevant for virtual objects like BACK." );
@@ -495,7 +495,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort SetFocus( CAT, VAL ).
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcSetFocus_ReadonlyAndEnabled( ) throws Exception
 	{
 		assertTrue( true, "BACK is always Readable and Enabled. This test is not relevant for virtual objects like BACK." );
@@ -614,7 +614,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test
+	@Test
 	public void tcTypeKey() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -641,7 +641,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2020.09,17
 	 */ 
 	@Override
-	// @Test
+	@Test
 	public void tcTypeKey_DELETE( ) throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -667,7 +667,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2020.09.17
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcTypeKey_IGNORE( ) throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -691,7 +691,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2020.09.17
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcTypeKey_EMPTY( ) throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -716,7 +716,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyCaption() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -741,7 +741,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
+	@Test // (expected=OKWFrameObjectMethodNotImplemented.class )
 	public void tcVerifyCaptionREGX() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -767,7 +767,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyCaptionWCM() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -787,17 +787,18 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  BACK existiert Immer
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyExists_ExistsNoExpectedNo( ) throws Exception
 	{
 		assertTrue( true, "BACK ist immer vorhanden, daher ist dieser Test nicht möglich/nötig" );
 	}
 
+	
 	/** 
 	 *  Teste das Schlüsselwort VerifyExists( CAT, VAL ).
 	 */
 	@Override
-	// @Test // ( expected = OKWVerifyingFailsException.class )
+	@Test // ( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyExists_ExistsNoExpectedYes( ) throws Exception
 	{
 		assertTrue( true, "BACK ist immer vorhanden, daher ist dieser Test nicht möglich/nötig" );
@@ -817,7 +818,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyExists_ExistsYesExpectedNo()  throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -844,7 +845,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyExists_ExistsYesExpectedYes() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -868,7 +869,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2020.09.17
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyExists_IGNORE( ) throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -892,7 +893,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017.07.23
 	 */ 
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyHasFocus() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -911,7 +912,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyHasFocus( CAT, VAL ).
 	 */
 	@Override
-	// @Test // ( expected = OKWVerifyingFailsException.class )
+	@Test // ( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyHasFocus_HasFocusNoExpectedYes( ) throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -931,7 +932,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyHasFocus( CAT, VAL ).
 	 */
 	@Override
-	// @Test // ( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyHasFocus_HasFocusYesExpectedNo( ) throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -957,7 +958,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2020.09.17
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyHasFocus_IGNORE( ) throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -980,7 +981,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyHasFocus_NotAllowedValue() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -1003,7 +1004,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017.07.30
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyIsActiv_ExistsYesExpectedYes() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -1024,7 +1025,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-30
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyIsActive_NotAllowedValue() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -1049,7 +1050,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
+	@Test // (expected=OKWFrameObjectMethodNotImplemented.class )
 	public void tcVerifyLabel() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -1068,7 +1069,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyLabel( CAT, "IGNORE" ).
 	 */
 	@Override
-	// @Test // ( expected = OKWVerifyingFailsException.class )
+	@Test // ( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyLabel_IGNORE( ) throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -1092,7 +1093,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
+	@Test // (expected=OKWFrameObjectMethodNotImplemented.class )
 	public void tcVerifyLabelREGX() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -1111,7 +1112,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyLabelREGX( CAT, "${IGNORE}" )
 	 */
 	@Override
-	// @Test // ( expected = OKWVerifyingFailsException.class )
+	@Test // ( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyLabelREGX_IGNORE( ) throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -1128,7 +1129,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyLabelWCM( CAT, negativeVAL ).
 	 */
 	@Override
-	// @Test // ( expected = OKWVerifyingFailsException.class )
+	@Test // ( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyLabelREGX_Fail( ) throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -1169,7 +1170,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyLabelWCM() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -1188,7 +1189,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyLabelWCM( CAT, "IGNORE" ).
 	 */
 	@Override
-	// @Test // ( expected = OKWVerifyingFailsException.class )
+	@Test // ( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyLabelWCM_IGNORE( ) throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -1204,7 +1205,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyLabelWCM( CAT, negativVAL ).
 	 */
 	@Override
-	// @Test // ( expected = OKWVerifyingFailsException.class )
+	@Test // ( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyLabelWCM_Fail( ) throws Exception
 	{
 		fail("Implement " + TestName );
@@ -1214,7 +1215,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyMaxLength( CAT, VAL ).
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyMaxLength( ) throws Exception
 	{
 		fail("Implement " + TestName );
@@ -1224,7 +1225,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyMaxLength( CAT, "IGNORE" ).
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyMaxLength_IGNORE( ) throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -1240,7 +1241,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyMaxLength( CAT, negativVAL ).
 	 */
 	@Override
-	// @Test // ( expected = OKWVerifyingFailsException.class )
+	@Test // ( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyMaxLength_Fail( ) throws Exception
 	{
 		fail("Implement " + TestName );
@@ -1250,7 +1251,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort tcVerifyMinLength( CAT, VAL ).
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyMinLength( ) throws Exception
 	{
 		fail("Implement " + TestName );
@@ -1261,7 +1262,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyMinLength( CAT, "IGNORE" ).
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyMinLength_IGNORE( ) throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -1277,7 +1278,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort tcVerifyMinLength( CAT, negativVAL ).
 	 */
 	@Override
-	// @Test // ( expected = OKWVerifyingFailsException.class )
+	@Test // ( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyMinLength_Fail( ) throws Exception
 	{
 		fail("Implement " + TestName );
@@ -1287,7 +1288,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyPlaceholder( CAT, VAL ).
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyPlaceholder( ) throws Exception
 	{
 		fail("Implement " + TestName );
@@ -1297,7 +1298,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyPlaceholder( CAT, IGNORE ).
 	 */
 	@Override
-	// @Test // ( expected = OKWVerifyingFailsException.class )
+	@Test // ( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyPlaceholder_IGNORE( ) throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -1313,7 +1314,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyPlaceholder( CAT, negativeVAL ).
 	 */
 	@Override
-	// @Test // ( expected = OKWVerifyingFailsException.class )
+	@Test // ( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyPlaceholder_Fail( ) throws Exception
 	{
 		fail("Implement " + TestName );
@@ -1323,7 +1324,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyPlaceholderREGX( CAT, VAL ).
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyPlaceholderREGX( ) throws Exception
 	{
 		fail("Implement " + TestName );
@@ -1333,7 +1334,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyPlaceholderREGX( CAT, IGNORE ).
 	 */
 	@Override
-	// @Test // ( expected = OKWVerifyingFailsException.class )
+	@Test // ( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyPlaceholderREGX_IGNORE( ) throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -1349,7 +1350,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyPlaceholderREGX( CAT, negativVAL ).
 	 */
 	@Override
-	// @Test // ( expected = OKWVerifyingFailsException.class )
+	@Test // ( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyPlaceholderREGX_Fail( ) throws Exception
 	{
 		fail("Implement " + TestName );
@@ -1360,7 +1361,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyPlaceholderWCM( CAT, VAL ).
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyPlaceholderWCM( ) throws Exception
 	{
 		fail("Implement " + TestName );
@@ -1370,7 +1371,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyPlaceholderWCM( CAT, IGNORE ).
 	 */
 	@Override
-	// @Test // ( expected = OKWVerifyingFailsException.class )
+	@Test // ( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyPlaceholderWCM_IGNORE( ) throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -1386,7 +1387,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyPlaceholderWCM( CAT, negativeVAL ).
 	 */
 	@Override
-	// @Test // ( expected = OKWVerifyingFailsException.class )
+	@Test // ( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyPlaceholderWCM_Fail( ) throws Exception
 	{
 		fail("Implement " + TestName );
@@ -1404,7 +1405,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
+	@Test // (expected=OKWFrameObjectMethodNotImplemented.class )
 	public void tcVerifyTooltip() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -1423,7 +1424,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyTooltip( CAT, "IGNORE" ).
 	 */
 	@Override
-	// @Test //v( expected = OKWVerifyingFailsException.class )
+	@Test //v( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyTooltip_IGNORE( ) throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -1439,7 +1440,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyTooltip( CAT, negativVAL ).
 	 */
 	@Override
-	// @Test //v( expected = OKWVerifyingFailsException.class )
+	@Test //v( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyTooltip_Fail( ) throws Exception
 	{
 		fail("Implement " + TestName );
@@ -1457,7 +1458,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
+	@Test // (expected=OKWFrameObjectMethodNotImplemented.class )
 	public void tcVerifyTooltipREGX() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -1476,7 +1477,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyTooltipREGX( CAT, "IGNORE" ).
 	 */
 	@Override
-	// @Test // ( expected = OKWVerifyingFailsException.class )
+	@Test // ( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyTooltipREGX_IGNORE( ) throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -1492,7 +1493,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyTooltipREGX( CAT, negativeVAL ).
 	 */
 	@Override
-	// @Test // ( expected = OKWVerifyingFailsException.class )
+	@Test // ( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyTooltipREGX_Fail( ) throws Exception
 	{
 		fail("Implement " + TestName );
@@ -1510,7 +1511,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
+	@Test // (expected=OKWFrameObjectMethodNotImplemented.class )
 	public void tcVerifyTooltipWCM() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -1529,7 +1530,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyTooltipWCM( CAT, "IGNORE" ).
 	 */
 	@Override
-	// @Test // ( expected = OKWVerifyingFailsException.class )
+	@Test // ( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyTooltipWCM_IGNORE( ) throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -1545,7 +1546,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyTooltipWCM( CAT, negativVAL ).
 	 */
 	@Override
-	// @Test // ( expected = OKWVerifyingFailsException.class )
+	@Test // ( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyTooltipWCM_Fail( ) throws Exception
 	{
 		fail("Implement " + TestName );
@@ -1563,7 +1564,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
+	@Test // (expected=OKWFrameObjectMethodNotImplemented.class )
 	public void tcVerifyValue() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -1582,7 +1583,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyValue( CAT, DELETE ).
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyValue_DELETE( ) throws Exception
 	{
 		fail("Implement " + TestName );
@@ -1592,7 +1593,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyValue( CAT, negativVAL ).
 	 */
 	@Override
-	// @Test // ( expected = OKWVerifyingFailsException.class )
+	@Test // ( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyValue_Fail( ) throws Exception
 	{
 		fail("Implement " + TestName );
@@ -1602,7 +1603,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyValue( CAT, EMPTY ).
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyValue_EMPTY( ) throws Exception
 	{
 		fail("Implement " + TestName );
@@ -1619,7 +1620,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
+	@Test // (expected=OKWFrameObjectMethodNotImplemented.class )
 	public void tcVerifyValueREGX() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -1638,7 +1639,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyValue( CAT, DELETE ).
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyValueREGX_DELETE( ) throws Exception
 	{
 		fail("Implement " + TestName );
@@ -1648,7 +1649,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyValue( CAT, EMPTY ).
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyValueREGX_EMPTY( ) throws Exception
 	{
 		fail("Implement " + TestName );
@@ -1658,7 +1659,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyValue( CAT, negativVAL ).
 	 */
 	@Override
-	// @Test // ( expected = OKWVerifyingFailsException.class )
+	@Test // ( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyValueREGX_Fail( ) throws Exception
 	{
 		fail("Implement " + TestName );
@@ -1676,7 +1677,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  \date 2017-07-23
 	 */ 
 	@Override
-	// @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
+	@Test // (expected=OKWFrameObjectMethodNotImplemented.class )
 	public void tcVerifyValueWCM() throws Exception
 	{
 		EN.BeginTest( TestName );
@@ -1695,7 +1696,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyValue( CAT, DELETE ).
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyValueWCM_DELETE( ) throws Exception
 	{
 		fail("Implement " + TestName );
@@ -1705,7 +1706,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyValue( CAT, EMPTY ).
 	 */
 	@Override
-	// @Test
+	@Test
 	public void tcVerifyValueWCM_EMPTY( ) throws Exception
 	{
 		fail("Implement " + TestName );
@@ -1715,7 +1716,7 @@ public class SeBACK_EN_Test extends SeOKWChildWindowBaseTest{
 	 *  Teste das Schlüsselwort VerifyValue( CAT, negativVAL ).
 	 */
 	@Override
-	// @Test // ( expected = OKWVerifyingFailsException.class )
+	@Test // ( expected = OKWVerifyingFailsException.class )
 	public void tcVerifyValueWCM_Fail( ) throws Exception
 	{
 		fail("Implement " + TestName );

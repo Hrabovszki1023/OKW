@@ -40,8 +40,6 @@ OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 package okw.log.log2html;
 
 
-import java.util.ArrayList;
-
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
 
@@ -74,82 +72,6 @@ public class LogError_Test extends JUnitBase
     }
 
     @Test
-    public void tc_LogFunction_1_Logerror_Test()
-    {   
-        Log2HTML myLog = new Log2HTML( TestName );
-                        
-        myLog.LogFunctionStart( "FunctionStart", "Param_1", "Value 1" );
-             myLog.LogError( "LogError");
-        myLog.LogFunctionEnd();        
-
-        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
-        
-        String Expected = this.loadUTF8FileFromResource( ClassName + "/" + TestName + ".json" );
-             
-        assertEquals( Expected, Current );      
-    }
-
-    
-    @Test
-    public void tc_LogFunction_2_Logerror_Test()
-    {   
-        Log2HTML myLog = new Log2HTML( TestName );
-                        
-        myLog.LogFunctionStart( "FuncTionStart", "Param_1", "Value 1" );
-             myLog.LogError( "LogError");
-        myLog.LogFunctionEnd( true );
-
-        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
-        
-        String Expected = this.loadUTF8FileFromResource( ClassName + "/" + TestName + ".json" );
-             
-        assertEquals( Expected, Current );      
-    }
-
-    
-    @Test
-    public void tc_LogFunction_3_Logerror_Test()
-    {   
-        ArrayList<String> lsReturn = new ArrayList<String>();
-        
-        lsReturn.add( "Sting 1" );
-        lsReturn.add( "Sting 2" );
-        lsReturn.add( "Sting 3" );
-        
-        Log2HTML myLog = new Log2HTML( TestName );
-                        
-        myLog.LogFunctionStart( "FuncTionStart", "Param_1", "Value 1" );
-             myLog.LogError( "LogError");
-        myLog.LogFunctionEnd( lsReturn );
-
-        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
-        
-        String Expected = this.loadUTF8FileFromResource( ClassName + "/" + TestName + ".json" );
-             
-        assertEquals( Expected, Current );      
-    }
-
-    
-    @Test
-    public void tc_LogFunction_4_Logerror_Test()
-    {   
-        
-        Log2HTML myLog = new Log2HTML( TestName );
-                        
-        myLog.LogFunctionStart( "FuncTionStart", "Param_1", "Value 1" );
-             myLog.LogError( "LogError");
-        myLog.LogFunctionEnd( "Return String" );
-
-        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
-        
-        String Expected = this.loadUTF8FileFromResource( ClassName + "/" + TestName + ".json" );
-             
-        assertEquals( Expected, Current );      
-    }
-
-    
-    
-    @Test
     public void tc_LogTestcaseStart_Logerror_Normal_Test()
     {   
         Log2HTML myLog = new Log2HTML( "Log2HTML - " + TestName );
@@ -166,79 +88,6 @@ public class LogError_Test extends JUnitBase
     }
 
     
-    
-    @Test
-    public void tc_LogFunctionDebug_1_Logerror_Test()
-    {   
-        Log2HTML myLog = new Log2HTML( TestName );
-                        
-        myLog.LogFunctionStartDebug( "FuncTionStart", "Param_1", "Value 1" );
-             myLog.LogError( "LogError");
-        myLog.LogFunctionEndDebug();        
-    
-        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
-        
-        String Expected = this.loadUTF8FileFromResource( ClassName + "/" + TestName + ".json" );
-             
-        assertEquals( Expected, Current );      
-    }
-
-    @Test
-    public void tc_LogFunctionDebug_2_Logerror_Test()
-    {   
-        Log2HTML myLog = new Log2HTML( TestName );
-                        
-        myLog.LogFunctionStartDebug( "FuncTionStart", "Param_1", "Value 1" );
-             myLog.LogError( "LogError");
-        myLog.LogFunctionEndDebug( true );
-    
-        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
-        
-        String Expected = this.loadUTF8FileFromResource( ClassName + "/" + TestName + ".json" );
-             
-        assertEquals( Expected, Current );      
-    }
-
-    @Test
-    public void tc_LogFunctionDebug_3_Logerror_Test()
-    {   
-        ArrayList<String> lsReturn = new ArrayList<String>();
-        
-        lsReturn.add( "Sting 1" );
-        lsReturn.add( "Sting 2" );
-        lsReturn.add( "Sting 3" );
-        
-        Log2HTML myLog = new Log2HTML( TestName );
-                        
-        myLog.LogFunctionStartDebug( "FuncTionStart", "Param_1", "Value 1" );
-             myLog.LogError( "LogError");
-        myLog.LogFunctionEndDebug( lsReturn );
-    
-        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
-        
-        String Expected = this.loadUTF8FileFromResource( ClassName + "/" + TestName + ".json" );
-             
-        assertEquals( Expected, Current );      
-    }
-
-    
-    @Test
-    public void tc_LogFunctionDebug_4_Logerror_Test()
-    {   
-        
-        Log2HTML myLog = new Log2HTML( TestName );
-                        
-        myLog.LogFunctionStartDebug( "FuncTionStart", "Param_1", "Value 1" );
-             myLog.LogError( "LogError");
-        myLog.LogFunctionEndDebug( "Return String" );
-    
-        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
-        
-        String Expected = this.loadUTF8FileFromResource( ClassName + "/" + TestName + ".json" );
-             
-        assertEquals( Expected, Current );      
-    }
-
     
     @Test
     public void tc_LogLocalACCallStart_Logerror_Test()

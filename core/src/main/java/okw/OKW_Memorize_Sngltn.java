@@ -35,7 +35,7 @@
 
     Sie sollten eine Kopie der GNU General Public License zusammen mit 
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package okw;
 
@@ -248,8 +248,6 @@ public class OKW_Memorize_Sngltn
 	{
 		Boolean lvbReturn = false;
 
-		Log.LogFunctionStartDebug(Instance.getClass().getName() + ".Exists", "String fpsKey", fpsKey);
-
 		if ( Value.containsKey(fpsKey))
 		{
 			lvbReturn = true;
@@ -258,8 +256,6 @@ public class OKW_Memorize_Sngltn
 		{
 			lvbReturn = false;
 		}
-
-		Log.LogFunctionEndDebug(lvbReturn);
 
 		return lvbReturn;
 	}
@@ -285,23 +281,14 @@ public class OKW_Memorize_Sngltn
 	{
 		String lvsReturn = null;
 
-		Log.LogFunctionStartDebug(Instance.getClass().getName() + ".Get", "String fpsKey", fpsKey);
-
-		try
+		if ( Value.containsKey(fpsKey))
 		{
-			if ( Value.containsKey(fpsKey))
-			{
-				lvsReturn = Value.get(fpsKey);
-			}
-			else
-			{
-				String ErrorText = LM.GetMessage("Get", "OKWMemorizeKeyNotExistsException", fpsKey);
-				throw new OKWMemorizeKeyNotExistsException(ErrorText);
-			}
+			lvsReturn = Value.get(fpsKey);
 		}
-		finally
+		else
 		{
-			Log.LogFunctionEndDebug(lvsReturn);
+			String ErrorText = LM.GetMessage("Get", "OKWMemorizeKeyNotExistsException", fpsKey);
+			throw new OKWMemorizeKeyNotExistsException(ErrorText);
 		}
 
 		return lvsReturn;
@@ -320,13 +307,8 @@ public class OKW_Memorize_Sngltn
 	{
 		Integer lvnReturn = 0;
 
-		Log.LogFunctionStartDebug(Instance.getClass().getName() + ".getKeysCount");
-
 		lvnReturn = Value.size();
 		lvnReturn = lvnReturn + this.ValuePersistent.size();
-		
-		Log.LogFunctionEndDebug( lvnReturn.toString() );
-		
 
 		return lvnReturn;
 	}
@@ -366,8 +348,6 @@ public class OKW_Memorize_Sngltn
 	 */
 	public void init()
 	{
-		Log.LogFunctionStartDebug(this.getClass().getName() + ".Init");
-
 		// Klassen Variablen erst löschen...
 
 		Instance.OKW_Memorize_xml = "";
@@ -396,36 +376,6 @@ public class OKW_Memorize_Sngltn
 			Log.LogWarning("Enviroment variable 'OKWIni' not set!");
 		}
 
-		Log.LogFunctionEndDebug();
-	}
-
-	/** \~german
-	 *  Liest die Werte der Klasse OKW_Memorize aus einer Datei,
-	 *  gegeben in OKW.OKW_Ini.Xml_Ini_xml, ein.
-	 *  Es wird eine XML Datei gelesen. Hierzu wird die Klasse OKW_Memorize mit
-	 *  System.Xml.XmlSerializer deserialisiert.
-	 * 
-	 *  \~english
-	 *  \~
-	 *  @author Zoltán Hrabovszki
-	 *  \date 2013.11.28
-	 */
-	public void load()
-	{
-		Log.LogFunctionStartDebug(Instance.getClass().getName() + "load()");
-
-		try
-		{
-			//OKW_XmlReader myXMLReader = new OKW_XmlReader("xml/OKW_Memorize.xml");			
-		}
-		catch(Exception e)
-		{
-			Log.LogPrintDebug(e.getMessage());
-		}
-		finally
-		{
-			Log.LogFunctionEndDebug();
-		}
 	}
 
 	/** \~german
@@ -442,22 +392,14 @@ public class OKW_Memorize_Sngltn
 	 *  \~
 	 *  \author Zoltán Hrabovszki
 	 *  \date 2013.11.28
+	 *  
+	 *  /TODO: Prüfen wozu das hier nich benötigt wird.
 	 */
 	public void save()
 	{
-		Log.LogFunctionStartDebug( Instance.getClass().getName() + ".save");
-
-		try
-		{
-			// Hint: The Name of Property with the Path nad Filename of the Properties-file
-			// to be loaded is "OKW_Memorize.properties"
-			Properties.getProperty( "OKW_Memorize.properties", "OKW_Memorize.properties" );
-
-		}
-		finally
-		{
-			Log.LogFunctionEndDebug();
-		}
+		// Hint: The Name of Property with the Path nad Filename of the Properties-file
+		// to be loaded is "OKW_Memorize.properties"
+		Properties.getProperty( "OKW_Memorize.properties", "OKW_Memorize.properties" );
 	}
 
 	/** \~german
@@ -476,44 +418,35 @@ public class OKW_Memorize_Sngltn
 	 */
 	public void set( String fpsKey, String fpsValue ) throws XPathExpressionException
 	{
-		Log.LogFunctionStartDebug(Instance.getClass().getName() + ".Set", "String fpsKey", fpsKey,
-				"String fpsValue", fpsValue);
 
-		try
+		// Are we overwriting an existing MemKey?
+		if (Value.containsKey(fpsKey))
 		{
-			// Are we overwriting an existing MemKey?
-			if (Value.containsKey(fpsKey))
-			{
-				String lvsOverwriteKey = LM.GetMessage("Set", "OverwriteKey", fpsKey);
-				String lvsOldValue = LM.GetMessage("Set", "OldValue", Value.get(fpsKey));
-				String lvsNewValue = LM.GetMessage("Set", "NewValue", fpsValue);
+			String lvsOverwriteKey = LM.GetMessage("Set", "OverwriteKey", fpsKey);
+			String lvsOldValue = LM.GetMessage("Set", "OldValue", Value.get(fpsKey));
+			String lvsNewValue = LM.GetMessage("Set", "NewValue", fpsValue);
 
-				if (!lvsOldValue.equals( lvsNewValue ))
-				{
-					Log.ResOpenList(lvsOverwriteKey);
-					Log.LogPrint(lvsOldValue);
-					Log.LogPrint(lvsNewValue);
-					Log.ResCloseList();
-				}
-				Instance.Value.put(fpsKey, fpsValue);
-			}
-			else
+			if (!lvsOldValue.equals( lvsNewValue ))
 			{
-				Instance.Value.put(fpsKey, fpsValue);
-
-				Log.ResOpenList(LM.GetMessage("Set", "SetValue", fpsKey, fpsValue));
-				String lvsMessage = LM.GetMessage("Set", "SetKeyAndValue", fpsKey, fpsValue);
-				Log.LogPrint( lvsMessage);
+				Log.ResOpenList(lvsOverwriteKey);
+				Log.LogPrint(lvsOldValue);
+				Log.LogPrint(lvsNewValue);
 				Log.ResCloseList();
 			}
-
-			// persistentes Speichern aller Daten...
-			// TODO: Prüfen: das wurde ebntfern. Frage soll hier eine Persisntes eingebaut werden?
-			// Instance.save();
+			Instance.Value.put(fpsKey, fpsValue);
 		}
-		finally
+		else
 		{
-			Log.LogFunctionEndDebug();
+			Instance.Value.put(fpsKey, fpsValue);
+
+			Log.ResOpenList(LM.GetMessage("Set", "SetValue", fpsKey, fpsValue));
+			String lvsMessage = LM.GetMessage("Set", "SetKeyAndValue", fpsKey, fpsValue);
+			Log.LogPrint( lvsMessage);
+			Log.ResCloseList();
 		}
+
+		// persistentes Speichern aller Daten...
+		// TODO: Prüfen: das wurde ebntfern. Frage soll hier eine Persisntes eingebaut werden?
+		// Instance.save();
 	}
 }

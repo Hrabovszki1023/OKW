@@ -108,7 +108,6 @@ public class FrameObjectDictionary_Sngltn
 	 */
 	private static LogMessenger  LM;
 
-
 	private static FrameObjectDictionary_Sngltn Instance = null;
 
 
@@ -130,8 +129,6 @@ public class FrameObjectDictionary_Sngltn
 	public static FrameObjectDictionary_Sngltn getInstance() throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException,
 	IOException
 	{
-		Log.LogFunctionStartDebug( "FrameObjectDictionary.getInstance" );
-
 		// Lazy Initialization (If required then only)
 		if ( Instance == null )
 		{
@@ -152,8 +149,6 @@ public class FrameObjectDictionary_Sngltn
 				}
 			}
 		}
-
-		Log.LogFunctionEndDebug( );
 
 		return Instance;
 	}
@@ -196,39 +191,25 @@ public class FrameObjectDictionary_Sngltn
 	{
 		Object lvo_Return = null;
 
-		Log.LogFunctionStartDebug( "FrameObjectDictionary.GetParentObjectByName", "FNParentObject", FNParentObject );
-		try
+		// Gibt es den Schlüssel im Dictinary? - D.h. Gibt es schon eine
+		// Instanz des Objektes im Speicher?
+		Log.LogPrintDebug( LM.GetMessage( "GetParentObjectByName", "M1", FNParentObject ) );
+		
+		if ( myFrameObjectDictionary.containsKey( FNParentObject ) )
 		{
-			// Gibt es den Schlüssel im Dictinary? - D.h. Gibt es schon eine
-			// Instanz des Objektes im Speicher?
-			Log.LogPrintDebug( LM.GetMessage( "GetParentObjectByName", "M1", FNParentObject ) );
-			if ( myFrameObjectDictionary.containsKey( FNParentObject ) )
-			{
-				// Ja, das Objekt existiert.
-				Log.LogPrintDebug( LM.GetMessage( "GetParentObjectByName", "M2" ) );
-				lvo_Return = myFrameObjectDictionary.get( FNParentObject );
-			}
-			else
-			{
-				// Nein -> Frame zum Funtionalen NAme wurde nicht gefunden ->
-				// Exception auslösen...
-				// \todo TODO: Fehlermeldung einbauen...
-				Log.LogPrintDebug( LM.GetMessage( "GetParentObjectByName", "M3" ) );
-
-				String lvsMessage = LM.GetMessage( "GetParentObjectByName", "OKWFrameObjectParentNotFoundException", FNParentObject );
-				throw new OKWFrameObjectParentNotFoundException( lvsMessage );
-			}
+			// Ja, das Objekt existiert.
+			Log.LogPrintDebug( LM.GetMessage( "GetParentObjectByName", "M2" ) );
+			lvo_Return = myFrameObjectDictionary.get( FNParentObject );
 		}
-		finally
+		else
 		{
-			if ( lvo_Return != null )
-			{
-				Log.LogFunctionEndDebug( lvo_Return.toString() );
-			}
-			else
-			{
-				Log.LogFunctionEndDebug();
-			}
+			// Nein -> Frame zum Funtionalen NAme wurde nicht gefunden ->
+			// Exception auslösen...
+			// \todo TODO: Fehlermeldung einbauen...
+			Log.LogPrintDebug( LM.GetMessage( "GetParentObjectByName", "M3" ) );
+
+			String lvsMessage = LM.GetMessage( "GetParentObjectByName", "OKWFrameObjectParentNotFoundException", FNParentObject );
+			throw new OKWFrameObjectParentNotFoundException( lvsMessage );
 		}
 
 		return lvo_Return;
@@ -301,42 +282,27 @@ public class FrameObjectDictionary_Sngltn
 		Object lvo_Return = null;
 		String lvs_ObjectName = fps_ParentObject + "." + fps_ChildObject;
 
-		Log.LogFunctionStartDebug( "FrameObjectDictionary.GetChildObjectByName", "fps_ParentObject", fps_ParentObject, "fps_ChildObject", fps_ChildObject );
-
 		// Gibt es den Schlüssel im Dictinary?
 		Log.LogPrintDebug( LM.GetMessage( "GetChildObjectByName", "M1", fps_ChildObject, fps_ParentObject ) );
-		try
+
+		if ( myFrameObjectDictionary.containsKey( lvs_ObjectName ) )
 		{
-			if ( myFrameObjectDictionary.containsKey( lvs_ObjectName ) )
-			{
-				// Ja, das Objekt existiert.
-				Log.LogPrintDebug( LM.GetMessage( "GetChildObjectByName", "M2" ) );
+			// Ja, das Objekt existiert.
+			Log.LogPrintDebug( LM.GetMessage( "GetChildObjectByName", "M2" ) );
 
-				// Hole die Referenz auf das Objekt aus dem Dictionary 
-				lvo_Return = myFrameObjectDictionary.get( lvs_ObjectName );
-				// lvo_Return = myField.get( this.GetParentObjectByName( fps_ParentObject ) );
-			}
-			else
-			{
-				// Nein -> Frame zum Funtionalen Name wurde nicht gefunden ->
-				// Exception OKWFrameObjectChildNotFoundException auslösen...
-				// \todo TODO: Fehlermeldung einbauen...
-				Log.LogPrintDebug( LM.GetMessage( "GetChildObjectByName", "M3" ) );
-
-				String lvsMessage = LM.GetMessage( "GetChildObjectByName", "OKWFrameObjectChildNotFoundException", lvs_ObjectName );
-				throw new OKWFrameObjectChildNotFoundException( lvsMessage );
-			}
+			// Hole die Referenz auf das Objekt aus dem Dictionary 
+			lvo_Return = myFrameObjectDictionary.get( lvs_ObjectName );
+			// lvo_Return = myField.get( this.GetParentObjectByName( fps_ParentObject ) );
 		}
-		finally
+		else
 		{
-			if ( lvo_Return == null )
-			{
-				Log.LogFunctionEndDebug();
-			}
-			else
-			{
-				Log.LogFunctionEndDebug( lvo_Return.toString() );
-			}
+			// Nein -> Frame zum Funtionalen Name wurde nicht gefunden ->
+			// Exception OKWFrameObjectChildNotFoundException auslösen...
+			// \todo TODO: Fehlermeldung einbauen...
+			Log.LogPrintDebug( LM.GetMessage( "GetChildObjectByName", "M3" ) );
+
+			String lvsMessage = LM.GetMessage( "GetChildObjectByName", "OKWFrameObjectChildNotFoundException", lvs_ObjectName );
+			throw new OKWFrameObjectChildNotFoundException( lvsMessage );
 		}
 		return lvo_Return;
 	}
@@ -358,43 +324,34 @@ public class FrameObjectDictionary_Sngltn
 	public static void init() throws ClassNotFoundException, InstantiationException, JAXBException, ParserConfigurationException, SAXException, IOException,
 	XPathExpressionException, IllegalArgumentException, IllegalAccessException
 	{
-		Log.LogFunctionStartDebug( "FrameObjectDictionary.Init" );
+		LM = new LogMessenger( "FrameObjectDictionary" );
 
-		try
+		Log.LogPrintDebug( LM.GetMessage( "Init", "InitClear", "FrameObjectDictionary" ) );
+
+		myFrameObjectDictionary.clear();
+
+		frameScan( );
+
+		Set<String> Keys = myFrameObjectDictionary.keySet();
+
+		ArrayList<String> myList = new ArrayList<String>();
+
+		for ( String Key : Keys )
 		{
-			LM = new LogMessenger( "FrameObjectDictionary" );
-
-			Log.LogPrintDebug( LM.GetMessage( "Init", "InitClear", "FrameObjectDictionary" ) );
-
-			myFrameObjectDictionary.clear();
-
-			frameScan( );
-
-			Set<String> Keys = myFrameObjectDictionary.keySet();
-
-			ArrayList<String> myList = new ArrayList<String>();
-
-			for ( String Key : Keys )
-			{
-				myList.add( Key );
-			}
-
-			Collections.sort( myList );
-
-			Log.ResOpenListDebug( "Frames: " );
-
-			for ( String Element : myList )
-			{
-				Log.LogPrintDebug( Element );
-			}
-
-			Log.ResCloseListDebug();
-
+			myList.add( Key );
 		}
-		finally
+
+		Collections.sort( myList );
+
+		Log.ResOpenListDebug( "Frames: " );
+
+		for ( String Element : myList )
 		{
-			Log.LogFunctionEndDebug();
+			Log.LogPrintDebug( Element );
 		}
+
+		Log.ResCloseListDebug();
+
 	}
 
 	/** \~german
@@ -685,48 +642,23 @@ public class FrameObjectDictionary_Sngltn
 	@SuppressWarnings( "unused" )
 	private Object createInstanceByObjectName( String fps_ParentObject, String fps_ChildObject ) throws XPathExpressionException
 	{
-		Log.LogFunctionStartDebug( "FrameObjectDictionary.CreateInstanceByObjectName", "fps_ParentObject", fps_ParentObject, "fps_ChildObject", fps_ChildObject );
-
 		Object myParentObject = null;
 		Object myChildObject = null;
-		Boolean bOK = false;
 
-		try
+		// PerentObject holen und ggf. als instanz anlegen
+		myParentObject = this.getParentObjectByName( fps_ParentObject );
+
+		// Kindobjekt aufrufen...
+		// aber nur wenn Paretobjekt gefunden worden ist.
+		if ( myParentObject != null )
 		{
-			// PerentObject holen und ggf. als instanz anlegen
-			myParentObject = this.getParentObjectByName( fps_ParentObject );
-
-			// Kindobjekt aufrufen...
-			// aber nur wenn Paretobjekt gefunden worden ist.
-			if ( myParentObject != null )
-			{
-				// FIXME: was ist wenn das myChildObject = null ist??Checken
-				myChildObject = getChildObjectByName( myParentObject, fps_ChildObject );
-			}
-			else
-			{
-				// \todo TODO: Log Schreiben..
-				throw new OKWFrameObjectParentNotFoundException( "Frame Objekt des Fensters" );
-			}
-
-			bOK = true;
-
+			// FIXME: was ist wenn das myChildObject = null ist??Checken
+			myChildObject = getChildObjectByName( myParentObject, fps_ChildObject );
 		}
-		finally
+		else
 		{
-			if ( bOK )
-			{
-				// Wir sind ohne Exception durchgekommen und wir nehmen an,
-				// dass lvo_Obj != null
-				// -> wir geben den Namen des Objektes zurück...
-				Log.LogFunctionEndDebug( myChildObject.getClass().getName() );
-			}
-			else
-			{
-				// Irgend etwas ist faul wir rufen nur LogFunctionEndDebug
-				// auf...
-				Log.LogFunctionEndDebug();
-			}
+			// \todo TODO: Log Schreiben..
+			throw new OKWFrameObjectParentNotFoundException( "Frame Objekt des Fensters" );
 		}
 
 		return myChildObject;
@@ -757,8 +689,6 @@ public class FrameObjectDictionary_Sngltn
 	{
 		Object lvo_Return = null;
 
-		Log.LogFunctionStartDebug( "FrameObjectDictionary.GetChildObjectByName", "fpo_ParentObject", fpo_ParentObject.toString(), "fps_ChildName", fps_ChildName );
-
 		try
 		{
 			Field fieldInfoObj = fpo_ParentObject.getClass().getField( fps_ChildName );
@@ -785,10 +715,6 @@ public class FrameObjectDictionary_Sngltn
 
 			throw new OKWFrameObjectChildNotFoundException( LM.GetMessage( "GetChildObjectByName", "ChildIsNotDefined_Exception", fps_ChildName, fpo_ParentObject
 					.getClass().getName() ) );
-		}
-		finally
-		{
-			Log.LogFunctionEndDebug();
 		}
 
 		return lvo_Return;

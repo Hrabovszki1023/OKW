@@ -79,19 +79,12 @@ public class SeTextarea extends SeAnyChildWindow {
 	public Integer getMaxLength() {
 		Integer lviReturn = 0;
 
-		try {
-			this.LogFunctionStartDebug("getMaxLength");
+		// The Attribute "MaxLength" auslesen...
+		String lvsMaxLength = this.WaitForInteractionReturnString( () -> {return this.Me().getAttribute( "maxlength" );} );
 
-            // The Attribute "MaxLength" auslesen...
-	        String lvsMaxLength = this.WaitForInteractionReturnString( () -> {return this.Me().getAttribute( "maxlength" );} );
-
-			if (!okw.OKW_Helper.isStringNullOrEmpty(lvsMaxLength)) {
-				lviReturn = Integer.parseInt(lvsMaxLength);
-			}
-		} finally {
-			this.LogFunctionEndDebug(lviReturn.toString());
+		if (!okw.OKW_Helper.isStringNullOrEmpty(lvsMaxLength)) {
+			lviReturn = Integer.parseInt(lvsMaxLength);
 		}
-
 		return lviReturn;
 	}
 
@@ -107,17 +100,12 @@ public class SeTextarea extends SeAnyChildWindow {
 	public Integer getMinLength() {
 		Integer lviReturn = 0;
 
-		try {
-			this.LogFunctionStartDebug("getMinLength");
+		// The Attribute "MaxLength" auslesen...
+		String lvsMaxLength = this.WaitForInteractionReturnString( () -> {return this.Me().getAttribute( "minlength" );} );
 
-            // The Attribute "MaxLength" auslesen...
-	        String lvsMaxLength = this.WaitForInteractionReturnString( () -> {return this.Me().getAttribute( "minlength" );} );
-
-			if (!okw.OKW_Helper.isStringNullOrEmpty(lvsMaxLength)) {
-				lviReturn = Integer.parseInt(lvsMaxLength);
-			}
-		} finally {
-			this.LogFunctionEndDebug(lviReturn.toString());
+		if (!okw.OKW_Helper.isStringNullOrEmpty(lvsMaxLength))
+		{
+			lviReturn = Integer.parseInt(lvsMaxLength);
 		}
 
 		return lviReturn;
@@ -143,20 +131,12 @@ public class SeTextarea extends SeAnyChildWindow {
 	public ArrayList<String> getPlaceholder() {
 		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-		try {
-			this.LogFunctionStartDebug("getPlaceholder");
+		// The Attribute "placeholder" wird als Beschriftung angezeigt...
+		String myAttribute = this.WaitForInteractionReturnString( () -> {return this.Me().getAttribute( "placeholder" );} );
 
-            // The Attribute "placeholder" wird als Beschriftung angezeigt...
-            String myAttribute = this.WaitForInteractionReturnString( () -> {return this.Me().getAttribute( "placeholder" );} );
+		myAttribute = StringUtils.normalizeSpace(myAttribute);
 
-            myAttribute = StringUtils.normalizeSpace(myAttribute);
-
-			lvLsReturn.add(myAttribute);
-		} 
-		finally 
-		{
-			this.LogFunctionEndDebug(lvLsReturn);
-		}
+		lvLsReturn.add(myAttribute);
 
 		return lvLsReturn;
 	}
@@ -178,53 +158,38 @@ public class SeTextarea extends SeAnyChildWindow {
 	public ArrayList<String> getValue() {
 		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-		try {
-			this.LogFunctionStartDebug("GetValue");
+		// Warten auf das Objekt. Wenn es nicht existiert wird mit
+		// OKWGUIObjectNotFoundException beendet...
+		this.WaitForMe();
 
-			// Warten auf das Objekt. Wenn es nicht existiert wird mit
-			// OKWGUIObjectNotFoundException beendet...
-			this.WaitForMe();
+		// Get Value from TextField and put this into the return List<string>
+		String myValue = this.Me().getAttribute("value");
 
-			// Get Value from TextField and put this into the return List<string>
-			String myValue = this.Me().getAttribute("value");
-
-			if (myValue != null) {
-				lvLsReturn.add(this.Me().getAttribute("value"));
-			}
-		} finally {
-			this.LogFunctionEndDebug(lvLsReturn.toString());
+		if (myValue != null) {
+			lvLsReturn.add(this.Me().getAttribute("value"));
 		}
 
 		return lvLsReturn;
 	}
 
-	public void SetValue(ArrayList<String> Values) {
-		this.LogFunctionStartDebug("SetValue", "Val", Values.toString());
+	public void SetValue(ArrayList<String> Values)
+	{
+		SetFocus();
 
-		try
+		WebElement myMe = this.Me();
+		myMe.clear();
+
+		for (String Value : Values)
 		{
-			SetFocus();
-
-			WebElement myMe = this.Me();
-			myMe.clear();
-
-			for (String Value : Values)
+			if (Value.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("DELETE")))
 			{
-				if (Value.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("DELETE")))
-				{
-					this.WaitForInteraction( () -> {myMe.clear();} );
-				}
-				else
-				{
-					String resolvedValue = okw.parser.SeKeyParser.ParseMe( Value );
-					this.WaitForInteraction( (  ) -> {myMe.sendKeys( resolvedValue );} );
-				}
+				this.WaitForInteraction( () -> {myMe.clear();} );
+			}
+			else
+			{
+				String resolvedValue = okw.parser.SeKeyParser.ParseMe( Value );
+				this.WaitForInteraction( (  ) -> {myMe.sendKeys( resolvedValue );} );
 			}
 		}
-		finally
-		{
-			this.LogFunctionEndDebug();
-		}
 	}
-
 }

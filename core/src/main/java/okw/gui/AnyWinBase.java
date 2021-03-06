@@ -35,10 +35,9 @@ Siehe die GNU General Public License für weitere Details.
 
 Sie sollten eine Kopie der GNU General Public License zusammen mit 
 OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
-*/
+ */
 package okw.gui;
 
-import java.util.ArrayList;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.log.*;
 
@@ -48,538 +47,286 @@ import okw.log.*;
 public abstract class AnyWinBase
 {
 	private Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
-	
+
 	protected OKWLocator _locator = null;
 
-  /** \~german
-   *  CAT - Categorie Name des aktuellen GUI-Objektes.
-   *  
-   *  Wert wird 
-   *  
-   *  \~english
-   *  CAT - Category Name of the current GUI object.
-   *  
-   *  \~
-   *  @author Zoltán Hrabovszki
-   *  \date 2014.04.27
-   */    
-  private String myCAT = "";
-
-  
-  /** \~german
-   *  Parent-Objekt FN des aktuellen GUI-Objektes.
-   *  
-   *  \~english
-   *  \brief
-   *  @todo TODO:  Übersetzung ins Englische fehlt...
-   *  
-   *  \~
-   *  @author Zoltán Hrabovszki
-   *  \date 2016.11.20
-   */    
-  private String myKN = "";
-
-  
-  /** \~german
-   *  Parent-Objekt FN des aktuellen GUI-Objektes.
-   *  
-   *  \~english
-   *  \brief
-   *  @todo TODO:  Übersetzung ins Englische fehlt...
-   *  
-   *  \~
-   *  @author Zoltán Hrabovszki
-   *  \date 2016.11.20
-   */    
-  private String myParentFN = "";
-
-  
-   /** \~german
-   *  Holt den vollständig (rekursiv) aufgelösten  (z.B. XPath-Wert) des Locators.
-   *  
-   *  Beim Aufruf dieser Methode wird der Locator vollständig neu berechnet und der aktuelle Wert zurückgeliefert.
-   *  (Dynamischer Locator)
-   *  
-   *  @return Aktueller Wert des Locators
-   *  
-   *  \~english
-   *  \brief
-   *  @todo TODO:  Übersetzung ins Englische fehlt...
-   *  
-   *  \~
-   *  @author Zoltán Hrabovszki
-   *  \date 2014.04.27
-   */
-  public String getLocator()
-  {
-          return _locator.getLocator();
-  }
-
-  
-  /** \~german
-   *  Holt die Refrenz auf den (OKWLocator) den Locator selbst.
-   *   
-   *  \~english
-   *  \brief
-   *  @todo TODO:  Übersetzung ins Englische fehlt...
-   *  
-   *  \~
-   *  @author Zoltán Hrabovszki
-   *  \date 2014.04.27
-   */  
-  public OKWLocatorBase getLOCATOR()
-  {
-          return _locator;
-  }
-
-  
-  /** \~german
-   *  Setzt den Locator für den aktuellen GUI-Adapter.
-   *   
-   *  \~english
-   *  \brief
-   *  @todo TODO:  Übersetzung ins Englische fehlt...
-   *  
-   *  \~
-   *  @author Zoltán Hrabovszki
-   *  \date 2014.04.27
-   */  
-  public void setLocator( String fpsLocator, OKWLocatorBase... fpLocators )
-  {
-          _locator.setLocator( fpsLocator, fpLocators );
-  }
-
- 
-  /** \~german
-   *  Prüft die Existenz des aktuellen Objektes.
-   *  
-   *  - Methode kann hier nicht implementiert werden.
-   *  - Hier wird die Ausnahme OKWFrameObjectMethodNotImplemented ausgelöst.
-   *  
-   *  Hinweis zur Implementierung:
-   *  - Implementierung durcg Methoden überschreiung in den GUI-Klassen.
-   *  - Ist eine elementare Funktion, muss Werkzeugspezifisch (für Selenium, AutoIt, SilkTets usw.) defiert sein/werden.
-   *  - Warten nicht auf die Existenz eines Objektes!
-   *  - Es wird nur ein eiziges mal die Existenz geprüft.
-   *  - Es wird keine Ausnahme ausgelöst, wenn das Object nicht vorhanden ist!
-   *  
-   *  @return true, falls das eindeutig Objekt gefunden worden ist ist, sonst false.
-   *  \~
-   *  @author Zoltán Hrabovszki
-   *  \date 2017.01.31
-   */  
-  public Boolean getExists()
-  {
-    // TODO: /todo Meldung in xml-Auslagern
-    throw new OKWFrameObjectMethodNotImplemented("The method getExists() is not definden for you GUI-Object. Please define first the methode!");
-  }
-
-  public AnyWinBase( )
-  {
-      _locator = new OKWLocator( );
-  }
+	/** \~german
+	 *  CAT - Categorie Name des aktuellen GUI-Objektes.
+	 *  
+	 *  Wert wird 
+	 *  
+	 *  \~english
+	 *  CAT - Category Name of the current GUI object.
+	 *  
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2014.04.27
+	 */    
+	private String myCAT = "";
 
 
-    public AnyWinBase(String fpsLocator, OKWLocatorBase... fpLocators )
-    {
-        if ( fpLocators.length != 0 )
-        {
-            this._locator = new OKWLocator(fpsLocator, fpLocators);
-        }
-        else
-        {
-            this._locator = new OKWLocator(fpsLocator);
-        }
-    }
-   
-    
-    /** \~german
-     *  Methode ruft die Methode Logger.Instance.LogFunctionStartDebug(fps_FunctionName),
-     *  und erweitert den gegebenen Methodenname in fps_FunctionName mit this.getClass().getName() um den Klassenbezeichner.
-     *  
-     *  @param fpsMethodName Name der Method  nicht "full quolified reference".
-     *  
-     *  \~english
-     *  \todo TODO:  Übersetzung ins Englische fehlt...
-     *  
-     *  @param fpsMethodName
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  \date 2014.04.27
-     *  @param fpsMethodName
-     */
-    public void LogFunctionStartDebug(String fpsMethodName)
-    {
-    	myLogger.LogFunctionStartDebug(this.getClass().getName() + "." + fpsMethodName);
-    }
-    
-    
-    /** \~german
-     *  Methode ruft die Methode Logger.Instance.LogFunctionStart(fps_FunctionName),
-     *  und erweitert den gegebenen Methodenname in fps_FunctionName mit this.getClass().getName() um den Klassenbezeichner.
-     *  
-     *  @param fpsMethodName Name der Method  nicht "full quolified reference".
-     *  
-     *  \~english
-     *  \todo TODO:  Übersetzung ins Englische fehlt...
-     *  
-     *  @param fpsMethodName
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  \date 2014.04.27
-     *  @param fpsMethodName
-     */
-    public void LogFunctionStart(String fpsMethodName)
-    {
-        myLogger.LogFunctionStart( this.getClass().getName() + "." + fpsMethodName );
-    }
-
-    
-    /** \~german
-     *  \brief
-     *  Methode ruft die Methode Logger.Instance.LogFunctionStartDebug(string,string,string),
-     *  erweitert den gegebenen Methodenname in fps_FunctionName mit this.getClass().getName() um den Klassenbezeichner.
-     *  
-     *  @param fpsMethodName Name der Method, aber ohne Paket Angabe.
-     *  @param P1_Name Name/Bezeichnung des (ersten) Parameters.
-     *  @param P1_Value Wert des ersten Parameters.
-     * 
-     *  \~english
-     *  @todo TODO: LogFunctionStartDebug(String fpsMethodName, String P1_Name, String P1_Value) Übersetzung ins Englische fehlt...
-     * 
-     *  @param fpsMethodName
-     *  @param P1_Name Name/Bezeichnung des ersten Parameters.
-     *  @param P1_Value Wert des ersten Parameters.
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  \date 2014.04.27
-     */
-    public void LogFunctionStartDebug( String fpsMethodName, String P1_Name, String P1_Value )
-    {
-    	myLogger.LogFunctionStartDebug(this.getClass().getName() + "." + fpsMethodName, P1_Name, P1_Value);
-    }
-
-    /** \~german
-     *  \brief
-     *  Methode ruft die Methode Logger.Instance.LogFunctionStart(string,string,string),
-     *  erweitert den gegebenen Methodenname in fps_FunctionName mit this.getClass().getName() um den Klassenbezeichner.
-     *  
-     *  @param fpsMethodName Name der Method, aber ohne Paket Angabe.
-     *  @param P1_Name Name/Bezeichnung des (ersten) Parameters.
-     *  @param P1_Value Wert des ersten Parameters.
-     * 
-     *  \~english
-     *  @todo TODO: LogFunctionStart(String fpsMethodName, String P1_Name, String P1_Value) Übersetzung ins Englische fehlt...
-     * 
-     *  @param fpsMethodName
-     *  @param P1_Name Name/Bezeichnung des ersten Parameters.
-     *  @param P1_Value Wert des ersten Parameters.
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  \date 2014.04.27
-     */
-    public void LogFunctionStart(String fpsMethodName, String P1_Name, String P1_Value)
-    {
-        myLogger.LogFunctionStart(this.getClass().getName() + "." + fpsMethodName, P1_Name, P1_Value);
-    }
-
-    /** \~german
-     *  Methode ruft die Methode Logger.Instance.LogFunctionEndDebug() auf.
-     *  
-     *  \~english
-     *  \brief
-     *  @todo TODO:  Übersetzung ins Englische fehlt...
-     *  
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  \date 2015.01.18
-     */
-    public void LogFunctionEndDebug()
-    {
-    	myLogger.LogFunctionEndDebug();
-    }
-
-    /** \~german
-     *  Methode ruft die Methode Logger.Instance.LogFunctionEnd() auf.
-     *  
-     *  \~english
-     *  \brief
-     *  @todo TODO:  Übersetzung ins Englische fehlt...
-     *  
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  \date 2015.01.18
-     */
-    public void LogFunctionEnd()
-    {
-        myLogger.LogFunctionEnd();
-    }
-    
-    
-    /** \~german
-     *  Diese Methode ruft die Methode Logger.Instance.LogFunctionEndDebug(string) auf.
-     *  
-     *  @param fpsReturn Zu loggender Rückgabewert.
-     *  
-     *  \~english
-     *  @todo TODO:  Übersetzung ins Englische fehlt...
-     *  
-     *  @param fpsReturn
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  \date 2015.01.18
-     */
-    public void LogFunctionEndDebug(String fpReturn)
-    {
-      if( fpReturn != null)
-          myLogger.LogFunctionEndDebug(fpReturn);
-      else
-          myLogger.LogFunctionEndDebug();
-    }
+	/** \~german
+	 *  Parent-Objekt FN des aktuellen GUI-Objektes.
+	 *  
+	 *  \~english
+	 *  \brief
+	 *  @todo TODO:  Übersetzung ins Englische fehlt...
+	 *  
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2016.11.20
+	 */    
+	private String myKN = "";
 
 
-    /** \~german
-     *  Diese Methode ruft die Methode Logger.Instance.LogFunctionEnd(string) auf.
-     *  
-     *  @param fpsReturn Zu loggender Rückgabewert.
-     *  
-     *  \~english
-     *  @todo TODO:  Übersetzung ins Englische fehlt...
-     *  
-     *  @param fpsReturn
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  \date 2015.01.18
-     */
-    public void LogFunctionEnd(String fpReturn)
-    {
-      if( fpReturn != null) 
-          myLogger.LogFunctionEnd(fpReturn);
-      else 
-          myLogger.LogFunctionEnd();
-    }
+	/** \~german
+	 *  Parent-Objekt FN des aktuellen GUI-Objektes.
+	 *  
+	 *  \~english
+	 *  \brief
+	 *  @todo TODO:  Übersetzung ins Englische fehlt...
+	 *  
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2016.11.20
+	 */    
+	private String myParentFN = "";
 
-    
-    /** \~german
-     *  Diese Methode ruft die Methode Logger.Instance.LogFunctionEndDebug(bool) auf.
-     *  
-     *  @param fpbReturn Zu loggender Rückgabewert.
-     *  
-     *  \~english
-     *  \brief
-     *  \todo TODO:  Übersetzung ins Englische fehlt...
-     *  
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  \date 2015.01.18
-     */
-    public void LogFunctionEndDebug(Boolean fpReturn)
-    {
-      if( fpReturn != null)
-          myLogger.LogFunctionEndDebug(fpReturn);
-      else
-          myLogger.LogFunctionEndDebug();
-    }
 
-    /** \~german
-     *  Diese Methode ruft die Methode Logger.Instance.LogFunctionEnd(bool) auf.
-     *  
-     *  @param fpbReturn Zu loggender Rückgabewert.
-     *  
-     *  \~english
-     *  \brief
-     *  \todo TODO:  Übersetzung ins Englische fehlt...
-     *  
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  \date 2015.01.18
-     */
-    public void LogFunctionEnd(Boolean fpReturn)
-    {
-      if( fpReturn != null)
-          myLogger.LogFunctionEnd(fpReturn);
-      else
-          myLogger.LogFunctionEnd();
-    }
+	/** \~german
+	 *  Holt den vollständig (rekursiv) aufgelösten  (z.B. XPath-Wert) des Locators.
+	 *  
+	 *  Beim Aufruf dieser Methode wird der Locator vollständig neu berechnet und der aktuelle Wert zurückgeliefert.
+	 *  (Dynamischer Locator)
+	 *  
+	 *  @return Aktueller Wert des Locators
+	 *  
+	 *  \~english
+	 *  \brief
+	 *  @todo TODO:  Übersetzung ins Englische fehlt...
+	 *  
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2014.04.27
+	 */
+	public String getLocator()
+	{
+		return _locator.getLocator();
+	}
 
-    /**
-     *  \~german
-     *  Diese Methode ruft die Methode Logger.Instance.LogFunctionEndDebug(ArrayList&lt;string&gt;) auf.
-     *  
-     *  @param fpLsReturn Zu loggender Rückgabeert.
-     *  
-     *  \~english
-     *  @todo TODO:  Übersetzung ins Englische...
-     *  
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  \date 2015.01.18
-     */
-    public void LogFunctionEndDebug(ArrayList<String> fpReturn)
-    {
-      if( fpReturn != null)
-          myLogger.LogFunctionEndDebug(fpReturn);
-      else
-          myLogger.LogFunctionEndDebug();
-    }
 
-    /**
-     *  \~german
-     *  Diese Methode ruft die Methode Logger.Instance.LogFunctionEnd(ArrayList&lt;string&gt;) auf.
-     *  
-     *  @param fpLsReturn Zu loggender Rückgabeert.
-     *  
-     *  \~english
-     *  @todo TODO:  Übersetzung ins Englische...
-     *  
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  \date 2015.01.18
-     */
-    public void LogFunctionEnd(ArrayList<String> fpReturn)
-    {
-      if( fpReturn != null)
-          myLogger.LogFunctionEnd(fpReturn);
-      else
-          myLogger.LogFunctionEnd();
-    }
-    
-    public void ResOpenList( String fps_Name )
-    {
-        myLogger.ResOpenList( fps_Name );
-    }
+	/** \~german
+	 *  Holt die Refrenz auf den (OKWLocator) den Locator selbst.
+	 *   
+	 *  \~english
+	 *  \brief
+	 *  @todo TODO:  Übersetzung ins Englische fehlt...
+	 *  
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2014.04.27
+	 */  
+	public OKWLocatorBase getLOCATOR()
+	{
+		return _locator;
+	}
 
-    public void ResOpenListDebug( String fps_Name )
-    {
-        myLogger.ResOpenListDebug( fps_Name );
-    }
 
-    public void ResCloseList( )
-    {
-        myLogger.ResCloseList( );
-    }
+	/** \~german
+	 *  Setzt den Locator für den aktuellen GUI-Adapter.
+	 *   
+	 *  \~english
+	 *  \brief
+	 *  @todo TODO:  Übersetzung ins Englische fehlt...
+	 *  
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2014.04.27
+	 */  
+	public void setLocator( String fpsLocator, OKWLocatorBase... fpLocators )
+	{
+		_locator.setLocator( fpsLocator, fpLocators );
+	}
 
-    public void ResCloseListDebug( )
-    {
-        myLogger.ResCloseListDebug( );
-    }
 
-    public void LogPrint( String fps_Message )
-    {
-        myLogger.LogPrint( fps_Message );
-    }
+	/** \~german
+	 *  Prüft die Existenz des aktuellen Objektes.
+	 *  
+	 *  - Methode kann hier nicht implementiert werden.
+	 *  - Hier wird die Ausnahme OKWFrameObjectMethodNotImplemented ausgelöst.
+	 *  
+	 *  Hinweis zur Implementierung:
+	 *  - Implementierung durcg Methoden überschreiung in den GUI-Klassen.
+	 *  - Ist eine elementare Funktion, muss Werkzeugspezifisch (für Selenium, AutoIt, SilkTets usw.) defiert sein/werden.
+	 *  - Warten nicht auf die Existenz eines Objektes!
+	 *  - Es wird nur ein eiziges mal die Existenz geprüft.
+	 *  - Es wird keine Ausnahme ausgelöst, wenn das Object nicht vorhanden ist!
+	 *  
+	 *  @return true, falls das eindeutig Objekt gefunden worden ist ist, sonst false.
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2017.01.31
+	 */  
+	public Boolean getExists()
+	{
+		// TODO: /todo Meldung in xml-Auslagern
+		throw new OKWFrameObjectMethodNotImplemented("The method getExists() is not definden for you GUI-Object. Please define first the methode!");
+	}
 
-    public void LogPrintDebug( String fps_Message )
-    {
-        myLogger.LogPrintDebug( fps_Message );
-    }
-    
-    public void LogWarning( String fps_Message )
-    {
-        myLogger.LogWarning( fps_Message );
-    }
+	public AnyWinBase( )
+	{
+		_locator = new OKWLocator( );
+	}
 
-    public void LogError( String fps_Message )
-    {
-        myLogger.LogError( fps_Message );
-    }
 
-    
-    /** \~german
-     *  Holt den Categorie Namen des GUI-Objektes.
-     * 
-     *  Hinweis: Die GUI-Adapter kennen ihre eigenen Kategorie-Namen.
-     *  Dieser wird beim Instanzieren der Frame-Objekte während des Frame-Klassen-Skans
-     *  in der Methode FrameObjectDictionary_Sngltn.FrameScan() gelesen und im Objekt gespeichet.
-     *  
-     *  \~english
-     *  Note: The GUI adapters know their own category names.
-     *  This is read in the method FrameObjectDictionary_Sngltn.FrameScan()
-     *  when the frame objects are instantiated during the frame class scan and stored in the object.
-     *  
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  \date 2014.04.27
-     */  
-    public String getCAT( )
-    {
-      return this.myCAT;
-    }
+	public AnyWinBase(String fpsLocator, OKWLocatorBase... fpLocators )
+	{
+		if ( fpLocators.length != 0 )
+		{
+			this._locator = new OKWLocator(fpsLocator, fpLocators);
+		}
+		else
+		{
+			this._locator = new OKWLocator(fpsLocator);
+		}
+	}
 
-    /** \~german
-     *  Setzten des Objekt KN.
-     *  
-     *  @return KN des Objektes.
-     *  
-     *  \~english
-     *  @todo TODO:  Übersetzung ins Englische fehlt...
-     *  
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  \date 2016.11.20
-     */ 
-    public String getKN( )
-    {
-      return this.myKN;
-    }
+	public void ResOpenList( String fps_Name )
+	{
+		myLogger.ResOpenList( fps_Name );
+	}
 
-    /** \~german
-     *  Setzten des Parent-Objekt FN.
-     *  
-     *  @return FN des Parent-Objektes.
-     *  
-     *  \~english
-     *  \brief
-     *  @todo TODO:  Übersetzung ins Englische fehlt...
-     *  
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  \date 2016.11.20
-     */ 
-    public String getParentFN( )
-    {
-      return this.myParentFN;
-    }
+	public void ResOpenListDebug( String fps_Name )
+	{
+		myLogger.ResOpenListDebug( fps_Name );
+	}
 
-    
-    public void setCAT(String fpsCAT)
-    {
-      this.myCAT =  fpsCAT;
-    }
+	public void ResCloseList( )
+	{
+		myLogger.ResCloseList( );
+	}
 
-    /** \~german
-     *  Setzten des Keyname FN.
-     *  
-     *  @fpsParentFN KN des Objektes
-     *  
-     *  \~english
-     *  \brief
-     *  @todo TODO:  Übersetzung ins Englische fehlt...
-     *  
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  \date 2016.11.20
-     */    
-    public void setKN(String fpsKN)
-    {
-      this.myKN =  fpsKN;
-    }
+	public void ResCloseListDebug( )
+	{
+		myLogger.ResCloseListDebug( );
+	}
 
-    /** \~german
-     *  Setzten des Parent-Objekt FN.
-     *  
-     *  @fpsParentFN FN des Parent-Objektes
-     *  
-     *  \~english
-     *  \brief
-     *  @todo TODO:  Übersetzung ins Englische fehlt...
-     *  
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  \date 2016.11.20
-     */    
-    public void setParentFN(String fpsParentFN)
-    {
-      this.myParentFN =  fpsParentFN;
-    }
+	public void LogPrint( String fps_Message )
+	{
+		myLogger.LogPrint( fps_Message );
+	}
+
+	public void LogPrintDebug( String fps_Message )
+	{
+		myLogger.LogPrintDebug( fps_Message );
+	}
+
+	public void LogWarning( String fps_Message )
+	{
+		myLogger.LogWarning( fps_Message );
+	}
+
+	public void LogError( String fps_Message )
+	{
+		myLogger.LogError( fps_Message );
+	}
+
+
+	/** \~german
+	 *  Holt den Categorie Namen des GUI-Objektes.
+	 * 
+	 *  Hinweis: Die GUI-Adapter kennen ihre eigenen Kategorie-Namen.
+	 *  Dieser wird beim Instanzieren der Frame-Objekte während des Frame-Klassen-Skans
+	 *  in der Methode FrameObjectDictionary_Sngltn.FrameScan() gelesen und im Objekt gespeichet.
+	 *  
+	 *  \~english
+	 *  Note: The GUI adapters know their own category names.
+	 *  This is read in the method FrameObjectDictionary_Sngltn.FrameScan()
+	 *  when the frame objects are instantiated during the frame class scan and stored in the object.
+	 *  
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2014.04.27
+	 */  
+	public String getCAT( )
+	{
+		return this.myCAT;
+	}
+
+	/** \~german
+	 *  Setzten des Objekt KN.
+	 *  
+	 *  @return KN des Objektes.
+	 *  
+	 *  \~english
+	 *  @todo TODO:  Übersetzung ins Englische fehlt...
+	 *  
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2016.11.20
+	 */ 
+	public String getKN( )
+	{
+		return this.myKN;
+	}
+
+	/** \~german
+	 *  Setzten des Parent-Objekt FN.
+	 *  
+	 *  @return FN des Parent-Objektes.
+	 *  
+	 *  \~english
+	 *  \brief
+	 *  @todo TODO:  Übersetzung ins Englische fehlt...
+	 *  
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2016.11.20
+	 */ 
+	public String getParentFN( )
+	{
+		return this.myParentFN;
+	}
+
+
+	public void setCAT(String fpsCAT)
+	{
+		this.myCAT =  fpsCAT;
+	}
+
+	/** \~german
+	 *  Setzten des Keyname FN.
+	 *  
+	 *  @fpsParentFN KN des Objektes
+	 *  
+	 *  \~english
+	 *  \brief
+	 *  @todo TODO:  Übersetzung ins Englische fehlt...
+	 *  
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2016.11.20
+	 */    
+	public void setKN(String fpsKN)
+	{
+		this.myKN =  fpsKN;
+	}
+
+	/** \~german
+	 *  Setzten des Parent-Objekt FN.
+	 *  
+	 *  @fpsParentFN FN des Parent-Objektes
+	 *  
+	 *  \~english
+	 *  \brief
+	 *  @todo TODO:  Übersetzung ins Englische fehlt...
+	 *  
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2016.11.20
+	 */    
+	public void setParentFN(String fpsParentFN)
+	{
+		this.myParentFN =  fpsParentFN;
+	}
 }

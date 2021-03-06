@@ -78,15 +78,6 @@ public class SeALERTDISMISS extends SeDRIVERBASE
 	@Override
 	public void ClickOn()
 	{
-		try
-		{
-			this.LogFunctionStartDebug( "ClickOn" );
-
-			SeDriver.getInstance().getDriver().switchTo().alert().dismiss();
-		}
-		finally
-		{
-			this.LogFunctionEndDebug();
-		}
+		SeDriver.getInstance().getDriver().switchTo().alert().dismiss();
 	}
 }

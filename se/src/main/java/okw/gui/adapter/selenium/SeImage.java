@@ -136,19 +136,10 @@ public class SeImage extends SeAnyChildWindow
 	{
 		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-		try
-		{
-			this.LogFunctionStartDebug( "getValue" );
+		String myAttribute = this.WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "src" ); } );
 
-			String myAttribute = this.WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "src" ); } );
-
-			// Wert des Attributes "src" wird als Wert zurückgegeben
-			lvLsReturn.add( StringUtils.normalizeSpace( myAttribute ) );
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvLsReturn );
-		}
+		// Wert des Attributes "src" wird als Wert zurückgegeben
+		lvLsReturn.add( StringUtils.normalizeSpace( myAttribute ) );
 
 		return lvLsReturn;
 	}
@@ -171,19 +162,11 @@ public class SeImage extends SeAnyChildWindow
 	{
 		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-		try
-		{
-			this.LogFunctionStartDebug( "getCaption" );
+		String myAttribute = this.WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "alt" ); } );
 
-			String myAttribute = this.WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "alt" ); } );
+		// Attributes "alt" is displayed as caption when the image is missing, and therefore is supplied as caption...
+		lvLsReturn.add( StringUtils.normalizeSpace( myAttribute ) );
 
-			// Attributes "alt" is displayed as caption when the image is missing, and therefore is supplied as caption...
-			lvLsReturn.add( StringUtils.normalizeSpace( myAttribute ) );
-		}
-		finally
-		{
-			this.LogFunctionEndDebug( lvLsReturn );
-		}
 		return lvLsReturn;
 	}
 
@@ -191,7 +174,7 @@ public class SeImage extends SeAnyChildWindow
 	public void SetFocus( ) // throws Exception
 	{
 		// TODO: /todo Meldung in xml-Auslagern
-	   throw new OKWFrameObjectMethodNotImplemented("The method 'public void SetFocus( ) throws Exception' is not defined for your GUI-Object. Please define first the methode!");
+		throw new OKWFrameObjectMethodNotImplemented("The method 'public void SetFocus( ) throws Exception' is not defined for your GUI-Object. Please define first the methode!");
 	}
 
 

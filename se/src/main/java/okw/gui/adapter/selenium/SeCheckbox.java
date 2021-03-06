@@ -146,18 +146,9 @@ public class SeCheckbox extends SeAnyChildWindow
 	{
 		Boolean lvbReturn = false;
 
-		try
-		{
-			LogFunctionStartDebug("getIsSelected");
+		// Hole Zusand: "Häkschen" oder kein "Häkschen", das ist hier die Frage...
+		lvbReturn = this.WaitForInteractionReturnBoolean( () -> { return this.Me().isSelected(); } );
 
-			// Hole Zusand: "Häkschen" oder kein "Häkschen", das ist hier die Frage...
-			lvbReturn = this.WaitForInteractionReturnBoolean( () -> { return this.Me().isSelected(); } );
-
-		}
-		finally
-		{
-			LogFunctionEndDebug(lvbReturn);
-		}
 		return lvbReturn;
 	}
 
@@ -177,19 +168,10 @@ public class SeCheckbox extends SeAnyChildWindow
 	public void checking()
 	{
 
-		try
+		// Hab ich ein Häkchen?
+		if (!this.getIsSelected())
 		{
-			LogFunctionStartDebug("checking");
-
-			// Hab ich ein Häkchen?
-			if (!this.getIsSelected())
-			{
-				this.ClickOn();
-			}
-		}
-		finally
-		{
-			LogFunctionEndDebug();
+			this.ClickOn();
 		}
 	}
 
@@ -212,24 +194,16 @@ public class SeCheckbox extends SeAnyChildWindow
 	public ArrayList<String> getValue()
 	{
 		ArrayList<String> lvls_Return = new ArrayList<String>();
-		try
-		{
-			this.LogFunctionStartDebug("getValue");
 
-			if (this.getIsSelected())
-			{
-				String lvsValue = myOKW_Const.GetConst4Internalname("CHECKED");
-				lvls_Return.add(lvsValue);
-			}
-			else
-			{
-				String lvsValue = myOKW_Const.GetConst4Internalname("UNCHECKED");
-				lvls_Return.add(lvsValue);
-			}
-		}
-		finally
+		if (this.getIsSelected())
 		{
-			LogFunctionEndDebug(lvls_Return);
+			String lvsValue = myOKW_Const.GetConst4Internalname("CHECKED");
+			lvls_Return.add(lvsValue);
+		}
+		else
+		{
+			String lvsValue = myOKW_Const.GetConst4Internalname("UNCHECKED");
+			lvls_Return.add(lvsValue);
 		}
 
 		return lvls_Return;
@@ -248,38 +222,23 @@ public class SeCheckbox extends SeAnyChildWindow
 	@Override
 	public void SetValue(ArrayList<String> fps_Values)
 	{
+		// Sprachabhängige Werte holen
+		String lvsCHECKED = myOKW_Const.GetConst4Internalname("CHECKED");
+		String lvsUNCHECKED = myOKW_Const.GetConst4Internalname("UNCHECKED");
 
-		try
+		if ( fps_Values.get(0).equalsIgnoreCase( lvsCHECKED ) )
 		{
-			this.LogFunctionStartDebug("SetValue", "fps_Values", fps_Values.toString());
-
-			// Warten auf das Objekt und Den Focus setzten.
-			// Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-			// this.SetFocus();
-			
-
-			// Sprachabhängige Werte holen
-			String lvsCHECKED = myOKW_Const.GetConst4Internalname("CHECKED");
-			String lvsUNCHECKED = myOKW_Const.GetConst4Internalname("UNCHECKED");
-
-			if ( fps_Values.get(0).equalsIgnoreCase( lvsCHECKED ) )
-			{
-				this.checking();
-			}
-			else if (fps_Values.get(0).equalsIgnoreCase( lvsUNCHECKED ) )
-			{
-				this.unchecking();
-			}
-			else
-			{
-				// LANGUAGE: Exceptionmeldungen in eine Eigene xml Auslagern.
-				String lvsLM = this.LM.GetMessage("Common", "OKWNotAllowedValueException", fps_Values.get(0));
-				throw new OKWNotAllowedValueException(lvsLM);
-			}
+			this.checking();
 		}
-		finally
+		else if (fps_Values.get(0).equalsIgnoreCase( lvsUNCHECKED ) )
 		{
-			this.LogFunctionEndDebug();
+			this.unchecking();
+		}
+		else
+		{
+			// LANGUAGE: Exceptionmeldungen in eine Eigene xml Auslagern.
+			String lvsLM = this.LM.GetMessage("Common", "OKWNotAllowedValueException", fps_Values.get(0));
+			throw new OKWNotAllowedValueException(lvsLM);
 		}
 	}
 
@@ -305,35 +264,24 @@ public class SeCheckbox extends SeAnyChildWindow
 	@Override
 	public void Select(ArrayList<String> fps_Values)
 	{
-		this.LogFunctionStartDebug("Select", "fps_Values", fps_Values.toString());
 
-		try
+		// Sprachabhängige Werte holen
+		String lvsCHECKED = myOKW_Const.GetConst4Internalname("CHECKED");
+		String lvsUNCHECKED = myOKW_Const.GetConst4Internalname("UNCHECKED");
+
+		if (fps_Values.get(0).equalsIgnoreCase( lvsCHECKED ) )
 		{
-			// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-			// this.SetFocus();
-
-			// Sprachabhängige Werte holen
-			String lvsCHECKED = myOKW_Const.GetConst4Internalname("CHECKED");
-			String lvsUNCHECKED = myOKW_Const.GetConst4Internalname("UNCHECKED");
-
-			if (fps_Values.get(0).equalsIgnoreCase( lvsCHECKED ) )
-			{
-				checking();
-			}
-			else if (fps_Values.get(0).equalsIgnoreCase( lvsUNCHECKED ) )
-			{
-				unchecking();
-			}
-			else
-			{
-				// LANGUAGE: Exceptionmeldungen in eine Eigene xml Auslagern.
-				String lvsLM = this.LM.GetMessage("Common", "OKWNotAllowedValueException", fps_Values.get(0));
-				throw new OKWNotAllowedValueException(lvsLM);
-			}
+			checking();
 		}
-		finally
+		else if (fps_Values.get(0).equalsIgnoreCase( lvsUNCHECKED ) )
 		{
-			this.LogFunctionEndDebug();
+			unchecking();
+		}
+		else
+		{
+			// LANGUAGE: Exceptionmeldungen in eine Eigene xml Auslagern.
+			String lvsLM = this.LM.GetMessage("Common", "OKWNotAllowedValueException", fps_Values.get(0));
+			throw new OKWNotAllowedValueException(lvsLM);
 		}
 	}
 
@@ -351,20 +299,11 @@ public class SeCheckbox extends SeAnyChildWindow
 	 */
 	public void unchecking()
 	{
-		try
+		// Hab ich ein Häckchen?
+		if (this.getIsSelected())
 		{
-			this.LogFunctionStartDebug("UnChecking");
-
-			// Hab ich ein Häckchen?
-			if (this.getIsSelected())
-			{
-				// yep! - Dann klicken und Häckchen weg...
-				this.ClickOn();
-			}
-		}
-		finally
-		{
-			this.LogFunctionEndDebug();
+			// yep! - Dann klicken und Häckchen weg...
+			this.ClickOn();
 		}
 	}
 }
