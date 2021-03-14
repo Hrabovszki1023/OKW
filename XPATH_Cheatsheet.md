@@ -1,6 +1,7 @@
-# XPATh cheat sheet for Selenium (but not only!) #
+# XPATH cheat sheet for Selenium (but not only!) #
 
-Das ist eine Samlung von XPATH Ausdrücken die als Locatoren in OpenKeyWord
+Das ist eine Samlung von XPATH Ausdrücken, die als Locatoren in OpenKeyWord oder harmony.ac verwendet werden können.
+Anderen Testautomatisierungswerkzeugen müssen die verwendeten XPATh-Funktonen unterstützen.
 
 ## ID & Name ##
 
