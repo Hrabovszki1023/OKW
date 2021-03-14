@@ -9,10 +9,11 @@ Das ist eine Samlung von XPATH Ausdrücken die als Locatoren in OpenKeyWord
   
 ## Parent & Child ##
 ### Aria ###
-Finden eines Baum-Knotens, der den Text "myText" enthält, in der 2. Ebene<br>
-> ``` //**[ @aria-level='2' and role='treeitem' ]/*[text()="myText"]/ancestor::*[@aria-level='2' and role='treeitem' ]```
+#### Baum-Knotens mit dem Text ####
+Finden eines Baum-Knotens, der genau den Text "myText" enthält, in der 2. Ebene<br>
+> ```//**[ @aria-level='2' and role='treeitem' ]//*[text()="myText"]/ancestor::*[@aria-level='2' and role='treeitem' ]```
 
-#### normalisierten Baum-Knotens mit dem Text ####
+#### Normalisierter Baum-Knotens mit dem Text ####
 Finden eines normalisierten Baum-Knotens mit dem Text "myText" enthält, in der 2. Ebene.<br>
 **Anmerkung:** Es werden all führenden und abschliessenden Whitespaces (Leerzeichen, Returns, Tabs) entfernt.<br>
-> ``` //**[ @aria-level='2' and role='treeitem' ]/*[normelize( text(), "myText") ]/ancestor::*[ @aria-level='2' and role='treeitem' ]```
+> ```//**[ @aria-level='2' and role='treeitem' ]//*[normalize-space( text(), "myText") ]/ancestor::*[@aria-level='2' and role='treeitem' ]```
