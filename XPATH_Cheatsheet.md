@@ -1,12 +1,16 @@
 # XPATH cheat sheet for Selenium (but not only!) #
 
-Das ist eine Samlung von XPATH Ausdrücken, die als Locatoren in OpenKeyWord oder harmony.ac verwendet werden können.
-Anderen Testautomatisierungswerkzeugen müssen die verwendeten XPATh-Funktonen unterstützen.
+This is a collection of XPATH expressions that can be used as locators in OpenKeyWord or harmony.ac.
+Other test automation tools must support the XPATH functions used.
 
 ## ID & Name ##
+### Beliebiges Element mit id="myID" ####
+Finden eines beliebiges Elements mit der id="myID"
+> ```//*[@id="myID"]```
 
-```//*[@id="myID"]```            Beliebiges Element mit der id="myID"
-```//TAG[@id="myID"]```          Element <TAG> mit der id I (css: E#I)
+### <TAG>-Element mit id="myID" ####
+Finden des <TAG>´s mit der id="myID"
+> ```//TAG[@id="myID"]```
   
 ## Parent & Child ##
 ### Aria ###
