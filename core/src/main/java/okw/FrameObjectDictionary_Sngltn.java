@@ -355,7 +355,6 @@ public class FrameObjectDictionary_Sngltn
 	}
 
 	/** \~german
-	 *  \brief
 	 *  Methode erstellt eine Liste aller OKWGUI-Rahmenklassen (Frame class),
 	 *  die in der aktuell ausgeführten Assambly
 	 *  definiert sind.
@@ -369,7 +368,6 @@ public class FrameObjectDictionary_Sngltn
 	 *  Attribute OKWGUI vershen sind.
 	 * 
 	 *  \~english
-	 *  \brief
 	 *  \note __IMPORTANT:__ the class is forced to be exactly, as specified.
 	 *  Here is no 'frame prefix' added.
 	 *  \return
@@ -500,7 +498,7 @@ public class FrameObjectDictionary_Sngltn
 								(( IOKW_FN ) lvFieldInstance).setParentFN( lvsFNWindow );
 								myFrameObjectDictionary.put( lvsChildKey, lvFieldInstance );
 
-								frameScanFieldsRecursively( lvField, lvFieldInstance, lvsFNWindow );
+								frameScanFieldsRecursively( lvField, lvFieldInstance, lvsChildKey );
 							}
 							catch (java.lang.ClassCastException e)
 							{
@@ -535,8 +533,10 @@ public class FrameObjectDictionary_Sngltn
 		try
 		{
 			// Get all Fields within fpFieldToScan
-			Field[] lvFields = fpParentField.getType().getFields();
-
+			// Field[] lvFields = fpParentField.getType().getFields();
+			// Field[] lvFields = fpParentFieldInstance.getType().getFields();
+			Field[] lvFields = fpParentFieldInstance.getClass().getFields();
+			
 			for ( Field lvField : lvFields )
 			{
 
@@ -575,7 +575,7 @@ public class FrameObjectDictionary_Sngltn
 
 							myFrameObjectDictionary.put( lvsKey, lvFieldInstance );
 
-							frameScanFieldsRecursively( lvField, lvFieldInstance, fpsWindowName );
+							frameScanFieldsRecursively( lvField, lvFieldInstance, lvsKey );
 							Log.ResCloseList();
 						}
 					}
