@@ -136,7 +136,6 @@ public class SeAnyChildWindow extends AnyChildwindow
 		this.WaitForInteraction( () -> {this.Me().click();} );
 	}
 
-
 	/** \~german
 	 *  Ermittelt den textuellen Inhalt der Überschrift eines HTML-Tags anhand des Attributee "textContent".
 	 *   
@@ -152,6 +151,26 @@ public class SeAnyChildWindow extends AnyChildwindow
 
 
 		String myAttribute = this.WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "textContent" ); } );
+
+		lvLsReturn.add( StringUtils.normalizeSpace( myAttribute ) );
+		return lvLsReturn;
+	}
+
+	/** \~german
+	 *  Ermittelt den Wert des gegebenen Attribute .
+	 *   
+	 *  @return Rückgabe des Wert des  der Caption/Überschrift.
+	 *  \~english
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2013.12.07
+	 */
+	public ArrayList<String> getAttribute( String Attribute )
+	{
+		ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+
+		String myAttribute = this.WaitForInteractionReturnString( () -> { return this.Me().getAttribute( Attribute ); } );
 
 		lvLsReturn.add( StringUtils.normalizeSpace( myAttribute ) );
 		return lvLsReturn;
@@ -1010,7 +1029,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 
 		Boolean lvbReturn = false;
 
-		lvbReturn = this.getExists();
+		lvbReturn = WaitForInteractionReturnBoolean( () -> {return this.getExists();} );
 
 		return lvbReturn;
 	}
@@ -1378,7 +1397,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 
 			if (isExecuted)
 			{
-				LogPrint( "Interaction succesfull executed" );
+				//LogPrint( "Interaction succesfull executed" );
 			}
 			else
 			{
@@ -1510,7 +1529,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 
 			if (isExecuted)
 			{
-				LogPrint( "Interaction succesfull executed" );
+				//LogPrint( "Interaction succesfull executed" );
 			}
 			else
 			{

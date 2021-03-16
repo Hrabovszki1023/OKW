@@ -193,12 +193,10 @@ public class FrmSeChrome extends SeBrowserWindow
 		}
 		catch (XPathExpressionException e)
 		{
-			// TODO Auto-generated catch block
 			throw new RuntimeException( e );
 		}
 		catch (IOException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
