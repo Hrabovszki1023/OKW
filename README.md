@@ -24,6 +24,10 @@ Here you can find the OKW Wiki-Pages:
 * [List of OKW KeyWords](https://github.com/Hrabovszki1023/OKW/wiki/List-of-OKW-Keywords)
 * [List of OKW Constants](https://github.com/Hrabovszki1023/OKW/wiki/List-of-OKW-Constants)
 
+## Cheat Sheets
+
+* [XPATH-Cheat Sheet](https://github.com/Hrabovszki1023/OKW/blob/master/XPATH_Cheatsheet.md)
+
 ## Maven POM files
 
 Here you can find all [OKW modules in Maven repository](https://search.maven.org/#search%7Cga%7C1%7Copenkeyword).
