@@ -205,7 +205,6 @@ public class SeAnyChildWindow extends AnyChildwindow
 
 			lvbReturn = true;
 		}
-
 		catch (OKWGUIObjectNotFoundException e)
 		{
 			LogPrint( "OKWGUIObjectNotFoundException - GUI-Object was not found..." );
@@ -213,7 +212,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 		}
 		catch ( StaleElementReferenceException e )
 		{
-			LogPrint( "StaleElementReferenceException - GUI-Objekt existiert nicht mehr..." );
+			LogPrint( "StaleElementReferenceException - GUI object no longer exists..." );
 			lvbReturn = false;
 		}
 
@@ -1351,6 +1350,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 				{
 
 					Method2Call.run();
+					
+					LogPrint( "Transaction successful!" );
 
 					// No mistake: Get out of the loop.
 					isExecuted = true;
@@ -1468,7 +1469,9 @@ public class SeAnyChildWindow extends AnyChildwindow
 		try
 		{
 			OKW myOKW = FrameObjectDictionary_Sngltn.getInstance().getOKW( this.getKN() );
-
+			
+			LogPrint( "[WaitForInteractionReturnString] KN: " + this.getKN() );
+			
 			// Determine TimeOut values
 			OKW_TimeOut timeout = new OKW_TimeOut( myOKW.WaitForMe_TO(), myOKW.WaitForMe_PT() );
 
@@ -1483,6 +1486,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 				{
 
 					lvsReturn = Method2Call.get();
+					
+					LogPrint( "Transaction successful!" );
 
 					// No mistake: Get out of the loop.
 					isExecuted = true;
@@ -1615,6 +1620,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 
 					lvbReturn = Method2Call.get();
 
+					LogPrint( "Transaction successful!" );
+
 					// No mistake: Get out of the loop.
 					isExecuted = true;
 					break;
@@ -1630,7 +1637,6 @@ public class SeAnyChildWindow extends AnyChildwindow
 				// includes also
 				//  * ElementNotVisibleException
 				//  * ElementClickInterceptedException
-				//  * ElementNotVisibleException
 				catch ( InvalidElementStateException e)
 				{
 					TimeOutException = new RuntimeException( e );

@@ -140,7 +140,7 @@ public class FrameObjectDictionary_Sngltn
 					Instance = new FrameObjectDictionary_Sngltn();
 					try
 					{
-						init();
+						Instance.init();
 					}
 					catch (Exception e)
 					{
@@ -321,7 +321,7 @@ public class FrameObjectDictionary_Sngltn
 	 * @author Zoltan Hrabovszki
 	 * \date 2014.10.10
 	 */
-	public static void init() throws ClassNotFoundException, InstantiationException, JAXBException, ParserConfigurationException, SAXException, IOException,
+	public void init() throws ClassNotFoundException, InstantiationException, JAXBException, ParserConfigurationException, SAXException, IOException,
 	XPathExpressionException, IllegalArgumentException, IllegalAccessException
 	{
 		LM = new LogMessenger( "FrameObjectDictionary" );
@@ -329,6 +329,7 @@ public class FrameObjectDictionary_Sngltn
 		Log.LogPrintDebug( LM.GetMessage( "Init", "InitClear", "FrameObjectDictionary" ) );
 
 		myFrameObjectDictionary.clear();
+		myAnnotationDictionary.clear();
 
 		frameScan( );
 
@@ -426,7 +427,7 @@ public class FrameObjectDictionary_Sngltn
 	 *  \date 2015.01.28
 	 *  \todo TODO: rename lvsFNParent to lvsFNWindow (Parent is not correct in all cases)
 	 */
-	private static void frameScan(  ) throws InstantiationException, XPathExpressionException,
+	public void frameScan(  ) throws InstantiationException, XPathExpressionException,
 	IllegalArgumentException, IllegalAccessException, ClassNotFoundException, IOException
 	{
 		Object lvTypeInstanceAsObject = null;
@@ -498,7 +499,7 @@ public class FrameObjectDictionary_Sngltn
 								(( IOKW_FN ) lvFieldInstance).setParentFN( lvsFNWindow );
 								myFrameObjectDictionary.put( lvsChildKey, lvFieldInstance );
 
-								frameScanFieldsRecursively( lvField, lvFieldInstance, lvsChildKey );
+								frameScanFieldsRecursively( lvFieldInstance, lvsChildKey );
 							}
 							catch (java.lang.ClassCastException e)
 							{
@@ -512,7 +513,7 @@ public class FrameObjectDictionary_Sngltn
 						else
 						{
 							Log.LogPrint( "-GUI-Container-" );              
-							frameScanFieldsRecursively( lvField, lvFieldInstance, lvsFNWindow );
+							frameScanFieldsRecursively( lvFieldInstance, lvsFNWindow );
 						}
 					}
 				}
@@ -526,7 +527,7 @@ public class FrameObjectDictionary_Sngltn
 	}
 
 
-	private static void frameScanFieldsRecursively( Field fpParentField, Object fpParentFieldInstance, String fpsWindowName )
+	public void frameScanFieldsRecursively( Object fpParentFieldInstance, String fpsWindowName )
 	{
 		//n++;
 
@@ -575,13 +576,13 @@ public class FrameObjectDictionary_Sngltn
 
 							myFrameObjectDictionary.put( lvsKey, lvFieldInstance );
 
-							frameScanFieldsRecursively( lvField, lvFieldInstance, lvsKey );
+							frameScanFieldsRecursively( lvFieldInstance, lvsKey );
 							Log.ResCloseList();
 						}
 					}
 					else
 					{
-						frameScanFieldsRecursively( lvField, lvFieldInstance, fpsWindowName );
+						frameScanFieldsRecursively( lvFieldInstance, fpsWindowName );
 					}
 				}
 			}
@@ -598,7 +599,7 @@ public class FrameObjectDictionary_Sngltn
 	 * @param  fpObject
 	 * @return Refernz auf die OKW-Annotaion des Objectes
 	 */
-	private static OKW getOKWFromObjekt( Object fpObject )
+	private OKW getOKWFromObjekt( Object fpObject )
 	{
 		OKW lvsReturn = null;
 

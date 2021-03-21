@@ -254,9 +254,11 @@ public abstract class AnyWinBase
 	}
 
 	/** \~german
-	 *  Setzten des Objekt KN.
+	 *  Setzt das KN (KeyName) des GUI-Objektes.
 	 *  
-	 *  @return KN des Objektes.
+	 *  KN ist bei Fenstern nur der "WindowName" des Fensters und bei Kindobjekten Besteht dieser aus "WindowName.ChildName" 
+	 *  
+	 *  @return KN (KeyName) des GUI-Objektes. "WindowName" oder "WindowName.ChildName"
 	 *  
 	 *  \~english
 	 *  @todo TODO:  Übersetzung ins Englische fehlt...

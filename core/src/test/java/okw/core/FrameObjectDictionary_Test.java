@@ -124,7 +124,7 @@ public class FrameObjectDictionary_Test
     // erneut existieren.
     try
     {
-      FrameObjectDictionary_Sngltn.init();
+      FrameObjectDictionary_Sngltn.getInstance().init();
     }
     catch (Exception e)
     {
@@ -216,10 +216,10 @@ public class FrameObjectDictionary_Test
     object_Exists = FrameObjectDictionary_Sngltn.myFrameObjectDictionary.containsKey( "frmObjDictTest.Tastatur" );
     assertEquals( true, object_Exists );
 
-    object_Exists = FrameObjectDictionary_Sngltn.myFrameObjectDictionary.containsKey( "frmObjDictTest.Taste_2" );
+    object_Exists = FrameObjectDictionary_Sngltn.myFrameObjectDictionary.containsKey( "frmObjDictTest.Tastatur.Taste_1" );
     assertEquals( true, object_Exists );
 
-    object_Exists = FrameObjectDictionary_Sngltn.myFrameObjectDictionary.containsKey( "frmObjDictTest.Taste_2" );
+    object_Exists = FrameObjectDictionary_Sngltn.myFrameObjectDictionary.containsKey( "frmObjDictTest.Tastatur.Taste_2" );
     assertEquals( true, object_Exists );
   }  
   
