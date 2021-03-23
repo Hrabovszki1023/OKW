@@ -164,6 +164,40 @@ public interface IOKW_State
     void EndTest() throws Exception;
 
     /**
+     *  \~german
+     *  Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text).
+     *  
+     *  _Beispiel: Prüfe, ob des Objekts "MeinObjekt" dem erwarteten Wert "MeinWert" enthält:_ <br>
+     *  
+     *  \verbatim EN.HasValue( "MeineKategorie", "meinWert" \endverbatim
+     *  
+     *  Dieses Schlüsselwort prüft die exakte Übereinstimmung. Wildkards sind nicht möglich. 
+     *  
+     *  @param CAT Kategoriename des GUI-Objekts 
+     *  @param ExpVal Erwarteter Wert
+     *  
+     *  @return Liefert true, wenn ExpVal übereinstimmt, sonst false. Es wird kein OKWVerifyingFailsException ausgelöst.
+     * 
+     *  \~english
+     *  Checks the default value of an object (in most cases this is the displayed text).
+     *  
+     *  _Example:_ Check whether the object "MyObject" contains the expected value "MyValue":_<br>
+     *  \verbatim VerifyValue( "MyCategorie", "MyValue" ) \endverbatim
+     *  
+     *  This keyword checks the exact match. Wildcards are not possible.
+     *  
+     *  @param CAT Category name of the GUI_object 
+     *  @param ExpVal Expected Value
+     * 
+     *  @return Returns true if ExpVal matches, false otherwise. No OKWVerifyingFailsException is thrown.
+     *  
+     *  \~
+     *  @author zh@openkeyword.de
+     *  \date 2021-03-23
+     */
+    Boolean HasValue( String CAT, String ExpVal ) throws Exception;
+
+    /**
      * \~german
      * Gibt die \ref refCaption eines GUI-Objektes in den Testergebnissen aus.
      * 

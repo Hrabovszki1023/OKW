@@ -99,6 +99,30 @@ public class Core implements IOKW_State
 		return VerifyFail;
 	}
 
+
+
+	/**
+	 *  \copydoc IOKW_State::HasValue(String,String)
+	 */
+	public Boolean HasValue( String CAT, String ExpVal ) throws Exception
+	{
+		boolean bReturn = false;
+		
+		try
+		{
+			// Log.LogKeyWordStart( LM.GetMessage( "HasValue", "KeyWordName" ), CAT, ExpVal ); // TODO: ZH Schlüsselwort Nachrichtauslagern
+			Log.LogKeyWordStart( "HasValue", CAT, ExpVal );
+			bReturn = this.CurrentState.HasValue( CAT, ExpVal );
+		}
+		finally
+		{
+			Log.LogKeyWordEnd();
+		}
+		
+		return bReturn;
+	}
+
+	
 	/**
 	 * @param verifyFail the verifyFail to set
 	 */

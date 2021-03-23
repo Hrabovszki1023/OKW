@@ -286,6 +286,64 @@ public class OK implements IOKW_State
 	}
 
 	/**
+	 *  \copydoc IOKW_State::HasValue(String,String)
+	 */
+	public Boolean HasValue( String FN, String ExpVal ) throws Exception
+	{
+		Boolean bReturn = false;
+		
+		ArrayList<String> lvlsExpected = null;
+		ArrayList<String> Actual = null;
+
+		try
+		{
+			// Prüfen ob ignoriert werden muss...
+			if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
+			{
+				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
+				String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+				Log.LogPrint( lvsLM );
+			}
+			else
+			{
+				// If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+				this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
+
+				if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
+				{
+					lvlsExpected = new ArrayList<String>();
+					lvlsExpected.add( "" );
+				}
+				else
+				{
+					// Split giveneExpected Value
+					lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+					lvlsExpected = Parser.ParseMe( lvlsExpected );
+				}
+
+				IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
+
+				OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
+				OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyValue_TO(), myOKW.VerifyValue_PT() );
+
+				Actual = verify( TimeOut, lvlsExpected, () ->
+				{
+					return MyObject.VerifyValue();
+				} );
+
+				bReturn = Actual.equals(lvlsExpected);
+			}
+		}
+		catch (Exception e)
+		{
+			this.handleException( e );
+		}
+		
+		Log.LogPrint( "HasValue result is " + bReturn.toString() );
+		return bReturn;
+	}
+	
+	/**
 	 *  \copydoc IOKW_State::LogCaption(String)
 	 */
 	public void LogCaption( String FN ) throws Exception

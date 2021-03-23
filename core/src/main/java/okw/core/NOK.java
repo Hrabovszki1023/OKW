@@ -136,6 +136,14 @@ public class NOK implements IOKW_State
 	}
 
 	/**
+    /// \copydoc IOKW_State::HasValue(String,String)
+	 */
+	public Boolean HasValue( String CAT, String ExpVal )
+	{
+		return false;
+	}
+	
+	/**
 	 *  \copydoc IOKW_State::LogCaption(String)
 	 */
 	public void LogCaption( String FN )

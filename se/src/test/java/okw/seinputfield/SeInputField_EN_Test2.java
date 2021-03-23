@@ -84,6 +84,10 @@ public class SeInputField_EN_Test2 extends OKWTestBase
       EN.VerifyHasFocus( "Last Name", "NO" );
       EN.VerifyHasFocus( "First Name", "YES" );
       
+      EN.SetValue( "Last Name", "Müller");
+      
+      EN.HasValue( "Last Name", "Müller" );
+      
       EN.StopApp( ApplicationName );
       EN.EndTest();
   }

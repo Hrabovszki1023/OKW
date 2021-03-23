@@ -113,6 +113,15 @@ public class EN
 	}
 
 	/**
+	 *  \copydoc IOKW_State::HasValueREGX(String,String)
+	 */
+	public static boolean HasValue( String CAT, String ExpVal ) throws Exception
+	{
+		myKernel.setLanguage( Language );
+		return myKernel.HasValue( CAT, ExpVal );
+	}
+
+	/**
 	 *  \copydoc IOKW_State::LogCaption(String)
 	 */
 	public static void LogCaption( String FN ) throws Exception
