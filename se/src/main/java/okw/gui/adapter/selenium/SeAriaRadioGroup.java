@@ -39,22 +39,17 @@
 
 package okw.gui.adapter.selenium;
 
-import java.io.IOException;
 import java.util.ArrayList;
-
-import javax.xml.bind.JAXBException;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPathExpressionException;
 
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.xml.sax.SAXException;
 
 import okw.FrameObjectDictionary_Sngltn;
+import okw.OKW;
 import okw.OKW_Const_Sngltn;
-import okw.core.Core;
 import okw.core.OKW_CurrentObject_Sngltn;
+import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.exceptions.OKWOnlySingleValueAllowedException;
 import okw.gui.OKWLocatorBase;
 import okw.gui.adapter.selenium.webdriver.SeDriver;
@@ -65,8 +60,13 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
  * @ingroup groupSeleniumChildGUIAdapter 
  * 
  * \~german
- *  Diese Klasse representiert einen <select>-Tag, der mit Selenium angsteuert wird.
+ *  Diese Klasse representiert ein GUI-Objket, welches der Aria role="RadioGroup" Konvention genügt.
  *  
+ *  Die Werte => den RadioButtons, 
+ *  
+ *  <code>
+ *   
+ *  </code>
  *  SeRadioList selbst ist ein komplexer GUI-Adapter, der als Kontainer für SeRadioButtons dient.
  *  Im Absatz *Verwendung*, wird beschrieben, wie ein funktionierender RadioList im GUI-Frame aufgebaut wird.
  *  
@@ -224,7 +224,7 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
  * @author Zoltán Hrabovszki
  * \date 2017.07.02
  */
-public class SeRadioList extends SeAnyChildWindow
+public class SeAriaRadioGroup extends SeAnyChildWindow
 {
 
 	// Instance of OKW_CurrentObject
@@ -233,16 +233,14 @@ public class SeRadioList extends SeAnyChildWindow
 	// Instance of OKW_CurrentObject
 	FrameObjectDictionary_Sngltn FOD              = null;
 
-	/**
-	 *  Holds the FNs of all RadionButton ChildObjects of this RadioList.<br/>
-	 *  See Constructor for initialsation.
-	 */
-	ArrayList<String>            myRadioButtonFNs = null;
+	// Eingebetteret Radio-Button.
+	@OKW (FN="RadioButon")
+	SeAriaRadio myRadiobutton = new SeAriaRadio( "" );
 
 	/**
 	 *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
 	 */
-	public SeRadioList( String Locator, OKWLocatorBase... Locators )
+	public SeAriaRadioGroup( String Locator, OKWLocatorBase... Locators )
 	{
 		super( Locator, Locators );
 
@@ -264,10 +262,6 @@ public class SeRadioList extends SeAnyChildWindow
 
 		try
 		{
-
-			// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-			this.WaitForMe();
-
 			if ( Val.size() == 1 )
 			{
 
@@ -276,29 +270,19 @@ public class SeRadioList extends SeAnyChildWindow
 				if ( Val.get( 0 ).equals( DELETE ) )
 				{
 					// \todo TODO: Ausnahme Meldung in LM_SeRadioList anlegen.
-					throw new okw.exceptions.OKWNotAllowedValueException( "SeRadioList: This Value is Not Alowed here: " + Val.get( 0 ) );
+					throw new okw.exceptions.OKWNotAllowedValueException( "SeAriaRadioList: This Value is not Alowed here: " + Val.get( 0 ) );
 				}
 
 				else
 				{
-					// Get my FN
-					String myFN = this.getCAT();
-
-					// Radiolist enthällt nur einen wert
-					String myChildFN = myFN + "." + Val.get( 0 );
-
-					Core myCore = new Core();
-					myCore.ClickOn( myChildFN );
-
-					// Set the Current Radiobutton-object back to the
-					// RadioList..
-					CO.setChildName( myFN );
+					myRadiobutton.setLocator("$L1$//*[normalize-space(text() )= " + Val.get( 0 ).trim() + " ] ]", this.getLOCATOR());
+					myRadiobutton.ClickOn();
 				}
 			}
 			else
 			{
 				// \todo TODO: Ausnahme Meldung in LM_SeRadioList anlegen.
-				throw new OKWOnlySingleValueAllowedException( "SeRadioList: Only single value is allowed!" );
+				throw new OKWOnlySingleValueAllowedException( "SeAriaRadioList: Only single value is allowed!" );
 			}
 		}
 		catch (Exception e)
@@ -332,41 +316,15 @@ public class SeRadioList extends SeAnyChildWindow
 	{
 		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-		ArrayList<String> myRadioButtonKeys = new ArrayList<String>();
-
 		try
 		{
-			// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-			this.WaitForMe();
-
-			String isChecked = OKW_Const_Sngltn.getInstance().GetConst4Internalname( "CHECKED" );
-
-			// 1. Get the List of RadioButtons
-			myRadioButtonKeys = OKW_CurrentObject_Sngltn.getInstance().getAllChildFNsOfParent( this.getParentFN() + "." + this.getCAT() + "." );
-
-			for ( String lvsRadioButtonFN : myRadioButtonKeys )
-			{
-
-				ArrayList<String> Actuel = ( ( SeRadio ) FOD.getParentObjectByName( lvsRadioButtonFN ) ).getValue();
-
-				if ( isChecked.equals( Actuel.get( 0 ) ) )
-				{
-
-					String CurrentValue = okw.OKW_Helper.getRightFromDelimiterNumber( lvsRadioButtonFN, this.getCAT() + ".", 1 );
-					lvLsReturn.add( CurrentValue );
-
-					break;
-				}
-			}
-			if ( 0 == lvLsReturn.size() )
-			{
-				lvLsReturn.add( "" );
-			}
-
+			myRadiobutton.setLocator("$L1$//*[role=\"radio\" and aria-checked=\"true\" ]", this.getLOCATOR());
+			lvLsReturn = myRadiobutton.getLabel();;
 		}
-		catch (XPathExpressionException | JAXBException | ParserConfigurationException | SAXException | IOException e)
+		catch ( OKWGUIObjectNotFoundException e)
 		{
-			throw new RuntimeException( e );
+			// es Ist kein RadioButton Ausgewählt
+			lvLsReturn.add("");
 		}
 
 		return lvLsReturn;
@@ -388,12 +346,12 @@ public class SeRadioList extends SeAnyChildWindow
 	{
 		ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-
-		// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-		this.WaitForMe();
-
+		// Get the value of the attribute "aria-labelledby" for this RadioList.
+		String aria_labelledby = this.getAttribute( "aria-labelledby" ).get(0);
+		
 		// 2.schritt nun den Tag-label finden und den Textinhalt ermitteln.
-		WebElement label = SeDriver.getInstance().getDriver().findElement( By.xpath( this.getLocator() + "//legend" ) );
+
+		WebElement label = SeDriver.getInstance().getDriver().findElement( By.xpath( this.getLocator() + "//*[@id = '" + aria_labelledby + "']" ) );
 
 		// The Attribute "textContent" wird als Beschriftung angezeigt...
 		String myAttribute = WaitForInteractionReturnString(() -> { return label.getAttribute( "textContent" );} );
