@@ -248,7 +248,7 @@ public class SeAriaRadioGroup_Test extends OKWTestBase
    * 
    * @throws Exception Here is no Exception expected!
    */
-  //@Test
+  @Test
   public void tcSetValue_SingelValue() throws Exception
   {
     EN.BeginTest( TestName );
@@ -257,14 +257,15 @@ public class SeAriaRadioGroup_Test extends OKWTestBase
 
     EN.SelectWindow( "SeAriaRadioGroup" );
     
-    EN.SetValue( "Pay Method", "Visa" );
-    EN.VerifyValue( "Pay Method", "Visa" );
+    // "Regular crust", "Deep dish", "Thin crust"/
+    EN.SetValue( "Pizza Crust", "Regular crust" );
+    EN.VerifyValue( "Pizza Crust", "Regular crust" );
 
-    EN.SetValue( "Pay Method", "Mastercard" );
-    EN.VerifyValue( "Pay Method", "Mastercard" );
+    EN.SetValue( "Pizza Crust", "Deep dish" );
+    EN.VerifyValue( "Pizza Crust", "Deep dish" );
 
-    EN.SetValue( "Pay Method", "American Express" );
-    EN.VerifyValue( "Pay Method", "American Express" );
+    EN.SetValue( "Pizza Crust", "Thin crust" );
+    EN.VerifyValue( "Pizza Crust", "Thin crust" );
 
     EN.StopApp( ApplicationName );
     EN.EndTest();
@@ -379,7 +380,7 @@ public class SeAriaRadioGroup_Test extends OKWTestBase
    *  @author Zoltan Hrabovszki
    *  \date 2016.12.20
    */
-  @Test
+  //@Test
   public void tcVerifyExists_ExistsYesExpectedYes() throws Exception
   {
     EN.BeginTest( TestName );
@@ -405,7 +406,7 @@ public class SeAriaRadioGroup_Test extends OKWTestBase
    *  @author Zoltan Hrabovszki
    *  \date 2016.12.20
    */
-  @Test
+  //@Test
   public void tcVerifyExists_ExistsNoExpectedNo() throws Exception
   {
 
@@ -435,7 +436,7 @@ public class SeAriaRadioGroup_Test extends OKWTestBase
    *  @author Zoltan Hrabovszki
    *  \date 2016.12.20
    */
-  @Test // ( expected = OKWVerifyingFailsException.class )
+  //@Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyExists_ExistsYesExpectedNo_OKWVerifyingFailsException() throws Exception
   {
 	    EN.BeginTest( TestName );
@@ -463,7 +464,7 @@ public class SeAriaRadioGroup_Test extends OKWTestBase
   *  @author Zoltan Hrabovszki
   *  \date 2016.12.20
   */
-  @Test // ( expected = OKWVerifyingFailsException.class )
+  //@Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyExists_ExistsNoExpectedYes_OKWVerifyingFailsException() throws Exception
   {
     EN.BeginTest( TestName );
@@ -474,10 +475,8 @@ public class SeAriaRadioGroup_Test extends OKWTestBase
     
     EN.VerifyExists( "Does Not Exist", "NO" );
     
-    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
-    {
-        EN.EndTest();
-    });
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
 
   

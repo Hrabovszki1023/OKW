@@ -45,10 +45,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import okw.FrameObjectDictionary_Sngltn;
 import okw.OKW;
 import okw.OKW_Const_Sngltn;
-import okw.core.OKW_CurrentObject_Sngltn;
 import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.exceptions.OKWOnlySingleValueAllowedException;
 import okw.gui.OKWLocatorBase;
@@ -227,15 +225,17 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
 public class SeAriaRadioGroup extends SeAnyChildWindow
 {
 
-	// Instance of OKW_CurrentObject
-	OKW_CurrentObject_Sngltn     CO               = null;
-
-	// Instance of OKW_CurrentObject
-	FrameObjectDictionary_Sngltn FOD              = null;
-
 	// Eingebetteret Radio-Button.
-	@OKW (FN="RadioButon")
-	SeAriaRadio myRadiobutton = new SeAriaRadio( "" );
+	@OKW (FN="RadioButon",
+			VerifyLabel_PT=500, VerifyLabel_TO=5,
+			VerifyIsActive_PT=500, VerifyIsActive_TO=1,
+			VerifyValue_PT=500, VerifyValue_TO=5,
+			VerifyTooltip_PT=500, VerifyTooltip_TO=5,
+			VerifyCaption_PT=500, VerifyCaption_TO=5,
+			VerifyExists_PT=500, VerifyExists_TO=5,
+			VerifyHasFocus_PT=500, VerifyHasFocus_TO=5
+			)
+	public SeAriaRadio myRadiobutton = new SeAriaRadio( "" );
 
 	/**
 	 *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
@@ -243,52 +243,38 @@ public class SeAriaRadioGroup extends SeAnyChildWindow
 	public SeAriaRadioGroup( String Locator, OKWLocatorBase... Locators )
 	{
 		super( Locator, Locators );
-
-		try
-		{
-			CO = OKW_CurrentObject_Sngltn.getInstance();
-			FOD = FrameObjectDictionary_Sngltn.getInstance();
-		}
-		catch (Exception e)
-		{
-			System.exit( 0 );
-		}
 	}
 
 
 	@Override
 	public void SetValue( ArrayList<String> Val )
 	{
+		String myLocator = "";
 
-		try
+		if ( Val.size() == 1 )
 		{
-			if ( Val.size() == 1 )
-			{
 
-				String DELETE = OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" );
+			String DELETE = OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" );
 
-				if ( Val.get( 0 ).equals( DELETE ) )
-				{
-					// \todo TODO: Ausnahme Meldung in LM_SeRadioList anlegen.
-					throw new okw.exceptions.OKWNotAllowedValueException( "SeAriaRadioList: This Value is not Alowed here: " + Val.get( 0 ) );
-				}
-
-				else
-				{
-					myRadiobutton.setLocator("$L1$//*[normalize-space(text() )= " + Val.get( 0 ).trim() + " ] ]", this.getLOCATOR());
-					myRadiobutton.ClickOn();
-				}
-			}
-			else
+			if ( Val.get( 0 ).equals( DELETE ) )
 			{
 				// \todo TODO: Ausnahme Meldung in LM_SeRadioList anlegen.
-				throw new OKWOnlySingleValueAllowedException( "SeAriaRadioList: Only single value is allowed!" );
+				throw new okw.exceptions.OKWNotAllowedValueException( "SeAriaRadioList: This Value is not Alowed here: " + Val.get( 0 ) );
+			}
+
+			else
+			{
+				myLocator = "$L1$//*[normalize-space(text() )= '" + Val.get( 0 ).trim() + "']";
+				this.LogPrint("[SeAriaRadioGrout] SetValue: Calculated locator: '" + myLocator + "'");
+				
+				myRadiobutton.setLocator( myLocator, this.getLOCATOR());
+				myRadiobutton.ClickOn();
 			}
 		}
-		catch (Exception e)
+		else
 		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// \todo TODO: Ausnahme Meldung in LM_SeRadioList anlegen.
+			throw new OKWOnlySingleValueAllowedException( "SeAriaRadioList: Only single value is allowed!" );
 		}
 	}
 
@@ -318,8 +304,8 @@ public class SeAriaRadioGroup extends SeAnyChildWindow
 
 		try
 		{
-			myRadiobutton.setLocator("$L1$//*[role=\"radio\" and aria-checked=\"true\" ]", this.getLOCATOR());
-			lvLsReturn = myRadiobutton.getLabel();;
+			myRadiobutton.setLocator("$L1$//*[@role=\"radio\" and @aria-checked=\"true\" ]", this.getLOCATOR());
+			lvLsReturn = myRadiobutton.getCaption();;
 		}
 		catch ( OKWGUIObjectNotFoundException e)
 		{
@@ -348,7 +334,7 @@ public class SeAriaRadioGroup extends SeAnyChildWindow
 
 		// Get the value of the attribute "aria-labelledby" for this RadioList.
 		String aria_labelledby = this.getAttribute( "aria-labelledby" ).get(0);
-		
+
 		// 2.schritt nun den Tag-label finden und den Textinhalt ermitteln.
 
 		WebElement label = SeDriver.getInstance().getDriver().findElement( By.xpath( this.getLocator() + "//*[@id = '" + aria_labelledby + "']" ) );
