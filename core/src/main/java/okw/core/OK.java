@@ -1796,7 +1796,7 @@ public class OK implements IOKW_State
 			LogVerifyError( fpsExpected, fpsActual );;
 
 			// Trigger OKWVerifyingFailsException!
-			String lvsLM = PROP.getProperty( "OKWVerifyingFailsException.${LANGUAGE}", fpsExpected, fpsActual );
+			String lvsLM = PROP.getProperty( "OKWVerifyingFailsException.${LANGUAGE}", null, fpsExpected, fpsActual );
 			throw new OKWVerifyingFailsException( lvsLM );
 		}
 	}
@@ -1815,7 +1815,7 @@ public class OK implements IOKW_State
 			LogVerifyError( fpsExpected, fpsActual );
 
 			// Trigger OKWVerifyingFailsException!
-			String lvsLM = PROP.getProperty( "OKWVerifyingFailsException.${LANGUAGE}", fpsExpected, fpsActual );
+			String lvsLM = PROP.getProperty( "OKWVerifyingFailsException.${LANGUAGE}", null, fpsExpected, fpsActual );
 			throw new OKWVerifyingFailsException( lvsLM );
 		}
 	}
