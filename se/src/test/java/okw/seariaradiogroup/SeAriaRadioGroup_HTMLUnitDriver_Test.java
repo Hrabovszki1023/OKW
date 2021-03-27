@@ -36,7 +36,7 @@
 	    Sie sollten eine Kopie der GNU General Public License zusammen mit 
 	    OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 	*/
-package okw.seradiolist;
+package okw.seariaradiogroup;
 
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
@@ -50,39 +50,28 @@ import org.junit.jupiter.api.*;
 * 
 * @author zoltan
 */
-public class SeRadioList_EN_Firefox_Test extends SeRadioList_EN_Test
+public class SeAriaRadioGroup_HTMLUnitDriver_Test extends SeAriaRadioGroup_Test
 {
 	protected static Log2HTML myLog2HTML = null;
 
 	@BeforeAll
 	public static void setUpBeforeClass() throws Exception
 	{
-		ApplicationName = "Firefox";
-
+		ApplicationName = "HTMLUnit";
+		
         Logger_Sngltn.getInstance();
-		// Reset des Loggers: Alle geladenen Instanzen löschen
+		    // Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.init();
 
-        myLog2HTML = new Log2HTML( "target/SeRadioList_EN_Firefox_Test.html" );
-        
+        myLog2HTML = new Log2HTML("SeRadioList_EN_HTMLUnitDriver_Test");
+
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}
-
-	@AfterAll
+    
+    @AfterAll
 	public static void tearDownAfterClass() throws Exception
 	{
-		myLog2HTML.Result2HTML("target/SeRadioList_EN_Firefox_Test.html");
+		myLog2HTML.Result2HTML("target/SeRadioList_EN_HTMLUnitDriver_Test.html");
 	}
-	
-    @AfterEach
-    public void FirefoxAfter() throws Exception
-    {
-    	Runtime rt = Runtime.getRuntime();
-    	  if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1) 
-    	     rt.exec("taskkill firefox");
-    	   else
-    	     rt.exec("pkill -f firefox");
-        Thread.sleep( 1000 );
-    }
 }

@@ -36,7 +36,7 @@
 	    Sie sollten eine Kopie der GNU General Public License zusammen mit 
 	    OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 	*/
-package okw.seradiolist;
+package okw.seariaradiogroup;
 
 import okw.OKWTestBase;
 import okw.core.EN;
@@ -50,21 +50,23 @@ import static org.junit.jupiter.api.Assertions.*;
 * @ingroup groupSeleniumChildGUIAdapterTests
 * 
  *  \~german
- *  Base-Class enthält Testfälle für die Prüfung der Klasse okw.gui.adapter.selenium.SeRadioList
+ *  Base-Class enthält Testfälle für die Prüfung der Klasse okw.gui.adapter.selenium.SeAriaRadioGroup
  *
  *  Browser spezifische Tests werden von dieser Klasse abgeleitet.
  *  @see
  *  <ul>
- *    <li>okw.SeRadioList.SeRadioList_Firefox_Test</li>
- *    <li>okw.SeRadioList.SeRadioList_HTMLUnitDriver_Test</li>
- *    <li>okw.SeRadioList.SeRadioList_Chrome_Test</li>
+ *    <li>okw.SeAriaRadioGroup.SeAriaRadioGroup_Firefox_Test</li>
+ *    <li>okw.SeAriaRadioGroup.SeAriaRadioGroup_HTMLUnitDriver_Test</li>
+ *    <li>okw.SeAriaRadioGroup.SeAriaRadioGroup_Chrome_Test</li>
  *  </ul>
  * \~
  * @author Zoltan Hrabovszki
  * \date 2014.12.03
  */
-public class SeRadioList_EN_Test extends OKWTestBase
+public class SeAriaRadioGroup_Test extends OKWTestBase
 {
+	String myURL = "https://www.w3.org/TR/wai-aria-practices-1.1/examples/radio/radio-1/radio-1.html";
+	
 	/** 
 	 *  \~german
 	 *  Enthält den FN Namen des aktuellen Browsers.
@@ -83,15 +85,15 @@ public class SeRadioList_EN_Test extends OKWTestBase
    * @author Zoltan Hrabovszki
    * \date 2014.12.03
    */
-  @Test
+  //@Test
   public void tcSelect_SingelValue() throws Exception
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
 
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+    EN.SetValue( "URL", myURL );
 
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
     
     EN.Select( "Pay Method", "Visa" );
     EN.VerifyValue( "Pay Method", "Visa" );
@@ -108,25 +110,25 @@ public class SeRadioList_EN_Test extends OKWTestBase
   
   
   /** \~german
-   * Prüft die Methode EN.Select() ob OKWOnlySingleValueAllowedException ausgelöst wird, wenn mehr als ein Wert an SeRadioList 
+   * Prüft die Methode EN.Select() ob OKWOnlySingleValueAllowedException ausgelöst wird, wenn mehr als ein Wert an SeAriaRadioGroup 
    * übergeben wird.
    *
    *  \~english
-   * Checks whether the OKWOnlySingleValueAllowedException is thrown by EN.Select(), if more than one value is passed to SeRadioList.
+   * Checks whether the OKWOnlySingleValueAllowedException is thrown by EN.Select(), if more than one value is passed to SeAriaRadioGroup.
    * \~
    * @author Zoltan Hrabovszki
    * \date 2014.12.03
    * 
    * @throws Exception Here is no Exception expected!
    */
-  @Test // ( expected = OKWOnlySingleValueAllowedException.class )
+  //@Test // ( expected = OKWOnlySingleValueAllowedException.class )
   public void tcSelect_OKWOnlySingleValueAllowedException() throws Exception
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+    EN.SetValue( "URL", myURL );
 
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
     
     EN.Select( "Pay Method", "Visa${SEP}Mastercard" );
 
@@ -140,7 +142,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
 
   /** \~german
    *  \brief
-   *  Testziel: Prüft die Methode SeRadioList.Select.
+   *  Testziel: Prüft die Methode SeAriaRadioGroup.Select.
    *
    *  Löst einen OKWNotAllowedValueException aus da ein Radiobutten nicht gelöschwerden kann. Lediglisch durch das Auswählen eines anderen 
    *  "deselectiert" ein RadioButton.<br>
@@ -153,14 +155,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
    *  @author Zoltan Hrabovszki
    *  \date 2014.12.03
    */
-  @Test // ( expected = OKWNotAllowedValueException.class )
+  //@Test // ( expected = OKWNotAllowedValueException.class )
   public void tcSelect_SingleValue_DELETE() throws Exception
   {
 	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
-	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+	    EN.SetValue( "URL", myURL );
 
-	    EN.SelectWindow( "SeRadioList" );
+	    EN.SelectWindow( "SeAriaRadioGroup" );
 	    
 	    EN.Select( "Pay Method", "${DELETE}" );
 
@@ -171,21 +173,21 @@ public class SeRadioList_EN_Test extends OKWTestBase
   }
 
   /** \~german
-   *  \brief Prüft die Methode SeRadioList.Select(),
+   *  \brief Prüft die Methode SeAriaRadioGroup.Select(),
    *  ob "${IGNORE}" keine Aktivität im Objekt aulösen.
    * 
    *  \~
    *  @author Zoltan Hrabovszki
    *  \date 2014.12.03
    */
-  @Test
+  //@Test
   public void tcSelect_SingleValue_IGNORE() throws Exception
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+    EN.SetValue( "URL", myURL );
 
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
     
     // Mit Werten vorbelegen
     EN.Select( "Pay Method", "Visa" );
@@ -203,21 +205,21 @@ public class SeRadioList_EN_Test extends OKWTestBase
 
 
   /** \~german
-   *  Prüft die Methode SeRadioList.Select(),
+   *  Prüft die Methode SeAriaRadioGroup.Select(),
    *  dass "" keine Aktivität im Objekt aulösen.
    * 
    *  \~
    *  @author Zoltan Hrabovszki
    *  \date 2014.12.03
    */
-  @Test
+  //@Test
   public void tcSelect_SingleValue_EmptyString() throws Exception
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+    EN.SetValue( "URL", myURL );
 
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
     
     // Mit Werten vorbelegen
     EN.Select( "Pay Method", "Visa" );
@@ -235,25 +237,25 @@ public class SeRadioList_EN_Test extends OKWTestBase
   
   
   /** \~german
-   * Prüft die Methode SeRadioList.SetValue()
+   * Prüft die Methode SeAriaRadioGroup.SetValue()
    * ob _ein_ einzelner Wert ausgewählt wird.
    *
    *  \~english
-   * Reviews the  Methode SetValue of the Class SeRadioList for singel value selection in SeRadioList.
+   * Reviews the  Methode SetValue of the Class SeAriaRadioGroup for singel value selection in SeAriaRadioGroup.
    * \~
    * @author Zoltan Hrabovszki
    * \date 2014.12.03
    * 
    * @throws Exception Here is no Exception expected!
    */
-  @Test
+  //@Test
   public void tcSetValue_SingelValue() throws Exception
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+    EN.SetValue( "URL", myURL );
 
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
     
     EN.SetValue( "Pay Method", "Visa" );
     EN.VerifyValue( "Pay Method", "Visa" );
@@ -270,7 +272,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
   
   /** \~german
    *  \brief
-   *  Testziel: Prüft die Methode SeRadioList.Select.
+   *  Testziel: Prüft die Methode SeAriaRadioGroup.Select.
    *
    *  Löst einen OKWNotAllowedValueException aus da ein Radiobutten nicht gelöschwerden kann. Lediglisch durch das Auswählen eines anderen 
    *  "deselectiert" ein RadioButten.
@@ -283,14 +285,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
    *  @author Zoltan Hrabovszki
    *  \date 2014.12.03
    */
-  @Test // ( expected = OKWNotAllowedValueException.class )
+  //@Test // ( expected = OKWNotAllowedValueException.class )
   public void tcSetValue_SingleValue_DELETE() throws Exception
   {
 	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
-	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+	    EN.SetValue( "URL", myURL );
 
-	    EN.SelectWindow( "SeRadioList" );
+	    EN.SelectWindow( "SeAriaRadioGroup" );
 	    
 	    EN.SetValue( "Pay Method", "${DELETE}" );
 	    
@@ -303,25 +305,25 @@ public class SeRadioList_EN_Test extends OKWTestBase
 
   
   /** \~german
-   * Prüft die Methode EN.SetValue() ob OKWOnlySingleValueAllowedException ausgelöst wird, wenn mehr als ein Wert an SeRadioList 
+   * Prüft die Methode EN.SetValue() ob OKWOnlySingleValueAllowedException ausgelöst wird, wenn mehr als ein Wert an SeAriaRadioGroup 
    * übergeben wird.
    *
    *  \~english
-   * Checks whether the OKWOnlySingleValueAllowedException is thrown by EN.SetValue(), if more than one value is passed to SeRadioList.
+   * Checks whether the OKWOnlySingleValueAllowedException is thrown by EN.SetValue(), if more than one value is passed to SeAriaRadioGroup.
    * \~
    * @author Zoltan Hrabovszki
    * \date 2014.12.03
    * 
    * @throws Exception The OKWOnlySingleValueAllowedException is expected!
    */
-  @Test // ( expected = OKWOnlySingleValueAllowedException.class )
+  //@Test // ( expected = OKWOnlySingleValueAllowedException.class )
   public void tcSetValue_OKWOnlySingleValueAllowedException() throws Exception
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+    EN.SetValue( "URL", myURL );
 
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
     
     EN.SetValue( "Pay Method", "Visa${SEP}Mastercard" );
 
@@ -335,7 +337,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
 
   
   /** \~german
-   * Prüft die Methode SetValue() der Klasse SeRadioList, ob ${IGNORE} und "" _keine Aktivität_ auf der GUI auslösen.
+   * Prüft die Methode SetValue() der Klasse SeAriaRadioGroup, ob ${IGNORE} und "" _keine Aktivität_ auf der GUI auslösen.
    *
    *  \~english
    * \~
@@ -344,14 +346,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
    * 
    * @throws Exception Here is no Exception expected!
    */
-  @Test
+  //@Test
   public void tcSetValue_SingelValue_IGNORE() throws Exception
   {
 	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
-	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+	    EN.SetValue( "URL", myURL );
 
-	    EN.SelectWindow( "SeRadioList" );
+	    EN.SelectWindow( "SeAriaRadioGroup" );
 	    
 	    EN.SetValue( "Pay Method", "Visa" );
 	    EN.VerifyValue( "Pay Method", "Visa" );
@@ -368,7 +370,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
 
   
   /** \~german
-   *  Prüft die Methode SeRadioList.VerifyExists.<br>
+   *  Prüft die Methode SeAriaRadioGroup.VerifyExists.<br>
    * 
    *   Istwert: Ist _vorhanden_.<br> 
    *   Sollwert: Soll _vorhanden_ sein.
@@ -382,11 +384,11 @@ public class SeRadioList_EN_Test extends OKWTestBase
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+    EN.SetValue( "URL", myURL );
 
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
     
-    EN.VerifyExists( "Pay Method", "YES" );
+    EN.VerifyExists( "Pizza Crust", "YES" );
 
     EN.StopApp( ApplicationName );
     EN.EndTest();
@@ -394,7 +396,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
 
   
   /** \~german
-   *  Prüft die Methode SeRadioList.VerifyExists.<br>
+   *  Prüft die Methode SeAriaRadioGroup.VerifyExists.<br>
    * 
    *   Istwert: Ist _nicht vorhanden_.<br> 
    *   Sollwert: Soll _nicht vorhanden_ sein.
@@ -410,19 +412,21 @@ public class SeRadioList_EN_Test extends OKWTestBase
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
 
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+    EN.SetValue( "URL", myURL );
 
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
     
     EN.VerifyExists( "Does Not Exist", "YES" );
 
-    EN.StopApp( ApplicationName );
-    EN.EndTest();
+    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
  
    /** \~german
-   *  Prüft die Methode SeRadioList.VerifyExists.<br>
+   *  Prüft die Methode SeAriaRadioGroup.VerifyExists.<br>
    * 
    *   Istwert: Ist _vorhanden_.<br> 
    *   Sollwert: Soll _nicht vorhanden_ sein.
@@ -436,11 +440,11 @@ public class SeRadioList_EN_Test extends OKWTestBase
   {
 	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
-	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+	    EN.SetValue( "URL", myURL );
 
-	    EN.SelectWindow( "SeRadioList" );
+	    EN.SelectWindow( "SeAriaRadioGroup" );
 	    
-	    EN.VerifyExists( "Pay Method", "NO" );
+	    EN.VerifyExists( "Pizza Crust", "NO" );
 	    
 	    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
 	    {
@@ -450,7 +454,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
 
   
   /** \~german
-  *  Prüft die Methode SeRadioList.VerifyExists.<br>
+  *  Prüft die Methode SeAriaRadioGroup.VerifyExists.<br>
   * 
   *   Istwert: Ist _nicht vorhanden_.<br> 
   *   Sollwert: Soll _vorhanden_ sein.
@@ -464,9 +468,9 @@ public class SeRadioList_EN_Test extends OKWTestBase
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+    EN.SetValue( "URL", myURL );
 
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
     
     EN.VerifyExists( "Does Not Exist", "NO" );
     
@@ -478,23 +482,22 @@ public class SeRadioList_EN_Test extends OKWTestBase
 
   
   /** \~german
-  *  Prüft die Methode SeRadioList.LogExists, wenn das Object _nicht vorhanden_ ist.<br>
+  *  Prüft die Methode SeAriaRadioGroup.LogExists, wenn das Object _nicht vorhanden_ ist.<br>
   * 
   * 
   *  \~
   *  @author Zoltan Hrabovszki
   *  \date 2016.12.25
   */
-  @Test
+  //@Test
   public void tcLogExists_ExistsNo() throws Exception
   {
 
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
+    EN.SetValue( "URL", myURL );
 
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
-
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
     
     EN.LogExists( "Does Not Exist" );
 
@@ -504,23 +507,22 @@ public class SeRadioList_EN_Test extends OKWTestBase
 
   
   /** \~german
-  *  Prüft die Methode SeRadioList.LogExists, wenn das Object _nicht vorhanden_ ist.<br>
+  *  Prüft die Methode SeAriaRadioGroup.LogExists, wenn das Object _nicht vorhanden_ ist.<br>
   * 
   * 
   *  \~
   *  @author Zoltan Hrabovszki
   *  \date 2016.12.25
   */
-  @Test
+  //@Test
   public void tcLogExists_ExistsYes() throws Exception
   {
 
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
+    EN.SetValue( "URL", myURL );
 
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
-
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
     
     EN.LogExists( "Pay Method" );
 
@@ -530,7 +532,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
 
 
   /** \~german
-   *  Prüft die Methode SeRadioList.IsActive().
+   *  Prüft die Methode SeAriaRadioGroup.IsActive().
    *  
    *  Istwert: _ist aktive_. Sollwert: _aktive_ ist.
    *  
@@ -538,14 +540,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
    *  @author Zoltan Hrabovszki
    *  \date 2016.12.23
    */
-  @Test
+  //@Test
   public void tcVerifyIsActive_IsActiveYesExpectedYes() throws Exception
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+    EN.SetValue( "URL", myURL );
 
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
 
     EN.VerifyIsActive( "Pay Method", "YES" );
 
@@ -555,25 +557,25 @@ public class SeRadioList_EN_Test extends OKWTestBase
 
   
   /** \~german
-   *  Prüft die Methode SeRadioList.MemorizeValue.
+   *  Prüft die Methode SeAriaRadioGroup.MemorizeValue.
    *  
    * Prüft ob der aktuell Wert eingespeichert wird. 
    *  \~
    *  @author Zoltan Hrabovszki
    *  \date 2016.12.23
    */
-  @Test
+  //@Test
   public void tcMemorizeValue() throws Exception
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+    EN.SetValue( "URL", myURL );
 
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
 
     EN.Select( "Pay Method", "Visa");
-    EN.MemorizeValue( "Pay Method", "SeRadioList_MemorizeValue_1" );
-    assertEquals( "Visa", okw.OKW_Memorize_Sngltn.getInstance().get( "SeRadioList_MemorizeValue_1" ) );
+    EN.MemorizeValue( "Pay Method", "SeAriaRadioGroup_MemorizeValue_1" );
+    assertEquals( "Visa", okw.OKW_Memorize_Sngltn.getInstance().get( "SeAriaRadioGroup_MemorizeValue_1" ) );
 
     EN.StopApp( ApplicationName );
     EN.EndTest();
@@ -581,21 +583,21 @@ public class SeRadioList_EN_Test extends OKWTestBase
 
   
   /** \~german
-   *  Prüft die Methode SeRadioList.LogValue.
+   *  Prüft die Methode SeAriaRadioGroup.LogValue.
    *  
    * Prüft ob der aktuell Wert "gelogged" wird. 
    *  \~
    *  @author Zoltan Hrabovszki
    *  \date 2016.12.23
    */
-  @Test
+  //@Test
   public void tcLogValue() throws Exception
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+    EN.SetValue( "URL", myURL );
 
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
 
     EN.Select( "Pay Method", "Visa");
     EN.LogValue( "Pay Method" );
@@ -606,7 +608,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
 
   
   /** \~german
-   *  Prüft die Methode SeRadioList.MemorizeValue.
+   *  Prüft die Methode SeAriaRadioGroup.MemorizeValue.
    *  
    * Prüft ob IGNORE ein OKWNotAllowedValueException auslöst.
    * 
@@ -614,18 +616,18 @@ public class SeRadioList_EN_Test extends OKWTestBase
    *  @author Zoltan Hrabovszki
    *  \date 2016.12.23
    */
-  @Test // ( expected = OKWNotAllowedValueException.class )
+  //@Test // ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeValue_IGNORE_OKWNotAllowedValueException() throws Exception
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+    EN.SetValue( "URL", myURL );
 
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
 
     EN.Select( "Pay Method", "Visa");
-    EN.MemorizeValue( "Pay Method", "SeRadioList_MemorizeValue_1" );
-    assertEquals( "Visa", okw.OKW_Memorize_Sngltn.getInstance().get( "SeRadioList_MemorizeValue_1" ) );
+    EN.MemorizeValue( "Pay Method", "SeAriaRadioGroup_MemorizeValue_1" );
+    assertEquals( "Visa", okw.OKW_Memorize_Sngltn.getInstance().get( "SeAriaRadioGroup_MemorizeValue_1" ) );
 
     EN.Select( "Pay Method", "American Express");
     EN.MemorizeValue( "Pay Method", "${IGNORE}" );
@@ -638,7 +640,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
 
   
   /** \~german
-   *  Prüft die Methode SeRadioList.MemorizeValue.
+   *  Prüft die Methode SeAriaRadioGroup.MemorizeValue.
    *  
    * Prüft ob "" ein OKWNotAllowedValueException auslöst.
    * 
@@ -646,18 +648,18 @@ public class SeRadioList_EN_Test extends OKWTestBase
    *  @author Zoltan Hrabovszki
    *  \date 2016.12.23
    */
-  @Test // ( expected = OKWNotAllowedValueException.class )
+  //@Test // ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeValue_Empty_OKWNotAllowedValueException() throws Exception
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+    EN.SetValue( "URL", myURL );
 
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
 
     EN.Select( "Pay Method", "Visa");
-    EN.MemorizeValue( "Pay Method", "SeRadioList_MemorizeValue_1" );
-    assertEquals( "Visa", okw.OKW_Memorize_Sngltn.getInstance().get( "SeRadioList_MemorizeValue_1" ) );
+    EN.MemorizeValue( "Pay Method", "SeAriaRadioGroup_MemorizeValue_1" );
+    assertEquals( "Visa", okw.OKW_Memorize_Sngltn.getInstance().get( "SeAriaRadioGroup_MemorizeValue_1" ) );
 
     EN.Select( "Pay Method", "American Express");
     EN.MemorizeValue( "Pay Method", "" );
@@ -670,7 +672,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
   
   
   /** \~german
-   *  Prüft die Methode SeRadioList.IsActive().
+   *  Prüft die Methode SeAriaRadioGroup.IsActive().
    *  
    *  Istwert: _ist aktive_. Sollwert: _aktive_ ist.
    *  
@@ -678,14 +680,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
    *  @author Zoltan Hrabovszki
    *  \date 2016.12.23
    */
-  @Test
+  //@Test
   public void tcVerifyIsActive_IsActiveNoExpectedNo() throws Exception
   {
 	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
-	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio_inactive.htm" );
+	    EN.SetValue( "URL", myURL );
 
-	    EN.SelectWindow( "SeRadioList" );
+	    EN.SelectWindow( "SeAriaRadioGroup" );
 
 	    EN.VerifyIsActive( "Pay Method", "NO" );
 
@@ -695,7 +697,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
 
   
   /** \~german
-   *  Prüft die Methode SeRadioList.IsActive().<br>
+   *  Prüft die Methode SeAriaRadioGroup.IsActive().<br>
    *
    *  Istwert: _ist aktive_. Sollwert _ist nicht aktive_.
    * 
@@ -703,14 +705,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
    *  @author Zoltan Hrabovszki
    *  \date 2016.09.20
    */
-  @Test // ( expected = OKWVerifyingFailsException.class )
+  //@Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyIsActive_IsActiveYesExpectedNo_OKWVerifyingFailsException() throws Exception
   {
 	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
-	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+	    EN.SetValue( "URL", myURL );
 
-	    EN.SelectWindow( "SeRadioList" );
+	    EN.SelectWindow( "SeAriaRadioGroup" );
 
 	    EN.VerifyIsActive( "Pay Method", "NO" );
 
@@ -724,7 +726,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
 
   
   /** \~german
-   *  Prüft die Methode SeRadioList.IsActive().<br>
+   *  Prüft die Methode SeAriaRadioGroup.IsActive().<br>
    *
    *  Istwert: _ist aktive_. Sollwert _ist nicht aktive_.
    * 
@@ -733,14 +735,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
    *  @author Zoltan Hrabovszki
    *  \date 2016.09.20
    */
-  @Test // ( expected = OKWVerifyingFailsException.class )
+  //@Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyIsActive_IsActiveNoExpectedYes_OKWVerifyingFailsException() throws Exception
   {
 	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
-	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+	    EN.SetValue( "URL", myURL );
 
-	    EN.SelectWindow( "SeRadioList" );
+	    EN.SelectWindow( "SeAriaRadioGroup" );
 
 	    EN.VerifyIsActive( "Pay Method", "NO" );
 
@@ -758,14 +760,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
    *  @author Zoltan Hrabovszki
    *  \date 2016.12.23
    */
-  @Test
+  //@Test
   public void tcLogIsActive() throws Exception
   {
 	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
-	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio_inactive.htm" );
+	    EN.SetValue( "URL", myURL );
 
-	    EN.SelectWindow( "SeRadioList" );
+	    EN.SelectWindow( "SeAriaRadioGroup" );
 
 	    EN.LogIsActive( "Pay Method" );
 
@@ -774,14 +776,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
   }
 
   
-  @Test
+  //@Test
   public void tcVerifyToolTip() throws Exception
   {
 	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
-	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio_inactive.htm" );
+	    EN.SetValue( "URL", myURL );
 
-	    EN.SelectWindow( "SeRadioList" );
+	    EN.SelectWindow( "SeAriaRadioGroup" );
 
 	    EN.VerifyTooltip( "Pay Method", "fieldset-title" );
 
@@ -790,14 +792,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
   }
 
 
-  @Test // ( expected = OKWVerifyingFailsException.class )
+  //@Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyToolTip_Fail_OKWVerifyingFailsException() throws Exception
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio_inactive.htm" );
+    EN.SetValue( "URL", myURL );
 
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
 
     EN.VerifyTooltip( "Pay Method", "Wrong Value" );
 
@@ -810,14 +812,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
   }
 
 
-  @Test
+  //@Test
   public void tcVerifyToolTipWCM() throws Exception
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio_inactive.htm" );
+    EN.SetValue( "URL", myURL );
 
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
 
     EN.VerifyTooltipWCM( "Pay Method", "fieldset?title" );
  
@@ -826,14 +828,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
 }
 
 
-  @Test // ( expected = OKWVerifyingFailsException.class )
+  //@Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyToolTipWCM_Fail_OKWVerifyingFailsException() throws Exception
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio_inactive.htm" );
+    EN.SetValue( "URL", myURL );
 
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
 
     EN.VerifyTooltip( "Pay Method", "Wrong Value" );
 
@@ -846,14 +848,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
  }
 
 
-  @Test
+  //@Test
   public void tcVerifyToolTipREGX() throws Exception
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio_inactive.htm" );
+    EN.SetValue( "URL", myURL );
 
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
 
     EN.VerifyTooltipREGX( "Pay Method", "fieldset.title" );
 
@@ -862,14 +864,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
 }
 
 
-  @Test // ( expected = OKWVerifyingFailsException.class )
+  //@Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyToolTipREGX_Fail_OKWVerifyingFailsException() throws Exception
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio_inactive.htm" );
+    EN.SetValue( "URL", myURL );
 
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
 
     EN.VerifyTooltipREGX( "Pay Method", "Wrong Value" );
 
@@ -881,14 +883,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
     });
   }
 
-  @Test
+  //@Test
   public void tcVerifyLabel() throws Exception
   {
 	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
-	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+	    EN.SetValue( "URL", myURL );
 
-	    EN.SelectWindow( "SeRadioList" );
+	    EN.SelectWindow( "SeAriaRadioGroup" );
 	    
 	    EN.Select( "Pay Method", "American Express" );
 	    EN.VerifyLabel( "Pay Method", "Pay with:" );
@@ -897,14 +899,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
 	    EN.EndTest();
 	  }
 
-  @Test // ( expected = OKWVerifyingFailsException.class )
+  //@Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyLabel_Fail_OKWVerifyingFailsException() throws Exception
   {
 	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
-	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+	    EN.SetValue( "URL", myURL );
 
-	    EN.SelectWindow( "SeRadioList" );
+	    EN.SelectWindow( "SeAriaRadioGroup" );
 	    
 	    EN.Select( "Pay Method", "American Express" );
 	    EN.VerifyLabel( "Pay Method", "Schnick-Schnack" );
@@ -915,14 +917,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
 	    });
 	}
 
-  @Test
+  //@Test
   public void tcVerifyLabelWCM() throws Exception
   {
 	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
-	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+	    EN.SetValue( "URL", myURL );
 
-	    EN.SelectWindow( "SeRadioList" );
+	    EN.SelectWindow( "SeAriaRadioGroup" );
 	    
 	    EN.Select( "Pay Method", "American Express" );
 	    EN.VerifyLabelWCM( "Pay Method", "Pay*" );
@@ -931,14 +933,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
 	    EN.EndTest();
 }
 
-  @Test // ( expected = OKWVerifyingFailsException.class )
+  //@Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyLabelWCM_Fail_OKWVerifyingFailsException() throws Exception
   {
 	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
-	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+	    EN.SetValue( "URL", myURL );
 
-	    EN.SelectWindow( "SeRadioList" );
+	    EN.SelectWindow( "SeAriaRadioGroup" );
 	    
 	    EN.Select( "Pay Method", "American Express" );
 	    EN.VerifyLabelWCM( "Pay Method", "Schnick*" );
@@ -950,14 +952,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
 	        EN.EndTest();
 	    });	    }
 
-  @Test
+  //@Test
   public void tcVerifyLabelREGX() throws Exception
   {
 	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
-	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+	    EN.SetValue( "URL", myURL );
 
-	    EN.SelectWindow( "SeRadioList" );
+	    EN.SelectWindow( "SeAriaRadioGroup" );
 	    
 	    EN.Select( "Pay Method", "American Express" );
 	    EN.VerifyLabelREGX( "Pay Method", "Pay .*" );
@@ -966,14 +968,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
 	    EN.EndTest();
   }
 
-  @Test // ( expected = OKWVerifyingFailsException.class )
+  //@Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyLabelREGX_Fail_OKWVerifyingFailsException() throws Exception
   {
 	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
-	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+	    EN.SetValue( "URL", myURL );
 
-	    EN.SelectWindow( "SeRadioList" );
+	    EN.SelectWindow( "SeAriaRadioGroup" );
 	    
 	    EN.Select( "Pay Method", "American Express" );
 	    EN.VerifyLabelREGX( "Pay Method", "Sch.*" );
@@ -987,21 +989,21 @@ public class SeRadioList_EN_Test extends OKWTestBase
 }
 
   /** \~german
-   *  Prüft die Methode SeRadioList.MemorizeValue.
+   *  Prüft die Methode SeAriaRadioGroup.MemorizeValue.
    *  
    * Prüft ob der aktuell Wert eingespeichert wird. 
    *  \~
    *  @author Zoltan Hrabovszki
    *  \date 2016.12.23
    */
-  @Test
+  //@Test
   public void tcMemorizeLabel() throws Exception
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+    EN.SetValue( "URL", myURL );
 
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
 
     EN.Select( "Pay Method", "Visa");
     EN.MemorizeLabel( "Pay Method", "SeRadioLabel_MemorizeValue_2" );
@@ -1012,21 +1014,21 @@ public class SeRadioList_EN_Test extends OKWTestBase
   }
 
   /** \~german
-   *  Prüft die Methode SeRadioList.LogValue.
+   *  Prüft die Methode SeAriaRadioGroup.LogValue.
    *  
    * Prüft ob der aktuell Wert "gelogged" wird. 
    *  \~
    *  @author Zoltan Hrabovszki
    *  \date 2016.12.23
    */
-  @Test
+  //@Test
   public void tcLogLabel() throws Exception
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+    EN.SetValue( "URL", myURL );
 
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
 
     EN.Select( "Pay Method", "Visa");
     EN.LogLabel( "Pay Method" );
@@ -1037,7 +1039,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
 
   
   /** \~german
-   *  Prüft die Methode SeRadioList.MemorizeLabel.
+   *  Prüft die Methode SeAriaRadioGroup.MemorizeLabel.
    *  
    * Prüft ob IGNORE ein OKWNotAllowedValueException auslöst.
    * 
@@ -1045,14 +1047,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
    *  @author Zoltan Hrabovszki
    *  \date 2016.12.23
    */
-  @Test // ( expected = OKWNotAllowedValueException.class )
+  //@Test // ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeLabel_IGNORE_OKWNotAllowedValueException() throws Exception
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+    EN.SetValue( "URL", myURL );
 
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
 
     EN.Select( "Pay Method", "Visa");
     EN.MemorizeLabel( "Pay Method", "${IGNORE}" );
@@ -1066,7 +1068,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
 
   
   /** \~german
-   *  Prüft die Methode SeRadioList.MemorizeLabel.
+   *  Prüft die Methode SeAriaRadioGroup.MemorizeLabel.
    *  
    * Prüft ob "" ein OKWNotAllowedValueException auslöst.
    * 
@@ -1074,14 +1076,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
    *  @author Zoltan Hrabovszki
    *  \date 2016.12.23
    */
-  @Test // ( expected = OKWNotAllowedValueException.class )
+  //@Test // ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeLabel_Empty_OKWNotAllowedValueException() throws Exception
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
+    EN.SetValue( "URL", myURL );
 
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
     EN.MemorizeLabel( "Pay Method", "" );
 
     Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
@@ -1090,37 +1092,38 @@ public class SeRadioList_EN_Test extends OKWTestBase
     });
   }
   
-  // / \brief
-  // / Prüft die Methode SeLink.MemorizeToolTip.
-  // /
-  @Test
+  /**
+   *  Prüft die Methode SeLink.MemorizeToolTip.
+   * @throws Exception
+   */
+  //@Test
   public void tcMemorizeToolTip() throws Exception
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio_inactive.htm" );
+    EN.SetValue( "URL", myURL );
 
-    EN.SelectWindow( "SeRadioList" );
+    EN.SelectWindow( "SeAriaRadioGroup" );
 
-    EN.MemorizeTooltip( "Pay Method", "SeRadioList_MemorizeTooltip_1" );
-    assertEquals( "fieldset-title", okw.OKW_Memorize_Sngltn.getInstance().get( "SeRadioList_MemorizeTooltip_1" ) );
+    EN.MemorizeTooltip( "Pay Method", "SeAriaRadioGroup_MemorizeTooltip_1" );
+    assertEquals( "fieldset-title", okw.OKW_Memorize_Sngltn.getInstance().get( "SeAriaRadioGroup_MemorizeTooltip_1" ) );
 
     EN.StopApp( ApplicationName );
     EN.EndTest();
   }
 
-  // / \brief
-  // / Tooltip eines Textfeldes Prüfen.
-  // /
-  @Test
+  /**
+   *  Tooltip eines Textfeldes Prüfen.
+   * @throws Exception
+   */
+  //@Test
   public void tcLogToolTip() throws Exception
   {
 	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
-
-	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
-
-	    EN.SelectWindow( "SeRadioList" );
+	    EN.SetValue( "URL", myURL );
+	    
+	    EN.SelectWindow( "SeAriaRadioGroup" );
 	    
 	    EN.Select( "Pay Method", "Visa" );
 	    EN.LogTooltip( "Pay Method" );
@@ -1129,36 +1132,34 @@ public class SeRadioList_EN_Test extends OKWTestBase
 	    EN.EndTest();
 }
 
-  @Test
+  //@Test
   public void tcVerifyValue() throws Exception
   {
 	  this.tcSelect_SingelValue();
   }
 
   
-  @Test
+  //@Test
   public void tcVerifyValue_EMPTY() throws Exception
   {
 	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
-
-	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
-
-	    EN.SelectWindow( "SeRadioList" );
+	    EN.SetValue( "URL", myURL );
+	    
+	    EN.SelectWindow( "SeAriaRadioGroup" );
 	    
 	    EN.VerifyValue( "Pay Method", "${EMPTY}" );
 }
 
   
-  @Test // ( expected = OKWVerifyingFailsException.class )
+  //@Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyValue_Fail_OKWVerifyingFailsException() throws Exception
   {
 	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
-
-	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
-
-	    EN.SelectWindow( "SeRadioList" );
+	    EN.SetValue( "URL", myURL );
+	    
+	    EN.SelectWindow( "SeAriaRadioGroup" );
 	    
 	    EN.Select( "Pay Method", "Visa" );
 	    EN.VerifyValue( "Pay Method", "American Express" );
@@ -1170,14 +1171,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
 }
 
   
-  @Test
+  //@Test
   public void tcVerifyValueWCM() throws Exception
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
-
-    EN.SelectWindow( "SeRadioList" );
+    EN.SetValue( "URL", myURL );
+    
+    EN.SelectWindow( "SeAriaRadioGroup" );
     
     EN.Select( "Pay Method", "American Express" );
     EN.VerifyValueWCM( "Pay Method", "American*" );
@@ -1187,14 +1188,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
 }
 
 
-  @Test // ( expected = OKWVerifyingFailsException.class )
+  //@Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyValueWCM_Fail_OKWVerifyingFailsException() throws Exception
   {
     EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
-
-    EN.SelectWindow( "SeRadioList" );
+    EN.SetValue( "URL", myURL );
+    
+    EN.SelectWindow( "SeAriaRadioGroup" );
     
     EN.Select( "Pay Method", "American Express" );
     EN.VerifyValueWCM( "Pay Method", "Vis*" );
@@ -1208,14 +1209,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
 }
 
   
-  @Test
+  //@Test
   public void tcVerifyValueREGX() throws Exception
   {
 	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
-	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
-
-	    EN.SelectWindow( "SeRadioList" );
+	    EN.SetValue( "URL", myURL );
+	    
+	    EN.SelectWindow( "SeAriaRadioGroup" );
 	    
 	    EN.Select( "Pay Method", "American Express" );
 	    EN.VerifyValueREGX( "Pay Method", "American.*" );
@@ -1225,14 +1226,14 @@ public class SeRadioList_EN_Test extends OKWTestBase
   }
 
   
-  @Test // ( expected = OKWVerifyingFailsException.class )
+  //@Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyValueREGX_Fail_OKWVerifyingFailsException() throws Exception
   {
 	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
-	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
-
-	    EN.SelectWindow( "SeRadioList" );
+	    EN.SetValue( "URL", myURL );
+	    
+	    EN.SelectWindow( "SeAriaRadioGroup" );
 	    
 	    EN.Select( "Pay Method", "American Express" );
 	    EN.VerifyValueREGX( "Pay Method", "Vis.*" );
