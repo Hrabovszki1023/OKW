@@ -179,7 +179,7 @@ public interface IOKW_State
      *  @return Liefert true, wenn ExpVal übereinstimmt, sonst false. Es wird kein OKWVerifyingFailsException ausgelöst.
      * 
      *  \~english
-     *  Checks the default value of an object (in most cases this is the displayed text).
+     *  Checks the value of an object (in most cases this is the displayed text).
      *  
      *  _Example:_ Check whether the object "MyObject" contains the expected value "MyValue":_<br>
      *  \verbatim VerifyValue( "MyCategorie", "MyValue" ) \endverbatim
