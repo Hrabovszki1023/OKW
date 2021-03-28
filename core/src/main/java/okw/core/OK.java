@@ -379,7 +379,7 @@ public class OK implements IOKW_State
 
 			// String lvsLM = LM.GetMessage( "LogExists", "LogValue", lvsActual );
 			// Print: "Value found: '%P1%'"
-			String lvsLM = PROP.getProperty( "ok.Log.ValueFound.${LANGUAGE}", lvsActual );
+			String lvsLM = PROP.getProperty( "ok.Log.ValueFound.${LANGUAGE}", null, lvsActual );
 			Log.LogPrint( lvsLM );
 		}
 		catch (Exception e)
@@ -400,7 +400,7 @@ public class OK implements IOKW_State
 
 			// String lvsLM = LM.GetMessage( "LogHasFocus", "LogValue", lvsActual );
 			// Print: "Value found: '%P1%'"
-			String lvsLM = PROP.getProperty( "ok.Log.ValueFound.${LANGUAGE}", lvsActual );
+			String lvsLM = PROP.getProperty( "ok.Log.ValueFound.${LANGUAGE}", null, lvsActual );
 			Log.LogPrint( lvsLM );
 		}
 		catch (Exception e)
@@ -421,7 +421,7 @@ public class OK implements IOKW_State
 
 			//String lvsLM = LM.GetMessage( "LogIsActive", "LogValue", lvsActual );
 			// Print: "Value found: '%P1%'"
-			String lvsLM = PROP.getProperty( "ok.Log.ValueFound.${LANGUAGE}", lvsActual );
+			String lvsLM = PROP.getProperty( "ok.Log.ValueFound.${LANGUAGE}", null, lvsActual );
 			Log.LogPrint( lvsLM );
 		}
 		catch (Exception e)
@@ -488,7 +488,7 @@ public class OK implements IOKW_State
 		{
 			ArrayList<String> actualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).LogSelected();
 
-			String lvsLM = PROP.getProperty( "ok.Log.ListValuesFound.${LANGUAGE}" );
+			String lvsLM = PROP.getProperty( "ok.Log.ListValuesFound.${LANGUAGE}", null, actualValues.toString() );
 			Log.ResOpenList( lvsLM );
 
 			for ( String Value : actualValues )
@@ -591,7 +591,7 @@ public class OK implements IOKW_State
 				// Wenn fpsMemKeyName = IGNORE oder "" ist ->
 				// OKWNotAllowedValueException auslösen...
 
-				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", MemKey );
+				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", null, MemKey );
 				throw new OKWNotAllowedValueException( lvsLM );
 			}
 			else
@@ -656,7 +656,7 @@ public class OK implements IOKW_State
 			{
 				// Wenn fps_MemKeyName = IGNORE oder "" ist ->
 				// OKWNotAllowedValueException auslösen...
-				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", MemKey );
+				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", null, MemKey );
 				throw new OKWNotAllowedValueException( lvsLM );
 			}
 			else
@@ -689,7 +689,7 @@ public class OK implements IOKW_State
 			{
 				// Wenn fpsMemKeyName = IGNORE oder "" ist ->
 				// OKWNotAllowedValueException auslösen...
-				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", MemKey );
+				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", null, MemKey );
 				throw new OKWNotAllowedValueException( lvsLM );
 			}
 			else
@@ -721,7 +721,7 @@ public class OK implements IOKW_State
 			{
 				// Wenn fps_MemKeyName = IGNORE oder "" ist ->
 				// OKWNotAllowedValueException auslösen...
-				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", MemKey );
+				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", null, MemKey );
 				throw new OKWNotAllowedValueException( lvsLM );
 			}
 			else
@@ -753,7 +753,7 @@ public class OK implements IOKW_State
 			{
 				// Wenn fps_MemKeyName = IGNORE oder "" ist ->
 				// OKWNotAllowedValueException auslösen...
-				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", MemKey );
+				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", null, MemKey );
 				throw new OKWNotAllowedValueException( lvsLM );
 			}
 			else
@@ -785,7 +785,7 @@ public class OK implements IOKW_State
 			{
 				// Wenn fps_MemKeyName = IGNORE oder "" ist ->
 				// OKWNotAllowedValueException auslösen...
-				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", MemKey );
+				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", null, MemKey );
 				throw new OKWNotAllowedValueException( lvsLM );
 			}
 			else
@@ -818,7 +818,7 @@ public class OK implements IOKW_State
 			{
 				// Wenn fpsMemKeyName = IGNORE oder "" ist ->
 				// OKWNotAllowedValueException auslösen...
-				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", MemKey );
+				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", null, MemKey );
 				throw new OKWNotAllowedValueException( lvsLM );
 			}
 			else
@@ -850,7 +850,7 @@ public class OK implements IOKW_State
 			{
 				// Wenn fpsMemKeyName = IGNORE oder "" ist ->
 				// OKWNotAllowedValueException auslösen...
-				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", MemKey );
+				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", null, MemKey );
 				throw new OKWNotAllowedValueException( lvsLM );
 
 			}
@@ -883,7 +883,7 @@ public class OK implements IOKW_State
 			{
 				// Wenn fpsMemKeyName = IGNORE oder "" ist ->
 				// OKWNotAllowedValueException auslösen...
-				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", MemKey );
+				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", null, MemKey );
 				throw new OKWNotAllowedValueException( lvsLM );
 
 			}
@@ -1661,7 +1661,7 @@ public class OK implements IOKW_State
 				else
 				{
 					// Both conditions are not fulfilled: An exception must be thrown since no other value is allowed here.
-					String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.YesNoIgnore.${LANGUAGE}", ExpVal );
+					String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.YesNoIgnore.${LANGUAGE}", null, ExpVal );
 					throw new OKWNotAllowedValueException( lvsLM );
 				}
 			}
@@ -1716,7 +1716,7 @@ public class OK implements IOKW_State
 				else
 				{
 					// Both conditions are not fulfilled: An exception must be thrown since no other value is allowed here.
-					String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.YesNoIgnore.${LANGUAGE}", ExpVal );
+					String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.YesNoIgnore.${LANGUAGE}", null, ExpVal );
 					throw new OKWNotAllowedValueException( lvsLM );
 				}
 			}
@@ -1773,7 +1773,7 @@ public class OK implements IOKW_State
 				else
 				{
 					// Both conditions are not fulfilled: An exception must be thrown since no other value is allowed here.
-					String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.YesNoIgnore.${LANGUAGE}", ExpVal );
+					String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.YesNoIgnore.${LANGUAGE}", null, ExpVal );
 					throw new OKWNotAllowedValueException( lvsLM );
 				}
 			}
@@ -2706,7 +2706,7 @@ public class OK implements IOKW_State
 				{
 					// Wenn ExpVal = keine Zahl enthält -> OKWNotAllowedValueException auslösen...
 					// OKWNotAllowedValueException.IntegerOnly
-					String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.IntegerOnly.${LANGUAGE}", ExpVal );
+					String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.IntegerOnly.${LANGUAGE}", null, ExpVal );
 					throw new OKWNotAllowedValueException( lvsLM );
 				}
 
@@ -3453,7 +3453,7 @@ public class OK implements IOKW_State
 				// 2. Konvertieren des Pfad separators.
 				lvsPATH = OKW_FileHelper.convertDirectorySeperator( lvsPATH );
 
-				String lsvLog = PROP.getProperty( "ok.FileCreate.ResolvedPath.${LANGUAGE}", lvsPATH );
+				String lsvLog = PROP.getProperty( "ok.FileCreate.ResolvedPath.${LANGUAGE}", null, lvsPATH );
 				Log.LogPrint( lsvLog );
 
 				OKW_FileHelper.createFile( lvsPATH );
@@ -3490,7 +3490,7 @@ public class OK implements IOKW_State
 				// 2. Konvertieren des Pfad separators.
 				lvsPathAndFileName = OKW_FileHelper.convertDirectorySeperator( lvsPathAndFileName );
 
-				String lsvLog = PROP.getProperty( "ok.FileDelete.ResolvedPath.${LANGUAGE}", lvsPathAndFileName );
+				String lsvLog = PROP.getProperty( "ok.FileDelete.ResolvedPath.${LANGUAGE}", null, lvsPathAndFileName );
 				Log.LogPrint( lsvLog );
 
 				// Basis-Funktion aufrufen...
@@ -3535,7 +3535,7 @@ public class OK implements IOKW_State
 				lvsDirPath = OKW_FileHelper.convertDirectorySeperator( lvsDirPath );
 				lvsFileMatch = OKW_FileHelper.convertDirectorySeperator( lvsFileMatch );
 
-				String lsvLog = PROP.getProperty( "ok.FileDelete.ResolvedPath.${LANGUAGE}", lvsFileMatch );
+				String lsvLog = PROP.getProperty( "ok.FileDelete.ResolvedPath.${LANGUAGE}", null, lvsFileMatch );
 				Log.LogPrint( lsvLog );
 
 				// Basis-Funktion aufrufen...
@@ -3572,7 +3572,7 @@ public class OK implements IOKW_State
 				// 2. Konvertieren des Pfad separators.
 				lvsPATH = OKW_FileHelper.convertDirectorySeperator( lvsPATH );
 
-				String lsvLog = PROP.getProperty( "ok.DirectoryDelete.ResolvedPath.${LANGUAGE}", lvsPATH );
+				String lsvLog = PROP.getProperty( "ok.DirectoryDelete.ResolvedPath.${LANGUAGE}", null, lvsPATH );
 				Log.LogPrint( lsvLog );
 
 				// Basis-Funktion aufrufen...
@@ -3610,7 +3610,7 @@ public class OK implements IOKW_State
 				// 2. Konvertieren des Pfad separators.
 				lvsPATH = OKW_FileHelper.convertDirectorySeperator( lvsPATH );
 
-				String lsvLog = PROP.getProperty( "ok.DirectoryCreate.ResolvedPath.${LANGUAGE}", lvsPATH );
+				String lsvLog = PROP.getProperty( "ok.DirectoryCreate.ResolvedPath.${LANGUAGE}", null, lvsPATH );
 				Log.LogPrint( lsvLog );
 
 				// Basis-Funktion aufrufen...
@@ -3650,7 +3650,7 @@ public class OK implements IOKW_State
 				// 2. Konvertieren des Pfad separators.
 				lvsPathAndFileName = OKW_FileHelper.convertDirectorySeperator( lvsPathAndFileName );
 
-				String lsvLog = PROP.getProperty( "ok.VerifyFileExists.ResolvedPath.${LANGUAGE}", lvsPathAndFileName );
+				String lsvLog = PROP.getProperty( "ok.VerifyFileExists.ResolvedPath.${LANGUAGE}", null, lvsPathAndFileName );
 				Log.LogPrint( lsvLog );
 
 				// Basis-Funkton aufrufen...
@@ -3664,7 +3664,7 @@ public class OK implements IOKW_State
 			else
 			{
 				// Both conditions are not fulfilled: An exception must be thrown since no other value is allowed here.
-				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.YesNoIgnore.${LANGUAGE}", ExpVal );
+				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.YesNoIgnore.${LANGUAGE}", null, ExpVal );
 				throw new OKWNotAllowedValueException( lvsLM );
 			}
 		}
@@ -3702,7 +3702,7 @@ public class OK implements IOKW_State
 				// 2. Konvertieren des Pfad separators.
 				lvsPathAndFileName = OKW_FileHelper.convertDirectorySeperator( lvsPathAndFileName );
 
-				String lsvLog = PROP.getProperty( "ok.VerifyIsFile.ResolvedPath.${LANGUAGE}", lvsPathAndFileName );
+				String lsvLog = PROP.getProperty( "ok.VerifyIsFile.ResolvedPath.${LANGUAGE}", null, lvsPathAndFileName );
 				Log.LogPrint( lsvLog );
 
 				// Basis-Funkton aufrufen...
@@ -3716,7 +3716,7 @@ public class OK implements IOKW_State
 			else
 			{
 				// Both conditions are not fulfilled: An exception must be thrown since no other value is allowed here.
-				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.YesNoIgnore.${LANGUAGE}", ExpVal );
+				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.YesNoIgnore.${LANGUAGE}", null, ExpVal );
 				throw new OKWNotAllowedValueException( lvsLM );
 			}
 		}
@@ -3754,7 +3754,7 @@ public class OK implements IOKW_State
 				// 2. Konvertieren des Pfad separators.
 				lvsPathAndFileName = OKW_FileHelper.convertDirectorySeperator( lvsPathAndFileName );
 
-				String lsvLog = PROP.getProperty( "ok.VerifyIsDirectory.ResolvedPath.${LANGUAGE}", lvsPathAndFileName );
+				String lsvLog = PROP.getProperty( "ok.VerifyIsDirectory.ResolvedPath.${LANGUAGE}", null, lvsPathAndFileName );
 				Log.LogPrint( lsvLog );
 
 				// Basis-Funkton aufrufen...
@@ -3768,7 +3768,7 @@ public class OK implements IOKW_State
 			else
 			{
 				// Both conditions are not fulfilled: An exception must be thrown since no other value is allowed here.
-				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.YesNoIgnore.${LANGUAGE}", ExpVal );
+				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.YesNoIgnore.${LANGUAGE}", null, ExpVal );
 				throw new OKWNotAllowedValueException( lvsLM );
 			}
 		}
@@ -3805,7 +3805,7 @@ public class OK implements IOKW_State
 				// 2. Konvertieren des Pfad separators.
 				lvsPath = OKW_FileHelper.convertDirectorySeperator( lvsPath );
 
-				String lsvLog = PROP.getProperty( "ok.VerifyDirectoryExists.ResolvedPath.${LANGUAGE}", lvsPath );
+				String lsvLog = PROP.getProperty( "ok.VerifyDirectoryExists.ResolvedPath.${LANGUAGE}", null, lvsPath );
 				Log.LogPrint( lsvLog );
 
 				// Basis-Funkton aufrufen...
@@ -3819,7 +3819,7 @@ public class OK implements IOKW_State
 			else
 			{
 				// Both conditions are not fulfilled: An exception must be thrown since no other value is allowed here.
-				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.YesNoIgnore.${LANGUAGE}", ExpVal );
+				String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.YesNoIgnore.${LANGUAGE}", null, ExpVal );
 				throw new OKWNotAllowedValueException( lvsLM );
 			}
 		}
@@ -3871,7 +3871,7 @@ public class OK implements IOKW_State
 				{
 					// Wenn ExpVal = keine Zahl enthält -> OKWNotAllowedValueException auslösen...
 					// OKWNotAllowedValueException.IntegerOnly
-					String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.IntegerOnly.${LANGUAGE}", ExpVal );
+					String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.IntegerOnly.${LANGUAGE}", null, ExpVal );
 					throw new OKWNotAllowedValueException( lvsLM );
 				}
 
