@@ -28,7 +28,7 @@ public class frmSeAriaRadioGroup extends SeBrowserChild
     
     /**
      *  Pizza Delivery
-     *  Mögliche Werte: "Regular crust", "Deep dish", "Thin crust"
+     *  Mögliche Werte: "Pickup" "Home Delivery" "Dine in"
      */
     @OKW( FN = "Pizza Delivery", VerifyLabel_PT = 500, VerifyLabel_TO = 1, VerifyValue_PT = 500, VerifyValue_TO = 1, VerifyTooltip_PT = 500, VerifyTooltip_TO = 1, VerifyCaption_PT = 500, VerifyCaption_TO = 1, VerifyIsActive_PT = 500, VerifyIsActive_TO = 1, VerifyExists_PT = 500, VerifyExists_TO = 1, VerifyHasFocus_PT = 500, VerifyHasFocus_TO = 1 )
     public SeAnyChildWindow  mySeRadioGroup_2 = new SeAriaRadioGroup( "//*[@aria-labelledby='group_label_2']", this.getLOCATOR() );
