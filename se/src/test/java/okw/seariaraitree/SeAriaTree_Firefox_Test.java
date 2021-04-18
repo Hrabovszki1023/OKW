@@ -49,7 +49,7 @@ import org.junit.jupiter.api.*;
 * 
 * @author zoltan
 */
-public class SeAriaRadio_Firefox_Test extends SeAriaTreeTest
+public class SeAriaTree_Firefox_Test extends SeAriaTreeTest
 {
 	protected static Log2HTML myLog2HTML = null;
 
