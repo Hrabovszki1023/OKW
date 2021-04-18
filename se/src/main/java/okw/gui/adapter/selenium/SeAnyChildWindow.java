@@ -48,6 +48,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
 
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
+import okw.exceptions.OKWGUIException;
 import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.gui.*;
 import okw.gui.adapter.selenium.webdriver.SeDriver;
@@ -920,6 +921,28 @@ public class SeAnyChildWindow extends AnyChildwindow
 		this.WaitForInteraction( () -> {this.Me().sendKeys( "" );} );
 	}
 
+	/**
+	 *  \~german
+	 */
+	public void setValue( ArrayList<String> Val )
+	{
+		// Wenn GUI-Objekt nicht gefunden wird, mit OKWGUIObjectNotFoundException aussteigen
+		this.SetFocus();
+
+		this.WaitForInteraction( () -> {this.Me().clear();} );
+
+		if ( Val.get( 0 ).equals( okw.OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
+		{
+			// this.WaitForInteraction( () -> {this.Me().clear();} );
+		}
+		else
+		{
+			String resolvedValue = Val.get( 0 );
+			this.WaitForInteraction( (  ) -> { this.Me().sendKeys( resolvedValue ); } );
+		}
+	}
+
+	
 	/** \~german
 	 *  Methode kann hier nicht allgemein gültig implementiert werden.
 	 *  
@@ -932,8 +955,30 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 */
 	public void SetValue( ArrayList<String> Values )
 	{
-		String lvsLM = this.LM.GetMessage( "Common", "OKWGUIObjectNotFoundException", "SetValue()" ); // FIXME Flasche Fehlemeldung? Prüfen
-		throw new OKWFrameObjectMethodNotImplemented( lvsLM );
+		String contentEditable = this.getAttribute( "contentEditable" ).get(0);
+
+		switch (contentEditable.toLowerCase())
+		{
+		case "inherit":
+			// The element's content is editable if its parent element is editable
+			this.LogPrint("Attribute contentEditable = \"inherit\" - Try to SetValue()");
+			this.setValue(Values);
+			break;
+		case "true":
+			this.LogPrint("Attribute contentEditable = \"true\" - Try to SetValue()");
+			this.setValue(Values);
+			break;
+		case "false":
+			// The content is editable
+			throw new OKWGUIException("GUI-Object not Editable: contentEditable = \"false\"");
+			// break;
+		default:
+			this.LogPrint("Attribute contentEditable = \"" + contentEditable + "\" has an unexpected value  - Try to SetValue()");
+			this.setValue(Values);
+			break;
+		}
+
+		return;
 	}
 
 	/** \~german
@@ -1350,7 +1395,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 				{
 
 					Method2Call.run();
-					
+
 					LogPrint( "Transaction successful!" );
 
 					// No mistake: Get out of the loop.
@@ -1469,9 +1514,9 @@ public class SeAnyChildWindow extends AnyChildwindow
 		try
 		{
 			OKW myOKW = FrameObjectDictionary_Sngltn.getInstance().getOKW( this.getKN() );
-			
+
 			LogPrint( "[WaitForInteractionReturnString] KN: " + this.getKN() );
-			
+
 			// Determine TimeOut values
 			OKW_TimeOut timeout = new OKW_TimeOut( myOKW.WaitForMe_TO(), myOKW.WaitForMe_PT() );
 
@@ -1486,7 +1531,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 				{
 
 					lvsReturn = Method2Call.get();
-					
+
 					LogPrint( "Transaction successful!" );
 
 					// No mistake: Get out of the loop.

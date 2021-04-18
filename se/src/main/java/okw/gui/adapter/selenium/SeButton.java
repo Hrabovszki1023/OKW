@@ -35,7 +35,7 @@
 
     Sie sollten eine Kopie der GNU General Public License zusammen mit 
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package okw.gui.adapter.selenium;
 
@@ -121,68 +121,84 @@ import okw.gui.OKWLocatorBase;
 public class SeButton extends SeAnyChildWindow
 {
 
-    /**
-     * \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...) \~
-     * 
-     * @author Zoltán Hrabovszki
-     * \date 2013.05.03
-     */
-    public SeButton( String Locator, OKWLocatorBase... Locators )
-    {
-        super( Locator, Locators );
-    }
+	/**
+	 * \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...) \~
+	 * 
+	 * @author Zoltán Hrabovszki
+	 * \date 2013.05.03
+	 */
+	public SeButton( String Locator, OKWLocatorBase... Locators )
+	{
+		super( Locator, Locators );
+	}
 
 
-//    /**
-//     * \~german Ermittelt den textuellen Inhalt der Caption/Überschrift des
-//     * Objektes.
-//     * 
-//     * @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
-//     * \~english
-//     * \~
-//     * @author Zoltán Hrabovszki
-//     * @throws Exception
-//     * \date 2013.12.07
-//     */
-//    //@Override // TODO define Prototype in BaseClass!
-//    public ArrayList<String> __getCaption()
-//    {
-//        ArrayList<String> lvLsReturn = new ArrayList<String>();
-//        try
-//        {
-//            this.LogFunctionStartDebug( "GetCaption" );
-//
-//            // Warten auf das Objekt. Wenn es nicht existiert mit Exception
-//            // beenden...
-//            this.WaitForMe();
-//
-//            // The Attribute "textContent" wird als Beschriftung angezeigt...
-//            String myAttribute = this.Me().getAttribute( "textContent" );
-//            myAttribute = StringUtils.normalizeSpace( myAttribute );
-//            
-//            lvLsReturn.add( myAttribute );
-//        }
-//        finally
-//        {
-//            this.LogFunctionEndDebug( lvLsReturn );
-//        }
-//
-//        return lvLsReturn;
-//    }
+	//    /**
+	//     * \~german Ermittelt den textuellen Inhalt der Caption/Überschrift des
+	//     * Objektes.
+	//     * 
+	//     * @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
+	//     * \~english
+	//     * \~
+	//     * @author Zoltán Hrabovszki
+	//     * @throws Exception
+	//     * \date 2013.12.07
+	//     */
+	//    //@Override // TODO define Prototype in BaseClass!
+	//    public ArrayList<String> __getCaption()
+	//    {
+	//        ArrayList<String> lvLsReturn = new ArrayList<String>();
+	//        try
+	//        {
+	//            this.LogFunctionStartDebug( "GetCaption" );
+	//
+	//            // Warten auf das Objekt. Wenn es nicht existiert mit Exception
+	//            // beenden...
+	//            this.WaitForMe();
+	//
+	//            // The Attribute "textContent" wird als Beschriftung angezeigt...
+	//            String myAttribute = this.Me().getAttribute( "textContent" );
+	//            myAttribute = StringUtils.normalizeSpace( myAttribute );
+	//            
+	//            lvLsReturn.add( myAttribute );
+	//        }
+	//        finally
+	//        {
+	//            this.LogFunctionEndDebug( lvLsReturn );
+	//        }
+	//
+	//        return lvLsReturn;
+	//    }
 
-    /**
-     * \~german Ein SeInputButton hat keinen Wert! -> OKWFrameObjectMethodNotImplemented Auslösen!
-     * 
-     * @return
-     * 
-     * \~english A SeInputButton has no value! -> Trigger
-     *         OKWFrameObjectMethodNotImplemented! \~
-     * @author Zoltán Hrabovszki
-     * \date 2016.10.06
-     */
-        @Override
-        public ArrayList<String> VerifyValue( )
-        {
-          throw new OKWFrameObjectMethodNotImplemented("The method 'public ArrayList<String> VerifyValue( )' is not defined for your GUI-Object. Please define first the methode!");
-        }
+	/**
+	 * \~german Ein SeButton hat keinen Wert! -> OKWFrameObjectMethodNotImplemented auslösen!
+	 * 
+	 * @return
+	 * 
+	 * \~english A SeInputButton has no value! -> Trigger
+	 *         OKWFrameObjectMethodNotImplemented! \~
+	 * @author Zoltán Hrabovszki
+	 * \date 2016.10.06
+	 */
+	@Override
+	public ArrayList<String> VerifyValue( )
+	{
+		throw new OKWFrameObjectMethodNotImplemented("The method 'public ArrayList<String> VerifyValue( )' is not defined for your GUI-Object. Please define first the methode!");
+	}
+
+	/**
+	 * \~german Ein SeButton hat keinen Wert, somit kann kein wert gesetzt werden! -> OKWFrameObjectMethodNotImplemented Auslösen!
+	 * 
+	 * @return
+	 * 
+	 * \~english A SeButton has no value, therefore no value can be set! -> OKWFrameObjectMethodNotImplemented Trigger!
+	 * \~
+	 * @author Zoltán Hrabovszki
+	 * \date 2021.04.18
+	 */
+	@Override
+	public void SetValue( ArrayList<String> Values )
+	{
+		throw new OKWFrameObjectMethodNotImplemented("The method 'public void SetValue( ArrayList<String> Values )' is not defined for SeButton GUI-Object!");
+	}
 }

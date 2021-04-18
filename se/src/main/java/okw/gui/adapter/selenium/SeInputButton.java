@@ -176,4 +176,21 @@ public class SeInputButton extends SeAnyChildWindow
 		String lvsLM = this.LM.GetMessage( "Common", "OKWFrameObjectMethodNotImplemented", "getValue()" );
 		throw new OKWFrameObjectMethodNotImplemented( lvsLM );
 	}
+	
+	/**
+	 * \~german Ein SeInputButton hat keinen Wert, somit kann kein wert gesetzt werden! -> OKWFrameObjectMethodNotImplemented Auslösen!
+	 * 
+	 * @return
+	 * 
+	 * \~english A SeInputButton has no value, therefore no value can be set! -> OKWFrameObjectMethodNotImplemented Trigger!
+	 * \~
+	 * @author Zoltán Hrabovszki
+	 * \date 2021.04.18
+	 */
+	@Override
+	public void SetValue( ArrayList<String> Values )
+	{
+		throw new OKWFrameObjectMethodNotImplemented("The method 'public void SetValue( ArrayList<String> Values )' is not defined for SeButton GUI-Object!");
+	}
+
 }
