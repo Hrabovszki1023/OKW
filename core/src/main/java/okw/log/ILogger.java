@@ -71,7 +71,9 @@ public interface ILogger
      * @author Zoltan Hrabovszki
      * \date 2016-10-23
      */
-    void LogError(String Message);
+    void LogError(String Message, String Expected, String Actual);
+	
+    // TODO void LogProvisoryError(String Message, int RemainingTimeMs);
 
 
     /**
