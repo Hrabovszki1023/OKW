@@ -37,74 +37,33 @@ Sie sollten eine Kopie der GNU General Public License zusammen mit
 OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
 
-package okw.log.log2html;
+package okw.exceptions;
 
-public class LogTestcase extends LogBaseNode
+/** \~german
+ *  <code>OKWVerifyingExistsFailsException</code>-Ausnahme wird ausgelöst,
+ *  wenn ein Soll-Ist-Vergleich der Existenz/das Vorhandensein eines GUI-Objektes fehlschlägt.<br>
+ * 
+ *  \~english
+ *  <code>OKWVerifyingExistsFailsException</code>-Exception is thrown when a target/actual
+ *  comparison of the existence/existence of a GUI object fails.<br>
+ *  
+ *  \~
+ *  \author Zoltán Hrabovszki
+ *  \date 2021.04.21
+ */
+public class OKWVerifyingExistsFailsException extends OKWVerifyingFailsException
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4827749401449144048L;
 
-    //private String info = "";
-    private String type = "TestCase";
-    
-	protected LogTestcase( LogBase Parent, String fpsTestcaseName )
-	{
-		setParent(Parent);
-		myID = AllCount;
-				
-		this._Info = fpsTestcaseName;
-		
-		
-		// inkrementieren TestcaseCount
-		this.TestcaseCount();
-	}
-	
-	
-  @Override
-  protected void ErrorCount()
-  {
-      ErrorCount++;
-      
-      this.TestcaseFail();
+	public OKWVerifyingExistsFailsException()
+    {
+    }
 
-      this.bError = true;
-      
-      if ( myParent != null)
-      {
-          myParent.ErrorCount();
-      }
-  }
-  
-  
-  @Override
-  protected void ExceptionCount()
-  {
-      ExceptionCount++;
-
-      this.TestcaseFail();
-      
-      this.bException = true;
-      
-      if ( myParent != null)
-      {
-          myParent.ExceptionCount();
-      }
-  }
-  
-  @Override
-  protected void TestcaseFail()
-  {
-      if ( ! (this.bError || this.bException ) )
-         myParent.TestcaseFail();
-  }
-  
-  
-  @Override
-  protected String getJSONNodeProperties()
-  {
-      StringBuilder myJSON = new StringBuilder();
-      
-      myJSON.append(this.jsonElementComma( "name", this.getInfo() ));
-      myJSON.append(this.jsonElementComma( "type", this.type ));
-      
-      return myJSON.toString();
-  }
+    public OKWVerifyingExistsFailsException(String message)
+    {
+    	super(message);
+    }
 }

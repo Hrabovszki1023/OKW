@@ -66,7 +66,7 @@ public class LogSourceLocation extends LogBaseLeaf
 		
 		String lvsIndention = this.getLevelIndention();
 		
-		sbResult.append( lvsIndention + myIndentionBase + "<p class='LogPassed'>" + StringEscapeUtils.escapeHtml4(this.Info) + "</p>\n" );
+		sbResult.append( lvsIndention + myIndentionBase + "<p class='LogPassed'>" + getInfoAsHTML() + "</p>\n" );
 		
 		return sbResult.toString();
 	}

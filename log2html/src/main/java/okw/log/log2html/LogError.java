@@ -46,7 +46,7 @@ public class LogError extends LogBaseLeaf
 
     protected LogError( LogBase fpParent, String fpsInfo )
     {
-        Info = fpsInfo;
+        _Info = fpsInfo;
         myID = AllCount;
         setParent(fpParent);
         
@@ -72,7 +72,7 @@ public class LogError extends LogBaseLeaf
 
         String lvsIndention = this.getLevelIndention();
 
-        sbResult.append( lvsIndention + myIndentionBase + "<p class='LogError'>" + StringEscapeUtils.escapeHtml4(this.Info) + "</p>\n" );
+        sbResult.append( lvsIndention + myIndentionBase + "<p class='LogError'>" + getInfoAsHTML() + "</p>\n" );
 
         return sbResult.toString();
     }
@@ -82,7 +82,7 @@ public class LogError extends LogBaseLeaf
      {
          StringBuilder myJSON = new StringBuilder();
                      
-         myJSON.append( this.jsonElement( "Error",  this.Info ) );
+         myJSON.append( this.jsonElement( "Error",  getInfo() ) );
          
          return myJSON.toString();
      }

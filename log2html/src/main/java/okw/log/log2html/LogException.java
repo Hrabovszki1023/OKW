@@ -46,7 +46,7 @@ public class LogException extends LogBaseLeaf
 
     protected LogException( LogBase fpParent, String fpsInfo )
 	{
-		Info = fpsInfo;
+		_Info = fpsInfo;
 		myID = AllCount;
 		setParent(fpParent);		
 		
@@ -60,7 +60,7 @@ public class LogException extends LogBaseLeaf
 		
 		String lvsIndention = this.getLevelIndention();
 		
-		sbResult.append( lvsIndention + myIndentionBase + "<p class='LogException'>" + StringEscapeUtils.escapeHtml4(this.Info) + "</p>\n" );
+		sbResult.append( lvsIndention + myIndentionBase + "<p class='LogException'>" + getInfoAsHTML() + "</p>\n" );
 		
 		return sbResult.toString();
 	}
@@ -70,7 +70,7 @@ public class LogException extends LogBaseLeaf
      {
          StringBuilder myJSON = new StringBuilder();
                      
-         myJSON.append( this.jsonElement( "Exception",  this.Info ) );
+         myJSON.append( this.jsonElement( "Exception",  getInfo() ) );
          
          return myJSON.toString();
      }

@@ -39,14 +39,12 @@ OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 
 package okw.log.log2html;
 
-import org.apache.commons.text.StringEscapeUtils;
-
 public class LogPass extends LogBaseLeaf
 {
 	
 	protected LogPass( LogBase fpParent, String fpsInfo )
 	{
-		Info = fpsInfo;
+		_Info = fpsInfo;
 		myID = AllCount;
 		this.setParent(fpParent);		
 		PassedCount();	
@@ -59,7 +57,7 @@ public class LogPass extends LogBaseLeaf
 		
 		String lvsIndention = this.getLevelIndention();
 		
-		sbResult.append( lvsIndention + myIndentionBase + "<p class='LogPassed'>" + StringEscapeUtils.escapeHtml4(this.Info) + "</p>\n" );
+		sbResult.append( lvsIndention + myIndentionBase + "<p class='LogPassed'>" + getInfoAsHTML() + "</p>\n" );
 		
 		return sbResult.toString();
 	}
@@ -69,7 +67,7 @@ public class LogPass extends LogBaseLeaf
     {
         StringBuilder myJSON = new StringBuilder();
                     
-        myJSON.append( this.jsonElement( "Passed",  this.Info ) );
+        myJSON.append( this.jsonElement( "Passed",  getInfo() ) );
         
         return myJSON.toString();
     }

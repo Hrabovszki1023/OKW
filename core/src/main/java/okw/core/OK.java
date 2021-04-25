@@ -1656,7 +1656,7 @@ public class OK implements IOKW_State
 
 					String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
-					verification( lvsActual, lvsExpected );
+					verificationExists( lvsActual, lvsExpected );
 				}
 				else
 				{
@@ -1801,6 +1801,55 @@ public class OK implements IOKW_State
 		}
 	}
 
+	/**
+	 * \~german
+	 *  Prüft ob der gegebene boolische Wert "fpbExpected" innerhalb des Time Out "timeout" durch
+	 *  die gegebene Methode Method2Call gefunden wird.
+	 *  
+	 *  Die Absicht dieser Methode ist _nicht_ ein Soll/Ist vergleich, sondern das warten auf einen Werten,
+	 *  der sich einstellen sollte, wenn ein Testfall wie geplant abläuft. Der Soll-/Istvergleich wird in der jeweiligen
+	 *  okw.core.IOKW_State methode, die diese Methode ruft, durchgeführt.
+	 *  
+	 *  Die Methode wird aus folgenden zwei Gründen beendet:
+	 *  -# der erwartet Wert fpbExpected wurde gefunden
+	 *  -# der Time Out timeout ist erreicht
+	 * 
+	 * \see https://www.codementor.io/eh3rrera/using-java-8-method-reference-du10866vx
+	 * @param timeout Enthält die Timeout Daten.
+	 * @param fpbExpected Erwarteter Wert, der sich einstellen sollte.
+	 * @param Method2Call Functions Referenz auf die aufzurufende Methode
+	 * @return Liefert den gefundenen aktuellen Wert zurück.
+	 * 
+	 * \~english
+	 * 
+	 * \~
+	 * @author Zoltán Hrabovszki
+	 * \date 2014-01-09
+	 */
+
+	private void verificationExists( String fpsActual, String fpsExpected )
+	{
+		String lvsLM = "";
+		
+		if ( fpsActual.equals( fpsExpected ) )
+		{
+			Log.LogPass( fpsActual + " = " + fpsExpected );
+		}
+		else
+		{
+			LogVerifyError( fpsExpected, fpsActual );;
+
+			// Trigger OKWVerifyingFailsException!
+			
+			if ( "YES".equals(fpsExpected))
+				lvsLM = PROP.getProperty( "OKWVerifyingExistsFailsException.IsUnpresent.${LANGUAGE}", null, CO.getChildFN() );
+			else
+				lvsLM = PROP.getProperty( "OKWVerifyingExistsFailsException.IsPresent.${LANGUAGE}", null, CO.getChildFN() );
+			throw new OKWVerifyingExistsFailsException( lvsLM );
+		}
+	}
+
+	
 	private void verification( Integer fpiActual, Integer fpiExpected )
 	{
 		String fpsActual   = fpiActual.toString();

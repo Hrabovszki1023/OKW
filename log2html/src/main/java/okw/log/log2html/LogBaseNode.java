@@ -397,12 +397,12 @@ public class LogBaseNode extends LogBase
     {
         StringBuilder myJSON = new StringBuilder();
         
-        myJSON.append(this.jsonElementComma( "info", this.Info ));
+        myJSON.append(this.jsonElementComma( "info", getInfo() ));
         
         return myJSON.toString();
     }
     
-    protected String getJSONResult()
+    protected String __getJSONResult()
     {
     
         StringBuilder myJSON = new StringBuilder();

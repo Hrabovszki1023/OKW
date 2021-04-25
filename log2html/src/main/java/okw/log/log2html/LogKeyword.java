@@ -72,7 +72,7 @@ public class LogKeyword extends LogBaseNode
 			}
 		}
 
-		this.Info = StrBuilder.toString();
+		this._Info = StrBuilder.toString();
 	}
 
     @Override
@@ -81,7 +81,7 @@ public class LogKeyword extends LogBaseNode
         StringBuilder myJSON = new StringBuilder();
         
         myJSON.append( this.jsonElementComma( "type", this.type ) );
-        myJSON.append( this.jsonElementComma( "info", this.Info ) );
+        myJSON.append( this.jsonElementComma( "info", this.getInfo() ) );
         myJSON.append( this.jsonElementComma( "Keyword", this.Keyword ) );
 
         for ( Integer i = 0; i < Parameter.length; i++) { 

@@ -46,7 +46,7 @@ public class LogWarning extends LogBaseLeaf
 
 	protected LogWarning(LogBase fpParent, String fpsInfo)
 	{
-		Info = fpsInfo;
+		_Info = fpsInfo;
 		myID = AllCount;
 		this.setParent(fpParent);		
 		this.WarningCount();	
@@ -59,7 +59,7 @@ public class LogWarning extends LogBaseLeaf
 		
 		String lvsIndention = this.getLevelIndention();
 		
-		sbResult.append( lvsIndention + myIndentionBase + "<p class='LogWarning'>" + StringEscapeUtils.escapeHtml4(this.Info) + "</p>\n" );
+		sbResult.append( lvsIndention + myIndentionBase + "<p class='LogWarning'>" + getInfoAsHTML() + "</p>\n" );
 		
 		return sbResult.toString();
 	}
@@ -69,7 +69,7 @@ public class LogWarning extends LogBaseLeaf
     {
         StringBuilder myJSON = new StringBuilder();
                     
-        myJSON.append( this.jsonElement( "Warning",  this.Info ) );
+        myJSON.append( this.jsonElement( "Warning",  this.getInfo() ) );
         
         return myJSON.toString();
     }

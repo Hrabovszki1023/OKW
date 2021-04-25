@@ -76,7 +76,7 @@ public class LogSequence  extends LogBaseNode
 			}
 		}
 		
-		this.Info = StrBuilder.toString();		
+		this._Info = StrBuilder.toString();		
 	}
 
 
@@ -126,7 +126,7 @@ public class LogSequence  extends LogBaseNode
         StringBuilder myJSON = new StringBuilder();
         
         myJSON.append( this.jsonElementComma( "type", this.type ) );
-        myJSON.append( this.jsonElementComma( "info", this.Info ) );
+        myJSON.append( this.jsonElementComma( "info", this.getInfo() ) );
         
         return myJSON.toString();
     }

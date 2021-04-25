@@ -46,7 +46,7 @@ public class LogPrint extends LogBaseLeaf
 
 	public LogPrint( LogBase fpParent, String fpsInfo )
 	{
-		Info = fpsInfo;
+		_Info = fpsInfo;
 		myID = AllCount;
 		this.setParent(fpParent);
         PrintCount();
@@ -58,7 +58,7 @@ public class LogPrint extends LogBaseLeaf
 		
 		String lvsIndention = this.getLevelIndention();
 		
-		sbResult.append( lvsIndention + myIndentionBase + "<p class='LogPrint'>" + StringEscapeUtils.escapeHtml4(this.Info) + "</p>\n" );
+		sbResult.append( lvsIndention + myIndentionBase + "<p class='LogPrint'>" + getInfoAsHTML() + "</p>\n" );
 		
 		return sbResult.toString();
 	}
@@ -68,7 +68,7 @@ public class LogPrint extends LogBaseLeaf
     {
         StringBuilder myJSON = new StringBuilder();
                     
-        myJSON.append( this.jsonElement( "Print",  this.Info ) );
+        myJSON.append( this.jsonElement( "Print",  this.getInfo() ) );
         
         return myJSON.toString();
     }

@@ -151,7 +151,7 @@ public class Logger_Sngltn implements ILogger
         {
 			while ((line = reader.readLine()) != null)
 			{
-				this.LogPrint("-" + line );
+				this.LogPrint( line );
 			}
 			reader.close();
 			

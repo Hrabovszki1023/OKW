@@ -49,6 +49,7 @@ import okw.core.EN;
 import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.exceptions.OKWVerifyingFailsException;
 import okw.exceptions.OKWNotAllowedValueException;
+import okw.exceptions.OKWVerifyingExistsFailsException;
 
 /**
 * \~
@@ -533,7 +534,7 @@ public class SeCheckbox_EN_Test extends OKWTestBase
 
                 EN.StopApp( ApplicationName );
                 
-                Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+                Assertions.assertThrows( OKWVerifyingExistsFailsException.class, () ->
                 {
                     EN.EndTest();
                 });
@@ -566,9 +567,9 @@ public class SeCheckbox_EN_Test extends OKWTestBase
 
                 EN.VerifyExists("Salami", "NO");
                 
-                Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+                Assertions.assertThrows( OKWVerifyingExistsFailsException.class, () ->
                 {
-                    EN.EndTest();
+                	EN.EndTest();
                 });
         }
 

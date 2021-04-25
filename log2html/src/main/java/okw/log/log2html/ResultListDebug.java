@@ -53,7 +53,7 @@ public class ResultListDebug extends LogBaseNode
 		setParent(Parent);
 		myID = AllCount;
 
-		this.Info = fpsListHeader;
+		this._Info = fpsListHeader;
 	}
 
 	public void setReturn(String fpsReturn)
@@ -86,7 +86,7 @@ public class ResultListDebug extends LogBaseNode
 			sbResult.append( lvsIndention + myIndentionBase +  myIndentionBase + "<div class='FoldMe' onClick='div_change(" + myID.toString() + ")'></div>\n" );
 		}
 		
-		sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div class='Info_ResultListDebug'>" + StringEscapeUtils.escapeHtml4(this.Info) + "</div>\n" );
+		sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div class='Info_ResultListDebug'>" + StringEscapeUtils.escapeHtml4(this.getInfoAsHTML() ) + "</div>\n" );
 		
 		sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "</div>\n" ); // end Header
 		
@@ -113,7 +113,7 @@ public class ResultListDebug extends LogBaseNode
         StringBuilder myJSON = new StringBuilder();
         
         myJSON.append( this.jsonElementComma( "type", this.type ) );
-        myJSON.append( this.jsonElementComma( "info", this.Info ) );
+        myJSON.append( this.jsonElementComma( "info", this.getInfo() ) );
         
         return myJSON.toString();
     }

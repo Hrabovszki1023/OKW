@@ -41,8 +41,12 @@ package okw.log.log2html;
 
 import java.util.*;
 
-import org.apache.commons.text.StringEscapeUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.commonmark.node.*;
+import org.commonmark.parser.Parser;
+import org.commonmark.renderer.html.HtmlRenderer;
 
+import okw.OKW_Helper;
 
 public abstract class LogBase {
 	
@@ -50,7 +54,7 @@ public abstract class LogBase {
 
 	protected Integer myID = 0;
 
-	protected String Info = "";
+	protected String _Info = "";
 	
 	protected LogTimer myDuration = new LogTimer();
 	
@@ -259,6 +263,42 @@ public abstract class LogBase {
 		return bError;
 	}
 
+
+	protected String getInfoAsHTML()
+	{
+		String lvsRetern = Markdown2HTML(_Info);
+		
+		return lvsRetern;
+	}
+
+	protected String getInfo()
+	{
+		
+		return _Info;
+	}
+	
+	static String Markdown2HTML(String fpsMarkdown)
+	{
+		String lvsReturn;
+
+		if ( fpsMarkdown != null ) {
+			Parser parser = Parser.builder().build();
+			Node document = parser.parse( fpsMarkdown );
+			HtmlRenderer renderer = HtmlRenderer.builder().build();
+			lvsReturn = renderer.render(document);
+			
+			// <p> -Paragraf entfernen...
+			lvsReturn = lvsReturn.replaceAll("^<p>", "").replaceAll("</p>$", "");
+		}
+		else
+		{
+			lvsReturn = "";
+		}
+		
+		
+		return lvsReturn;
+	}
+	
     // Node Statistics
     protected abstract void ErrorCount();
  
@@ -351,12 +391,12 @@ public abstract class LogBase {
 
 		if (this.bException || this.bError )
 		{
-			sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div class='Info_Fail'>" + StringEscapeUtils.escapeHtml4( this.Info ) + "</div>\n" );
+			sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div class='Info_Fail'>" + getInfoAsHTML() + "</div>\n" );
 		}
 		else
 		{
 			sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div class='SuccessSign' title='Success...'></div>\n" );
-			sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div class='Info_Pass'>" + StringEscapeUtils.escapeHtml4( this.Info ) + "</div>\n" );
+			sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div class='Info_Pass'>" + getInfoAsHTML() + "</div>\n" );
 		}
 
 		sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "</div>\n" ); // end Header
