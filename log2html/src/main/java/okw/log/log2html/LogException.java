@@ -64,15 +64,5 @@ public class LogException extends LogBaseLeaf
 		
 		return sbResult.toString();
 	}
-	
-
-    protected String getJSONResult()
-     {
-         StringBuilder myJSON = new StringBuilder();
-                     
-         myJSON.append( this.jsonElement( "Exception",  this.Info ) );
-         
-         return myJSON.toString();
-     }
 
 }

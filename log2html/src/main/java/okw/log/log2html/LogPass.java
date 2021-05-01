@@ -63,14 +63,4 @@ public class LogPass extends LogBaseLeaf
 		
 		return sbResult.toString();
 	}
-
-    
-   protected String getJSONResult()
-    {
-        StringBuilder myJSON = new StringBuilder();
-                    
-        myJSON.append( this.jsonElement( "Passed",  this.Info ) );
-        
-        return myJSON.toString();
-    }
 }

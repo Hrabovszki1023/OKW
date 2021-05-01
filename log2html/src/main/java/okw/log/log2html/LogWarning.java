@@ -65,16 +65,7 @@ public class LogWarning extends LogBaseLeaf
 	}
 
     
-    protected String getJSONResult()
-    {
-        StringBuilder myJSON = new StringBuilder();
-                    
-        myJSON.append( this.jsonElement( "Warning",  this.Info ) );
-        
-        return myJSON.toString();
-    }
-    
-	protected void SetFail()
+    protected void SetFail()
 	{
 	}
 

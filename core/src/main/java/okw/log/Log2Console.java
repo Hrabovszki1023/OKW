@@ -82,6 +82,19 @@ public class Log2Console implements ILogger
 				System.out.println(this.BlanksBefore + OKW_Helper.repeatString("-", 80));      
 	        }
 
+	        
+			/**
+	         * \copydoc ILogger::LogError(String, STring, String)
+			 */
+			@Override
+	        public void LogError(String fps_Message, String fps_Expected, String fps_Actual)
+	        {
+				System.out.println(this.BlanksBefore + OKW_Helper.repeatString("-", 80));
+				System.out.println(this.BlanksBefore + "ERROR: " + fps_Message);
+				System.out.println(this.BlanksBefore + "Expected value: " + fps_Expected);
+				System.out.println(this.BlanksBefore + " Actuel value:: " + fps_Actual);
+				System.out.println(this.BlanksBefore + OKW_Helper.repeatString("-", 80));      
+	        }
 
 			/**
 	         * \copydoc ILogger::LogException(String)

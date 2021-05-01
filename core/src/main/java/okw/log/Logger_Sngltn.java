@@ -224,8 +224,25 @@ public class Logger_Sngltn implements ILogger
         }
     }
 
+
     /**
-     *  \brief
+     *  LogError Logs an error message with Expected and Actual to the results file.
+     * 
+     *  \param fps_Message
+     *  \param fps_Expected 
+     *  \param fps_Actual 
+     *  
+     */
+    public void LogError( String fps_Message, String fps_Expected, String fps_Actual)
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogError( fps_Message, fps_Expected, fps_Actual );
+        }
+    }
+    
+    
+    /**
      *  LogException Function:
      *  Logs a Script Exception to the results file.
      * 

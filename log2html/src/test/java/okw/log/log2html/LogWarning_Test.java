@@ -65,11 +65,11 @@ public class LogWarning_Test extends JUnitBase
              myLog.LogWarning( "LogWarning");
         myLog.LogTestcaseEnd();
 
-        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+        String Current = myLog.Result2HTML( "target/" + TestName + ".html" );
         
-        String Expected = this.loadUTF8FileFromResource( ClassName + "/" + TestName + ".json" );
+        String Expected = this.loadUTF8FileFromResource( ClassName + "/" + TestName + ".html" );
              
-        assertEquals( Expected, Current );      
+        assertEquals( Expected.trim(), Current.trim() );      
     }
 
     
@@ -82,11 +82,11 @@ public class LogWarning_Test extends JUnitBase
              myLog.LogWarning( "LogWarning");
         myLog.LogLocalACCallEnd( );
     
-        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+        String Current = myLog.Result2HTML( "target/" + TestName + ".html" );
         
-        String Expected = this.loadUTF8FileFromResource( ClassName + "/" + TestName + ".json" );
+        String Expected = this.loadUTF8FileFromResource( ClassName + "/" + TestName + ".html" );
              
-        assertEquals( Expected, Current );      
+        assertEquals( Expected.trim(), Current.trim() );      
     }
 
     
@@ -99,11 +99,11 @@ public class LogWarning_Test extends JUnitBase
              myLog.LogWarning( "LogWarning");
         myLog.LogRemoteACCallEnd( );
     
-        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+        String Current = myLog.Result2HTML( "target/" + TestName + ".html" );
         
-        String Expected = this.loadUTF8FileFromResource( ClassName + "/" + TestName + ".json" );
+        String Expected = this.loadUTF8FileFromResource( ClassName + "/" + TestName + ".html" );
              
-        assertEquals( Expected, Current );      
+        assertEquals( Expected.trim(), Current.trim() );      
     }
 
     
@@ -116,11 +116,11 @@ public class LogWarning_Test extends JUnitBase
              myLog.LogWarning( "LogWarning");
         myLog.LogSequenceEnd( );
     
-        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+        String Current = myLog.Result2HTML( "target/" + TestName + ".html" );
         
-        String Expected = this.loadUTF8FileFromResource( ClassName + "/" + TestName + ".json" );
+        String Expected = this.loadUTF8FileFromResource( ClassName + "/" + TestName + ".html" );
              
-        assertEquals( Expected, Current );      
+        assertEquals( Expected.trim(), Current.trim() );      
     }
 
     
@@ -137,11 +137,11 @@ public class LogWarning_Test extends JUnitBase
     
         myLog.LogTestcaseEnd();
         
-        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+        String Current = myLog.Result2HTML( "target/" + TestName + ".html" );
         
-        String Expected = this.loadUTF8FileFromResource( ClassName + "/" + TestName + ".json" );
+        String Expected = this.loadUTF8FileFromResource( ClassName + "/" + TestName + ".html" );
              
-        assertEquals( Expected, Current );      
+        assertEquals( Expected.trim(), Current.trim() );      
     }
 
     
@@ -154,11 +154,11 @@ public class LogWarning_Test extends JUnitBase
             myLog.LogWarning( "LogWarning");
             myLog.LogKeyWordEnd();
     
-        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+        String Current = myLog.Result2HTML( "target/" + TestName + ".html" );
         
-        String Expected = this.loadUTF8FileFromResource( ClassName + "/" + TestName + ".json" );
+        String Expected = this.loadUTF8FileFromResource( ClassName + "/" + TestName + ".html" );
              
-        assertEquals( Expected, Current );      
+        assertEquals( Expected.trim(), Current.trim() );      
     }
 
     @Test
@@ -170,11 +170,11 @@ public class LogWarning_Test extends JUnitBase
              myLog.LogWarning( "LogWarning");
         myLog.ResCloseList( );
     
-        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+        String Current = myLog.Result2HTML( "target/" + TestName + ".html" );
         
-        String Expected = this.loadUTF8FileFromResource( ClassName + "/" + TestName + ".json" );
+        String Expected = this.loadUTF8FileFromResource( ClassName + "/" + TestName + ".html" );
              
-        assertEquals( Expected, Current );      
+        assertEquals( Expected.trim(), Current.trim() );      
     }
     
 
@@ -187,10 +187,10 @@ public class LogWarning_Test extends JUnitBase
              myLog.LogWarning( "LogWarning");
         myLog.ResCloseListDebug( );
     
-        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+        String Current = myLog.Result2HTML( "target/" + TestName + ".html" );
         
-        String Expected = this.loadUTF8FileFromResource( ClassName + "/" + TestName + ".json" );
+        String Expected = this.loadUTF8FileFromResource( ClassName + "/" + TestName + ".html" );
              
-        assertEquals( Expected, Current );      
+        assertEquals( Expected.trim(), Current.trim() );      
     }
 }

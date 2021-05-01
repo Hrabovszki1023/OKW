@@ -135,70 +135,6 @@ public abstract class LogBase {
         return myIndention.toString();
     }    
 
-	protected String jsonElement( String Key, String Value)
-	{
-	       return "\"" + Key + "\": \"" + Value + "\"";
-	}
-
-    protected String jsonElementComma( String Key, String Value)
-    {
-        return "\"" + Key + "\": \"" + Value + "\",";
-    }
-    
-    protected String jsonElementComma( String Key, Integer Value )
-    {
-        return "\"" + Key + "\": \"" + Value.toString() + "\",";
-    }
-    
-
-    protected String jsonElement( String Key, Integer Value )
-    {
-         return "\"" + Key + "\": \""  + "\"";
-    }
-	   
-    protected String jsonStructure( String Key, String Value )
-    {
-        return  "\"" + Key + "\": {" + Value + " }";
-    }
-    
-    protected String jsonStructureComma( String Key, String Value )
-    {
-        return  "\"" + Key + "\": {" + Value + " },";
-    }
-    
-    protected String jsonArray( String Key, String Value )
-    {
-        StringBuilder myIndention = new StringBuilder();
-        
-        myIndention.append( "\"" + Key + "\": [" );
-        myIndention.append( Value );
-        myIndention.append( "]" );
-        
-        return  myIndention.toString();
-    }
-    
-    protected String jsonArrayElement( String Value )
-    {
-        StringBuilder myIndention = new StringBuilder();
-        
-        myIndention.append( "{" );
-        myIndention.append( Value );
-        myIndention.append( "}" );
-        
-        return  myIndention.toString();
-    }
-    
-    protected String jsonArrayElementComma( String Value )
-    {
-        StringBuilder myIndention = new StringBuilder();
-        
-        myIndention.append( "{" );
-        myIndention.append( Value );
-        myIndention.append( "}," );
-        
-        return  myIndention.toString();
-    }
-    
 	protected Boolean bWarning = false;
 	
 	protected void setWarning()
@@ -376,31 +312,4 @@ public abstract class LogBase {
 		
 		return sbResult.toString();
 	}
-
-
-	   protected String getJSONResult()
-	    {
-        
-	        StringBuilder myJSON = new StringBuilder();
-	        
-	        // Duration
-	        if ( "false".equals( okw.OKW_Properties.getInstance().getProperty( "Log2HTML.Test", "false" ) ) )
-	        {
-	            myJSON.append( this.jsonElement( "duration", this.myDuration.getSeconds("#0.000") ) );
-	        }
-	        else
-	        {
-	            myJSON.append( this.jsonElement( "duration", "Duration TestMode" ) );
-	        }	        
-	        Integer EC = 0;
-	        
-	        for( LogBase myLog: this.myLogs )
-	        {
-	            EC++;
-	            String Element = myLog.getClass().getSimpleName();
-	            myJSON.append( this.jsonStructure( Element + EC.toString(), myLog.getJSONResult() ) );
-	        }
-	        
-	        return myJSON.toString();
-	    }
 }

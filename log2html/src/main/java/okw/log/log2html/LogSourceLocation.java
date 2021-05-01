@@ -70,17 +70,4 @@ public class LogSourceLocation extends LogBaseLeaf
 		
 		return sbResult.toString();
 	}
-
-   @Override 
-   protected String getJSONResult()
-    {
-        StringBuilder myJSON = new StringBuilder();
-                    
-        myJSON.append( this.jsonElementComma( "Start",  this.Start ) );
-        myJSON.append( this.jsonElementComma( "End",  this.End ) );
-        myJSON.append( this.jsonElementComma( "featureName",  this.featureName ) );
-        myJSON.append( this.jsonElement( "sourceType",  this.sourceType ) );
-        
-        return myJSON.toString();
-    }
 }

@@ -106,16 +106,4 @@ public class ResultListDebug extends LogBaseNode
 		return sbResult.toString();
 	}
     
-
-    @Override
-    protected String getJSONNodeProperties()
-    {
-        StringBuilder myJSON = new StringBuilder();
-        
-        myJSON.append( this.jsonElementComma( "type", this.type ) );
-        myJSON.append( this.jsonElementComma( "info", this.Info ) );
-        
-        return myJSON.toString();
-    }
-    
 }

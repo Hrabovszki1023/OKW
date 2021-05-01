@@ -43,12 +43,30 @@ import org.apache.commons.text.StringEscapeUtils;
 
 public class LogError extends LogBaseLeaf
 {
-
+	protected Boolean bVerification = false;
+	protected String Expected = "";
+	protected String Actual = "";
+	
+	
     protected LogError( LogBase fpParent, String fpsInfo )
     {
         Info = fpsInfo;
         myID = AllCount;
         setParent(fpParent);
+        
+        ErrorCount();
+    }
+
+    
+    protected LogError( LogBase fpParent, String fpsInfo, String fps_Expected, String fps_Actual )
+    {
+        Info = fpsInfo;
+        myID = AllCount;
+        setParent(fpParent);
+        
+        bVerification = true;
+        Expected = fps_Expected;
+        Actual = fps_Actual;
         
         ErrorCount();
     }
@@ -72,18 +90,20 @@ public class LogError extends LogBaseLeaf
 
         String lvsIndention = this.getLevelIndention();
 
-        sbResult.append( lvsIndention + myIndentionBase + "<p class='LogError'>" + StringEscapeUtils.escapeHtml4(this.Info) + "</p>\n" );
-
+        if ( bVerification )
+        {
+        	sbResult.append( lvsIndention + myIndentionBase 
+        			+ "<p class='LogError'>" 
+        			   + StringEscapeUtils.escapeHtml4(this.Info) + "<br>\n"
+        			   + "Expected = " + this.Expected + "<br>\n"
+        			   + "Actual = " + this.Actual + "<br>\n"
+        			+ "</p>\n" );
+        }
+        else
+        {
+        	sbResult.append( lvsIndention + myIndentionBase + "<p class='LogError'>" + StringEscapeUtils.escapeHtml4(this.Info) + "</p>\n" );
+        }
+        
         return sbResult.toString();
     }
-
-    
-    protected String getJSONResult()
-     {
-         StringBuilder myJSON = new StringBuilder();
-                     
-         myJSON.append( this.jsonElement( "Error",  this.Info ) );
-         
-         return myJSON.toString();
-     }
 }

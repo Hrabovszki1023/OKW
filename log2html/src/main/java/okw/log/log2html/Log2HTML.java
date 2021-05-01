@@ -50,9 +50,6 @@ import java.io.Writer;
 import java.util.Locale;
 import java.util.Stack;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-
 import okw.log.ILogger;
 
 
@@ -76,6 +73,7 @@ public class Log2HTML extends LogBaseNode implements ILogger
 	{
 		this.myDuration.startTimer();
 		Pointer2LogBaseStack.push(this);
+		this.reset();
 	}
 
 
@@ -85,6 +83,7 @@ public class Log2HTML extends LogBaseNode implements ILogger
 		this.name = featereName;
 
 		Pointer2LogBaseStack.push(this);
+		this.reset();
 	}
 
 
@@ -125,6 +124,14 @@ public class Log2HTML extends LogBaseNode implements ILogger
 		AllCount++;
 
 		Pointer2LogBaseStack.peek().myLogs.add( new LogError(Pointer2LogBaseStack.peek(), fpsMessage) );
+	}
+
+
+	public void LogError(String fpsMessage, String fps_Expected, String fps_Actual )
+	{
+		AllCount++;
+
+		Pointer2LogBaseStack.peek().myLogs.add( new LogError(Pointer2LogBaseStack.peek(), fpsMessage, fps_Expected, fps_Actual ) );
 	}
 
 
@@ -452,6 +459,9 @@ public class Log2HTML extends LogBaseNode implements ILogger
 
 	private String getHTMLStatistics()
 	{
+		String lvsStartTime = "????-???-?? ??:??:??.???";
+		String lvsEndTime = "????-???-?? ??:??:??.???";
+
 		StringBuilder myResult = new StringBuilder();
 
 		myResult.append("<h2>Test Statistics</h2>\n");
@@ -529,15 +539,17 @@ public class Log2HTML extends LogBaseNode implements ILogger
 		myResult.append("\t\t\t<th  colspan='5'>Timer</th>\n");
 		myResult.append("\t\t</tr>\n");
 
+		lvsStartTime = this.myDuration.getStartTime();
+		lvsEndTime = this.myDuration.getEndTime();
 
 		myResult.append("\t\t<tr>\n");    	
 		myResult.append("\t\t\t<td class='right'>Start time:</td>\n");
-		myResult.append("\t\t\t<td class='center' colspan='4'>" + this.myDuration.getStartTime() + "</td>\n");
+		myResult.append("\t\t\t<td class='center' colspan='4'>" + lvsStartTime + "</td>\n");
 		myResult.append("\t\t</tr>\n");
 
 		myResult.append("\t\t<tr>\n");    	
 		myResult.append("\t\t\t<td class='right'>End time:</td>\n");
-		myResult.append("\t\t\t<td class='center' colspan='4'>" + this.myDuration.getEndTime() + "</td>\n");
+		myResult.append("\t\t\t<td class='center' colspan='4'>" + lvsEndTime + "</td>\n");
 		myResult.append("\t\t</tr>\n");
 		myResult.append("</table>\n");
 
@@ -595,7 +607,7 @@ public class Log2HTML extends LogBaseNode implements ILogger
 		}
 	}
 
-	public void Result2HTML( String fpsFilename )
+	public String Result2HTML( String fpsFilename )
 	{
 
 		StringBuilder myResult = new StringBuilder();
@@ -618,11 +630,14 @@ public class Log2HTML extends LogBaseNode implements ILogger
 			bw.write( myResult.toString() );
 
 			bw.close();
+
 		}
 		catch (Exception e)
 		{
 			System.out.print( e.getMessage() );
 		}
+
+		return myResult.toString();
 	}
 
 	protected String getHTMLResult()
@@ -635,113 +650,6 @@ public class Log2HTML extends LogBaseNode implements ILogger
 		}
 
 		return sbResult.toString();
-	}
-
-
-	public String Result2JSON( String fpsFileName )
-	{
-		StringBuilder myJSON = new StringBuilder();
-		String myJSONReturn = "";
-
-		try
-		{
-			StopAllTimerAndEmptyStack();
-
-			myJSON.append( getJSONHeader() );
-			myJSON.append( this.jsonStructureComma( "statistics", this.getJSONStatistics() ) );
-
-			myJSON.append( this.jsonArray( "features", this.jsonArrayElement( this.getJSONResult() )));
-			myJSON.append( getJSONFooter());
-
-			myJSONReturn = this.beautify( myJSON.toString() );
-
-			System.out.print( myJSON.toString() );
-
-			// Write jason-File
-			FileWriter fw = new FileWriter( fpsFileName );
-			BufferedWriter bw = new BufferedWriter(fw);
-
-			bw.write( myJSONReturn );
-
-			bw.close();
-		}
-		catch(Exception e)
-		{
-			System.out.print(e.getMessage());
-		}
-
-		return myJSONReturn;
-	}
-
-
-	private String getJSONHeader()
-	{
-		StringBuilder myResult = new StringBuilder();
-
-		myResult.append("{");
-
-		return myResult.toString();
-	}
-
-
-	protected String getJSONResult()
-	{
-		StringBuilder myJSON = new StringBuilder();
-		StringBuilder myJSONForLoop = new StringBuilder();
-
-		// 
-		myJSON.append( this.jsonElementComma( "name", this.name ) );
-		myJSON.append( this.jsonElement( "result", this.result ) );
-
-		Boolean GreaterOne = false;
-
-		for( LogBase myLog: this.myLogs )
-		{
-			if (GreaterOne) myJSONForLoop.append( ", " ); 
-			else GreaterOne = true;
-			myJSONForLoop.append( this.jsonArrayElement( myLog.getJSONResult() ) ) ;
-
-		}
-
-		if (GreaterOne) 
-			myJSON.append( ", " + this.jsonArray( "tests", myJSONForLoop.toString() ) );
-
-
-
-
-		return myJSON.toString();
-	}
-
-	private String getJSONFooter()
-	{
-		StringBuilder myResult = new StringBuilder();
-
-		myResult.append("}");
-
-		return myResult.toString();
-	}
-
-	String beautify(String json) 
-	{
-
-		String myReturn = "";
-
-		ObjectMapper mapper = new ObjectMapper();
-		mapper.configure(SerializationFeature.INDENT_OUTPUT, true);
-		Object obj;
-		try
-		{
-			obj = mapper.readValue(json, Object.class);
-			myReturn = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(obj);
-		}
-		catch ( Exception e)
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-
-		return myReturn;
 	}
 
 	protected void abort()
@@ -831,7 +739,6 @@ public class Log2HTML extends LogBaseNode implements ILogger
 	{
 
 	}
-
 
 	@Override
 	protected void TestcaseCount()
