@@ -53,7 +53,7 @@ public class ResultListDebug extends LogBaseNode
 		setParent(Parent);
 		myID = AllCount;
 
-		this._Info = fpsListHeader;
+		this.Info = fpsListHeader;
 	}
 
 	public void setReturn(String fpsReturn)
@@ -105,17 +105,4 @@ public class ResultListDebug extends LogBaseNode
 		
 		return sbResult.toString();
 	}
-    
-
-    @Override
-    protected String getJSONNodeProperties()
-    {
-        StringBuilder myJSON = new StringBuilder();
-        
-        myJSON.append( this.jsonElementComma( "type", this.type ) );
-        myJSON.append( this.jsonElementComma( "info", this.getInfo() ) );
-        
-        return myJSON.toString();
-    }
-    
 }

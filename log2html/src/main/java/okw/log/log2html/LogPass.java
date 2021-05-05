@@ -44,7 +44,7 @@ public class LogPass extends LogBaseLeaf
 	
 	protected LogPass( LogBase fpParent, String fpsInfo )
 	{
-		_Info = fpsInfo;
+		Info = fpsInfo;
 		myID = AllCount;
 		this.setParent(fpParent);		
 		PassedCount();	
@@ -61,14 +61,4 @@ public class LogPass extends LogBaseLeaf
 		
 		return sbResult.toString();
 	}
-
-    
-   protected String getJSONResult()
-    {
-        StringBuilder myJSON = new StringBuilder();
-                    
-        myJSON.append( this.jsonElement( "Passed",  getInfo() ) );
-        
-        return myJSON.toString();
-    }
 }

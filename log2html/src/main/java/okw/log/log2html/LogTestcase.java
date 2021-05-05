@@ -50,7 +50,7 @@ public class LogTestcase extends LogBaseNode
 		setParent(Parent);
 		myID = AllCount;
 				
-		this._Info = fpsTestcaseName;
+		this.Info = fpsTestcaseName;
 		
 		
 		// inkrementieren TestcaseCount
@@ -94,17 +94,5 @@ public class LogTestcase extends LogBaseNode
   {
       if ( ! (this.bError || this.bException ) )
          myParent.TestcaseFail();
-  }
-  
-  
-  @Override
-  protected String getJSONNodeProperties()
-  {
-      StringBuilder myJSON = new StringBuilder();
-      
-      myJSON.append(this.jsonElementComma( "name", this.getInfo() ));
-      myJSON.append(this.jsonElementComma( "type", this.type ));
-      
-      return myJSON.toString();
   }
 }

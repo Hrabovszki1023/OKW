@@ -94,16 +94,4 @@ public class LogRemoteACCall extends LogBaseNode
         if ( ! (this.bError || this.bException ) )
            myParent.RemoteACCallFail();
     }
- 
-    
-    @Override
-    protected String getJSONNodeProperties()
-    {
-        StringBuilder myJSON = new StringBuilder();
-        
-        myJSON.append( this.jsonElementComma( "sourceExcerpt", this.sourceExcerpt ) );
-        myJSON.append( this.jsonElementComma( "type", this.type ) );
-  
-        return myJSON.toString();
-    }
 }

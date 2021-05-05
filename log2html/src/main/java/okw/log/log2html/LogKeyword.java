@@ -72,26 +72,9 @@ public class LogKeyword extends LogBaseNode
 			}
 		}
 
-		this._Info = StrBuilder.toString();
+		this.Info = StrBuilder.toString();
 	}
 
-    @Override
-    protected String getJSONNodeProperties()
-    {
-        StringBuilder myJSON = new StringBuilder();
-        
-        myJSON.append( this.jsonElementComma( "type", this.type ) );
-        myJSON.append( this.jsonElementComma( "info", this.getInfo() ) );
-        myJSON.append( this.jsonElementComma( "Keyword", this.Keyword ) );
-
-        for ( Integer i = 0; i < Parameter.length; i++) { 
-            
-            myJSON.append( this.jsonElementComma( "Parameter" + i.toString(), Parameter[i] ) );
-        } 
-        return myJSON.toString();
-    }
-	
-    
   @Override
   protected void ErrorCount()
   {

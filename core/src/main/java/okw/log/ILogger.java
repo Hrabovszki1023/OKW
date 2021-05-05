@@ -73,6 +73,21 @@ public interface ILogger
      */
     void LogError(String Message);
 
+    /**
+     *  LogError: Logs an error message to the result.  @todo TODO: Add description.
+     *  
+     *  @param fps_Message Error message text.
+     *  
+     * \~
+     * @author Zoltan Hrabovszki
+     * \date 2016-10-23
+     */
+    void LogError(String Message, String Expected, String Actual);
+
+    
+    
+    // void LogProvisoryError(String Message, int RemainingTimeMs);
+
 
     /**
      *  LogPass: Logs an error message to the result. @todo TODO: Add description.

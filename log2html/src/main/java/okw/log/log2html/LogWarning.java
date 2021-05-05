@@ -46,7 +46,7 @@ public class LogWarning extends LogBaseLeaf
 
 	protected LogWarning(LogBase fpParent, String fpsInfo)
 	{
-		_Info = fpsInfo;
+		Info = fpsInfo;
 		myID = AllCount;
 		this.setParent(fpParent);		
 		this.WarningCount();	
@@ -64,16 +64,6 @@ public class LogWarning extends LogBaseLeaf
 		return sbResult.toString();
 	}
 
-    
-    protected String getJSONResult()
-    {
-        StringBuilder myJSON = new StringBuilder();
-                    
-        myJSON.append( this.jsonElement( "Warning",  this.getInfo() ) );
-        
-        return myJSON.toString();
-    }
-    
 	protected void SetFail()
 	{
 	}

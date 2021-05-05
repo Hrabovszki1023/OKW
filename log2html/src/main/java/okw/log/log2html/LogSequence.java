@@ -76,7 +76,7 @@ public class LogSequence  extends LogBaseNode
 			}
 		}
 		
-		this._Info = StrBuilder.toString();		
+		this.Info = StrBuilder.toString();		
 	}
 
 
@@ -116,18 +116,5 @@ public class LogSequence  extends LogBaseNode
     {
         if ( ! (this.bError || this.bException ) )
            myParent.SequenceFail();
-    }
-    
-
-    
-    @Override
-    protected String getJSONNodeProperties()
-    {
-        StringBuilder myJSON = new StringBuilder();
-        
-        myJSON.append( this.jsonElementComma( "type", this.type ) );
-        myJSON.append( this.jsonElementComma( "info", this.getInfo() ) );
-        
-        return myJSON.toString();
     }
  }

@@ -125,23 +125,5 @@ public class LogStep extends LogBaseNode
 	  {
 	      if ( ! (this.bError || this.bException ) )
 	         myParent.StepFail();
-	  }
-
-	  
-	  @Override
-	  protected String getJSONNodeProperties()
-	  {
-	      StringBuilder myJSON = new StringBuilder();
-	      
-	      myJSON.append( this.jsonElementComma( "type", this.type ) );
-	      myJSON.append( this.jsonElementComma( "categoryName", this.categoryName ) );
-	      myJSON.append( this.jsonElementComma( "categoryType", this.categoryType ) );
-	      myJSON.append( this.jsonElementComma( "choiceValue", this.choiceValue ) );
-	      myJSON.append( this.jsonElementComma( "featureName", this.featureName ) );
-	      myJSON.append( this.jsonElementComma( "localCategoryName", this.localCategoryName ) );
-	      myJSON.append( this.jsonElementComma( "sourceExcerpt", this.sourceExcerpt ) );
-	      myJSON.append( this.jsonElementComma( "result", this.result ) );
-	      
-	      return myJSON.toString();
 	  }	    
 }

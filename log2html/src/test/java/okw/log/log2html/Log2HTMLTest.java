@@ -145,6 +145,22 @@ public class Log2HTMLTest  extends JUnitBase {
 		
 		myLog.Result2HTML( "target/" + TestName + ".html" );
 	}
+
+	@Test
+	public void TC_LogError_ExpectedActuel_Test()
+	{	
+		Log2HTML myLog = new Log2HTML( TestName );
+				
+		myLog.LogTestcaseStart( "TC_LogError_Test" );
+			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
+				myLog.LogError("Error", "Expected", "Actuel");
+				myLog.LogKeyWordEnd();
+		myLog.LogTestcaseEnd();
+		
+		System.out.println( myLog.Result2HTML( "target/" + TestName + ".html" ) );
+		
+	}
+
 	
 	@Test
 	public void TC_LogWarning_Test()

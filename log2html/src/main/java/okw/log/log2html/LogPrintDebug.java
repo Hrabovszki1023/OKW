@@ -39,14 +39,12 @@ OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 
 package okw.log.log2html;
 
-import org.apache.commons.text.StringEscapeUtils;
-
 public class LogPrintDebug extends LogBaseLeaf
 {
 
 	public LogPrintDebug( LogBase fpParent, String fpsInfo )
 	{
-		_Info = fpsInfo;
+		Info = fpsInfo;
 		myID = AllCount;
 		this.setParent(fpParent);
         PrintCount();
@@ -62,18 +60,7 @@ public class LogPrintDebug extends LogBaseLeaf
 		
 		return sbResult.toString();
 	}
-
 	
-    protected String getJSONResult()
-    {
-        StringBuilder myJSON = new StringBuilder();
-                    
-        myJSON.append( this.jsonElement( "PrintDebug",  this.getInfo() ) );
-        
-        return myJSON.toString();
-    }
-    
-    
 	protected void SetFail()
 	{
 	}
