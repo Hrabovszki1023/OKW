@@ -319,7 +319,7 @@ public class Logger_Test
         Logger_Sngltn.getInstance().setDebugMode( false );
         Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogError" );
 
-        Logger_Sngltn.getInstance().LogError( "Error..." );
+        Logger_Sngltn.getInstance().LogVerifyError( "A", "B");
         
         Logger_Sngltn.getInstance().LogTestcaseEnd();
 
@@ -327,7 +327,7 @@ public class Logger_Test
         Logger_Sngltn.getInstance().setDebugMode( true );
         Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogError" );
 
-        Logger_Sngltn.getInstance().LogError( "Error..." );
+        Logger_Sngltn.getInstance().LogVerifyError( "A", "B");
         
         Logger_Sngltn.getInstance().LogTestcaseEnd();
     }

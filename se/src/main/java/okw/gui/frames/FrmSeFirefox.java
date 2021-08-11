@@ -116,7 +116,7 @@ public class FrmSeFirefox extends SeBrowserWindow
 					MEM.set( "System Propety: OKWGeckodriverPath", System.getProperty( "webdriver.gecko.driver" ) );
 					break;
 				default:
-					LogError( "Unknown Property: 'os.name'= '" + System.getProperty( "os.name" ) + "'" );
+					LogException( "Unknown Property: 'os.name'= '" + System.getProperty( "os.name" ) + "'" );
 					break;
 				}
 

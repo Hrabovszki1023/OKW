@@ -35,7 +35,7 @@ Siehe die GNU General Public License für weitere Details.
 
 Sie sollten eine Kopie der GNU General Public License zusammen mit 
 OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package okw.junit;
 
@@ -46,9 +46,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.TestInfo;
-
 
 
 /**
@@ -72,63 +71,65 @@ import org.junit.jupiter.api.TestInfo;
  */
 public class JUnitBase
 {
+	
 
-    String ClassName = this.getClass().getSimpleName();
-    
-    public String TestName;
 
-    @BeforeEach
-    void init(TestInfo testInfo)
-    {
-        TestName = testInfo.getTestMethod().get().getName();
-    }
+	String ClassName = this.getClass().getSimpleName();
 
-    /**
-     * \~german
-     * Lädt eine Resource Datei, die als Referenz datei in einem Assert verwendet werden kann.
-     *
-     * @param resorceFilename
-     * @return Den Inhalt der Resource Datei als String 
-     * \~english
-     *
-     *
-     * @param resorceFilename
-     * @return
-     * \~
-     * @author Zoltán Hrabovszki
-     * \date 2019-08-06
-     */
-    public String loadUTF8FileFromResource( String resorceFilename )
-    {
+	public String TestName;
 
-        StringBuilder myJSON = new StringBuilder();
+	@BeforeEach
+	void init(TestInfo testInfo)
+	{
+		TestName = testInfo.getTestMethod().get().getName();
+	}
 
-        try
-        {
+	/**
+	 * \~german
+	 * Lädt eine Resource Datei, die als Referenz datei in einem Assert verwendet werden kann.
+	 *
+	 * @param resorceFilename
+	 * @return Den Inhalt der Resource Datei als String 
+	 * \~english
+	 *
+	 *
+	 * @param resorceFilename
+	 * @return
+	 * \~
+	 * @author Zoltán Hrabovszki
+	 * \date 2019-08-06
+	 */
+	public String loadUTF8FileFromResource( String resorceFilename )
+	{
 
-            ClassLoader classloader = Thread.currentThread().getContextClassLoader();
-            InputStream inputStream = classloader.getResourceAsStream( resorceFilename );
-            InputStreamReader streamReader = new InputStreamReader( inputStream, StandardCharsets.UTF_8 );
-            BufferedReader reader = new BufferedReader( streamReader );
+		StringBuilder myJSON = new StringBuilder();
 
-            Boolean GreaterOne = false;
+		try
+		{
 
-            for ( String line; ( line = reader.readLine() ) != null; )
-            {
-                if (GreaterOne) myJSON.append( "\n" ); 
-                else GreaterOne = true;
-                myJSON.append( line );
-            }
+			ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+			InputStream inputStream = classloader.getResourceAsStream( resorceFilename );
+			InputStreamReader streamReader = new InputStreamReader( inputStream, StandardCharsets.UTF_8 );
+			BufferedReader reader = new BufferedReader( streamReader );
 
-        }
-        catch (FileNotFoundException fnfe)
-        {
-            // process errors
-        }
-        catch (IOException ioe)
-        {
-            // process errors
-        }
-        return myJSON.toString();
-    }
+			Boolean GreaterOne = false;
+
+			for ( String line; ( line = reader.readLine() ) != null; )
+			{
+				if (GreaterOne) myJSON.append( "\n" ); 
+				else GreaterOne = true;
+				myJSON.append( line );
+			}
+
+		}
+		catch (FileNotFoundException fnfe)
+		{
+			// process errors
+		}
+		catch (IOException ioe)
+		{
+			// process errors
+		}
+		return myJSON.toString();
+	}
 }

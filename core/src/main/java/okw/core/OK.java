@@ -1793,7 +1793,7 @@ public class OK implements IOKW_State
 		}
 		else
 		{
-			LogVerifyError( fpsExpected, fpsActual );;
+			Log.LogVerifyError( fpsExpected, fpsActual );;
 
 			// Trigger OKWVerifyingFailsException!
 			String lvsLM = PROP.getProperty( "OKWVerifyingFailsException.${LANGUAGE}", null, fpsExpected, fpsActual );
@@ -1837,7 +1837,7 @@ public class OK implements IOKW_State
 		}
 		else
 		{
-			LogVerifyError( fpsExpected, fpsActual );;
+			Log.LogVerifyError( fpsExpected, fpsActual );;
 
 			// Trigger OKWVerifyingFailsException!
 			
@@ -1861,7 +1861,7 @@ public class OK implements IOKW_State
 		}
 		else
 		{   
-			LogVerifyError( fpsExpected, fpsActual );
+			Log.LogVerifyError( fpsExpected, fpsActual );
 
 			// Trigger OKWVerifyingFailsException!
 			String lvsLM = PROP.getProperty( "OKWVerifyingFailsException.${LANGUAGE}", null, fpsExpected, fpsActual );
@@ -1891,7 +1891,7 @@ public class OK implements IOKW_State
 				}
 				else
 				{   
-					LogVerifyError( Expected.get( i ), Actual.get( i ) );
+					Log.LogVerifyError( Expected.get( i ), Actual.get( i ) );
 
 					msg = PROP.getProperty( "ok.verification.exception.unexpectedvalue.${LANGUAGE}" );
 					bFail = true;
@@ -1901,7 +1901,7 @@ public class OK implements IOKW_State
 		}
 		else
 		{               
-			LogVerifyError( ((Integer)Expected.size()).toString(), ((Integer)Actual.size()).toString() );
+			Log.LogVerifyError( ((Integer)Expected.size()).toString(), ((Integer)Actual.size()).toString() );
 
 			msg = PROP.getProperty( "ok.verification.exception.unexpectedsize.${LANGUAGE}" );
 			bFail = true;
@@ -1936,7 +1936,7 @@ public class OK implements IOKW_State
 				}
 				else
 				{   
-					LogVerifyError( Expected.get( i ), Actual.get( i ) );
+					Log.LogVerifyError( Expected.get( i ), Actual.get( i ) );
 
 					msg = PROP.getProperty( "ok.verification.exception.unexpectedvalue.${LANGUAGE}" );
 					bFail = true;
@@ -1945,7 +1945,7 @@ public class OK implements IOKW_State
 		}
 		else
 		{   
-			LogVerifyError( ((Integer)Expected.size()).toString(), ((Integer)Actual.size()).toString() );
+			Log.LogVerifyError( ((Integer)Expected.size()).toString(), ((Integer)Actual.size()).toString() );
 			msg = PROP.getProperty( "ok.verification.exception.unexpectedsize.${LANGUAGE}" );
 			bFail = true;
 		}
@@ -1978,7 +1978,7 @@ public class OK implements IOKW_State
 				}
 				else
 				{   
-					LogVerifyError( Expected.get( i ), Actual.get( i ) );
+					Log.LogVerifyError( Expected.get( i ), Actual.get( i ) );
 
 					msg = PROP.getProperty( "ok.verification.exception.unexpectedvalue.${LANGUAGE}" );
 					bFail = true;
@@ -1987,7 +1987,7 @@ public class OK implements IOKW_State
 		}
 		else
 		{   
-			LogVerifyError( ((Integer)Expected.size()).toString(), ((Integer)Actual.size()).toString() );
+			Log.LogVerifyError( ((Integer)Expected.size()).toString(), ((Integer)Actual.size()).toString() );
 			msg = PROP.getProperty( "ok.verification.exception.unexpectedsize.${LANGUAGE}" );
 
 			bFail = true;
@@ -4123,14 +4123,5 @@ public class OK implements IOKW_State
 			}
 			else continue;
 		}
-	}
-
-	protected void LogVerifyError( String fpsExpected,  String fpsActual )
-	{
-		Log.LogError( PROP.getProperty( "ok.LogVerifyError.ExpectedActuel.${LANGUAGE}", null, fpsExpected,  fpsActual ) );
-		Log.ResOpenList( PROP.getProperty( "ok.LogVerifyError.Details.${LANGUAGE}" ) );
-		Log.LogPrint( PROP.getProperty( "ok.LogVerifyError.Expected.${LANGUAGE}", null, fpsExpected ) );
-		Log.LogPrint( PROP.getProperty( "ok.LogVerifyError.Actuel.${LANGUAGE}", null, fpsActual ) );
-		Log.ResCloseList();
 	}
 }

@@ -64,10 +64,10 @@ public class Log2HTML extends LogBaseNode implements ILogger
 
 
 	// name des Features, welches hier getestet wird.
-	private String name = "";
+	private String name = ""; //TODO: entfernen
 
 	// result - das Ergebniss des Features welche hier representiert wird.
-	private String result = ""; // mögliche Werte "success"
+	//private String result = ""; // mögliche Werte "success"
 
 	public Log2HTML()
 	{
@@ -119,19 +119,11 @@ public class Log2HTML extends LogBaseNode implements ILogger
 	}
 
 
-	public void LogError(String fpsMessage)
+	public void LogVerifyError( String fps_Expected, String fps_Actual )
 	{
 		AllCount++;
 
-		Pointer2LogBaseStack.peek().myLogs.add( new LogError(Pointer2LogBaseStack.peek(), fpsMessage) );
-	}
-
-
-	public void LogError(String fpsMessage, String fps_Expected, String fps_Actual )
-	{
-		AllCount++;
-
-		Pointer2LogBaseStack.peek().myLogs.add( new LogError(Pointer2LogBaseStack.peek(), fpsMessage, fps_Expected, fps_Actual ) );
+		Pointer2LogBaseStack.peek().myLogs.add( new LogVerifyError(Pointer2LogBaseStack.peek(), fps_Expected, fps_Actual ) );
 	}
 
 

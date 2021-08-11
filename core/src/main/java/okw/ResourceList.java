@@ -49,8 +49,6 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipException;
 import java.util.zip.ZipFile;
 
-import okw.log.Logger_Sngltn;
-
 /**
  * list resources available from the classpath @ *
  */
@@ -60,7 +58,7 @@ public class ResourceList
     /**
      *  \copydoc Logger_Sngltn::getInstance()
      */
-    private static Logger_Sngltn Log = Logger_Sngltn.getInstance();
+    //private static Logger_Sngltn Log = Logger_Sngltn.getInstance();
 	
 	/**
 	 * for all elements of java.class.path get a Collection of resources Pattern
@@ -78,15 +76,15 @@ public class ResourceList
 		
 		final String[] classPathElements = classPath.split(System.getProperty("path.separator"));
 		
-		Log.ResOpenListDebug( "Class Path..." ); 
+		//Log.ResOpenListDebug( "Class Path..." ); 
 		
 		for (final String element : classPathElements)
 		{
-			Log.LogPrintDebug( element );
+			//Log.LogPrintDebug( element );
 			retval.addAll(getResources(element, pattern));
 		}
 		
-		Log.ResCloseListDebug();
+		//Log.ResCloseListDebug();
 		
 		return retval;
 	}

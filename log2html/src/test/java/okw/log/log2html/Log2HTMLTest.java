@@ -43,6 +43,7 @@ import org.junit.jupiter.api.*;
 
 import okw.junit.JUnitBase;
 
+
 @Tag("Log2HTML")
 public class Log2HTMLTest  extends JUnitBase {
     
@@ -54,7 +55,7 @@ public class Log2HTMLTest  extends JUnitBase {
 		myLog.LogTestcaseStart( "TC_LogPrint_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
 				myLog.LogPrint( "Print im Schlüsselwort");
-				myLog.LogPrint( "Das hier ist ein weiterern Print-Absatz im Schlüsselwort.");
+				myLog.LogPrint( "Das hier ist ein weiterer Print-Absatz im Schlüsselwort.");
 				myLog.LogKeyWordEnd();
 			myLog.LogPrint( "Print auf einer Ebene höher...");
 		myLog.LogTestcaseEnd();
@@ -108,7 +109,7 @@ public class Log2HTMLTest  extends JUnitBase {
 				myLog.ResOpenListDebug( "ResultOpenListDebug" );
 					myLog.LogPrintDebug( "Print im Schlüsselwort");
 					myLog.LogPrintDebug( "Das hier ist ein weiterern Print-Absatz im Schlüsselwort.");
-					myLog.LogError( "Error" );
+                    myLog.LogVerifyError( "A", "B");
 					myLog.LogPass( "Pass" );
 					myLog.ResCloseListDebug();
 				myLog.LogKeyWordEnd();
@@ -125,7 +126,7 @@ public class Log2HTMLTest  extends JUnitBase {
 				
 		myLog.LogTestcaseStart( "TC_LogException_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
-				myLog.LogException( "Exception");
+				myLog.LogException( "Exception...");
 				myLog.LogKeyWordEnd();
 		myLog.LogTestcaseEnd();
 		
@@ -139,7 +140,7 @@ public class Log2HTMLTest  extends JUnitBase {
 				
 		myLog.LogTestcaseStart( "TC_LogError_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
-				myLog.LogError("Error");
+            myLog.LogVerifyError( "A", "B");
 				myLog.LogKeyWordEnd();
 		myLog.LogTestcaseEnd();
 		
@@ -153,7 +154,7 @@ public class Log2HTMLTest  extends JUnitBase {
 				
 		myLog.LogTestcaseStart( "TC_LogError_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
-				myLog.LogError("Error", "Expected", "Actuel");
+                myLog.LogVerifyError( "A", "B");
 				myLog.LogKeyWordEnd();
 		myLog.LogTestcaseEnd();
 		

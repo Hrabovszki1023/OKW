@@ -40,6 +40,7 @@
 package okw.log;
 
 import okw.OKW_Helper;
+import okw.OKW_Properties;
 
 /** \~german
  *  Klasse zur Ausgabe in die System.out.
@@ -61,6 +62,7 @@ public class Log2Console implements ILogger
 	        
 	        private Boolean cvbDebugMode = false;
 
+	    	private static OKW_Properties PROP = OKW_Properties.getInstance();
 	        
 	        public void reset()
 	        {
@@ -71,31 +73,39 @@ public class Log2Console implements ILogger
 	        }
 	        
 	        
-			/**
-	         * \copydoc ILogger::LogError(String)
-			 */
-			@Override
-	        public void LogError(String fps_Message)
-	        {
-				System.out.println(this.BlanksBefore + OKW_Helper.repeatString("-", 80));
-				System.out.println(this.BlanksBefore + "ERROR: " + fps_Message);
-				System.out.println(this.BlanksBefore + OKW_Helper.repeatString("-", 80));      
-	        }
+//			/**
+//	         * \copydoc ILogger::LogError(String)
+//			 */
+//			@Override
+//	        public void LogError(String fps_Message)
+//	        {
+//				System.out.println(this.BlanksBefore + OKW_Helper.repeatString("-", 80));
+//				System.out.println(this.BlanksBefore + "ERROR: " + fps_Message);
+//				System.out.println(this.BlanksBefore + OKW_Helper.repeatString("-", 80));      
+//	        }
 
 	        
 			/**
-	         * \copydoc ILogger::LogError(String, STring, String)
+	         * \copydoc ILogger::LogError(String,String)
 			 */
 			@Override
-	        public void LogError(String fps_Message, String fps_Expected, String fps_Actual)
+	        public void LogVerifyError(String fps_Expected, String fps_Actual)
 	        {
+				String fps_Message = PROP.getProperty( "ok.LogVerifyError.ExpectedActuel.${LANGUAGE}", null, fps_Expected,  fps_Actual );
+				
 				System.out.println(this.BlanksBefore + OKW_Helper.repeatString("-", 80));
 				System.out.println(this.BlanksBefore + "ERROR: " + fps_Message);
 				System.out.println(this.BlanksBefore + "Expected value: " + fps_Expected);
 				System.out.println(this.BlanksBefore + " Actuel value:: " + fps_Actual);
-				System.out.println(this.BlanksBefore + OKW_Helper.repeatString("-", 80));      
+				System.out.println(this.BlanksBefore + OKW_Helper.repeatString("-", 80));
+				
+				ResOpenList( PROP.getProperty( "ok.LogVerifyError.Details.${LANGUAGE}" ) );
+				LogPrint( PROP.getProperty( "ok.LogVerifyError.Expected.${LANGUAGE}", null, fps_Expected ) );
+				LogPrint( PROP.getProperty( "ok.LogVerifyError.Actuel.${LANGUAGE}", null, fps_Actual ) );
+				ResCloseList();
 	        }
 
+			
 			/**
 	         * \copydoc ILogger::LogException(String)
 			 */			@Override

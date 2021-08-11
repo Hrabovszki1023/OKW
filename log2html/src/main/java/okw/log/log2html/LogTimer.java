@@ -46,12 +46,16 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
+import okw.OKW_Properties;
+
 
 public class LogTimer {
 
+	
 	public LogTimer()
 	{
-		if ( "true".equals( okw.OKW_Properties.getInstance().getProperty( "Log2HTML.Test" )) )
+		
+		if ( "true".equals( OKW_Properties.getInstance().getProperty( "Log2HTML.Test" )) )
 		{
 			Testmode = true;
 		}

@@ -309,7 +309,7 @@ public class Logger_Test
 		Log.setDebugMode( false );
 		Log.LogTestcaseStart( "tcLogError" );
 
-		Log.LogError( "Error..." );
+		Log.LogVerifyError( "1", "2" );
 
 		Log.LogTestcaseEnd();
 
@@ -317,7 +317,7 @@ public class Logger_Test
 		Log.setDebugMode( true );
 		Log.LogTestcaseStart( "tcLogError" );
 
-		Log.LogError( "Error..." );
+		Log.LogVerifyError( "1", "2" );
 
 		Log.LogTestcaseEnd();
 	}

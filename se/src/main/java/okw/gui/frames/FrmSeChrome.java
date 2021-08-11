@@ -173,7 +173,7 @@ public class FrmSeChrome extends SeBrowserWindow
 					System.setProperty( "webdriver.chrome.driver", "/usr/bin/chromedriver" );
 					break;
 				default:
-					LogError( "Unknown Property: 'os.name'= '" + System.getProperty( "os.name" ) + "'" );
+					LogException( "Unknown Property: 'os.name'= '" + System.getProperty( "os.name" ) + "'" );
 					break;
 				}
 			}

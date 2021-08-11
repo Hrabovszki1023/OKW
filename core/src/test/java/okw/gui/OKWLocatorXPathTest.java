@@ -166,7 +166,7 @@ public class OKWLocatorXPathTest
     {
         OKWLocatorXPath Window = new OKWLocatorXPath("4T!Window");
         
-        assertEquals("//*[@data-harmony-id='Window']", Window.getLocator());
+        assertEquals("//*[@data-harmony-id=\"Window\"]", Window.getLocator());
     }
 
     @Test
@@ -175,8 +175,8 @@ public class OKWLocatorXPathTest
         OKWLocatorXPath Window = new OKWLocatorXPath("4T!Window");
         OKWLocatorXPath Child  = new OKWLocatorXPath("4T!Child", Window);
         
-        assertEquals("//*[@data-harmony-id='Window']", Window.getLocator());
-        assertEquals("//*[@data-harmony-id='Window']//*[@data-harmony-id='Child']", Child.getLocator());
+        assertEquals("//*[@data-harmony-id=\"Window\"]", Window.getLocator());
+        assertEquals("//*[@data-harmony-id=\"Window\"]//*[@data-harmony-id=\"Child\"]", Child.getLocator());
     }
 
 
@@ -194,8 +194,8 @@ public class OKWLocatorXPathTest
         OKWLocatorXPath Window = new OKWLocatorXPath("4T!Window");
         OKWLocatorXPath Child  = new OKWLocatorXPath("4TNA!Child", Window);
         
-        assertEquals("//*[@data-harmony-id='Window']", Window.getLocator());
-        assertEquals("//*[@data-harmony-id='Window']//*[contains(@name,'Child')]", Child.getLocator());
+        assertEquals("//*[@data-harmony-id=\"Window\"]", Window.getLocator());
+        assertEquals("//*[@data-harmony-id=\"Window\"]//*[contains(@name,'Child')]", Child.getLocator());
     }
 
     @Test
@@ -212,8 +212,8 @@ public class OKWLocatorXPathTest
         OKWLocatorXPath Window = new OKWLocatorXPath("4T!Window");
         OKWLocatorXPath Child  = new OKWLocatorXPath("4TID!Child", Window);
         
-        assertEquals("//*[@data-harmony-id='Window']", Window.getLocator());
-        assertEquals("//*[@data-harmony-id='Window']//*[contains(@id,'Child')]", Child.getLocator());
+        assertEquals("//*[@data-harmony-id=\"Window\"]", Window.getLocator());
+        assertEquals("//*[@data-harmony-id=\"Window\"]//*[contains(@id,'Child')]", Child.getLocator());
     }
 
     @Test
@@ -230,8 +230,8 @@ public class OKWLocatorXPathTest
         OKWLocatorXPath Window = new OKWLocatorXPath("4T!Window");
         OKWLocatorXPath Child  = new OKWLocatorXPath("4TLA!Child", Window);
         
-        assertEquals("//*[@data-harmony-id='Window']", Window.getLocator());
-        assertEquals("//*[@data-harmony-id='Window']//label[contains(text(),'Child')]/following-sibling::input", Child.getLocator());
+        assertEquals("//*[@data-harmony-id=\"Window\"]", Window.getLocator());
+        assertEquals("//*[@data-harmony-id=\"Window\"]//label[contains(text(),'Child')]/following-sibling::input", Child.getLocator());
     }
     
 
@@ -249,8 +249,8 @@ public class OKWLocatorXPathTest
         OKWLocatorXPath Window = new OKWLocatorXPath("4T!Window");
         OKWLocatorXPath Child  = new OKWLocatorXPath("4TTX!Child", Window);
         
-        assertEquals("//*[@data-harmony-id='Window']", Window.getLocator());
-        assertEquals("//*[@data-harmony-id='Window']//*[contains(text(),'Child')]", Child.getLocator());
+        assertEquals("//*[@data-harmony-id=\"Window\"]", Window.getLocator());
+        assertEquals("//*[@data-harmony-id=\"Window\"]//*[contains(text(),'Child')]", Child.getLocator());
     }
 }
 

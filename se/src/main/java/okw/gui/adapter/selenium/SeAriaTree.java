@@ -168,7 +168,7 @@ public class SeAriaTree extends SeAnyChildWindow
 			}
 			else
 			{
-				Log.LogError( myIntend + ">  Undefinde/Unexpected Valueof aria-expanded: " + aria_expanded );
+				Log.LogException( myIntend + ">  Undefinde/Unexpected Valueof aria-expanded: " + aria_expanded );
 				// Exception
 				nodeElementIsSelected = false;
 			}

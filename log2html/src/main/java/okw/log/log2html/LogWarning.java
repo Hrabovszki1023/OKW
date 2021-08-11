@@ -39,8 +39,6 @@ OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 
 package okw.log.log2html;
 
-import org.apache.commons.text.StringEscapeUtils;
-
 public class LogWarning extends LogBaseLeaf
 {
 

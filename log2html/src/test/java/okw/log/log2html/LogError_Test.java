@@ -62,7 +62,7 @@ public class LogError_Test extends JUnitBase
     {   
         Log2HTML myLog = new Log2HTML( TestName );
                         
-        myLog.LogError( "LogError");
+        myLog.LogVerifyError( "A", "B");
     
         String Current = myLog.Result2HTML( "target/" + TestName + ".html" );
         
@@ -77,7 +77,7 @@ public class LogError_Test extends JUnitBase
         Log2HTML myLog = new Log2HTML( "Log2HTML - " + TestName );
                         
         myLog.LogTestcaseStart( TestName );
-             myLog.LogError( "LogError");
+        	myLog.LogVerifyError( "A", "B");
         myLog.LogTestcaseEnd();
 
         String Current = myLog.Result2HTML( "target/" + TestName + ".html" );
@@ -95,7 +95,7 @@ public class LogError_Test extends JUnitBase
         Log2HTML myLog = new Log2HTML( TestName );
                         
         myLog.LogLocalACCallStart( "my source excerpt", "my Local AC Type" );;
-             myLog.LogError( "LogError");
+        	myLog.LogVerifyError( "A", "B");
         myLog.LogLocalACCallEnd( );
     
         String Current = myLog.Result2HTML( "target/" + TestName + ".html" );
@@ -112,7 +112,7 @@ public class LogError_Test extends JUnitBase
         Log2HTML myLog = new Log2HTML( TestName );
                         
         myLog.LogRemoteACCallStart( "sourceExcerpt", "my remote AC type" );
-             myLog.LogError( "LogError");
+        myLog.LogVerifyError( "A", "B");
         myLog.LogRemoteACCallEnd( );
     
         String Current = myLog.Result2HTML( "target/" + TestName + ".html" );
@@ -129,7 +129,7 @@ public class LogError_Test extends JUnitBase
         Log2HTML myLog = new Log2HTML( TestName );
                         
         myLog.LogSequenceStart( "Sequence", "Window", "SequenzName", "SeqID" );
-             myLog.LogError( "LogError");
+        myLog.LogVerifyError( "A", "B");
         myLog.LogSequenceEnd( );
     
         String Current = myLog.Result2HTML( "target/" + TestName + ".html" );
@@ -148,7 +148,7 @@ public class LogError_Test extends JUnitBase
         myLog.LogTestcaseStart( "TestCase = " + TestName );
         
         myLog.LogStepStart( "mycategoryName", "mycategoryType", "mychoiceValue", "myfeatureName", "mylocalCategoryName", "mysourceExcerpt", "TestStep" );
-             myLog.LogError( "LogError");
+        myLog.LogVerifyError( "A", "B");
         myLog.LogStepEnd( );
     
         myLog.LogTestcaseEnd();
@@ -167,7 +167,7 @@ public class LogError_Test extends JUnitBase
     	Log2HTML myLog = new Log2HTML( TestName );
     					
     	myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
-    		myLog.LogError( "LogError");
+        myLog.LogVerifyError( "A", "B");
     		myLog.LogKeyWordEnd();
     
         String Current = myLog.Result2HTML( "target/" + TestName + ".html" );
@@ -183,7 +183,7 @@ public class LogError_Test extends JUnitBase
         Log2HTML myLog = new Log2HTML( TestName );
                         
         myLog.ResOpenList( "fps_ListHeader" );
-             myLog.LogError( "LogError");
+        myLog.LogVerifyError( "A", "B");
         myLog.ResCloseList( );
     
         String Current = myLog.Result2HTML( "target/" + TestName + ".html" );
@@ -200,7 +200,7 @@ public class LogError_Test extends JUnitBase
         Log2HTML myLog = new Log2HTML( TestName );
                         
         myLog.ResOpenListDebug( "fps_ListHeader" );
-             myLog.LogError( "LogError");
+        myLog.LogVerifyError( "A", "B");
         myLog.ResCloseListDebug( );
     
         String Current = myLog.Result2HTML( "target/" + TestName + ".html" );

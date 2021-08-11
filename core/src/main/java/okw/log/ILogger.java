@@ -71,7 +71,7 @@ public interface ILogger
      * @author Zoltan Hrabovszki
      * \date 2016-10-23
      */
-    void LogError(String Message);
+    //void LogVerifyError(String Message);
 
     /**
      *  LogError: Logs an error message to the result.  @todo TODO: Add description.
@@ -80,14 +80,11 @@ public interface ILogger
      *  
      * \~
      * @author Zoltan Hrabovszki
-     * \date 2016-10-23
+     * \date 2021-08-04
      */
-    void LogError(String Message, String Expected, String Actual);
+    void LogVerifyError(String Expected, String Actual);
 
-    
-    
     // void LogProvisoryError(String Message, int RemainingTimeMs);
-
 
     /**
      *  LogPass: Logs an error message to the result. @todo TODO: Add description.

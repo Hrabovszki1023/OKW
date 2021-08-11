@@ -209,35 +209,34 @@ public class Logger_Sngltn implements ILogger
         }
     }
 
-    /**
-     *  \brief
-     *  LogError Function:
-     *  Logs an error message to the results file.
-     * 
-     *  \param fps_Message
-     */
-    public void LogError( String fps_Message )
-    {
-        for ( ILogger myLogger : LoggerList )
-        {
-            myLogger.LogError( fps_Message );
-        }
-    }
+//    /**
+//     *  \brief
+//     *  LogError Function:
+//     *  Logs an error message to the results file.
+//     * 
+//     *  \param fps_Message
+//     */
+//    public void LogError( String fps_Message )
+//    {
+//        for ( ILogger myLogger : LoggerList )
+//        {
+//            myLogger.LogError( fps_Message );
+//        }
+//    }
 
 
     /**
      *  LogError Logs an error message with Expected and Actual to the results file.
      * 
-     *  \param fps_Message
      *  \param fps_Expected 
      *  \param fps_Actual 
      *  
      */
-    public void LogError( String fps_Message, String fps_Expected, String fps_Actual)
+    public void LogVerifyError(String fps_Expected, String fps_Actual)
     {
         for ( ILogger myLogger : LoggerList )
         {
-            myLogger.LogError( fps_Message, fps_Expected, fps_Actual );
+            myLogger.LogVerifyError( fps_Expected, fps_Actual );
         }
     }
     

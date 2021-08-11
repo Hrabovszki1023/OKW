@@ -41,26 +41,17 @@ package okw.log.log2html;
 
 import org.apache.commons.text.StringEscapeUtils;
 
-public class LogError extends LogBaseLeaf
+import okw.OKW_Properties;
+
+public class LogVerifyError extends LogBaseLeaf
 {
 	protected Boolean bVerification = false;
 	protected String Expected = "";
 	protected String Actual = "";
 	
-	
-    protected LogError( LogBase fpParent, String fpsInfo )
+    protected LogVerifyError( LogBase fpParent, String fps_Expected, String fps_Actual )
     {
-        Info = fpsInfo;
-        myID = AllCount;
-        setParent(fpParent);
-        
-        ErrorCount();
-    }
-
-    
-    protected LogError( LogBase fpParent, String fpsInfo, String fps_Expected, String fps_Actual )
-    {
-        Info = fpsInfo;
+        Info = OKW_Properties.getInstance().getProperty( "ok.LogVerifyError.ExpectedActuel.${LANGUAGE}", null, fps_Expected,  fps_Actual );
         myID = AllCount;
         setParent(fpParent);
         

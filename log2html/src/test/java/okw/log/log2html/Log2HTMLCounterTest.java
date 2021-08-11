@@ -42,16 +42,18 @@ package okw.log.log2html;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
 
+import okw.OKW_Properties;
 import okw.junit.JUnitBase;
 
 @Tag("Log2HTML")
 public class Log2HTMLCounterTest extends JUnitBase
 {
+	private static OKW_Properties PROP = OKW_Properties.getInstance();
 
 	@BeforeEach
 	public void setUp() throws Exception
 	{
-	    okw.OKW_Properties.getInstance().setProperty( "Log2HTML.Test", "true" );
+		PROP.setProperty( "Log2HTML.Test", "true" );
 	}
 
 	@Test
@@ -221,7 +223,7 @@ public class Log2HTMLCounterTest extends JUnitBase
 		myLog.LogTestcaseStart( "tcTestcase_Error_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
 				myLog.LogPrint( "Print im Schlüsselwort");
-				myLog.LogError("Error 1");
+                myLog.LogVerifyError( "A", "B");
 				myLog.LogKeyWordEnd();
 			myLog.LogTestcaseEnd();
 		
@@ -244,9 +246,9 @@ public class Log2HTMLCounterTest extends JUnitBase
 		myLog.LogTestcaseStart( "tcTestcase_Error2_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
 				myLog.LogPrint( "Print im Schlüsselwort");
-				myLog.LogError("Error 1");
+                myLog.LogVerifyError( "A", "B");
 				myLog.LogKeyWordEnd();
-			myLog.LogError("Error 2_Z");
+                myLog.LogVerifyError( "A", "B");
 			myLog.LogTestcaseEnd();
 		
             String Current = myLog.Result2HTML( "target/" + TestName+".html" );
@@ -266,7 +268,7 @@ public class Log2HTMLCounterTest extends JUnitBase
 		myLog.LogTestcaseStart( "tcTestcase_ErrorAborted_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
 				myLog.LogPrint( "Print im Schlüsselwort");
-				myLog.LogError("Error 1");
+                myLog.LogVerifyError( "A", "B");
 		
 	            String Current = myLog.Result2HTML( "target/" + TestName+".html" );
 	            
@@ -287,7 +289,7 @@ public class Log2HTMLCounterTest extends JUnitBase
 		myLog.LogTestcaseStart( "tcTestcase_ErrorAborted_TC_KW_F_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
 				myLog.LogPrint( "Print im Schlüsselwort");
-				myLog.LogError("Error 1");
+                myLog.LogVerifyError( "A", "B");
 		
 	            String Current = myLog.Result2HTML( "target/" + TestName+".html" );
 	            
@@ -308,7 +310,7 @@ public class Log2HTMLCounterTest extends JUnitBase
 	        myLog.LogTestcaseStart( "tcTestcase_ErrorAborted_TC_KW_F_Test" );
 	            myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
 	                myLog.LogPrint( "Print im Schlüsselwort");
-	                    myLog.LogError("Error 1");
+                    myLog.LogVerifyError( "A", "B");
 	                myLog.LogKeyWordEnd( );
 	        myLog.LogTestcaseEnd( );
 	        
@@ -401,8 +403,7 @@ public class Log2HTMLCounterTest extends JUnitBase
 	            String Current = myLog.Result2HTML( "target/" + TestName+".html" );
 	            
 	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".html" );
-		        
-	            
+
 	            
 	            assertEquals( Expected.trim(), Current.trim() );      
 	
@@ -424,7 +425,6 @@ public class Log2HTMLCounterTest extends JUnitBase
             
             String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + TestName + ".html" );
 	        
-            
             
             assertEquals( Expected.trim(), Current.trim() );      
 
@@ -525,7 +525,7 @@ public class Log2HTMLCounterTest extends JUnitBase
         myLog.LogTestcaseStart( "tcAcceptanceCriteria_Error" );
             myLog.LogRemoteACCallStart( "WHEN Gherkin IS myGherkin", "I" );
                 myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
-                    myLog.LogError( "Error im Schlüsselwort");
+                myLog.LogVerifyError( "A", "B");
                 myLog.LogKeyWordEnd( );
             myLog.LogRemoteACCallEnd();
         myLog.LogTestcaseEnd( );
@@ -573,7 +573,7 @@ public class Log2HTMLCounterTest extends JUnitBase
         myLog.LogTestcaseStart( "tcAcceptanceCriteria_Error" );
             myLog.LogLocalACCallStart( "WHEN Gherkin IS myGherkin", "I" );
                 myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
-                    myLog.LogError( "Error im Schlüsselwort");
+                    myLog.LogVerifyError( "A", "B");
                 myLog.LogKeyWordEnd( );
             myLog.LogLocalACCallEnd();
         myLog.LogTestcaseEnd( );
@@ -620,7 +620,7 @@ public class Log2HTMLCounterTest extends JUnitBase
         myLog.LogTestcaseStart( "tcAcceptanceCriteria_Error" );
             myLog.LogStepStart( "myCat_3", "myCatType_3", "myChoice_3", "myFeature_3", "myLocalFeature_3", "WHEN myCat_3 IS myChoice_3", "myType_3 TestStep" );
                 myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
-                    myLog.LogError( "Error im Schlüsselwort");
+                myLog.LogVerifyError( "A", "B");
                 myLog.LogKeyWordEnd( );
             myLog.LogStepEnd();
         myLog.LogTestcaseEnd( );

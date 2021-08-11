@@ -88,10 +88,6 @@ public class OKW_Properties extends Properties
 	String PropPath = "";
 	String PropPathWin = "";
 
-	/**
-	 *  \copydoc Logger_Sngltn::getInstance()
-	 */
-	private static Logger_Sngltn Log = Logger_Sngltn.getInstance();
 
 
 	/**
@@ -223,7 +219,7 @@ public class OKW_Properties extends Properties
 		// Zurücksetzen...
 		this.clear();
 
-		Log.ResOpenList( "Find Properties..." );
+		//Log.ResOpenList( "Find Properties..." );
 
 		// =========================================
 		// !. JAR - */okw/default/*/*.properties Dateien einlesen
@@ -232,7 +228,7 @@ public class OKW_Properties extends Properties
 		// -----------------------------------------        
 		// okw-Dafault-Properties
 		//
-		Log.ResOpenList( "Find OKW Core Properties..." );
+		//Log.ResOpenList( "Find OKW Core Properties..." );
 
 		String PropPattern = ".*okw.default.properties.*\\.properties";
 		String PropPath = "okw" + Sep + "default" + Sep + "properties" + Sep;
@@ -241,13 +237,13 @@ public class OKW_Properties extends Properties
 		ArrayList<String> someProperties = getPropertyFiles( PropPattern, PropPath, PropPathWin);
 		this.CoreProperties.addAll( someProperties );
 
-		Log.ResCloseList();
+		//Log.ResCloseList();
 
 		// =========================================
 		// project specific properties 
 		// =========================================
 		// 
-		Log.ResOpenList( "Find Project Properties..." );
+		//Log.ResOpenList( "Find Project Properties..." );
 
 		PropPattern = ".*okw.properties.*\\.properties";
 		PropPath = "okw" + Sep + "properties" + Sep;
@@ -256,9 +252,9 @@ public class OKW_Properties extends Properties
 		ArrayList<String> some3Properties = getPropertyFiles( PropPattern, PropPath, PropPathWin);
 		this.ResoursesProperties.addAll( some3Properties );
 
-		Log.ResCloseList();
+		//Log.ResCloseList();
 
-		Log.ResCloseList();
+		//Log.ResCloseList();
 
 		// =========================================
 		// Read system properties and environment Vars...
@@ -290,7 +286,7 @@ public class OKW_Properties extends Properties
 
 		for ( String element : myList)
 		{
-			Log.ResOpenList( element );
+			//Log.ResOpenList( element );
 
 			if ( StringUtils.startsWith( element, PropPath) )
 			{
@@ -305,10 +301,10 @@ public class OKW_Properties extends Properties
 				loadResoure =  PropPath + StringUtils.splitByWholeSeparator( element, PropPath )[1];
 			}
 
-			Log.LogPrint( "--> " + loadResoure );
+			//Log.LogPrint( "--> " + loadResoure );
 			myReturn.add( loadResoure );
 
-			Log.ResCloseList();
+			//Log.ResCloseList();
 		}
 
 		return myReturn;
@@ -325,15 +321,15 @@ public class OKW_Properties extends Properties
 	 * @author Zoltán Hrabovszki
 	 * \date 2018-03-08
 	 */
-	public void updateProperties()
+	protected void updateProperties()
 	{
-		// 1. Löschen des HProperty Hashs...
+		// 1. Löschen des Property Hashs...
 		super.clear();
 
 		// 2. Laden der Core_Properties
 
-		Log.ResOpenList( "Update Properties..." );
-		Log.ResOpenList( "Load OKW Core Properties..." );
+		//Log.ResOpenList( "Update Properties..." );
+		//Log.ResOpenList( "Load OKW Core Properties..." );
 
 		Collections.sort( this.CoreProperties, new Comparator<String>() {
 			@Override
@@ -345,11 +341,11 @@ public class OKW_Properties extends Properties
 		{
 			loadFromResource(s);
 		}        
-		Log.ResCloseList();
+		//Log.ResCloseList();
 
 
 		// Laden/Überladen projektspezifiescher Properties aus resourcen
-		Log.ResOpenList( "Load Project Properties..." );
+		//Log.ResOpenList( "Load Project Properties..." );
 
 		Collections.sort( this.ResoursesProperties, new Comparator<String>() {
 			@Override
@@ -361,29 +357,29 @@ public class OKW_Properties extends Properties
 		{
 			loadFromResource(s);
 		}
-		Log.ResCloseList();
+		//Log.ResCloseList();
 
 
-		Log.ResOpenList( "Load File Properties..." );
+		//Log.ResOpenList( "Load File Properties..." );
 		for( String s : this.FileProperties )
 		{
 			this.loadFromFile(s);
 		}
-		Log.ResCloseList();
+		// Log.ResCloseList();
 
 
 		// =========================================
-		// run specific properties
+		// load specific properties
 		// =========================================
-		Log.ResOpenList( "Load System Enviroment Vars..." );       
+		//Log.ResOpenList( "Load System Enviroment Vars..." );       
 		loadSystemEnviromentVars();
-		Log.ResCloseList();
+		//Log.ResCloseList();
 
-		Log.ResOpenList( "Load System Propertie..." );
+		//Log.ResOpenList( "Load System Propertie..." );
 		loadSystemProperties();
-		Log.ResCloseList();
+		//Log.ResCloseList();
 
-		Log.ResCloseList(); // "Update Properties..." 
+		//Log.ResCloseList(); // "Update Properties..." 
 	}
 
 
@@ -467,7 +463,7 @@ public class OKW_Properties extends Properties
 		String path = "";
 
 		try {
-			Log.ResOpenList( "Scan folder: " + folder );
+			//Log.ResOpenList( "Scan folder: " + folder );
 
 			path = URLDecoder.decode(url.getPath(), Charset.defaultCharset().name() );
 
@@ -490,7 +486,7 @@ public class OKW_Properties extends Properties
 					{
 						// Log.LogPrint( "Property-File: " + FolderOrFile.getPath());
 
-						Log.LogPrint( folder + "/" + FolderOrFile.getName().replaceAll(urlResourceFolder, "") );
+						//Log.LogPrint( folder + "/" + FolderOrFile.getName().replaceAll(urlResourceFolder, "") );
 						Return.add( folder + "/" + FolderOrFile.getName().replaceAll(urlResourceFolder, ""));
 					}
 				}
@@ -504,7 +500,7 @@ public class OKW_Properties extends Properties
 		}
 		finally
 		{
-			Log.ResCloseList();
+			//Log.ResCloseList();
 		}
 		return Return;
 	}
@@ -556,7 +552,7 @@ public class OKW_Properties extends Properties
 			myLogPrint = myLogPrint + " - failed!";
 		}
 
-		Log.LogPrint( myLogPrint );
+		//Log.LogPrint( myLogPrint );
 		return lvbReturn;
 	}
 
@@ -614,24 +610,24 @@ public class OKW_Properties extends Properties
 	{
 		Map<String, String> env = System.getenv();
 
-		Log.ResOpenList( "System Enviroment Vars..." );
+		//Log.ResOpenList( "System Enviroment Vars..." );
 
 		for (String key : env.keySet())
 		{
 			String value = env.get(key);
 			if (this.containsKey(key))
 			{
-				Log.LogPrint( "Override: " + key + ": '" + this.get(key) + "'");
-				Log.LogPrint( "    with: " + key + ": '" + value + "'");
+				//Log.LogPrint( "Override: " + key + ": '" + this.get(key) + "'");
+				//Log.LogPrint( "    with: " + key + ": '" + value + "'");
 			}
 			else
 			{
-				Log.LogPrint( "   Write: " + key + ": '" + value + "'");
+				//Log.LogPrint( "   Write: " + key + ": '" + value + "'");
 			}
 			this.setProperty(key, value);
 		}
 
-		Log.ResCloseList();
+		//Log.ResCloseList();
 	}
 
 
@@ -642,7 +638,7 @@ public class OKW_Properties extends Properties
 
 		Set<String> keys = mySystemProperties.stringPropertyNames();
 
-		Log.ResOpenList( "System Properties..." );
+		//Log.ResOpenList( "System Properties..." );
 
 		for ( String key : keys )
 		{
@@ -650,23 +646,28 @@ public class OKW_Properties extends Properties
 
 			if ( this.containsKey( key ) )
 			{
-				Log.LogPrint( "Override: " + key + ": '" + this.get(key) + "'" );
-				Log.LogPrint( "    with: " + key + ": '" + value + "'" );
+				//Log.LogPrint( "Override: " + key + ": '" + this.get(key) + "'" );
+				//Log.LogPrint( "    with: " + key + ": '" + value + "'" );
 			}
 			else
 			{
-				Log.LogPrint( "   Write: " + key + ": '" + value + "'" );
+				//Log.LogPrint( "   Write: " + key + ": '" + value + "'" );
 			}
 
 			this.setProperty(key, value);
 		}
 
-		Log.ResCloseList();
+		//Log.ResCloseList();
 	}
 
 
 	public void PrintProperties()
 	{
+
+		/**
+		 *  \copydoc Logger_Sngltn::getInstance()
+		 */
+		Logger_Sngltn Log = Logger_Sngltn.getInstance();
 
 		Log.ResOpenList( "List of Properties..." );
 
@@ -697,6 +698,10 @@ public class OKW_Properties extends Properties
 	 */ 
 	public void PrintPropertiesSources()
 	{
+		/**
+		 *  \copydoc Logger_Sngltn::getInstance()
+		 */
+		Logger_Sngltn Log = Logger_Sngltn.getInstance();
 
 		Iterator<String> iterator = null;
 		Log.ResOpenList( "Properties Sources..." );

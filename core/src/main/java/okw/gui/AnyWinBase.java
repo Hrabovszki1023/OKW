@@ -226,12 +226,17 @@ public abstract class AnyWinBase
 		myLogger.LogWarning( fps_Message );
 	}
 
-	public void LogError( String fps_Message )
+	public void LogVerifyError(String fps_Expected, String fps_Actual )
 	{
-		myLogger.LogError( fps_Message );
+		myLogger.LogVerifyError(fps_Expected, fps_Actual);;
 	}
 
-
+	public void LogException(String fps_Message)
+	{
+		myLogger.LogException(fps_Message);
+	}
+	
+	
 	/** \~german
 	 *  Holt den Categorie Namen des GUI-Objektes.
 	 * 
